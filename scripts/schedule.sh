@@ -8,6 +8,7 @@
 # overwrite the other. `status` lists every please-hire-me job on the machine.
 set -uo pipefail
 cd "$(dirname "$0")/.."
+export PYTHONUTF8=1
 
 REPO="$(pwd -P)"
 
@@ -245,6 +246,86 @@ show_status() {
     fi
   done
 }
+
+# ── Windows (Git Bash): Task Scheduler instead of launchd / cron ─────────────
+is_windows() { case "$(uname -s)" in MINGW*|MSYS*|CYGWIN*) return 0;; *) return 1;; esac; }
+WIN_TASK="please-hire-me-${SLUG_HASH}"
+
+win_bash() {  # Windows path to Git's bash.exe
+  cygpath -w /usr/bin/bash.exe
+}
+
+install_schtasks() {
+  local f="$1" sched
+  case "$f" in
+    hourly)        sched="/SC HOURLY /MO 1" ;;
+    every-2-hours) sched="/SC HOURLY /MO 2" ;;
+    every-3-hours) sched="/SC HOURLY /MO 3" ;;
+    every-6-hours) sched="/SC HOURLY /MO 6" ;;
+    daily)         sched="/SC DAILY /ST 09:00" ;;
+    weekdays)      sched="/SC WEEKLY /D MON,TUE,WED,THU,FRI /ST 09:00" ;;
+    *) echo "Unknown frequency '$f'." >&2; return 1 ;;
+  esac
+  mkdir -p logs
+  # Hidden PowerShell wrapper: a visible console window gets closed by accident, and closing it kills the run
+  # (exit -1073741510), which is exactly what ended the 2:11 AM run on 2026-10-05.
+  local tr="powershell.exe -NoProfile -WindowStyle Hidden -Command \"& '$(win_bash)' -l '$REPO/scripts/scheduled_run.sh'\""
+  # shellcheck disable=SC2086
+  if MSYS_NO_PATHCONV=1 schtasks.exe /Create /F /TN "$WIN_TASK" /TR "$tr" $sched >/dev/null; then
+    echo "Installed Windows scheduled task '$WIN_TASK' ($f)."
+    echo "  repo:  $REPO"
+    echo "  runs:  $tr"
+    echo "  log:   $REPO/logs/scheduled-run.log"
+    echo "  It runs only while you are signed in to Windows, with Chrome open and the"
+    echo "  Claude in Chrome extension connected. The run is hidden: no window to close."
+  else
+    echo "schtasks /Create failed." >&2; return 1
+  fi
+}
+
+uninstall_schtasks() {
+  if MSYS_NO_PATHCONV=1 schtasks.exe /Query /TN "$WIN_TASK" >/dev/null 2>&1; then
+    MSYS_NO_PATHCONV=1 schtasks.exe /Delete /F /TN "$WIN_TASK" >/dev/null && echo "Removed scheduled task '$WIN_TASK'."
+  else
+    echo "Nothing scheduled for this checkout."
+  fi
+}
+
+uninstall_every_schtasks() {
+  local t removed=0
+  for t in $(MSYS_NO_PATHCONV=1 schtasks.exe /Query /FO CSV /NH 2>/dev/null | cut -d, -f1 | tr -d '"\r' | grep -F 'please-hire-me-' | sort -u); do
+    MSYS_NO_PATHCONV=1 schtasks.exe /Delete /F /TN "$t" >/dev/null && { echo "Removed $t."; removed=1; }
+  done
+  [ "$removed" = "0" ] && echo "Nothing scheduled anywhere."
+  return 0
+}
+
+show_status_schtasks() {
+  echo "Repo:      $REPO"
+  echo "Task:      $WIN_TASK"
+  echo "Frequency: $(freq)  (config/settings.json -> schedule.frequency)"
+  if MSYS_NO_PATHCONV=1 schtasks.exe /Query /TN "$WIN_TASK" /V /FO LIST 2>/dev/null \
+      | grep -E '^(Status|Next Run Time|Last Run Time|Last Result|Schedule Type|Repeat: Every):' | sed 's/^/           /'; then :; else
+    echo "           not installed for this checkout"
+  fi
+  echo
+  echo "All please-hire-me tasks on this PC:"
+  MSYS_NO_PATHCONV=1 schtasks.exe /Query /FO CSV /NH 2>/dev/null | cut -d, -f1 | tr -d '"\r' | grep -F 'please-hire-me-' | sort -u | sed 's/^/  /'
+}
+
+if is_windows; then
+  case "$ACTION" in
+    install)
+      F="$(freq)"
+      [ "$F" = "manual" ] && { echo "schedule.frequency is 'manual'. Set it in config/settings.json first."; exit 0; }
+      install_schtasks "$F" ;;
+    uninstall)     uninstall_schtasks ;;
+    uninstall-all) uninstall_every_schtasks ;;
+    status)        show_status_schtasks ;;
+    *) echo "Usage: $0 [install|uninstall|uninstall-all|status]"; exit 1 ;;
+  esac
+  exit $?
+fi
 
 case "$ACTION" in
   install)

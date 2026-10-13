@@ -1,15 +1,16 @@
 {
-  "_readme": "Every knob the agent obeys. Copy to settings.json (setup.sh does this for you) and edit. Full docs: README.md#settings.",
+  "_readme": "Every knob the agent obeys. Full docs: README.md#settings.",
   "run": {
-    "max_applications_per_run": 3,
-    "one_application_per_company_per_run": true,
-    "same_day_company_freeze": true,
+    "max_applications_per_run": 0,
+    "_max_note": "0 = no per-run cap (Dominick, 2026-10-04): apply to every lead that passes the gate. ./run.sh N still caps one run at N.",
+    "one_application_per_company_per_run": false,
+    "same_day_company_freeze": false,
     "max_applications_per_company_lifetime": 2,
-    "_lifetime_cap_note": "Hard ceiling on TOTAL applications ever sent to one company, counted across applications/ AND logs/applications-log.md. An ATS dedupes by email, so every req lands on one candidate profile: many reqs in a short window read as spray, not interest, and buy nothing past the second. At the cap, SKIP the company and log one line.",
     "pause_company_while_interviewing": true,
-    "_interview_pause_note": "Never send a new application to a company where an interview is in progress. A second recruiter can auto-reject the new req, stamping a rejection on the profile of an active loop. List interviewing companies in targets.skip_companies with the reason.",
     "interview_tracker_path": "",
-    "_interview_tracker_note": "Optional absolute path to a note or file where YOU track interviews, OAs and recruiter threads (any format; company names are grepped). When set, the agent reads it at the start of every run and treats every company named in it as a HARD SKIP, on top of skip_companies. Keep it current and you never have to edit skip_companies by hand. Empty means off."
+    "model": "sonnet",
+    "_model_note": "Model for headless runs (run.sh / scheduled). sonnet uses far less of your plan than opus and is plenty for form filling. Empty = your account default.",
+    "_freeze_note": "Off (2026-10-05, Dominick: 'don't wait til tomorrow'): a second role at a company the same day is allowed. The lifetime cap of 2 per company still applies, and the best-fit role is taken first."
   },
   "schedule": {
     "frequency": "manual",
@@ -18,42 +19,51 @@
   "targets": {
     "roles": [
       "software engineer",
+      "software engineer II",
       "full stack engineer",
-      "AI/ML engineer",
-      "research engineer",
+      "product engineer",
+      "backend engineer",
       "forward deployed engineer",
-      "member of technical staff"
+      "platform engineer",
+      "infrastructure engineer",
+      "site reliability engineer (SRE)",
+      "devops / cloud engineer",
+      "distributed systems engineer",
+      "data engineer",
+      "ML / AI engineer (applied, software-focused)",
+      "software engineer in test / test automation (SDET)",
+      "security engineer (software-focused)",
+      "developer tools / developer experience engineer"
     ],
     "seniority": [
-      "new-grad",
-      "internship"
+      "early-career",
+      "mid-level"
     ],
-    "max_years_experience_required": 1,
+    "_seniority_note": "Early-career/mid-level hire. Set to [\"new-grad\",\"internship\"] for a student. New-grad/campus and intern postings are dropped when absent.",
+    "max_years_experience_required": 5,
     "locations": [
-      "San Francisco Bay Area",
       "New York",
-      "Seattle",
+      "Chicago",
       "Remote (US)"
     ],
-    "min_annual_comp_usd": 150000,
-    "_min_annual_comp_note": "Applies to FULL-TIME roles only. Internships post hourly or monthly pay and would fail an annual floor, so they are judged by internship_min_hourly_usd instead.",
+    "_locations_note": "New York, NY (in person or hybrid), Chicago, IL (in person or hybrid; would relocate), or remote in the US.",
+    "min_annual_comp_usd": 120000,
+    "_min_annual_comp_note": "Floor is BASE salary and passes when the posted band's TOP reaches it (Dominick 2026-10-05: $120K). Jobs with no posted pay are applied to.",
     "internship_min_hourly_usd": 0,
-    "_internship_note": "Hourly floor for internships. 0 means no floor: judge internships by prestige_note alone. Top US SWE internships run roughly $40-$120/hour.",
-    "prioritize_above_usd": 250000,
-    "count_equity_toward_comp": true,
-    "prestige_note": "One or two sentences describing what makes a company worth your time. The agent uses this as a judgment gate when a posting lists no salary band. Example: 'Only frontier AI labs, top-tier AI startups, or top quant firms. Skip ordinary enterprise software companies.'",
+    "count_equity_toward_comp": false,
+    "prestige_note": "One or two sentences on what makes a company worth your time. Used as a judgment gate when a posting lists no pay.",
     "priority_companies": [],
     "skip_companies": [],
     "skip_notes": [
-      "Defense and ITAR employers require US persons.",
-      "Companies that do not sponsor visas are a dead end if you need sponsorship."
-    ]
+      "Skip any title containing Senior, Staff, Lead, Principal, or Manager."
+    ],
+    "_roles_note": "Software engineer and adjacent roles (2026-10-05). Still skipped: iOS/Android/mobile, embedded/firmware/hardware, analytics engineer, data scientist, research scientist, IT/support, network engineer, sales/solutions engineer."
   },
   "eligibility": {
     "needs_visa_sponsorship": false,
     "us_person_only_roles_ok": true,
-    "earliest_start": "2027-06",
-    "latest_start": "2027-09",
+    "earliest_start": "",
+    "latest_start": "",
     "graduation": "May 2027"
   },
   "channels": {
@@ -70,15 +80,13 @@
       "simplify",
       "indeed quick apply"
     ],
-    "_why": "Aggregators need accounts and hide the real form. The agent applies on the company's own ATS only.",
-    "signed_in_portals": [],
-    "_signed_in_portals_note": "Optional. Career portals where YOU created the account and your Chrome is signed in. The agent may apply inside that session. It never creates accounts or types passwords; a login page is NEEDS HUMAN."
+    "signed_in_portals": []
   },
   "broker": {
     "gmail_account": "",
     "signup_email_pattern": "",
     "keychain_service": "jobapply-gmail-imap",
-    "_broker_note": "Optional. scripts/code_broker.py reads emailed verification codes over Gmail IMAP and pastes them into the page without the agent ever seeing the code or the password. One-time setup, done by YOU, not the agent: turn on 2-Step Verification, create an app password at https://myaccount.google.com/apppasswords, then in your own Terminal run `security add-generic-password -s jobapply-gmail-imap -a <gmail_account> -w` and paste it at the hidden prompt. Check with `python3 scripts/code_broker.py check`. signup_email_pattern is the plus address used per portal, {tag} = portal name."
+    "_broker_note": "Optional. On Windows the app password goes in Windows Credential Manager: in your own PowerShell run `cmdkey /generic:jobapply-gmail-imap /user:<gmail> /pass` and type it at the hidden prompt. Check with `python3 scripts/code_broker.py check`."
   },
   "safety": {
     "never_create_accounts": true,
@@ -88,7 +96,41 @@
     "require_log_before_submit": true
   },
   "integrations": {
-    "post_run_script": "",
-    "_post_run_note": "Optional path to a python3 script run after each run. Left empty by default."
+    "post_run_script": ""
+  },
+  "collector": {
+    "_readme": "scripts/collect.py: finds, vets and saves leads with no Claude usage. run.sh runs it before every session.",
+    "jobdatalake_queries": [
+      "software engineer",
+      "full stack engineer",
+      "backend engineer",
+      "product engineer",
+      "forward deployed engineer",
+      "platform engineer",
+      "infrastructure engineer",
+      "site reliability engineer",
+      "devops engineer",
+      "data engineer",
+      "machine learning engineer",
+      "ai engineer",
+      "software engineer in test",
+      "distributed systems",
+      "developer tools"
+    ],
+    "jobdatalake_posted_within": "7d",
+    "jobdatalake_max_calls": 45,
+    "max_enrich_per_run": 1500,
+    "stale_after_days": 150,
+    "title_exclude": "\\banalytics engineer|data scientist|research scientist|\\bios\\b|android|mobile|embedded|firmware|hardware|electrical|mechanical|network engineer|sales engineer|solutions? engineer|support|\\bit engineer|devrel|developer relations|developer advocate|robotics|silicon|\\basic\\b|\\bfpga\\b|manual|solutions? (architect|consultant)|\\brvp\\b|vice president|account (manager|executive)|customer success|sales|recruit|partner (manager|engineer)|mission engineer|information extraction|model test|research (associate|engineer)|it (operations|ops)|trader|quant(itative)? (researcher|developer)|\\bintern\\b|\\bgtm\\b|go.to.market|revenue|marketing|growth engineer|\\bcontract(or)?\\b|temporary|freelance|part.?time",
+    "route_required_self_id_to_you": false,
+    "_self_id_note": "false (2026-10-05): Dominick authorized the agent to fill self-ID dropdowns from config/profile.json. If a session's permission check still blocks it, the job goes to 'Apply yourself' at that point.",
+    "blocking_question_patterns": [],
+    "_blocking_note": "Empty (2026-10-05): every known blocker now has an answer in config/answers.md. Add a pattern here when a new recurring question has no fact on file.",
+    "jobdatalake_min_hours": 3,
+    "min_minutes_between_runs": 20,
+    "_interval_note": "collect.py skips itself if it ran within this many minutes (--force overrides), so sessions can call it whenever the pool runs dry.",
+    "min_fit": 55,
+    "_min_fit_note": "Leads scoring under this (0-100, scripts/fit.py) are skipped before the agent can claim them: off-target roles waste claims and tokens.",
+    "_stale_note": "Older open postings stay in the queue but are worked LAST (fresh first, then best fit); only postings over this many days old are dropped."
   }
 }

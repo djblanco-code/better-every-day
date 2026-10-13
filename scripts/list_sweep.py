@@ -42,10 +42,22 @@ CONSIDER = [  # (label, board host, board id)
 S = json.load(open(os.path.join(R, 'config', 'settings.json')))
 T, E = S['targets'], S['eligibility']
 MAX_YEARS = T.get('max_years_experience_required', 1)
+
+# Seniority from config/settings.json -> targets.seniority. A profile without "new-grad" / "internship"
+# (an experienced hire) drops campus and intern postings instead of hunting for them.
+try: _SEN = [x.lower() for x in S.get('targets', {}).get('seniority', ['new-grad', 'internship'])]
+except Exception: _SEN = ['new-grad', 'internship']
+WANT_NEWGRAD, WANT_INTERN = 'new-grad' in _SEN, 'internship' in _SEN
+EXPERIENCED = not (WANT_NEWGRAD or WANT_INTERN)
+NOT_WANTED = re.compile('|'.join(([] if WANT_INTERN else [r'\bintern', r'co-?op\b']) +
+                                 ([] if WANT_NEWGRAD else [r'new ?grad', r'new college', r'university', r'campus', r'graduate\b', r'\b20(26|27) start'])) or r'(?!x)x', re.I)
+SIMPLIFY = [(l, r) for l, r in SIMPLIFY if ('intern' in l and WANT_INTERN) or ('new-grad' in l and WANT_NEWGRAD)]
 FLOOR = T.get('min_annual_comp_usd', 0)
 
-BAD = re.compile(r'senior|\bsr\b|staff|principal|\blead\b|manager|director|head of|architect|\bII\b|\bIII\b|\bIV\b|sales|account exec|recruit|marketing|support|legal|counsel|finance|accountant|designer'
+BAD = re.compile(r'senior|\bsr\b|staff|principal|\blead\b|manager|director|head of|architect|\bIII\b|\bIV\b|sales|account exec|recruit|marketing|support|legal|counsel|finance|accountant|designer'
                  r'|solutions? engineer|value engineer|\bgtm\b|\bit engineer|customer|optical|electrical|solar|mechanical|hardware|design verification|\bpcb\b|\brf\b|ph\.?d|technician|test equipment|\[template\]', re.I)
+# "Software Engineer II" is a step up for a new grad but exactly the level for an experienced hire.
+if not EXPERIENCED: BAD = re.compile(BAD.pattern.replace('|architect|', r'|architect|\bII\b|'), re.I)
 SOFT = re.compile(r'software|developer|engineer|machine learning|\bml\b|\bai\b|research|quant|infrastructure|platform|backend|full.?stack|forward.?deployed', re.I)
 LOC_RULES = {  # targets.locations entry -> pattern over a posting location
     'San Francisco Bay Area': r'San Francisco|\bSF\b|Bay Area|Palo Alto|Mountain View|Menlo Park|Redwood City|San Mateo|Sunnyvale|Santa Clara|San Jose|Oakland|Berkeley|Cupertino|Foster City|Emeryville|Burlingame|San Bruno',
@@ -129,7 +141,7 @@ for label, repo in SIMPLIFY:
         if not E.get('us_person_only_roles_ok', True) and re.search(r'citizenship', sp, re.I): continue
         degrees = x.get('degrees') or []
         if degrees and not any('bachelor' in d.lower() for d in degrees): continue
-        if not SOFT.search(t) or BAD.search(t) or not LOC.search(locs) or is_blocked(co): continue
+        if not SOFT.search(t) or BAD.search(t) or NOT_WANTED.search(t) or not LOC.search(locs) or is_blocked(co): continue
         if ('intern' in label and not term_ok(x.get('terms'))) or not title_term_ok(t): continue
         # Simplify marks ~all rows "Other"; only its explicit values carry information.
         rows.append([label, co, posted.isoformat()[:10], t, locs[:80], '' if sp == 'Other' else sp, '', clean(url)])
@@ -162,7 +174,7 @@ for label, host, board in CONSIDER:
             sal = j.get('salary') or {}
             mx = sal.get('maxValue') if (sal.get('period') or {}).get('value') == 'year' else None
             if yrs is not None and yrs > MAX_YEARS: continue
-            if not SOFT.search(t) or BAD.search(t) or not LOC.search(locs) or is_blocked(co) or not title_term_ok(t): continue
+            if not SOFT.search(t) or BAD.search(t) or NOT_WANTED.search(t) or not LOC.search(locs) or is_blocked(co) or not title_term_ok(t): continue
             if mx and FLOOR and mx < FLOOR and not re.search(r'intern', t, re.I): continue
             band = f"${sal.get('minValue', 0) // 1000}K-${mx // 1000}K" if mx else ''
             rows.append([label, co, posted.isoformat()[:10], t, locs[:80], '', band, clean(url)])

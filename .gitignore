@@ -58,3 +58,11 @@ venv/
 !config/settings.example.json
 !data/queue.example.md
 !data/sources.md
+
+# Added with the Windows / lead-pool work
+.claude/worktrees/
+data/cover-letter-*.txt
+state/pool.json
+
+# Local record of where you applied; keep it off public repos
+docs/job-tracker-snapshot.md

@@ -36,6 +36,9 @@ fi
 sec "logs/applications-log.md — EVERY line, not just ### headers"
 grep -in -- "$NAME" logs/applications-log.md && hit=1
 
+sec "logs/job-tracker.md — agent submits AND rows the user applied to by hand ('Applied by me')"
+grep -in -- "$NAME" logs/job-tracker.md 2>/dev/null && hit=1
+
 sec "data/queue.md — the checklist; holds the oldest applications"
 grep -in -- "$NAME" data/queue.md && hit=1
 

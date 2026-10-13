@@ -7,7 +7,7 @@ this file is the what (rules, per-application procedure, log format). Every valu
 ## Run config
 Read from `config/settings.json`:
 - `run.max_applications_per_run` — hard cap. The launcher passes it in the prompt; an argument to
-  `./run.sh` overrides it.
+  `./run.sh` overrides it. `0` means no per-run cap: apply to every lead that passes the gate.
 - `run.dry_run` — **contributor flag, absent from the default config on purpose.** When present and
   true, fill and verify and screenshot every form, then close the tab WITHOUT submitting, and log
   the application as DRY RUN. It exists so contributors can iterate against real forms without

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Portal sweep: new-grad software postings on account-gated career portals (no login needed to LIST).
+"""Portal sweep: software postings on account-gated career portals (no login needed to LIST). New-grad and
+intern searches by default; with an experienced targets.seniority (no new-grad / internship) it searches
+general software roles instead, drops campus pages, and keeps only targets.locations.
 
     python3 scripts/portal_sweep.py            # since state/last_portal_sweep.txt, then advance it
     python3 scripts/portal_sweep.py --dry      # do not advance the cutoff
@@ -21,6 +23,15 @@ import json, re, os, sys, ssl, time, datetime, urllib.request, urllib.parse
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CUT_FILE = os.path.join(R, 'state', 'last_portal_sweep.txt')
 OUT = os.path.join(R, 'state', 'sweep', 'portal_cands.json')
+
+# Seniority from config/settings.json -> targets.seniority. A profile without "new-grad" / "internship"
+# (an experienced hire) drops campus and intern postings instead of hunting for them.
+try: _SEN = [x.lower() for x in json.load(open(os.path.join(R, 'config', 'settings.json'), encoding='utf-8')).get('targets', {}).get('seniority', ['new-grad', 'internship'])]
+except Exception: _SEN = ['new-grad', 'internship']
+WANT_NEWGRAD, WANT_INTERN = 'new-grad' in _SEN, 'internship' in _SEN
+EXPERIENCED = not (WANT_NEWGRAD or WANT_INTERN)
+NOT_WANTED = re.compile('|'.join(([] if WANT_INTERN else [r'\bintern', r'co-?op\b']) +
+                                 ([] if WANT_NEWGRAD else [r'new ?grad', r'new college', r'university', r'campus', r'graduate\b', r'\b20(26|27) start'])) or r'(?!x)x', re.I)
 UTC = datetime.timezone.utc
 
 WORKDAY = [  # (label, tenant, wd-host, site, host for signed_in_portals)
@@ -39,6 +50,14 @@ WORKDAY_QUERIES = ['new college grad software', 'new college graduate software e
 NEWGRAD = re.compile(r'\b(I|1)\b|university|grad|2027|entry|early career|campus|new college|intern', re.I)
 BAD = re.compile(r'senior|\bsr\b|principal|\blead\b|manager|director|architect|\bII\b|\bIII\b|hardware|asic|fpga|verification|\bqa\b|quality assurance|test engineer|sales|support', re.I)
 SOFT = re.compile(r'software|developer|engineer|machine learning|\bml\b|\bai\b', re.I)
+if EXPERIENCED:
+    # General software searches. Titles are not gated on "grad"; the level words go instead, and II / III
+    # (mid-level at Google, Microsoft, Amazon) stay in for the agent's years-of-experience check.
+    AMAZON_QUERIES = ['software development engineer', 'software engineer']
+    WORKDAY_QUERIES = ['software engineer']
+    WORKDAY = [w for w in WORKDAY if 'campus' not in w[3].lower()]
+    NEWGRAD = re.compile(r'', re.I)
+    BAD = re.compile(BAD.pattern.replace(r'|\bII\b|\bIII\b', '') + '|' + NOT_WANTED.pattern + r'|staff|head of', re.I)
 US = re.compile(r'\bUS\b|United States|, (WA|CA|NY|IL|TX|MA|VA|AZ|CO)\b', re.I)
 
 def parse_ts(s):
@@ -142,7 +161,8 @@ for label, tenant, wd, site, host in WORKDAY:
 
 # ---- Google Careers (listings embedded in the HTML; no date, so seen-ids) ----
 import html as _html
-GOOGLE_QUERIES = ['"software engineer" "university graduate"', '"software engineer" "early career"', '"software engineer" "new grad"']
+GOOGLE_QUERIES = (['"software engineer"'] if EXPERIENCED else
+                  ['"software engineer" "university graduate"', '"software engineer" "early career"', '"software engineer" "new grad"'])
 for q in GOOGLE_QUERIES:
     u = 'https://www.google.com/about/careers/applications/jobs/results/?' + urllib.parse.urlencode({'q': q, 'location': 'United States', 'sort_by': 'date'})
     page = get_text(u)
@@ -155,7 +175,7 @@ for q in GOOGLE_QUERIES:
     time.sleep(1)
 
 # ---- D. E. Shaw campus page (positions embedded as JSON; no date, so seen-ids; own form, no account) ----
-page = get_text('https://www.deshaw.com/careers/choose-your-path/campus-candidates')
+page = '' if EXPERIENCED else get_text('https://www.deshaw.com/careers/choose-your-path/campus-candidates')
 for m in re.finditer(r'"id":(\d+),"displayName":"([^"]+)","jobUrl":"([^"]+)"', page):
     jid, tt, slug = m.group(1), _html.unescape(m.group(2)), m.group(3)
     tail = page[m.end():m.end() + 6000]
@@ -169,7 +189,7 @@ for m in re.finditer(r'"id":(\d+),"displayName":"([^"]+)","jobUrl":"([^"]+)"', p
             rows.append(['D. E. Shaw', 'www.deshaw.com', 'new', tt, offices or 'New York', f'https://www.deshaw.com/careers/{slug.lower()}'])
 
 # ---- Two Sigma (Avature portal; early-careers page lists JobDetail links; no date, seen-ids) ----
-page = get_text('https://careers.twosigma.com/careers/InternshipsAndEarlyCareers')
+page = '' if EXPERIENCED else get_text('https://careers.twosigma.com/careers/InternshipsAndEarlyCareers')
 for u, slug, jid in sorted(set(re.findall(r'href="(https://careers\.twosigma\.com/careers/JobDetail/([^"/]+)/(\d+))"', page))):
     tt = slug.replace('-', ' ')
     if re.search(r'software|engineer|developer', tt, re.I) and not re.search(r'intern|hardware|ph ?d', tt, re.I) and re.search(r'united states', tt, re.I):
@@ -186,7 +206,7 @@ def ts_date(ts):
 # ---- Eightfold, newer pcsx API (Microsoft, Qualcomm; both need the signed-in account to apply) ----
 for label, host, domain in [('Microsoft', 'apply.careers.microsoft.com', 'microsoft.com'), ('Qualcomm', 'careers.qualcomm.com', 'qualcomm.com')]:
     # Relevance order, not timestamp: sorted by timestamp the API ignores the query words.
-    for q in ['university', 'intern', 'college graduate', 'new grad']:
+    for q in (['software engineer'] if EXPERIENCED else ['university', 'intern', 'college graduate', 'new grad']):
         d = get(f'https://{host}/api/pcsx/search?' + urllib.parse.urlencode({'domain': domain, 'query': q, 'location': 'United States', 'start': 0}))
         for p in ((d or {}).get('data') or {}).get('positions') or []:
             posted = ts_date(p.get('postedTs')); loc = '; '.join(p.get('locations') or [])
@@ -205,7 +225,7 @@ for label, host, domain in [('Netflix', 'explore.jobs.netflix.net', 'netflix.com
             rows.append([label, host, posted.isoformat()[:10], t, loc, f'https://{host}/careers/apply?pid={p["id"]}&domain={domain}'])
 
 # ---- AMD (careers.amd.com search API, dated; applying goes through iCIMS, signed in) ----
-for q in ['software engineer new college grad', 'software engineer intern', 'software engineer university']:
+for q in (['software engineer'] if EXPERIENCED else ['software engineer new college grad', 'software engineer intern', 'software engineer university']):
     d = get('https://careers.amd.com/api/jobs?' + urllib.parse.urlencode({'keywords': q, 'location': 'United States', 'limit': 50, 'sortBy': 'posted_date', 'descending': 'true'}))
     for j in (d or {}).get('jobs') or []:
         j = j.get('data', {}); posted = parse_ts(re.sub(r'([+-]\d\d)(\d\d)$', r'\1:\2', j.get('posted_date', '') or ''))  # '+0000' -> '+00:00' for py3.9
@@ -214,7 +234,7 @@ for q in ['software engineer new college grad', 'software engineer intern', 'sof
     time.sleep(1)
 
 # ---- Uber (Oracle Recruiting Cloud REST, dated; no account) ----
-for q in ['software engineer', 'new grad', 'intern']:
+for q in (['software engineer'] if EXPERIENCED else ['software engineer', 'new grad', 'intern']):
     u = ('https://iaziqy.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList'
          f'&finder=findReqs;siteNumber=UberCareers,keyword=%22{urllib.parse.quote(q)}%22,limit=50,sortBy=POSTING_DATES_DESC')
     d = get(u)
@@ -226,7 +246,7 @@ for q in ['software engineer', 'new grad', 'intern']:
 
 # ---- Apple (search page HTML carries details/<id>/<slug> links; no date, seen-ids; Apple ID signed in) ----
 # The page ignores free-text search when fetched without JS, so filter by the student team instead.
-for team in ['internships-STDNT-INTRN']:
+for team in ([] if EXPERIENCED else ['internships-STDNT-INTRN']):  # experienced: Apple's search needs JS; check by hand
     page = get_text('https://jobs.apple.com/en-us/search?' + urllib.parse.urlencode({'team': team, 'sort': 'newest', 'location': 'united-states-USA'}))
     for jid, slug in sorted(set(re.findall(r'details/([0-9A-Z-]+)/([a-z0-9-]+)', page))):
         tt = slug.replace('-', ' ')
@@ -235,7 +255,7 @@ for team in ['internships-STDNT-INTRN']:
     time.sleep(1)
 
 # ---- Bloomberg (Avature search HTML; no date, seen-ids; signed in) ----
-for q in ['software engineer', 'internship', '2027']:
+for q in (['software engineer'] if EXPERIENCED else ['software engineer', 'internship', '2027']):
     page = get_text('https://bloomberg.avature.net/careers/SearchJobs/' + urllib.parse.quote(q) + '?listFilterMode=1&jobRecordsPerPage=50')
     for slug, jid in sorted(set(re.findall(r'JobDetail/([^"/?]+)/(\d+)', page))):
         tt = slug.replace('-', ' ')
@@ -260,6 +280,15 @@ WIN = (_ym(_E.get('earliest_start')), _ym(_E.get('latest_start')))
 def in_window(title):
     m = re.search(r'(winter|spring|summer|fall|autumn)\s*(\d{4})', title or '', re.I)
     return not (m and all(WIN)) or WIN[0] <= (int(m.group(2)), SEASON[m.group(1).lower()]) <= WIN[1]
+# Experienced mode searches broadly, so keep only targets.locations (unknown locations stay for the agent).
+if EXPERIENCED:
+    _PL = {'New York': r'new york|\bnyc\b|brooklyn|manhattan|\bNY\b', 'Remote (US)': r'remote|virtual|work from home|anywhere',
+           'Seattle': r'seattle|bellevue|redmond|kirkland|\bWA\b', 'Chicago': r'chicago',
+           'San Francisco Bay Area': r'san francisco|bay area|palo alto|mountain view|sunnyvale|san jose|santa clara|cupertino|menlo park|redwood city'}
+    try: _LOCS = json.load(open(os.path.join(R, 'config', 'settings.json'), encoding='utf-8')).get('targets', {}).get('locations', [])
+    except Exception: _LOCS = []
+    _LOCRE = re.compile('|'.join(_PL[l] for l in _LOCS if l in _PL) or r'.', re.I)
+    rows = [r for r in rows if _LOCRE.search(r[4]) or re.search(r'see |locations|^united states$', r[4], re.I)]
 dropped = [r for r in rows if not in_window(r[3])]
 rows = [r for r in rows if in_window(r[3])]
 
@@ -270,10 +299,10 @@ ok_hosts = signed | OPEN_PORTALS
 agent = [r for r in rows if r[1] in ok_hosts]; alex = [r for r in rows if r[1] not in ok_hosts]
 if agent:
     print('--- AGENT MAY APPLY (signed-in portal, or a no-account portal in OPEN_PORTALS):')
-    for r in sorted(agent): print('\t'.join(r))
+    for r in sorted(agent, key=lambda r: r[2], reverse=True): print('\t'.join(r))
 if alex:
     print('--- FOR YOU, BY HAND (no signed-in account; put these in the run summary):')
-    for r in sorted(alex): print('\t'.join(r))
+    for r in sorted(alex, key=lambda r: r[2], reverse=True): print('\t'.join(r))
 if not dry:
     json.dump(SEEN, open(SEEN_FILE, 'w'))
     open(CUT_FILE, 'w').write(START.isoformat(timespec='minutes').replace('+00:00', 'Z') + '\n')

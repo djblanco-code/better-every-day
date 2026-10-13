@@ -4,6 +4,8 @@
 set -uo pipefail
 
 cd "$(dirname "$0")/.."
+# Task Scheduler starts with a bare PATH: make sure the claude CLI and python3 resolve.
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH" PYTHONUTF8=1
 mkdir -p logs
 LOG_FILE="logs/scheduled-run.log"
 

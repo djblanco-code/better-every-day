@@ -13,7 +13,11 @@ How it works: reads Gmail over IMAP (read-only, messages stay unread) with an ap
 macOS Keychain, finds the newest message to the plus address from the expected sender domain that arrived
 after --since (epoch seconds, taken BEFORE clicking Submit), checks DKIM, extracts the code, and puts it
 on the clipboard marked concealed + transient so clipboard managers skip it. A detached child clears the
-clipboard after --hold seconds (default 20). The agent clicks the code field and presses cmd+v.
+clipboard after --hold seconds (default 20). The agent clicks the code field and presses cmd+v (ctrl+v on Windows).
+
+Windows: the app password lives in Windows Credential Manager instead of the Keychain. The user stores it
+once in their own PowerShell with `cmdkey /generic:jobapply-gmail-imap /user:<gmail> /pass` (hidden prompt);
+the clipboard copy is flagged so Windows clipboard history and cloud sync skip it.
 
 The code, the message body and the app password are never printed, returned, or logged. stdout is one JSON
 line: {"status": ...}. Exit 0 = ready on clipboard, 1 = not found / timed out, 2 = refused (ambiguous code,
@@ -41,7 +45,36 @@ def log(**kw):
     kw['ts'] = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
     with open(LOG, 'a') as f: f.write(json.dumps(kw) + '\n')
 
+WINDOWS = sys.platform == 'win32'
+PASTE = 'ctrl+v' if WINDOWS else 'cmd+v'
+
+def _win_cred(target, user):
+    """Generic credential from Windows Credential Manager (stored by the user with
+    `cmdkey /generic:<target> /user:<gmail> /pass`). Returns the password or None."""
+    import ctypes
+    from ctypes import wintypes
+    class CREDENTIAL(ctypes.Structure):
+        _fields_ = [('Flags', wintypes.DWORD), ('Type', wintypes.DWORD), ('TargetName', wintypes.LPWSTR),
+                    ('Comment', wintypes.LPWSTR), ('LastWritten', wintypes.FILETIME),
+                    ('CredentialBlobSize', wintypes.DWORD), ('CredentialBlob', ctypes.POINTER(ctypes.c_ubyte)),
+                    ('Persist', wintypes.DWORD), ('AttributeCount', wintypes.DWORD), ('Attributes', ctypes.c_void_p),
+                    ('TargetAlias', wintypes.LPWSTR), ('UserName', wintypes.LPWSTR)]
+    advapi = ctypes.WinDLL('advapi32', use_last_error=True)
+    p = ctypes.POINTER(CREDENTIAL)()
+    # cmdkey /generic stores CRED_TYPE_DOMAIN_PASSWORD (2); a script-made one is CRED_TYPE_GENERIC (1).
+    for ctype in (1, 2):
+        if advapi.CredReadW(target, ctype, 0, ctypes.byref(p)):
+            try:
+                cr = p.contents
+                if user and (cr.UserName or '').lower() != user.lower(): return None
+                raw = ctypes.string_at(cr.CredentialBlob, cr.CredentialBlobSize)
+                return raw.decode('utf-16-le') if len(raw) % 2 == 0 else raw.decode('utf-8', 'replace')
+            finally:
+                advapi.CredFree(p)
+    return None
+
 def app_password(c):
+    if WINDOWS: return _win_cred(c['keychain_service'], c['gmail_account'])
     r = subprocess.run(['security', 'find-generic-password', '-s', c['keychain_service'], '-a', c['gmail_account'], '-w'],
                        capture_output=True, text=True)
     return r.stdout.strip() if r.returncode == 0 else None
@@ -112,7 +145,55 @@ p.setStringForType($(""),"org.nspasteboard.TransientType");return p.changeCount;
 JXA_CLEAR = '''ObjC.import("AppKit");function run(a){var p=$.NSPasteboard.generalPasteboard;
 if(p.changeCount==parseInt(a[0])){p.clearContents;return "cleared"}return "untouched"}'''
 
+# ---- clipboard (Windows): Win32 API, marked so clipboard history / cloud sync / monitors skip it -------
+def _win_clip():
+    import ctypes
+    from ctypes import wintypes
+    u, k = ctypes.WinDLL('user32', use_last_error=True), ctypes.WinDLL('kernel32', use_last_error=True)
+    u.SetClipboardData.argtypes = [wintypes.UINT, wintypes.HANDLE]; u.SetClipboardData.restype = wintypes.HANDLE
+    u.RegisterClipboardFormatW.argtypes = [wintypes.LPCWSTR]; u.RegisterClipboardFormatW.restype = wintypes.UINT
+    k.GlobalAlloc.argtypes = [wintypes.UINT, ctypes.c_size_t]; k.GlobalAlloc.restype = wintypes.HGLOBAL
+    k.GlobalLock.argtypes = [wintypes.HGLOBAL]; k.GlobalLock.restype = ctypes.c_void_p
+    k.GlobalUnlock.argtypes = [wintypes.HGLOBAL]
+    return ctypes, u, k
+
+def _win_open(u):
+    for _ in range(20):
+        if u.OpenClipboard(None): return True
+        time.sleep(0.05)
+    return False
+
+def _win_put(u, k, ctypes, fmt, data):
+    h = k.GlobalAlloc(0x0002, len(data)); ptr = k.GlobalLock(h)
+    ctypes.memmove(ptr, data, len(data)); k.GlobalUnlock(h)
+    u.SetClipboardData(fmt, h)
+
+def win_to_clipboard(value, hold):
+    ctypes, u, k = _win_clip()
+    if not _win_open(u): out('clipboard_error', 3, detail='OpenClipboard failed')
+    try:
+        u.EmptyClipboard()
+        _win_put(u, k, ctypes, 13, (value + '\0').encode('utf-16-le'))  # CF_UNICODETEXT
+        _win_put(u, k, ctypes, u.RegisterClipboardFormatW('ExcludeClipboardContentFromMonitorProcessing'), b'\0\0\0\0')
+        _win_put(u, k, ctypes, u.RegisterClipboardFormatW('CanIncludeInClipboardHistory'), b'\0\0\0\0')
+        _win_put(u, k, ctypes, u.RegisterClipboardFormatW('CanUploadToCloudClipboard'), b'\0\0\0\0')
+    finally:
+        u.CloseClipboard()
+    n = u.GetClipboardSequenceNumber()
+    # Detached child clears the clipboard after `hold` seconds, only if nothing else replaced it since.
+    subprocess.Popen([sys.executable, os.path.abspath(__file__), '_clear', str(n), str(hold)],
+                     creationflags=0x00000008 | 0x00000200 | 0x08000000,  # DETACHED | NEW_GROUP | NO_WINDOW
+                     stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, close_fds=True)
+
+def win_clear(n, hold):
+    time.sleep(hold)
+    ctypes, u, k = _win_clip()
+    if u.GetClipboardSequenceNumber() == n and _win_open(u):
+        try: u.EmptyClipboard()
+        finally: u.CloseClipboard()
+
 def to_clipboard(value, hold):
+    if WINDOWS: return win_to_clipboard(value, hold)
     r = subprocess.run(['osascript', '-l', 'JavaScript', '-e', JXA_SET], input=value, capture_output=True, text=True)
     if r.returncode != 0: out('clipboard_error', 3, detail=r.stderr.strip()[:200])
     n = r.stdout.strip()
@@ -160,7 +241,7 @@ def cmd_fetch(c):
             if code:
                 to_clipboard(code, hold); del code
                 log(cmd='fetch', to=to, sender_domain=frm, status='ready', received=received)
-                out('ready', 0, received=received, hold_s=hold, next='click the code field, press cmd+v, never read the field back')
+                out('ready', 0, received=received, hold_s=hold, next=f'click the code field, press {PASTE}, never read the field back')
             if why == 'ambiguous':
                 log(cmd='fetch', to=to, sender_domain=frm, status='ambiguous', received=received)
                 out('ambiguous', 2, received=received, detail='several candidate codes; NEEDS HUMAN')
@@ -177,6 +258,8 @@ def cmd_check(c):
 
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else ''
+    if cmd == '_clear' and WINDOWS:  # internal: the detached clipboard-clearing child
+        win_clear(int(sys.argv[2]), int(sys.argv[3])); sys.exit(0)
     if cmd == 'selftest':
         to_clipboard('BROKER-TEST-4821', int(arg('--hold', '20')))
         out('ready', 0, hold_s=int(arg('--hold', '20')), detail='dummy value BROKER-TEST-4821 on clipboard; paste it to test')

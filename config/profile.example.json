@@ -57,11 +57,23 @@
     "race": "Decline to self-identify",
     "gender": "Decline to self-identify",
     "veteran": "Not a protected veteran",
-    "disability": "No, I do not have a disability"
+    "disability": "No, I do not have a disability",
+    "hispanic_or_latino": "Decline to self-identify",
+    "sexual_orientation": "Decline to self-identify",
+    "transgender": "Decline to self-identify"
   },
   "internships_in_scope": "Yes",
   "work_availability_heavy_hours": "Yes, comfortable with most weeknights and some weekends",
   "work_availability_travel_25pct": "Yes, willing to travel about 25% of the time",
   "work_availability_50pct_support": "Yes, willing to spend up to 50% of time on customer support",
-  "_availability_note": "These three answers come up constantly on startup and forward-deployed forms. Answer them once here and the agent stops getting blocked."
+  "_availability_note": "These three answers come up constantly on startup and forward-deployed forms. Answer them once here and the agent stops getting blocked.",
+  "resume_absolute_path": "C:/Users/<you>/code/please-hire-me/data/resume.pdf",
+  "middle_name": "",
+  "military_service_answer": "No, I have not served in the US military",
+  "felony_indictment_answer": "No",
+  "government_official_answer": "No",
+  "languages_spoken": "English",
+  "non_compete_answer": "No non-compete or non-solicitation agreements",
+  "security_clearance_answer": "No, I do not hold a security clearance",
+  "earliest_start_answer": "Two weeks after accepting an offer"
 }

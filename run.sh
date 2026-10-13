@@ -4,6 +4,8 @@
 set -euo pipefail
 
 cd "$(dirname "$0")"
+# Windows (Git Bash): Python must read and write UTF-8, not the ANSI code page.
+export PYTHONUTF8=1
 LOCK_DIR=".hourly-run.lock"
 
 if [ $# -ge 1 ] && ! [ "$1" -ge 0 ] 2>/dev/null; then
@@ -19,6 +21,8 @@ done
 # the claude binary explicitly. Prefer the stable ~/.local/bin symlink, then PATH.
 if [ -x "$HOME/.local/bin/claude" ]; then
   CLAUDE_BIN="$HOME/.local/bin/claude"
+elif [ -x "$HOME/.local/bin/claude.exe" ]; then
+  CLAUDE_BIN="$HOME/.local/bin/claude.exe"
 elif command -v claude >/dev/null 2>&1; then
   CLAUDE_BIN="$(command -v claude)"
 else
@@ -44,7 +48,12 @@ run, t, el = s.get('run', {}), s.get('targets', {}), s.get('eligibility', {})
 ch, sf = s.get('channels', {}), s.get('safety', {})
 out = []
 mx = os.environ.get('MAX_OVERRIDE') or run.get('max_applications_per_run', 3)
-out.append(f"Submit at most {mx} new applications this run, then exit.")
+if str(mx).strip() in ('0', 'None', '', 'unlimited'):
+    out.append("NO PER-RUN CAP: keep applying to every lead that passes the target gate, newest first, until "
+               "every source is exhausted, then exit. The per-company, same-day and lifetime rules still apply, "
+               "and a weak target is still a skip.")
+else:
+    out.append(f"Submit at most {mx} new applications this run, then exit.")
 if run.get('dry_run'):
     out.append("DRY RUN IS ON: fill every field, verify it, screenshot it, write the log entry and "
                "the per-application doc marked DRY RUN, then close the tab WITHOUT clicking submit. "
@@ -91,7 +100,8 @@ if t.get('skip_companies'):
 tp = run.get('interview_tracker_path')
 if tp:
     import subprocess
-    r = subprocess.run(['python3', 'scripts/tracker_companies.py'], capture_output=True, text=True)
+    import sys
+    r = subprocess.run([sys.executable, 'scripts/tracker_companies.py'], capture_output=True, text=True)
     if r.returncode != 0:
         raise SystemExit(r.stderr.strip() or 'interview tracker unreadable')
     cos = [c for c in r.stdout.splitlines() if c.strip()]
@@ -151,18 +161,63 @@ fi
 echo "$$" > "$LOCK_DIR/pid"
 trap 'rm -rf "$LOCK_DIR" 2>/dev/null || true' EXIT
 
+# If the last session hit the plan's usage limit, do nothing until it resets (the collector still runs, free).
+PAUSE_UNTIL="$(cat state/paused_until 2>/dev/null || echo 0)"
+PAUSED=0
+[ "$(date +%s)" -lt "${PAUSE_UNTIL:-0}" ] && PAUSED=1
+
+# Find, vet and save leads BEFORE the Claude session, in plain Python: searching costs no Claude usage, and
+# a session that dies on the usage limit loses nothing (leads stay in state/pool.json).
+COLLECT_SUMMARY="$(python3 scripts/collect.py 2>>logs/collector.log | tail -1 || true)"
+printf '%s\n' "$COLLECT_SUMMARY"
+POOL_STATS="$(python3 scripts/pool.py stats 2>/dev/null || true)"
+
+MODEL="$(python3 -c 'import json;print(json.load(open("config/settings.json")).get("run",{}).get("model",""))' 2>/dev/null || true)"
+MODEL_ARGS=()
+[ -n "$MODEL" ] && MODEL_ARGS=(--model "$MODEL")
+
 PROMPT="Continue the job application run in $(pwd). This is a fresh session: derive all durable state from repository files, not from chat history.
 
-Read and follow, in order: CLAUDE.md, config/settings.json, config/profile.json, config/answers.md, config/spec.md, data/queue.md, state/status.md, and logs/applications-log.md.
+Read and follow, in order: CLAUDE.md, config/settings.json, config/profile.json, config/answers.md, and config/spec.md. Read only the newest block of state/status.md (head -40). Do NOT read logs/applications-log.md or logs/job-tracker.md whole; ./scripts/dupe_check.sh greps them for you.
 
 RUN CONFIG (from config/settings.json, obey exactly): ${SETTINGS_PROMPT}
 
 METHOD: use the connected real Chrome through the Claude-in-Chrome extension and fill every field with trusted computer-tool input. Use file_upload for the resume and transcript. At the start, call tabs_context_mcp and close ONLY leftover job-application tabs inside your own MCP tab group from prior crashed runs; NEVER close, read, or navigate any tab that is not listed in your group, those are the user's personal tabs. Do the whole run in one reused tab, navigating it from posting to posting so no half-filled form is left behind. If the tab group drops mid-fill, reconnect via tabs_context_mcp, abandon the half-filled form rather than resuming it, and restart that company from a clean tab. Before exiting, close EVERY tab in your group with tabs_close_mcp and confirm tabs_context_mcp answers that no tab group exists.
 
-SOURCING: run python3 scripts/delta_sweep.py in the FOREGROUND with the Bash tool (timeout 540000), ONCE per run. Never run it in the background and never wait for a notification: a headless session ends when your turn ends. Never rebuild the sweep in /tmp; the script keeps its own cutoff in state/last_sweep.txt. A candidate row ending in FLYOUT promises an in-person final round; mention that as a plus. Also run python3 scripts/portal_sweep.py once (foreground): apply only to rows under AGENT MAY APPLY (a signed-in portal or a no-account portal; on a signed-in one confirm the signed-in header first), and copy every row under FOR YOU, BY HAND into the top of the run summary. Then run python3 scripts/list_sweep.py once (foreground): new postings from the SimplifyJobs lists and six VC portfolio boards, already filtered on location, start window, years and comp; judge each against targets.prestige_note, run the usual duplicate and eligibility checks, and apply on the company's own ATS. Never open a login page.
+LEADS (already found and vetted before this session; do NOT run any sweep yourself): ${COLLECT_SUMMARY} ${POOL_STATS}. Get work ONE lead at a time with: python3 scripts/pool.py take (it claims the lead so a second session never takes it; newest first, one per company, lifetime and same-day caps applied; it prints NO READY LEADS when there is nothing left today). python3 scripts/pool.py next 10 only previews. These already passed title, level, location, pay floor, years (when the posting states them), the skip list, and known-blocked Greenhouse questions. Per lead: run ./scripts/dupe_check.sh \"<Company>\" <job id>, open the url, confirm it is live and read the requirements, then apply. Record the outcome in the pool every time: python3 scripts/pool.py mark <id> applied | closed | skipped <reason> | needs_human <reason>. When take says NO READY LEADS: if you have not run python3 scripts/collect.py in the last 20 minutes, run it once in the FOREGROUND (Bash timeout 1500000; it finds newly posted jobs from every board and the job APIs, at no Claude cost), then take again. Only when take still says NO READY LEADS after a fresh collect are you done. Also take the top of data/queue.md. Only if pool.py next shows fewer than 5 leads, query the GrepJob MCP (mcp__grepjob__search_jobs, once per targets.locations entry, seniority entry level and mid level, min_salary = targets.min_annual_comp_usd) and treat its rows as leads to follow to the company's own ATS. Never open a login page.
 
-SCOPE: verify every posting is live and check applications/, data/queue.md, and logs/applications-log.md for duplicates before opening a tab. A hard eligibility mismatch is a SKIP with a one-line log entry, not a NEEDS HUMAN. NEEDS HUMAN is only for a role the user is eligible for that is missing a fact they could supply. Never submit a weak target just to reach the cap; zero strong submissions beats one bad one.
+SCOPE: a hard eligibility mismatch you find in the posting is pool.py mark <id> skipped <reason>, not NEEDS HUMAN. NEEDS HUMAN is only for a role the user is eligible for that is missing a fact they could supply. Never submit a weak target.
 
-END OF RUN: update the per-application docs, data/queue.md, logs/applications-log.md, and add a new status block at the top of state/status.md. If Chrome is disconnected or required facts are missing, log it and exit. Keep token use low by working the queue top-down and avoiding repeated research."
+JOB TRACKER: every submit gets a row under Applied by the agent in logs/job-tracker.md (insert at the top of that table; do not rewrite the file). Every eligible role you could not submit gets a row under Apply yourself with the posting URL, the blocker, and what the user must do, plus pool.py mark <id> needs_human. The collector already adds account-wall and blocked-question rows itself.
 
-"$CLAUDE_BIN" -p --chrome --no-session-persistence --dangerously-skip-permissions "$PROMPT"
+TOKENS: the user's plan is limited. Prefer find and read_page refs over screenshots; take a screenshot only when you need the layout, after a file upload, and for the confirmation JPG. Keep each applications/ doc to the questions and answers. Do not re-read files you already read this session.
+
+END OF RUN: add a short status block at the top of state/status.md (submitted, needs-human, skipped counts, anything odd). If Chrome is disconnected, log it and exit."
+
+if [ "$PAUSED" = "1" ]; then
+  echo "Usage limit active until $(date -d "@$PAUSE_UNTIL" '+%H:%M' 2>/dev/null || echo "$PAUSE_UNTIL"); leads collected, no session started."
+  exit 0
+fi
+
+OUT_FILE="$(mktemp)"
+"$CLAUDE_BIN" -p --chrome --no-session-persistence --dangerously-skip-permissions "${MODEL_ARGS[@]}" "$PROMPT" 2>&1 | tee "$OUT_FILE"
+RC=${PIPESTATUS[0]}
+# "You've hit your session limit · resets 6:50am (America/New_York)" -> pause until then
+if grep -qiE "hit your (session|usage|weekly) limit" "$OUT_FILE"; then
+  python3 - "$OUT_FILE" <<'PY'
+import re, sys, datetime
+t = open(sys.argv[1], encoding='utf-8', errors='replace').read()
+m = re.search(r'resets\s+(\d{1,2})(?::(\d{2}))?\s*([ap]m)', t, re.I)
+now = datetime.datetime.now()
+if m:
+    h = int(m.group(1)) % 12 + (12 if m.group(3).lower() == 'pm' else 0)
+    r = now.replace(hour=h, minute=int(m.group(2) or 0), second=0, microsecond=0)
+    if r <= now: r += datetime.timedelta(days=1)
+else:
+    r = now + datetime.timedelta(hours=1)
+open('state/paused_until', 'w').write(str(int(r.timestamp()) + 120))
+print('Usage limit hit; no new sessions until', r.strftime('%a %H:%M'))
+PY
+fi
+rm -f "$OUT_FILE"
+exit "$RC"

@@ -22,6 +22,15 @@ import json, re, sys, os, time, datetime, urllib.request, concurrent.futures as 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CUT_FILE = os.path.join(R, 'state', 'last_sweep.txt')
 OUT = os.path.join(R, 'state', 'sweep')
+
+# Seniority from config/settings.json -> targets.seniority. A profile without "new-grad" / "internship"
+# (an experienced hire) drops campus and intern postings instead of hunting for them.
+try: _SEN = [x.lower() for x in json.load(open(os.path.join(R, 'config', 'settings.json'), encoding='utf-8')).get('targets', {}).get('seniority', ['new-grad', 'internship'])]
+except Exception: _SEN = ['new-grad', 'internship']
+WANT_NEWGRAD, WANT_INTERN = 'new-grad' in _SEN, 'internship' in _SEN
+EXPERIENCED = not (WANT_NEWGRAD or WANT_INTERN)
+NOT_WANTED = re.compile('|'.join(([] if WANT_INTERN else [r'\bintern', r'co-?op\b']) +
+                                 ([] if WANT_NEWGRAD else [r'new ?grad', r'new college', r'university', r'campus', r'graduate\b', r'\b20(26|27) start'])) or r'(?!x)x', re.I)
 DEADLINE = 420          # seconds, hard stop for the whole sweep (Bash tool timeout must exceed this)
 THREADS = 24
 UTC = datetime.timezone.utc
@@ -65,7 +74,20 @@ TIT = re.compile(r'engineer|developer|technical staff|\bmts\b|\bswe\b|programmer
 BAD = re.compile(r'senior|\bsr\b|\bsr\.|principal|\blead\b|manager|director|head of|\bvp\b|architect|recruit|sales|account exec|designer|marketing|counsel|legal|finance|hardware|mechanical|electrical|firmware|\brf\b|analog|asic|fpga|verification|manufactur|technician|solutions engineer|support engineer|customer success|\biii\b|\biv\b|\bstaff\b', re.I)
 # Postings that promise an in-person final round. A plus for users who like being flown out, not a gate.
 FLY = re.compile(r"fly (you )?(out|in)|flown (out|in)|on-?site (final|round|interview|loop)|in-?person (final|round|interview|loop)|final (round|interview).{0,30}(on-?site|in-?person|in our office)|visit (our|the) (office|team)", re.I)
-titleok = lambda t: TIT.search(t) and not BAD.search(re.sub(r'technical staff', '', t, flags=re.I))
+titleok = lambda t: TIT.search(t) and not NOT_WANTED.search(t) and not BAD.search(re.sub(r'technical staff', '', t, flags=re.I))
+# Locations come from config/settings.json -> targets.locations when every entry is one we know; the broad
+# built-in LOC above stays the fallback for unknown entries.
+LOC_RULES = {
+    'San Francisco Bay Area': r'san francisco|\bsf\b|bay area|palo alto|mountain view|menlo park|sunnyvale|san jose|redwood city|oakland|berkeley|san mateo|burlingame|foster city|santa clara|cupertino|emeryville',
+    'New York': r'new york|\bnyc\b|brooklyn|manhattan',
+    'Chicago': r'chicago',
+    'Seattle': r'seattle|bellevue|kirkland|redmond',
+    'Remote (US)': r'remote|anywhere|distributed',
+}
+try: _LOCS = json.load(open(os.path.join(R, 'config', 'settings.json'), encoding='utf-8')).get('targets', {}).get('locations', [])
+except Exception: _LOCS = []
+if _LOCS and all(l in LOC_RULES for l in _LOCS):
+    LOC = re.compile('|'.join(LOC_RULES[l] for l in _LOCS), re.I)
 locok = lambda loc: LOC.search(loc) and not (BADLOC.search(loc) and not USLOC.search(loc))
 
 import ssl
@@ -195,7 +217,8 @@ c = [o for o in allnew if o[1] != 'jobgether' and titleok(o[3]) and locok(o[4])]
 json.dump(c, open(os.path.join(OUT, 'cands.json'), 'w'))
 print(f'cutoff {CUT.isoformat()[:16]}Z  pairs {len(jobs)}  probed {done}  live {live}  new reqs {len(allnew)}  after title+loc {len(c)}  {time.time()-t0:.0f}s'
       + ('  ★ TIMED OUT at DEADLINE, results partial; cutoff NOT advanced' if timed_out else ''))
-for o in sorted(c, key=lambda o: (o[1], o[3])): print('\t'.join(o[:7]) + ('\t★FLYOUT' if FLY.search(o[7] or '') else ''))
+# Newest first: applying within a day or two of posting is the biggest lever on callbacks.
+for o in sorted(c, key=lambda o: o[2], reverse=True): print('\t'.join(o[:7]) + ('\t★FLYOUT' if FLY.search(o[7] or '') else ''))
 if get.errors: print('--- request errors by type:', get.errors)
 testing = bool(ONLY or LIMIT)
 if not testing and sum(live.values()) < 500: print('★ FEWER THAN 500 LIVE BOARDS: the network or TLS is broken, not the boards. Results are NOT trustworthy; cutoff NOT advanced.')

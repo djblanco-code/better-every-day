@@ -15,145 +15,18 @@ account, and never apply to something the user is not eligible for.
    (company limits, hidden seniority gates, slug traps, injection canaries).
 7. `state/status.md` (what previous runs did) and `logs/applications-log.md` (what is already sent).
 
-## ★ FIRST RUN — a fresh clone has no config. Onboard the user, do not apply. ★
-If `config/profile.json`, `config/answers.md`, or `config/settings.json` is missing, this is a new
-install. **Do not open a browser and do not apply to anything.** Set them up first.
+## ★ FIRST RUN — only when config is missing ★
+If `config/profile.json`, `config/answers.md`, or `config/settings.json` is missing, this is a new install: do NOT open a browser or apply. Read `docs/ONBOARDING.md` and follow it. Otherwise ignore it; setup is done.
 
-**Do not offer a menu. Start the setup yourself, at step 1, in the same message.** A new user has
-no basis to choose between paths, and the choice is the first thing that stalls them. You read
-their resume and draft the hard file (`config/answers.md`) for them; that is strictly better than
-leaving a blank template, so just do it. A `./setup.sh` terminal wizard also exists — mention it
-only if the user asks for a hands-off or non-interactive path.
-
-### Setup, step by step
-1. **Copy the templates first** if they are absent: `config/{profile,settings}.example.json` →
-   `config/{profile,settings}.json`, `config/answers.example.md` → `config/answers.md`,
-   `data/queue.example.md` → `data/queue.md`. Create `applications/ logs/ screenshots/ state/`.
-2. **Ask for their resume** and read it (the Read tool opens PDFs). Copy it to the path in
-   `profile.json.resume`, default `data/resume.pdf`.
-3. **Draft `config/profile.json` from the resume**: name, email, phone, location, school, degree,
-   major, graduation, GPA, LinkedIn, GitHub, site. Then **show every extracted value and have the
-   user confirm or correct each one.** If the resume does not state something, leave it empty and
-   ask. Never infer an address, a GPA, or a graduation date.
-4. **Ask EVERY remaining question in ONE numbered list. This is the only question you get to ask.**
-   Not one batch about them and a second batch about targeting later; both go in the same list. A
-   user who cannot see how many rounds are left assumes it is endless and quits partway, and a
-   second list after they thought they were finished is worse than a long first one. Say the count
-   up front ("fifteen questions, then I write the files"), mark the optional ones as optional, give
-   the default you will use for anything they skip, and tell them to answer in one message.
-
-   **Build the list by walking `config/profile.example.json` and `config/answers.example.md` key by
-   key**, not from memory and not from the topics below. Those files are the checklist. A key you
-   forget is exactly how a second round happens, which is the thing this rule exists to prevent.
-   Keys that ship with a working default (desired compensation, how they heard about the company,
-   notice period) are NOT questions: apply the default, say in one line which defaults you took,
-   and move on. `highest_education_completed_answer` is one of these: derive it from the resume as
-   the degree in progress with its expected date, never as high school, and state what you wrote.
-
-   Two exceptions to the default-instead-of-question rule. **The three availability answers
-   (`work_availability_heavy_hours`, `work_availability_travel_25pct`,
-   `work_availability_50pct_support`) get asked as one combined question**, because a default Yes
-   silently commits a stranger to nights, weekends, travel, and half their week on support tickets.
-   A neutral default like "decline to self-identify" may be assumed; a promise about how someone
-   will live may not. The same goes for anything else where the default is a commitment rather than
-   a decline.
-   - *About them, and this list is the minimum, not a sample:* preferred vs legal first name;
-     native-script legal name, asked for verbatim (`name_native_language`) and never
-     transliterated; **a personal non-`.edu` email, because a resume usually lists only the school
-     one and some ATS reject `.edu`**; mailing address; work authorization and whether they need
-     sponsorship; citizenship, for the export-control question; **`college_start_date`, the month
-     and year they started, which is almost never on a resume**; **`high_school_name` and
-     `high_school_grad_year`, optional but required by some forms**; earliest start date; GPA and
-     whether to fill it when optional; transcript path; pronouns; and all four EEO answers listed
-     one by one, race, gender, veteran status, and disability (offer "decline to self-identify" as
-     the default for each). Never infer any of the four from a name, a photo, or a resume, and
-     never collapse them into a single "EEO answers" question, which is how gender ends up unset.
-   - *About targeting:* roles and titles; internship, new-grad, or both; locations plus whether
-     remote counts; full-time compensation floor; internship hourly floor; their quality bar in
-     their own words (`prestige_note`); companies to never apply to. Say that the annual floor does
-     not apply to internships, since that surprises people.
-
-   Follow up ONLY on an answer that came back blank, self-contradictory, or unusable, and say that
-   it is the last of it. **A field you forgot to ask about is not grounds for a second round.**
-   Take the template's default, name the default you took in one line, and let them correct it if
-   they care. A second list, arriving after the user thought they were done, is the failure this
-   whole step is written to prevent.
-5. **Draft `config/answers.md`, the file that decides everything, and write `config/settings.json`
-   from the targeting answers.** Write the templates from their real work, keeping every number
-   exactly as the resume states it. Build the fact sheet with one line per job, project, and
-   result. Then **read the templates back and get explicit confirmation.** If a bullet is vague
-   ("improved performance"), ask for the number instead of inventing one. This is the step that
-   makes their runs work, so do not rush it.
-
-   **Before you read the templates back, check every number and every job title in them against
-   the resume, one at a time.** A figure that is close but not equal is a fabrication on a real
-   application. Carrying over an illustrative number from the example template is the specific
-   mistake to watch for: `config/answers.example.md` ships with no example numbers precisely
-   because they get copied. Titles are facts too: Co-founder is not CTO, intern is not engineer.
-
-   **Ask for the confirmation in concrete terms, never as "do these read as yours?"** That phrasing
-   gives the user nothing to check against, so they skim and approve. Ask for the two specific
-   things instead, and name the figures you want them to verify:
-   > "Two things to check. Does this sound like you rather than like a brochure, and are these
-   > numbers right: 90% acceptance, two weeks down to two days, Co-founder. Change anything that is
-   > off and I will rewrite it."
-   Quote the actual figures from their drafts, not these. The point is that they are checking
-   claims they can verify, not judging prose.
-6. **Offer to install the schedule**, explain the cadence, and if they say yes run
-   `./scripts/schedule.sh install` for them rather than printing it for them to run.
-6b. **Mention the optional add-ons in one short list, and do not push them.** Each needs a step only the
-   user can take, and none blocks the first run. See README "Optional add-ons":
-   - Company portals that need an account: they sign in once in Chrome, you add the host to
-     `channels.signed_in_portals`. You never create an account or log in.
-   - Emailed verification codes: they create a Gmail app password and store it with
-     `security add-generic-password -s jobapply-gmail-imap -a <gmail> -w` **in their own Terminal**. Tell them
-     never to paste it into the chat. Then run `python3 scripts/code_broker.py check` for them.
-   - Interview tracker: set `run.interview_tracker_path` to their note, companies as `[[wikilinks]]`.
-7. **Run the first application yourself, supervised.** Setup ends with the user having watched you
-   work, so ending on homework is the wrong last impression. **Never offer a run that cannot
-   submit.** A run that fills a form and then throws it away is a demo, and the user came here to
-   apply to jobs, so it wastes the one posting it touched and teaches them nothing they could not
-   learn from the checkpoint. Ask one question: do it now, or not yet.
-   - **Now (recommend this).** Source one real posting, fill every field, screenshot it, write the
-     log and the per-application doc, then **stop and show them everything before clicking
-     submit**. On their yes, submit for real. On their no, close the tab and send nothing. A real
-     application with a checkpoint.
-   - **Not yet.** Give them `./run.sh 1` and move on.
-
-   Do it in this session; you do not need `./run.sh`. Read `config/settings.json` and obey it
-   directly. When it finishes, name the posting and point at the `applications/` doc and the
-   screenshot.
-
-   **Preflight the browser before you start, and never make the user guess what is wrong.** Call
-   `list_connected_browsers`. Installing the extension cannot be automated: it is a Chrome Web
-   Store install, a sign-in, and per-site permission grants, all user gestures by design. So detect
-   the state and give the exact next step:
-   - *Empty list on the first call* → the extension is not connected. Tell them to install it from
-     https://claude.ai/chrome, sign in with the SAME account as this Claude Code session, and say
-     when it is done. Then re-check. Do not start a run and discover it mid-form.
-   - *Connected but every page action returns "Couldn't determine which page this action targets"*
-     → a different failure, usually transient. Wait and retry; it clears in 3-15 minutes.
-   - *Connected but the ATS domain is not permitted* → the extension grants access per site. Tell
-     them which domain to allow in the extension's settings.
-
-   **Say plainly what happens after the first one**, because it is the thing users get wrong:
-   scheduled runs submit on their own. There is no per-application checkpoint once the schedule is
-   installed. The supervised checkpoint exists for the first run, so they can see the quality
-   before handing over the wheel. `./run.sh` cannot offer one either: it launches a headless
-   `claude -p` session with nobody there to approve. If they want a checkpoint on every
-   application, the answer is to ask you for a run inside an interactive session and say "stop
-   before submitting", not a flag.
-   - The same rule holds for the schedule in step 6 and for anything else the setup could do
-     itself. Offer to run it, get a yes, run it. A command in a code block is the fallback for
-     when they decline, not the default.
-
-### Rules during onboarding
-- **Never invent a fact to fill a field.** An empty value that becomes a question later is correct;
-  a plausible guess is not. This is the whole premise of the project.
-- Confirm before writing each file, and say what you wrote.
-- Tell the user that `profile.json`, `answers.md`, `settings.json`, and everything under
-  `applications/ logs/ screenshots/ state/` are gitignored, so their data never leaves the machine.
-- If they ask you to skip the confirmation step, still show the values once before writing.
+## Windows notes (this checkout runs on Windows 11 via Git Bash)
+- Shell scripts run under Git Bash: `bash run.sh`, `bash scripts/schedule.sh install`. From PowerShell or
+  cmd use `run.cmd [N]`. `python3` resolves to the python.org install; scripts force `PYTHONUTF8=1`.
+- Keyboard shortcuts in the browser are **ctrl**, not cmd: `ctrl+v`, `ctrl+a`.
+- `scripts/schedule.sh` installs a Windows Task Scheduler task (`please-hire-me-<hash>`), not launchd/cron.
+  It only fires while the user is signed in to Windows with Chrome open.
+- `scripts/code_broker.py` reads the Gmail app password from Windows Credential Manager (target
+  `jobapply-gmail-imap`) and uses the Win32 clipboard, excluded from clipboard history.
+- `file_upload` paths must be absolute Windows paths, e.g. `C:\Users\<you>\code\please-hire-me\data\resume.pdf` (the profile's `resume_absolute_path`).
 
 ## What this is
 Find and submit applications on **organic company ATS forms** (Greenhouse, Lever, Ashby, Workable)
@@ -289,11 +162,11 @@ email body into context.
    (foreground, waits up to 5 min). It prints `{"status":"ready"}` and holds the code on a concealed
    clipboard for 20s. Greenhouse's sender domain is unconfirmed: take it from the first `no_message` run's
    mailbox by hand and record it in `data/ats-field-notes.md`.
-3. In ONE `browser_batch`: click the code field, `key cmd+v`, click confirm. **No screenshot, zoom,
+3. In ONE `browser_batch`: click the code field, `key ctrl+v` (`cmd+v` on macOS), click confirm. **No screenshot, zoom,
    `read_page` or JS read between the paste and the click**: the screenshot would show the code.
 4. Screenshot after. Any status other than `ready` (`no_message`, `no_code`, `ambiguous`,
    `unverified_sender`, `setup_error`), or a code the page rejects → NEEDS HUMAN, tab left open.
-Never read the Keychain or the clipboard yourself; `.claude/hooks/block-secret-read.sh` blocks it.
+Never read the Keychain, Windows Credential Manager or the clipboard yourself; `.claude/hooks/block-secret-read.sh` blocks it.
 
 ## Tricky widget recipes
 - **D. E. Shaw (own portal, no account):** the posting page (`deshaw.com/careers/<slug>-<id>`) has a cookie banner
@@ -343,7 +216,7 @@ Never read the Keychain or the clipboard yourself; `.claude/hooks/block-secret-r
 - **Ashby wipes text typed before hydration finishes.** Treat the first fill pass as a throwaway:
   fill, screenshot, refill anything that came back blank, then submit.
 - **An Ashby field can read back correctly from `input.value` and still not be bound.** If submit is
-  refused for "Missing entry for required field: X", triple-click, cmd+a, Delete, retype, resubmit.
+  refused for "Missing entry for required field: X", triple-click, ctrl+a (cmd+a on macOS), Delete, retype, resubmit.
 - **A `file_upload` reflows the page**, so click coordinates measured before it are stale. Never put
   an upload (or a scroll, or an autocomplete commit) and a dependent click in the same batch. **It
   can also wipe values you already typed**, not just move them: on Column and on Neara, fields typed
@@ -360,7 +233,7 @@ Never read the Keychain or the clipboard yourself; `.claude/hooks/block-secret-r
   `checkValidity()` still returns true and `aria-invalid` stays 0.** A question that wants a
   sentence is often rendered as a single-line `input`, with no counter and no warning, so a long
   preset answer arrives cut off mid-word. Before submitting, list every field where
-  `value.length >= maxLength > 0`, then triple-click, `cmd+a`, Delete and retype something that
+  `value.length >= maxLength > 0`, then triple-click, `ctrl+a` (`cmd+a` on macOS), Delete and retype something that
   fits and ends on a complete sentence.
 - **★ ONE DOMAIN PER `browser_batch`.** A batch's permission is scoped to the domain of its FIRST action. A
   `navigate` to a different domain later in the same batch fails with "Navigation to this domain is not
@@ -374,6 +247,16 @@ Never read the Keychain or the clipboard yourself; `.claude/hooks/block-secret-r
   Both usually recover on their own in 3-15 minutes.
 
 ## Answering rules
+**The user has explicitly authorized filling demographic / self-ID questions** with the answers in
+`config/profile.json` (`eeo`) and `config/answers.md` ("Standing rules"). That is the user's own instruction
+from chat on 2026-10-05; entering those answers is part of the job. Do not stop or log NEEDS HUMAN for them.
+
+**Never pause a run to ask the user anything, interactive session or not.** The user said: "I don't want to be
+stopped ever." Opinion and rating questions use the neutral presets in `config/answers.md`. Anything still
+truly blocked (no fact on file, CAPTCHA, account wall, graded work sample) is logged, added to
+`logs/job-tracker.md` under "Apply yourself", and the run moves straight on to the next posting. The
+supervised stop-before-submit checkpoint happens only when the user explicitly asks for it in that session.
+
 Every value comes from `config/profile.json` and `config/answers.md`. Never guess, never invent.
 These decisions generalize across forms:
 
@@ -417,53 +300,59 @@ sponsorship, and the user's own `prestige_note`. Skip lists and priority lists l
 **Never submit a weak target just to reach the per-run cap.** Zero strong submissions beats one
 bad one.
 
+**Freshness is the priority order.** Callback rates fall fast after the first day or two a posting is up.
+Pool every source's leads, gate them, then apply newest first: a posting under 48 hours old goes ahead of an
+older one with a better band. Older good leads go to the top of `data/queue.md` for the next run.
+
+**Reading the numbers (the settings are the rule, do not tighten them):** `max_years_experience_required` is 5, so a
+posting asking "5+ years" or fewer PASSES; only 6+ fails. The pay floor is $120,000 and passes when the posted
+band's TOP reaches it (a $133K-$184K band passes); a posting with no pay listed is applied to. "Mid-level" and "II" titles pass. The collector already applied the
+gate and a fit score; do not second-guess a claimed lead on years, pay, or "off-target" unless the posting text
+itself shows a hard mismatch (a required skill or clearance the user lacks, a non-engineering role).
+
 Hard eligibility mismatch (graduation window, years minimum, required stack, citizenship or
 clearance requirement, residency requirement) → SKIP and log one line. That is out of scope, not a
 NEEDS HUMAN. NEEDS HUMAN is only for a role the user IS eligible for that is missing a fact they
 could supply.
 
-## Sourcing method (fastest first)
-Start from `data/boards.md`, which lists the org slugs already verified live, and read
-`data/ats-field-notes.md` before opening any form. Then query the ATS board APIs from the shell
-instead of crawling search pages.
-- Ashby: `https://api.ashbyhq.com/posting-api/job-board/<org>?includeCompensation=true` → JSON with
-  title, location, `compensation.compensationTierSummary`, and `descriptionPlain`.
-- Greenhouse: `https://boards-api.greenhouse.io/v1/boards/<token>/jobs`, then `/jobs/<id>`.
-- Lever: `https://api.lever.co/v0/postings/<org>?mode=json`.
-- SmartRecruiters: `https://api.smartrecruiters.com/v1/companies/<org>/postings` (org is case-sensitive).
-- Workable: `https://apply.workable.com/api/v1/widget/accounts/<org>?details=true`.
-- **★ The delta sweep is `python3 scripts/delta_sweep.py`. Run it in the FOREGROUND** (Bash tool, timeout
-  540000), never `run_in_background`. A headless run that backgrounds it and "waits for the notification"
-  ends its turn, and the session ends with it: four runs in a row once did zero work that way. The
-  script keeps its own cutoff in `state/last_sweep.txt` and advances it on success, stops itself at 7
-  minutes, and writes `state/sweep/cands.json`. Do not rebuild it in `/tmp`; edit the one in `scripts/`.
-- **`python3 scripts/portal_sweep.py`, once per run, foreground.** Lists new-grad software postings on company
-  portals without logging in: Amazon, Nvidia, Salesforce, Intel, Arrowstreet, G-Research, Google, D. E. Shaw,
-  Two Sigma, Bloomberg, Microsoft, Qualcomm, AMD, Apple (signed-in portals) and Netflix, Millennium, Uber,
-  Renaissance (no account needed, `OPEN_PORTALS` in the script). Rows under "AGENT MAY APPLY" are yours: on a
-  signed-in portal confirm the signed-in header first, then apply. Rows under "FOR YOU, BY HAND" go verbatim
-  into the run summary's top section. Never try to log in. The sweep cannot list Meta, Tesla, Citadel,
-  Citadel Securities or Balyasny (scripts are blocked); their apply forms need no account except Meta's, so
-  check their careers pages in the browser when a run has spare capacity. Apply flows per portal:
-  `data/manual-portals.md`.
-- **`python3 scripts/list_sweep.py`, once per run, foreground.** New postings since the last run from the
-  SimplifyJobs new-grad and internship lists (their `listings.json` feeds) and the Consider-hosted VC boards
-  (a16z, Sequoia, Lightspeed, Kleiner Perkins, GV, Bessemer). Already filtered on `targets.locations`, the
-  start window (internship terms and seasons in titles), sponsorship, `minYearsExp` and the comp floor; the
-  prestige gate is yours, per posting. Every row links to the company's own ATS. It also appends ATS slugs it
-  has not seen to `data/slug-candidates.txt`, so `delta_sweep.py` reads those boards in full from the next run.
-- Hacker News monthly hiring thread: `./scripts/fetch_hn_hiring.sh`. Startups that never post to a
-  job board, roles link straight to the company ATS. Refill an empty queue from here first.
+## ★ Lead pool — the agent applies, it does not search ★
+`scripts/collect.py` does ALL searching and vetting in plain Python (no Claude usage): the three sweeps
+below plus JobDataLake over HTTP, then full descriptions, years, pay band, liveness and Greenhouse
+required questions from public APIs. Every lead is saved to `state/pool.json` before anything else, so a
+run that dies loses nothing. Account walls and known-blocked required questions go straight to the
+tracker's "Apply yourself" table. `run.sh` runs the collector before each headless session.
+- **Interactive session ("run a job application round"):** run `python3 scripts/collect.py` once in the
+  FOREGROUND (Bash timeout 1500000), then loop on `python3 scripts/pool.py take` (claims ONE lead; safe even if the hourly task is running; `next 10` only previews). On `NO READY LEADS`: run `python3 scripts/collect.py` once if it has not run in the last 20 minutes (it skips itself otherwise), then `take` again; only a second `NO READY LEADS` means done. Never run the sweeps or
+  query JobDataLake yourself.
+- **Per lead:** `./scripts/dupe_check.sh "<Company>" <job id>` → open the url → confirm live, read the
+  requirements → apply. Always record the outcome: `python3 scripts/pool.py mark <id> applied|closed|skipped|needs_human <reason>`. A claimed lead you never mark returns to ready after 60 minutes.
+- `python3 scripts/pool.py show <id>` prints one lead with its description and required questions.
+- GrepJob needs the user's login (`/mcp`), so it is the only source queried from inside a session, and only when
+  fewer than 5 leads are ready (the saved queue comes first). Write its rows to a JSON file
+  `[{company, title, location, url, band, desc}]` and run `python3 scripts/collect.py --import <file>` so they are
+  vetted and queued like every other lead. The `/round` command (`.claude/commands/round.md`) runs the whole flow.
+- One-off look-back: `python3 scripts/collect.py --backfill 21`. Re-gate after editing settings:
+  `python3 scripts/collect.py --vet-only`.
 
-Notes that keep costing runs when forgotten:
-- Grep `descriptionPlain` for `\d+ years`, *senior*, *staff-level*, *proven*, *at scale* before
-  opening a tab. Seniority often lives in the body, not the title. Print the surrounding context:
-  a "18 years" match can be a founder bio, not a gate.
-- `compensation: null` is not proof of no band. The band is often in the body text.
-- Sleep ~2s between org queries. Rate-limited responses fail to parse and read as dead boards.
-- Org slugs are not company names. Try hyphenated and suffixed variants before recording a board as
-  dead, and re-test "dead" slugs occasionally; they come back.
-- A req id carried over from a previous run can die. Re-verify `isListed: true` before filling.
+## Sourcing method
+Searching is done by `scripts/collect.py` (see the Lead pool section). Only if you are asked to find leads by hand, or debug a source, read `docs/SOURCING.md`.
+
+## ★ Job tracker (`logs/job-tracker.md`) — the user's single list. Update it every run. ★
+Two tables, newest row at the top of each. Write the row the moment the outcome is known, not at the end.
+- **Applied by the agent:** one row per submit: date, company, role, location, pay band (as posted, or
+  "not posted"), the posting URL, and the record (`applications/<file>.md` + screenshot filename).
+- **Apply yourself:** every role the user QUALIFIES for (passes the target gate: title, seniority, years,
+  location, comp floor, not skipped, not a duplicate) that the agent could not submit. One row each with the
+  posting URL, the concrete blocker, and the user's next step. Blockers that belong here: NEEDS HUMAN of any
+  kind (missing fact, required essay or "no AI" question, interactive CAPTCHA, emailed code that failed,
+  cross-origin iframe resume upload), a portal that needs an account or sign-in, an apply flow only
+  available through LinkedIn Easy Apply or another blocked aggregator, a form left half-open for the user,
+  and GrepJob or sweep leads whose company form the agent could not reach. Status starts as `Open`.
+- NOT in the tracker: hard eligibility mismatches (wrong level, too many years, wrong location, under the
+  floor) — those are SKIP lines in the log only. Strong targets left over because the per-run cap was hit go
+  to the top of `data/queue.md` for the next run, not to "Apply yourself".
+- Rows the user marked `Applied by me ...` count as real applications for every duplicate and lifetime
+  rule. Never re-add a posting that already has a row; update its row instead.
 
 ## Duplicate rules
 - **Grep BOTH `applications/` filenames AND `logs/applications-log.md` for the company, then match
@@ -471,7 +360,9 @@ Notes that keep costing runs when forgotten:
   per-application-doc convention started partway through, so the earliest applications exist only
   as numbered entries in the log and a filename grep returns nothing for them. That gap is what
   resubmitted IMC on 2026-08-07 with every documented check passing. See `data/ats-field-notes.md`.
-- Never open a second req at a company that already got an application the SAME day.
+- A second req at a company the SAME day is ALLOWED: the user turned `run.same_day_company_freeze` off and
+  said "yes, remove the same-day rule" on 2026-10-05. Never mark a lead blocked or skipped for a same-day freeze.
+  The lifetime cap of 2 per company still applies.
 - **★ COUNT THE COMPANY'S LIFETIME TOTAL, NOT JUST TODAY'S.** Before opening a req, count every
   prior application to that company across `applications/` and `logs/applications-log.md`. At or
   above `run.max_applications_per_company_lifetime` (default 2), SKIP and log one line. The
