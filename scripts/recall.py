@@ -46,7 +46,8 @@ def bank(track):
                 comps = sorted(p.get('companies', {}).items(), key=lambda kv: -(kv[1].get('6m', 0) or kv[1].get('all', 0)))
                 items.append({'id': p['slug'], 'title': p['title'], 'difficulty': p['difficulty'], 'topic': p['category'] or (p['topics'][0] if p['topics'] else ''),
                               'topics': p['topics'], 'lists': p['lists'], 'url': p['url'], 'companies': [c for c, _ in comps[:12]], 'company_count': len(comps)})
-            _bank_cache[track] = {'items': items, 'categories': d.get('categories', []), 'companies': d.get('companies', []), '_mtime': mt}
+            _bank_cache[track] = {'items': items, 'categories': d.get('categories', []), 'companies': d.get('companies', []),
+                                  'company_lists': d.get('company_lists', {}), '_mtime': mt}
         else:
             _bank_cache[track] = {'items': d.get('items', []), 'categories': sorted({i['topic'] for i in d.get('items', [])}), 'companies': [], '_mtime': mt}
     return _bank_cache[track]
@@ -85,7 +86,7 @@ def public_state():
     if cur.isoformat() not in days: cur -= datetime.timedelta(days=1)
     while cur.isoformat() in days: streak += 1; cur -= datetime.timedelta(days=1)
     return {'settings': {'provider': c.get('provider', 'anthropic'), 'model': c.get('model') or DEFAULT_MODEL.get(c.get('provider', 'anthropic')),
-                         'has_key': bool(c.get('api_key')), 'default_minutes': int(c.get('default_minutes', 25))},
+                         'has_key': bool(c.get('api_key')), 'default_minutes': int(c.get('default_minutes', 25)), 'company_focus': c.get('company_focus', '')},
             'banks': {t: bank(t) for t in BANKS}, 'items': st.get('items', {}), 'restated': st.get('restated', {}),
             'sessions': sessions[-200:], 'daily': daily, 'streak': streak, 'today': today(), 'external': st.get('external', [])[-100:],
             'plan': plan(st), 'program': program_view(st), 'metrics': metrics(st)}   # plan first: it starts the program on day one
@@ -95,6 +96,7 @@ def save_settings(body):
         c = cfg()
         for k in ('provider', 'model', 'default_minutes'):
             if k in body and body[k] not in (None, ''): c[k] = body[k]
+        if 'company_focus' in body: c['company_focus'] = str(body['company_focus'] or '').strip()   # empty clears it
         if body.get('api_key'): c['api_key'] = str(body['api_key']).strip()   # typed by the user in the UI; never echoed back
         if body.get('clear_key'): c.pop('api_key', None)
         _save(CFG, c)
@@ -348,6 +350,9 @@ def recommend(st, track, exclude=(), d=None):
     focus = (wk.get('focus') or {}).get(track, '')
     mast = mastery(st, track)
     road = list(bank(track)['categories'])
+    # an active interview loop beats the curriculum: the company's last-30-days list, most frequent first
+    focus_co = cfg().get('company_focus', '') if track == 'leetcode' else ''
+    crank = {s: n for n, s in enumerate(bank('leetcode').get('company_lists', {}).get(focus_co, []))} if focus_co else {}
     def diff_rank(i):
         m = mast.get(i.get('topic') or '', {}); s = m.get('strong', 0)
         order = ['Medium', 'Hard', 'Easy'] if s >= 2 else ['Medium', 'Easy', 'Hard'] if (s >= 1 or m.get('attempted', 0) >= 2) else ['Easy', 'Medium', 'Hard']
@@ -361,7 +366,8 @@ def recommend(st, track, exclude=(), d=None):
         attempted = bool(p.get('attempts')); due = attempted and p.get('next_due') and p['next_due'] <= d
         pref150 = 0 if (track != 'leetcode' or 'neetcode150' in (i.get('lists') or [])) else 1
         if due: tier, sub = 0, (p.get('best', 0), n)
-        elif not attempted and cat == focus: tier, sub = 1, (pref150, diff_rank(i), n)
+        elif not attempted and i['id'] in crank: tier, sub = 1, (crank[i['id']], n)
+        elif not attempted and cat == focus: tier, sub = 1.2, (pref150, diff_rank(i), n)
         elif not attempted: tier, sub = 2, (road_rank(i), pref150, diff_rank(i), n)
         elif p.get('best', 0) < 8: tier, sub = 3, (p.get('best', 0), n)
         else: tier, sub = 4, (p.get('next_due') or '', n)
@@ -371,6 +377,7 @@ def recommend(st, track, exclude=(), d=None):
     p = items.get(_key(track, best['id']), {}); cat = best.get('topic') or ''
     is_due = bool(p.get('attempts') and p.get('next_due') and p['next_due'] <= d)
     if is_due: why = 'Due for review (best %s/10)' % p.get('best', 0)
+    elif not p.get('attempts') and best['id'] in crank: why = "#%d on %s's last-30-days list" % (crank[best['id']] + 1, focus_co)
     elif not p.get('attempts') and cat == focus: why = "This week's focus: %s" % focus
     elif not p.get('attempts'): why = 'New, in your weakest category: %s' % cat
     elif p.get('best', 0) < 8: why = 'Below 8 last time (%s/10), try again' % p.get('best', 0)

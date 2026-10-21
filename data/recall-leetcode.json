@@ -10,7 +10,8 @@
 ],
 "url": "https://leetcode.com/problems/concatenation-of-array/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -24,7 +25,8 @@
 },
 "Google": {
 "6m": 67.0,
-"all": 61.4
+"all": 61.4,
+"30d": 57.2
 },
 "Meta": {
 "6m": 46.4,
@@ -103,7 +105,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Arrays & Hashing",
 "companies": {
@@ -129,7 +132,8 @@
 },
 "Google": {
 "6m": 57.6,
-"all": 57.7
+"all": 57.7,
+"30d": 48.7
 },
 "IBM": {
 "6m": 74.4,
@@ -169,7 +173,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Arrays & Hashing",
 "companies": {
@@ -221,7 +226,8 @@
 },
 "Google": {
 "6m": 100.0,
-"all": 100.0
+"all": 100.0,
+"30d": 100.0
 },
 "IBM": {
 "all": 84.7
@@ -287,7 +293,8 @@
 ],
 "url": "https://leetcode.com/problems/longest-common-prefix/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -308,7 +315,8 @@
 },
 "Google": {
 "6m": 66.1,
-"all": 73.8
+"all": 73.8,
+"30d": 60.4
 },
 "Hudson River Trading": {
 "all": 62.5
@@ -359,7 +367,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Arrays & Hashing",
 "companies": {
@@ -392,7 +401,8 @@
 },
 "Google": {
 "6m": 60.0,
-"all": 58.3
+"all": 58.3,
+"30d": 57.2
 },
 "IBM": {
 "all": 68.7
@@ -446,7 +456,8 @@
 ],
 "url": "https://leetcode.com/problems/remove-element/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -463,7 +474,8 @@
 },
 "Google": {
 "6m": 46.8,
-"all": 57.9
+"all": 57.9,
+"30d": 34.4
 },
 "IBM": {
 "all": 34.6
@@ -492,7 +504,8 @@
 ],
 "url": "https://leetcode.com/problems/majority-element/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -515,7 +528,8 @@
 },
 "Google": {
 "6m": 59.5,
-"all": 66.6
+"all": 66.6,
+"30d": 48.7
 },
 "IBM": {
 "all": 34.6
@@ -755,7 +769,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Arrays & Hashing",
 "companies": {
@@ -782,7 +797,8 @@
 },
 "Google": {
 "6m": 50.2,
-"all": 58.6
+"all": 58.6,
+"30d": 48.7
 },
 "Meta": {
 "6m": 49.5,
@@ -1048,7 +1064,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Arrays & Hashing",
 "companies": {
@@ -1078,7 +1095,8 @@
 },
 "Google": {
 "6m": 66.7,
-"all": 70.8
+"all": 70.8,
+"30d": 48.7
 },
 "IBM": {
 "all": 50.2
@@ -1128,7 +1146,8 @@
 ],
 "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -1152,7 +1171,8 @@
 },
 "Google": {
 "6m": 46.8,
-"all": 48.1
+"all": 48.1,
+"30d": 34.4
 },
 "Meta": {
 "6m": 52.3,
@@ -1222,7 +1242,8 @@
 ],
 "url": "https://leetcode.com/problems/subarray-sum-equals-k/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -1249,7 +1270,8 @@
 },
 "Google": {
 "6m": 57.1,
-"all": 65.8
+"all": 65.8,
+"30d": 34.4
 },
 "IBM": {
 "all": 75.3
@@ -1346,7 +1368,8 @@
 ],
 "url": "https://leetcode.com/problems/reverse-string/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -1366,7 +1389,8 @@
 },
 "Google": {
 "6m": 49.5,
-"all": 47.1
+"all": 47.1,
+"30d": 42.7
 },
 "Meta": {
 "6m": 42.7,
@@ -1552,7 +1576,8 @@
 ],
 "url": "https://leetcode.com/problems/merge-sorted-array/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -1575,7 +1600,8 @@
 },
 "Google": {
 "6m": 60.0,
-"all": 69.2
+"all": 69.2,
+"30d": 53.4
 },
 "IBM": {
 "all": 34.6
@@ -1612,7 +1638,8 @@
 ],
 "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -1632,7 +1659,8 @@
 },
 "Google": {
 "6m": 62.0,
-"all": 65.7
+"all": 65.7,
+"30d": 34.4
 },
 "IBM": {
 "all": 34.6
@@ -1662,7 +1690,8 @@
 "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Two Pointers",
 "companies": {
@@ -1678,7 +1707,8 @@
 },
 "Google": {
 "6m": 45.9,
-"all": 49.9
+"all": 49.9,
+"30d": 48.7
 },
 "Meta": {
 "6m": 42.7,
@@ -1712,7 +1742,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Two Pointers",
 "companies": {
@@ -1739,7 +1770,8 @@
 },
 "Google": {
 "6m": 70.4,
-"all": 72.8
+"all": 72.8,
+"30d": 65.7
 },
 "IBM": {
 "all": 59.4
@@ -1833,7 +1865,8 @@
 ],
 "url": "https://leetcode.com/problems/rotate-array/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -1851,7 +1884,8 @@
 },
 "Google": {
 "6m": 51.7,
-"all": 56.4
+"all": 56.4,
+"30d": 34.4
 },
 "IBM": {
 "all": 34.6
@@ -1886,7 +1920,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Two Pointers",
 "companies": {
@@ -1913,7 +1948,8 @@
 },
 "Google": {
 "6m": 63.9,
-"all": 68.4
+"all": 68.4,
+"30d": 42.7
 },
 "IBM": {
 "6m": 74.4,
@@ -2005,7 +2041,8 @@
 "url": "https://leetcode.com/problems/trapping-rain-water/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Two Pointers",
 "companies": {
@@ -2038,7 +2075,8 @@
 },
 "Google": {
 "6m": 67.6,
-"all": 73.5
+"all": 73.5,
+"30d": 65.7
 },
 "IBM": {
 "all": 43.6
@@ -2143,7 +2181,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Sliding Window",
 "companies": {
@@ -2184,7 +2223,8 @@
 },
 "Google": {
 "6m": 69.7,
-"all": 71.9
+"all": 71.9,
+"30d": 63.2
 },
 "IBM": {
 "6m": 63.9,
@@ -2241,7 +2281,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Sliding Window",
 "companies": {
@@ -2272,7 +2313,8 @@
 },
 "Google": {
 "6m": 69.2,
-"all": 72.6
+"all": 72.6,
+"30d": 67.9
 },
 "IBM": {
 "6m": 63.9,
@@ -2341,7 +2383,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Sliding Window",
 "companies": {
@@ -2366,7 +2409,8 @@
 },
 "Google": {
 "6m": 44.8,
-"all": 53.9
+"all": 53.9,
+"30d": 42.7
 },
 "Meta": {
 "6m": 32.4,
@@ -2444,7 +2488,8 @@
 ],
 "url": "https://leetcode.com/problems/minimum-size-subarray-sum/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -2467,7 +2512,8 @@
 },
 "Google": {
 "6m": 43.7,
-"all": 45.8
+"all": 45.8,
+"30d": 42.7
 },
 "Meta": {
 "6m": 56.8,
@@ -2640,7 +2686,8 @@
 "url": "https://leetcode.com/problems/sliding-window-maximum/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Sliding Window",
 "companies": {
@@ -2673,7 +2720,8 @@
 },
 "Google": {
 "6m": 50.2,
-"all": 55.2
+"all": 55.2,
+"30d": 48.7
 },
 "IBM": {
 "all": 50.2
@@ -2759,7 +2807,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Stack",
 "companies": {
@@ -2791,7 +2840,8 @@
 },
 "Google": {
 "6m": 62.4,
-"all": 67.4
+"all": 67.4,
+"30d": 57.2
 },
 "IBM": {
 "6m": 87.7,
@@ -2935,7 +2985,8 @@
 "url": "https://leetcode.com/problems/min-stack/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Stack",
 "companies": {
@@ -2961,7 +3012,8 @@
 },
 "Google": {
 "6m": 35.1,
-"all": 50.5
+"all": 50.5,
+"30d": 34.4
 },
 "IBM": {
 "all": 34.6
@@ -3013,7 +3065,8 @@
 "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Stack",
 "companies": {
@@ -3040,7 +3093,8 @@
 },
 "Google": {
 "6m": 25.4,
-"all": 36.5
+"all": 36.5,
+"30d": 34.4
 },
 "LinkedIn": {
 "all": 51.0
@@ -3070,7 +3124,8 @@
 "url": "https://leetcode.com/problems/generate-parentheses/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Stack",
 "companies": {
@@ -3093,7 +3148,8 @@
 },
 "Google": {
 "6m": 50.2,
-"all": 61.5
+"all": 61.5,
+"30d": 42.7
 },
 "IBM": {
 "all": 43.6
@@ -3207,7 +3263,8 @@
 "url": "https://leetcode.com/problems/daily-temperatures/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Stack",
 "companies": {
@@ -3229,7 +3286,8 @@
 },
 "Google": {
 "6m": 47.8,
-"all": 48.3
+"all": 48.3,
+"30d": 34.4
 },
 "Intuit": {
 "all": 51.8
@@ -3409,7 +3467,8 @@
 ],
 "url": "https://leetcode.com/problems/decode-string/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -3429,7 +3488,8 @@
 },
 "Google": {
 "6m": 40.0,
-"all": 57.4
+"all": 57.4,
+"30d": 34.4
 },
 "Meta": {
 "6m": 38.1,
@@ -3514,7 +3574,8 @@
 "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Stack",
 "companies": {
@@ -3540,7 +3601,8 @@
 },
 "Google": {
 "6m": 49.5,
-"all": 56.8
+"all": 56.8,
+"30d": 34.4
 },
 "IBM": {
 "all": 34.6
@@ -3623,7 +3685,8 @@
 ],
 "url": "https://leetcode.com/problems/search-insert-position/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -3637,7 +3700,8 @@
 },
 "Google": {
 "6m": 51.7,
-"all": 55.2
+"all": 55.2,
+"30d": 48.7
 },
 "Meta": {
 "6m": 52.3,
@@ -3693,7 +3757,8 @@
 ],
 "url": "https://leetcode.com/problems/sqrtx/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -3719,7 +3784,8 @@
 },
 "Google": {
 "6m": 54.9,
-"all": 52.2
+"all": 52.2,
+"30d": 34.4
 },
 "LinkedIn": {
 "all": 42.6
@@ -3813,7 +3879,8 @@
 "url": "https://leetcode.com/problems/koko-eating-bananas/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Binary Search",
 "companies": {
@@ -3845,7 +3912,8 @@
 },
 "Google": {
 "6m": 56.1,
-"all": 59.2
+"all": 59.2,
+"30d": 57.2
 },
 "IBM": {
 "all": 34.6
@@ -3948,7 +4016,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Binary Search",
 "companies": {
@@ -3965,7 +4034,8 @@
 },
 "Google": {
 "6m": 38.5,
-"all": 40.0
+"all": 40.0,
+"30d": 42.7
 },
 "LinkedIn": {
 "all": 20.3
@@ -4001,7 +4071,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Binary Search",
 "companies": {
@@ -4027,7 +4098,8 @@
 },
 "Google": {
 "6m": 53.7,
-"all": 57.3
+"all": 57.3,
+"30d": 48.7
 },
 "IBM": {
 "all": 34.6
@@ -4115,7 +4187,8 @@
 "url": "https://leetcode.com/problems/time-based-key-value-store/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Binary Search",
 "companies": {
@@ -4146,7 +4219,8 @@
 },
 "Google": {
 "6m": 21.9,
-"all": 32.6
+"all": 32.6,
+"30d": 34.4
 },
 "Lyft": {
 "6m": 96.6,
@@ -4199,7 +4273,8 @@
 ],
 "url": "https://leetcode.com/problems/split-array-largest-sum/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -4222,7 +4297,8 @@
 },
 "Google": {
 "6m": 54.3,
-"all": 58.2
+"all": 58.2,
+"30d": 48.7
 },
 "Meta": {
 "all": 45.7
@@ -4257,7 +4333,8 @@
 "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Binary Search",
 "companies": {
@@ -4287,7 +4364,8 @@
 },
 "Google": {
 "6m": 70.4,
-"all": 74.3
+"all": 74.3,
+"30d": 63.2
 },
 "IBM": {
 "all": 34.6
@@ -4366,7 +4444,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Linked List",
 "companies": {
@@ -4390,7 +4469,8 @@
 },
 "Google": {
 "6m": 51.0,
-"all": 59.4
+"all": 59.4,
+"30d": 34.4
 },
 "IBM": {
 "all": 43.6
@@ -4709,7 +4789,8 @@
 "url": "https://leetcode.com/problems/add-two-numbers/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Linked List",
 "companies": {
@@ -4741,7 +4822,8 @@
 },
 "Google": {
 "6m": 75.0,
-"all": 78.6
+"all": 78.6,
+"30d": 67.9
 },
 "IBM": {
 "all": 43.6
@@ -4786,7 +4868,8 @@
 "url": "https://leetcode.com/problems/find-the-duplicate-number/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Linked List",
 "companies": {
@@ -4810,7 +4893,8 @@
 },
 "Google": {
 "6m": 44.8,
-"all": 45.8
+"all": 45.8,
+"30d": 42.7
 },
 "Meta": {
 "6m": 38.1,
@@ -4840,7 +4924,8 @@
 ],
 "url": "https://leetcode.com/problems/reverse-linked-list-ii/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -4857,7 +4942,8 @@
 },
 "Google": {
 "6m": 30.9,
-"all": 40.0
+"all": 40.0,
+"30d": 34.4
 },
 "Meta": {
 "6m": 24.6,
@@ -5528,7 +5614,8 @@
 "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Trees",
 "companies": {
@@ -5551,7 +5638,8 @@
 },
 "Google": {
 "6m": 40.0,
-"all": 44.1
+"all": 44.1,
+"30d": 34.4
 },
 "Meta": {
 "6m": 46.4,
@@ -5591,7 +5679,8 @@
 "url": "https://leetcode.com/problems/balanced-binary-tree/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Trees",
 "companies": {
@@ -5612,7 +5701,8 @@
 },
 "Google": {
 "6m": 35.1,
-"all": 36.0
+"all": 36.0,
+"30d": 34.4
 },
 "Meta": {
 "6m": 38.1,
@@ -5727,7 +5817,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Trees",
 "companies": {
@@ -5744,7 +5835,8 @@
 },
 "Google": {
 "6m": 30.9,
-"all": 28.3
+"all": 28.3,
+"30d": 42.7
 },
 "LinkedIn": {
 "all": 64.7
@@ -5769,7 +5861,8 @@
 ],
 "url": "https://leetcode.com/problems/insert-into-a-binary-search-tree/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -5786,7 +5879,8 @@
 },
 "Google": {
 "6m": 21.9,
-"all": 27.4
+"all": 27.4,
+"30d": 34.4
 },
 "LinkedIn": {
 "all": 20.3
@@ -6032,7 +6126,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Trees",
 "companies": {
@@ -6052,7 +6147,8 @@
 },
 "Google": {
 "6m": 35.1,
-"all": 36.0
+"all": 36.0,
+"30d": 42.7
 },
 "IBM": {
 "all": 34.6
@@ -7090,7 +7186,8 @@
 "url": "https://leetcode.com/problems/subsets/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Backtracking",
 "companies": {
@@ -7110,7 +7207,8 @@
 },
 "Google": {
 "6m": 33.2,
-"all": 52.2
+"all": 52.2,
+"30d": 34.4
 },
 "Meta": {
 "6m": 56.8,
@@ -7142,7 +7240,8 @@
 "url": "https://leetcode.com/problems/combination-sum/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Backtracking",
 "companies": {
@@ -7165,7 +7264,8 @@
 },
 "Google": {
 "6m": 44.8,
-"all": 47.4
+"all": 47.4,
+"30d": 34.4
 },
 "LinkedIn": {
 "all": 27.3
@@ -7209,7 +7309,8 @@
 "url": "https://leetcode.com/problems/combination-sum-ii/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Backtracking",
 "companies": {
@@ -7226,7 +7327,8 @@
 },
 "Google": {
 "6m": 25.4,
-"all": 33.8
+"all": 33.8,
+"30d": 34.4
 },
 "LinkedIn": {
 "all": 36.5
@@ -7511,7 +7613,8 @@
 "url": "https://leetcode.com/problems/palindrome-partitioning/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Tries",
 "companies": {
@@ -7528,7 +7631,8 @@
 },
 "Google": {
 "6m": 36.9,
-"all": 46.1
+"all": 46.1,
+"30d": 34.4
 },
 "Meta": {
 "6m": 49.5,
@@ -7556,7 +7660,8 @@
 "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Tries",
 "companies": {
@@ -7585,7 +7690,8 @@
 },
 "Google": {
 "6m": 51.7,
-"all": 57.8
+"all": 57.8,
+"30d": 34.4
 },
 "IBM": {
 "all": 50.2
@@ -7709,7 +7815,8 @@
 "url": "https://leetcode.com/problems/n-queens/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Tries",
 "companies": {
@@ -7729,7 +7836,8 @@
 },
 "Google": {
 "6m": 51.7,
-"all": 58.5
+"all": 58.5,
+"30d": 34.4
 },
 "IBM": {
 "all": 34.6
@@ -8181,7 +8289,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Graphs",
 "companies": {
@@ -8225,7 +8334,8 @@
 },
 "Google": {
 "6m": 53.7,
-"all": 64.1
+"all": 64.1,
+"30d": 42.7
 },
 "IBM": {
 "all": 50.2
@@ -8451,7 +8561,8 @@
 "url": "https://leetcode.com/problems/rotting-oranges/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Graphs",
 "companies": {
@@ -8488,7 +8599,8 @@
 },
 "Google": {
 "6m": 42.6,
-"all": 51.1
+"all": 51.1,
+"30d": 34.4
 },
 "IBM": {
 "all": 50.2
@@ -8714,7 +8826,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Graphs",
 "companies": {
@@ -8748,7 +8861,8 @@
 },
 "Google": {
 "6m": 41.3,
-"all": 51.4
+"all": 51.4,
+"30d": 34.4
 },
 "LinkedIn": {
 "all": 27.3
@@ -8806,7 +8920,8 @@
 "url": "https://leetcode.com/problems/course-schedule-ii/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Graphs",
 "companies": {
@@ -8841,7 +8956,8 @@
 },
 "Google": {
 "6m": 30.9,
-"all": 37.0
+"all": 37.0,
+"30d": 34.4
 },
 "IBM": {
 "all": 34.6
@@ -9490,7 +9606,8 @@
 "url": "https://leetcode.com/problems/swim-in-rising-water/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Advanced Graphs",
 "companies": {
@@ -9505,7 +9622,8 @@
 },
 "Google": {
 "6m": 33.2,
-"all": 40.8
+"all": 40.8,
+"30d": 34.4
 },
 "Meta": {
 "6m": 24.6,
@@ -9731,7 +9849,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "1-D Dynamic Programming",
 "companies": {
@@ -9757,7 +9876,8 @@
 },
 "Google": {
 "6m": 56.6,
-"all": 62.8
+"all": 62.8,
+"30d": 53.4
 },
 "IBM": {
 "all": 34.6
@@ -9866,7 +9986,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "1-D Dynamic Programming",
 "companies": {
@@ -9902,7 +10023,8 @@
 },
 "Google": {
 "6m": 49.5,
-"all": 57.4
+"all": 57.4,
+"30d": 34.4
 },
 "Intuit": {
 "all": 43.1
@@ -10001,7 +10123,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "1-D Dynamic Programming",
 "companies": {
@@ -10035,7 +10158,8 @@
 },
 "Google": {
 "6m": 62.0,
-"all": 69.4
+"all": 69.4,
+"30d": 48.7
 },
 "IBM": {
 "6m": 74.4,
@@ -10483,7 +10607,8 @@
 "url": "https://leetcode.com/problems/partition-equal-subset-sum/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "1-D Dynamic Programming",
 "companies": {
@@ -10503,7 +10628,8 @@
 },
 "Google": {
 "6m": 41.3,
-"all": 45.8
+"all": 45.8,
+"30d": 34.4
 },
 "Meta": {
 "all": 35.2
@@ -11441,7 +11567,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Greedy",
 "companies": {
@@ -11467,7 +11594,8 @@
 },
 "Google": {
 "6m": 59.1,
-"all": 64.8
+"all": 64.8,
+"30d": 53.4
 },
 "IBM": {
 "all": 55.2
@@ -11590,7 +11718,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Greedy",
 "companies": {
@@ -11617,7 +11746,8 @@
 },
 "Google": {
 "6m": 47.8,
-"all": 55.8
+"all": 55.8,
+"30d": 48.7
 },
 "Meta": {
 "6m": 54.7,
@@ -11943,7 +12073,8 @@
 "url": "https://leetcode.com/problems/valid-parenthesis-string/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Greedy",
 "companies": {
@@ -11964,7 +12095,8 @@
 },
 "Google": {
 "6m": 30.9,
-"all": 32.0
+"all": 32.0,
+"30d": 42.7
 },
 "LinkedIn": {
 "all": 36.5
@@ -12104,7 +12236,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Intervals",
 "companies": {
@@ -12152,7 +12285,8 @@
 },
 "Google": {
 "6m": 50.2,
-"all": 64.8
+"all": 64.8,
+"30d": 48.7
 },
 "IBM": {
 "6m": 81.9,
@@ -12337,7 +12471,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Intervals",
 "companies": {
@@ -12369,7 +12504,8 @@
 },
 "Google": {
 "6m": 47.8,
-"all": 57.9
+"all": 57.9,
+"30d": 48.7
 },
 "IBM": {
 "all": 55.2
@@ -12429,7 +12565,8 @@
 ],
 "url": "https://leetcode.com/problems/meeting-rooms-iii/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -12448,7 +12585,8 @@
 },
 "Google": {
 "6m": 28.4,
-"all": 40.8
+"all": 40.8,
+"30d": 42.7
 },
 "IBM": {
 "all": 34.6
@@ -12553,7 +12691,8 @@
 ],
 "url": "https://leetcode.com/problems/greatest-common-divisor-of-strings/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -12565,7 +12704,8 @@
 },
 "Google": {
 "6m": 35.1,
-"all": 41.2
+"all": 41.2,
+"30d": 42.7
 },
 "Meta": {
 "6m": 24.6,
@@ -12959,7 +13099,8 @@
 ],
 "url": "https://leetcode.com/problems/roman-to-integer/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -12985,7 +13126,8 @@
 },
 "Google": {
 "6m": 54.9,
-"all": 65.1
+"all": 65.1,
+"30d": 48.7
 },
 "IBM": {
 "6m": 63.9,
@@ -13166,7 +13308,8 @@
 "url": "https://leetcode.com/problems/single-number/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Bit Manipulation",
 "companies": {
@@ -13192,7 +13335,8 @@
 },
 "Google": {
 "6m": 43.7,
-"all": 57.5
+"all": 57.5,
+"30d": 34.4
 },
 "Meta": {
 "6m": 63.8,
@@ -13219,7 +13363,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Bit Manipulation",
 "companies": {
@@ -13235,7 +13380,8 @@
 },
 "Google": {
 "6m": 25.4,
-"all": 31.3
+"all": 31.3,
+"30d": 34.4
 },
 "IBM": {
 "all": 34.6
@@ -13307,7 +13453,8 @@
 ],
 "url": "https://leetcode.com/problems/add-binary/",
 "lists": [
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "",
 "companies": {
@@ -13321,7 +13468,8 @@
 },
 "Google": {
 "6m": 45.9,
-"all": 53.2
+"all": 53.2,
+"30d": 42.7
 },
 "IBM": {
 "all": 34.6
@@ -13403,7 +13551,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Bit Manipulation",
 "companies": {
@@ -13423,7 +13572,8 @@
 },
 "Google": {
 "6m": 46.8,
-"all": 45.6
+"all": 45.6,
+"30d": 34.4
 },
 "IBM": {
 "all": 34.6
@@ -13455,7 +13605,8 @@
 "lists": [
 "neetcode150",
 "blind75",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Bit Manipulation",
 "companies": {
@@ -13469,7 +13620,8 @@
 },
 "Google": {
 "6m": 28.4,
-"all": 37.0
+"all": 37.0,
+"30d": 34.4
 },
 "IBM": {
 "all": 34.6
@@ -13493,7 +13645,8 @@
 "url": "https://leetcode.com/problems/reverse-integer/",
 "lists": [
 "neetcode150",
-"neetcode250"
+"neetcode250",
+"company:Google"
 ],
 "category": "Bit Manipulation",
 "companies": {
@@ -13510,7 +13663,8 @@
 },
 "Google": {
 "6m": 66.1,
-"all": 66.3
+"all": 66.3,
+"30d": 57.2
 },
 "LinkedIn": {
 "all": 20.3
@@ -13579,6 +13733,1557 @@
 },
 "Google": {
 "all": 10.6
+}
+}
+},
+{
+"slug": "palindrome-number",
+"title": "Palindrome Number",
+"difficulty": "Easy",
+"topics": [
+"Math"
+],
+"url": "https://leetcode.com/problems/palindrome-number/",
+"lists": [
+"company:Google"
+],
+"category": "Math & Geometry",
+"companies": {
+"Google": {
+"30d": 73.4
+}
+}
+},
+{
+"slug": "add-two-integers",
+"title": "Add Two Integers",
+"difficulty": "Easy",
+"topics": [
+"Math"
+],
+"url": "https://leetcode.com/problems/add-two-integers/",
+"lists": [
+"company:Google"
+],
+"category": "Math & Geometry",
+"companies": {
+"Google": {
+"30d": 60.4
+}
+}
+},
+{
+"slug": "max-consecutive-ones",
+"title": "Max Consecutive Ones",
+"difficulty": "Easy",
+"topics": [
+"Array"
+],
+"url": "https://leetcode.com/problems/max-consecutive-ones/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 57.2
+}
+}
+},
+{
+"slug": "combine-two-tables",
+"title": "Combine Two Tables",
+"difficulty": "Easy",
+"topics": [
+"Database"
+],
+"url": "https://leetcode.com/problems/combine-two-tables/",
+"lists": [
+"company:Google"
+],
+"category": "",
+"companies": {
+"Google": {
+"30d": 53.4
+}
+}
+},
+{
+"slug": "find-the-index-of-the-first-occurrence-in-a-string",
+"title": "Find the Index of the First Occurrence in a String",
+"difficulty": "Easy",
+"topics": [
+"Two Pointers",
+"String",
+"String Matching",
+"Z Algorithm",
+"Knuth\u2013Morris\u2013Pratt Algorithm",
+"Boyer\u2013Moore String-Search Algorithm"
+],
+"url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+"lists": [
+"company:Google"
+],
+"category": "Two Pointers",
+"companies": {
+"Google": {
+"30d": 53.4
+}
+}
+},
+{
+"slug": "zigzag-conversion",
+"title": "Zigzag Conversion",
+"difficulty": "Medium",
+"topics": [
+"String"
+],
+"url": "https://leetcode.com/problems/zigzag-conversion/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 53.4
+}
+}
+},
+{
+"slug": "minimum-sum-of-squared-difference",
+"title": "Minimum Sum of Squared Difference",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search",
+"Greedy",
+"Sorting",
+"Heap (Priority Queue)"
+],
+"url": "https://leetcode.com/problems/minimum-sum-of-squared-difference/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 53.4
+}
+}
+},
+{
+"slug": "power-of-three",
+"title": "Power of Three",
+"difficulty": "Easy",
+"topics": [
+"Math",
+"Recursion"
+],
+"url": "https://leetcode.com/problems/power-of-three/",
+"lists": [
+"company:Google"
+],
+"category": "Math & Geometry",
+"companies": {
+"Google": {
+"30d": 48.7
+}
+}
+},
+{
+"slug": "minimum-operations-to-reduce-x-to-zero",
+"title": "Minimum Operations to Reduce X to Zero",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Binary Search",
+"Sliding Window",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 48.7
+}
+}
+},
+{
+"slug": "intersection-of-two-arrays",
+"title": "Intersection of Two Arrays",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"Two Pointers",
+"Binary Search",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/intersection-of-two-arrays/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 48.7
+}
+}
+},
+{
+"slug": "find-first-and-last-position-of-element-in-sorted-array",
+"title": "Find First and Last Position of Element in Sorted Array",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search"
+],
+"url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 48.7
+}
+}
+},
+{
+"slug": "pascals-triangle",
+"title": "Pascal's Triangle",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/pascals-triangle/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 48.7
+}
+}
+},
+{
+"slug": "remove-k-digits",
+"title": "Remove K Digits",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Stack",
+"Greedy",
+"Monotonic Stack"
+],
+"url": "https://leetcode.com/problems/remove-k-digits/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 48.7
+}
+}
+},
+{
+"slug": "move-zeroes",
+"title": "Move Zeroes",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Two Pointers"
+],
+"url": "https://leetcode.com/problems/move-zeroes/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "can-make-arithmetic-progression-from-sequence",
+"title": "Can Make Arithmetic Progression From Sequence",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "invalid-tweets",
+"title": "Invalid Tweets",
+"difficulty": "Easy",
+"topics": [
+"Database"
+],
+"url": "https://leetcode.com/problems/invalid-tweets/",
+"lists": [
+"company:Google"
+],
+"category": "",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "reverse-degree-of-a-string",
+"title": "Reverse Degree of a String",
+"difficulty": "Easy",
+"topics": [
+"String",
+"Simulation"
+],
+"url": "https://leetcode.com/problems/reverse-degree-of-a-string/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "maximum-profit-in-job-scheduling",
+"title": "Maximum Profit in Job Scheduling",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Binary Search",
+"Dynamic Programming",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/maximum-profit-in-job-scheduling/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "russian-doll-envelopes",
+"title": "Russian Doll Envelopes",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Binary Search",
+"Dynamic Programming",
+"Sorting",
+"Longest Increasing Subsequence"
+],
+"url": "https://leetcode.com/problems/russian-doll-envelopes/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "score-of-parentheses",
+"title": "Score of Parentheses",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Stack",
+"Bracket Sequences"
+],
+"url": "https://leetcode.com/problems/score-of-parentheses/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "find-the-safest-path-in-a-grid",
+"title": "Find the Safest Path in a Grid",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search",
+"Breadth-First Search",
+"Union-Find",
+"Heap (Priority Queue)",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/find-the-safest-path-in-a-grid/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "minimum-insertions-to-balance-a-parentheses-string",
+"title": "Minimum Insertions to Balance a Parentheses String",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Stack",
+"Greedy",
+"Bracket Sequences"
+],
+"url": "https://leetcode.com/problems/minimum-insertions-to-balance-a-parentheses-string/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "length-of-last-word",
+"title": "Length of Last Word",
+"difficulty": "Easy",
+"topics": [
+"String"
+],
+"url": "https://leetcode.com/problems/length-of-last-word/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "maximum-alternating-sum-of-squares",
+"title": "Maximum Alternating Sum of Squares",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Greedy",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/maximum-alternating-sum-of-squares/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "subarrays-distinct-element-sum-of-squares-i",
+"title": "Subarrays Distinct Element Sum of Squares I",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"Binary Indexed Tree",
+"Segment Tree"
+],
+"url": "https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "find-target-indices-after-sorting-array",
+"title": "Find Target Indices After Sorting Array",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Binary Search",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/find-target-indices-after-sorting-array/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 42.7
+}
+}
+},
+{
+"slug": "subarray-product-less-than-k",
+"title": "Subarray Product Less Than K",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search",
+"Sliding Window",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/subarray-product-less-than-k/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "find-customer-referee",
+"title": "Find Customer Referee",
+"difficulty": "Easy",
+"topics": [
+"Database"
+],
+"url": "https://leetcode.com/problems/find-customer-referee/",
+"lists": [
+"company:Google"
+],
+"category": "",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "shuffle-the-array",
+"title": "Shuffle the Array",
+"difficulty": "Easy",
+"topics": [
+"Array"
+],
+"url": "https://leetcode.com/problems/shuffle-the-array/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "count-and-say",
+"title": "Count and Say",
+"difficulty": "Medium",
+"topics": [
+"String"
+],
+"url": "https://leetcode.com/problems/count-and-say/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "contiguous-array",
+"title": "Contiguous Array",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/contiguous-array/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "string-to-integer-atoi",
+"title": "String to Integer (atoi)",
+"difficulty": "Medium",
+"topics": [
+"String"
+],
+"url": "https://leetcode.com/problems/string-to-integer-atoi/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "smallest-index-with-digit-sum-equal-to-index",
+"title": "Smallest Index With Digit Sum Equal to Index",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Math"
+],
+"url": "https://leetcode.com/problems/smallest-index-with-digit-sum-equal-to-index/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "lucky-numbers-in-a-matrix",
+"title": "Lucky Numbers in a Matrix",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/lucky-numbers-in-a-matrix/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "partition-array-into-two-arrays-to-minimize-sum-difference",
+"title": "Partition Array Into Two Arrays to Minimize Sum Difference",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Two Pointers",
+"Binary Search",
+"Dynamic Programming",
+"Bit Manipulation",
+"Meet in the Middle",
+"Sorting",
+"Ordered Set",
+"Bitmask"
+],
+"url": "https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "last-day-where-you-can-still-cross",
+"title": "Last Day Where You Can Still Cross",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Binary Search",
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/last-day-where-you-can-still-cross/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "reverse-substrings-between-each-pair-of-parentheses",
+"title": "Reverse Substrings Between Each Pair of Parentheses",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Stack",
+"Bracket Sequences"
+],
+"url": "https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "allocate-mailboxes",
+"title": "Allocate Mailboxes",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Math",
+"Dynamic Programming",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/allocate-mailboxes/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "maximum-nesting-depth-of-two-valid-parentheses-strings",
+"title": "Maximum Nesting Depth of Two Valid Parentheses Strings",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Stack",
+"Bracket Sequences"
+],
+"url": "https://leetcode.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "first-bad-version",
+"title": "First Bad Version",
+"difficulty": "Easy",
+"topics": [
+"Binary Search",
+"Interactive"
+],
+"url": "https://leetcode.com/problems/first-bad-version/",
+"lists": [
+"company:Google"
+],
+"category": "Binary Search",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "find-x-value-of-array-i",
+"title": "Find X Value of Array I",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Math",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/find-x-value-of-array-i/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "find-all-numbers-disappeared-in-an-array",
+"title": "Find All Numbers Disappeared in an Array",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table"
+],
+"url": "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "set-mismatch",
+"title": "Set Mismatch",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"Bit Manipulation",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/set-mismatch/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "summary-ranges",
+"title": "Summary Ranges",
+"difficulty": "Easy",
+"topics": [
+"Array"
+],
+"url": "https://leetcode.com/problems/summary-ranges/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "maximum-subarray-sum-with-one-deletion",
+"title": "Maximum Subarray Sum with One Deletion",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "longest-non-decreasing-subarray-after-replacing-at-most-one-element",
+"title": "Longest Non-Decreasing Subarray After Replacing at Most One Element",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "find-pivot-index",
+"title": "Find Pivot Index",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/find-pivot-index/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "minimum-add-to-make-parentheses-valid",
+"title": "Minimum Add to Make Parentheses Valid",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Stack",
+"Greedy",
+"Bracket Sequences"
+],
+"url": "https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "parse-lisp-expression",
+"title": "Parse Lisp Expression",
+"difficulty": "Hard",
+"topics": [
+"Hash Table",
+"String",
+"Stack",
+"Recursion"
+],
+"url": "https://leetcode.com/problems/parse-lisp-expression/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "continuous-subarray-sum",
+"title": "Continuous Subarray Sum",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Math",
+"Prefix Sum",
+"Pigeonhole Principle"
+],
+"url": "https://leetcode.com/problems/continuous-subarray-sum/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "largest-3-same-digit-number-in-string",
+"title": "Largest 3-Same-Digit Number in String",
+"difficulty": "Easy",
+"topics": [
+"String"
+],
+"url": "https://leetcode.com/problems/largest-3-same-digit-number-in-string/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "kth-ancestor-of-a-tree-node",
+"title": "Kth Ancestor of a Tree Node",
+"difficulty": "Hard",
+"topics": [
+"Binary Search",
+"Dynamic Programming",
+"Bit Manipulation",
+"Tree",
+"Depth-First Search",
+"Breadth-First Search",
+"Design",
+"Binary Lifting"
+],
+"url": "https://leetcode.com/problems/kth-ancestor-of-a-tree-node/",
+"lists": [
+"company:Google"
+],
+"category": "Binary Search",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "flatten-binary-tree-to-linked-list",
+"title": "Flatten Binary Tree to Linked List",
+"difficulty": "Medium",
+"topics": [
+"Linked List",
+"Stack",
+"Tree",
+"Depth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
+"lists": [
+"company:Google"
+],
+"category": "Linked List",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "couples-holding-hands",
+"title": "Couples Holding Hands",
+"difficulty": "Hard",
+"topics": [
+"Greedy",
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Graph Theory"
+],
+"url": "https://leetcode.com/problems/couples-holding-hands/",
+"lists": [
+"company:Google"
+],
+"category": "Greedy",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "sudoku-solver",
+"title": "Sudoku Solver",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Hash Table",
+"Backtracking",
+"Matrix",
+"Algorithm X",
+"Dancing Links"
+],
+"url": "https://leetcode.com/problems/sudoku-solver/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "apply-operations-on-array-to-maximize-sum-of-squares",
+"title": "Apply Operations on Array to Maximize Sum of Squares",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Hash Table",
+"Greedy",
+"Bit Manipulation"
+],
+"url": "https://leetcode.com/problems/apply-operations-on-array-to-maximize-sum-of-squares/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "first-unique-character-in-a-string",
+"title": "First Unique Character in a String",
+"difficulty": "Easy",
+"topics": [
+"Hash Table",
+"String",
+"Queue",
+"Counting"
+],
+"url": "https://leetcode.com/problems/first-unique-character-in-a-string/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "counter",
+"title": "Counter",
+"difficulty": "Easy",
+"topics": [],
+"url": "https://leetcode.com/problems/counter/",
+"lists": [
+"company:Google"
+],
+"category": "",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "employees-earning-more-than-their-managers",
+"title": "Employees Earning More Than Their Managers",
+"difficulty": "Easy",
+"topics": [
+"Database"
+],
+"url": "https://leetcode.com/problems/employees-earning-more-than-their-managers/",
+"lists": [
+"company:Google"
+],
+"category": "",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "move-pieces-to-obtain-a-string",
+"title": "Move Pieces to Obtain a String",
+"difficulty": "Medium",
+"topics": [
+"Two Pointers",
+"String"
+],
+"url": "https://leetcode.com/problems/move-pieces-to-obtain-a-string/",
+"lists": [
+"company:Google"
+],
+"category": "Two Pointers",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "largest-number",
+"title": "Largest Number",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"String",
+"Greedy",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/largest-number/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "insert-delete-getrandom-o1",
+"title": "Insert Delete GetRandom O(1)",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Math",
+"Design",
+"Randomized"
+],
+"url": "https://leetcode.com/problems/insert-delete-getrandom-o1/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "maximal-square",
+"title": "Maximal Square",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/maximal-square/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "subarrays-distinct-element-sum-of-squares-ii",
+"title": "Subarrays Distinct Element Sum of Squares II",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Hash Table",
+"Binary Indexed Tree",
+"Segment Tree"
+],
+"url": "https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-ii/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "find-peak-element",
+"title": "Find Peak Element",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search"
+],
+"url": "https://leetcode.com/problems/find-peak-element/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "range-module",
+"title": "Range Module",
+"difficulty": "Hard",
+"topics": [
+"Design",
+"Segment Tree",
+"Ordered Set"
+],
+"url": "https://leetcode.com/problems/range-module/",
+"lists": [
+"company:Google"
+],
+"category": "Stack",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "longest-arithmetic-subsequence-of-given-difference",
+"title": "Longest Arithmetic Subsequence of Given Difference",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "ransom-note",
+"title": "Ransom Note",
+"difficulty": "Easy",
+"topics": [
+"Hash Table",
+"String",
+"Counting"
+],
+"url": "https://leetcode.com/problems/ransom-note/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "next-greater-element-i",
+"title": "Next Greater Element I",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"Stack",
+"Monotonic Stack"
+],
+"url": "https://leetcode.com/problems/next-greater-element-i/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "recyclable-and-low-fat-products",
+"title": "Recyclable and Low Fat Products",
+"difficulty": "Easy",
+"topics": [
+"Database"
+],
+"url": "https://leetcode.com/problems/recyclable-and-low-fat-products/",
+"lists": [
+"company:Google"
+],
+"category": "",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "basic-calculator",
+"title": "Basic Calculator",
+"difficulty": "Hard",
+"topics": [
+"Math",
+"String",
+"Stack",
+"Recursion"
+],
+"url": "https://leetcode.com/problems/basic-calculator/",
+"lists": [
+"company:Google"
+],
+"category": "Math & Geometry",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "battleships-in-a-board",
+"title": "Battleships in a Board",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Depth-First Search",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/battleships-in-a-board/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "longest-string-chain",
+"title": "Longest String Chain",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Two Pointers",
+"String",
+"Dynamic Programming",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/longest-string-chain/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "print-binary-tree",
+"title": "Print Binary Tree",
+"difficulty": "Medium",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Breadth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/print-binary-tree/",
+"lists": [
+"company:Google"
+],
+"category": "Trees",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "verbal-arithmetic-puzzle",
+"title": "Verbal Arithmetic Puzzle",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Math",
+"String",
+"Backtracking"
+],
+"url": "https://leetcode.com/problems/verbal-arithmetic-puzzle/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "max-consecutive-ones-iii",
+"title": "Max Consecutive Ones III",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search",
+"Sliding Window",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/max-consecutive-ones-iii/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
+}
+}
+},
+{
+"slug": "number-of-visible-people-in-a-queue",
+"title": "Number of Visible People in a Queue",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Stack",
+"Monotonic Stack"
+],
+"url": "https://leetcode.com/problems/number-of-visible-people-in-a-queue/",
+"lists": [
+"company:Google"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Google": {
+"30d": 34.4
 }
 }
 }
@@ -13659,5 +15364,163 @@
 "Two Sigma",
 "Uber",
 "Verkada"
+],
+"company_lists": {
+"Google": [
+"two-sum",
+"palindrome-number",
+"longest-substring-without-repeating-characters",
+"add-two-numbers",
+"3sum",
+"trapping-rain-water",
+"median-of-two-sorted-arrays",
+"best-time-to-buy-and-sell-stock",
+"longest-common-prefix",
+"add-two-integers",
+"concatenation-of-array",
+"reverse-integer",
+"group-anagrams",
+"valid-parentheses",
+"koko-eating-bananas",
+"max-consecutive-ones",
+"merge-sorted-array",
+"climbing-stairs",
+"combine-two-tables",
+"maximum-subarray",
+"find-the-index-of-the-first-occurrence-in-a-string",
+"zigzag-conversion",
+"minimum-sum-of-squared-difference",
+"roman-to-integer",
+"longest-consecutive-sequence",
+"search-in-rotated-sorted-array",
+"split-array-largest-sum",
+"majority-element",
+"valid-anagram",
+"search-insert-position",
+"top-k-frequent-elements",
+"sliding-window-maximum",
+"power-of-three",
+"minimum-operations-to-reduce-x-to-zero",
+"intersection-of-two-arrays",
+"find-first-and-last-position-of-element-in-sorted-array",
+"two-sum-ii-input-array-is-sorted",
+"merge-intervals",
+"pascals-triangle",
+"jump-game",
+"remove-k-digits",
+"meeting-rooms-ii",
+"longest-palindromic-substring",
+"container-with-most-water",
+"move-zeroes",
+"number-of-islands",
+"reverse-string",
+"find-minimum-in-rotated-sorted-array",
+"can-make-arithmetic-progression-from-sequence",
+"invalid-tweets",
+"add-binary",
+"validate-binary-search-tree",
+"minimum-size-subarray-sum",
+"reverse-degree-of-a-string",
+"maximum-profit-in-job-scheduling",
+"generate-parentheses",
+"lowest-common-ancestor-of-a-binary-search-tree",
+"greatest-common-divisor-of-strings",
+"longest-repeating-character-replacement",
+"russian-doll-envelopes",
+"valid-parenthesis-string",
+"score-of-parentheses",
+"find-the-safest-path-in-a-grid",
+"minimum-insertions-to-balance-a-parentheses-string",
+"length-of-last-word",
+"meeting-rooms-iii",
+"maximum-alternating-sum-of-squares",
+"find-the-duplicate-number",
+"subarrays-distinct-element-sum-of-squares-i",
+"find-target-indices-after-sorting-array",
+"remove-duplicates-from-sorted-array",
+"subarray-sum-equals-k",
+"subarray-product-less-than-k",
+"find-customer-referee",
+"combination-sum",
+"subsets",
+"remove-element",
+"shuffle-the-array",
+"min-stack",
+"count-and-say",
+"contiguous-array",
+"letter-combinations-of-a-phone-number",
+"course-schedule",
+"string-to-integer-atoi",
+"balanced-binary-tree",
+"sum-of-two-integers",
+"smallest-index-with-digit-sum-equal-to-index",
+"lucky-numbers-in-a-matrix",
+"partition-array-into-two-arrays-to-minimize-sum-difference",
+"last-day-where-you-can-still-cross",
+"reverse-substrings-between-each-pair-of-parentheses",
+"palindrome-partitioning",
+"insert-into-a-binary-search-tree",
+"allocate-mailboxes",
+"missing-number",
+"maximum-nesting-depth-of-two-valid-parentheses-strings",
+"swim-in-rising-water",
+"first-bad-version",
+"time-based-key-value-store",
+"find-x-value-of-array-i",
+"find-all-numbers-disappeared-in-an-array",
+"set-mismatch",
+"summary-ranges",
+"maximum-subarray-sum-with-one-deletion",
+"longest-non-decreasing-subarray-after-replacing-at-most-one-element",
+"find-pivot-index",
+"best-time-to-buy-and-sell-stock-ii",
+"minimum-add-to-make-parentheses-valid",
+"diameter-of-binary-tree",
+"parse-lisp-expression",
+"continuous-subarray-sum",
+"largest-3-same-digit-number-in-string",
+"kth-ancestor-of-a-tree-node",
+"flatten-binary-tree-to-linked-list",
+"largest-rectangle-in-histogram",
+"evaluate-reverse-polish-notation",
+"decode-string",
+"course-schedule-ii",
+"couples-holding-hands",
+"sudoku-solver",
+"rotate-array",
+"apply-operations-on-array-to-maximize-sum-of-squares",
+"rotting-oranges",
+"first-unique-character-in-a-string",
+"single-number",
+"counter",
+"employees-earning-more-than-their-managers",
+"reverse-linked-list-ii",
+"number-of-1-bits",
+"partition-equal-subset-sum",
+"move-pieces-to-obtain-a-string",
+"largest-number",
+"insert-delete-getrandom-o1",
+"maximal-square",
+"combination-sum-ii",
+"subarrays-distinct-element-sum-of-squares-ii",
+"house-robber",
+"find-peak-element",
+"range-module",
+"reverse-linked-list",
+"longest-arithmetic-subsequence-of-given-difference",
+"n-queens",
+"ransom-note",
+"next-greater-element-i",
+"recyclable-and-low-fat-products",
+"sqrtx",
+"basic-calculator",
+"daily-temperatures",
+"battleships-in-a-board",
+"longest-string-chain",
+"print-binary-tree",
+"verbal-arithmetic-puzzle",
+"max-consecutive-ones-iii",
+"number-of-visible-people-in-a-queue"
 ]
+}
 }
