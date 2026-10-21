@@ -66,3 +66,15 @@ state/pool.json
 
 # Local record of where you applied; keep it off public repos
 docs/job-tracker-snapshot.md
+
+# Recall (interview prep) local settings: holds your AI API key
+config/recall.json
+
+# Your interview history note (personal)
+data/interview-tracker.md
+
+# Local copy of the open leetcode-problems dataset (not redistributed)
+state/recall-statements/
+state/recall.json
+state/journal.json
+state/network.json

@@ -20,7 +20,7 @@ What it does, in order:
     marks them ready. The agent takes them with `python3 scripts/pool.py next`.
 Output: a short summary on stdout; details in logs/collector.log.
 """
-import html, json, os, re, ssl, subprocess, sys, time, datetime, urllib.error, urllib.request
+import html, json, os, re, ssl, subprocess, sys, time, datetime, urllib.error, urllib.parse, urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import pool as P
@@ -190,11 +190,74 @@ def search():
     ok['career_sites'] = run_sweep('portal_sweep.py', 400, since)
     for o in read_json('state/sweep/portal_cands.json'):  # [portal, host, posted, title, loc, url]
         add('portal', o[0], o[3], o[4], o[5], '' if o[2] == 'new' else o[2])
+    ok['extra'] = extra_sweep(since)
     ok['jobdatalake'] = jobdatalake()
     return ok
 
+def extra_sweep(since):
+    """Getro VC boards, HN Who-is-hiring, Gem/Workable/Breezy/Rippling/SmartRecruiters boards. Runs every
+    collector.extra_sweep_days (default 3) days, or on --force / --backfill; a lookback (--backfill) widens the window."""
+    stamp = os.path.join(R, 'state', 'last_extra_sweep.txt')
+    days = C.get('extra_sweep_days', 3)
+    try: age = time.time() - os.path.getmtime(stamp)
+    except OSError: age = 1e12
+    if age < days * 86400 and not (BACKFILL or '--force-extra' in ARGS):
+        log(f'extra sweep: last ran {age/86400:.1f} days ago, next after {days} days'); return True
+    ok = run_sweep('extra_sweep.py', 900, since)
+    for o in read_json('state/sweep/extra_cands.json'):   # [source, company, posted, title, loc, band, url, desc]
+        add('extra:' + o[0], o[1], o[3], o[4], o[6], o[2], o[5], o[7])
+    return ok
+
 JDL_ENTRY = re.compile(r'^\s*\d+\.\s+\*\*(.+?)\*\*\s+at\s+(.+?)\s*\n\s*(.+?)\s*\n(?:\s*Skills:.*\n)?\s*Apply:\s*(\S+)', re.M)
+def jobdatalake_rest():
+    """REST API with the user's key: 1 credit per request, 100 jobs per request, newest first, no daily cap.
+    Returns True when it handled the search, False to fall back to the free MCP path."""
+    key = C.get('jobdatalake_api_key')
+    if not key: return False
+    stamp = os.path.join(R, 'state', 'last_jdl_rest.txt')
+    now_ms = int(time.time() * 1000)
+    try: since_ms = int(open(stamp).read().strip())
+    except Exception: since_ms = now_ms - 7 * 86400000
+    if BACKFILL: since_ms = now_ms - BACKFILL * 86400000
+    seniority = ','.join(x for x, want in [('Entry', 'early-career' in SEN or WANT_NEWGRAD), ('Mid Level', 'mid-level' in SEN)] if want)
+    cap, calls, added = C.get('jobdatalake_rest_max_calls', 60), 0, 0
+    places = []
+    for loc in T.get('locations', []):
+        if loc == 'Remote (US)': places.append({'remote_type': 'fully_remote'})
+        elif 'new york' in loc.lower(): places.append({'states': 'NY'})
+        elif 'chicago' in loc.lower(): places.append({'states': 'IL', 'location': 'Chicago'})
+        else: places.append({'location': loc})
+    for q in C.get('jobdatalake_rest_queries', ['software engineer']):
+        for pl in places:
+            for page in (1, 2, 3):
+                if calls >= cap: log('jobdatalake REST: call cap reached'); open(stamp, 'w').write(str(now_ms)); return True
+                a = {'q': q, 'countries': 'US', 'job_function': 'eng', 'employment_type': 'full_time', 'posted_after': since_ms,
+                     'per_page': 100, 'page': page, 'sort_by': 'posted_at:desc', **pl}
+                if seniority: a['seniority'] = seniority
+                try:
+                    req = urllib.request.Request('https://api.jobdatalake.com/v1/jobs?' + urllib.parse.urlencode(a),
+                                                 headers={'X-API-Key': key, 'User-Agent': 'please-hire-me/1'})
+                    with urllib.request.urlopen(req, timeout=40, context=ssl.create_default_context()) as r: d = json.load(r)
+                    calls += 1
+                except urllib.error.HTTPError as e:
+                    log(f'jobdatalake REST HTTP {e.code} ({"out of credits" if e.code == 402 else "error"})')
+                    return e.code not in (401, 402)       # bad key or no credits: fall back to the free MCP path
+                except Exception as e: log('jobdatalake REST error', e); return False
+                jobs = d.get('jobs') or []
+                for j in jobs:
+                    lo, hi = j.get('salary_min_usd'), j.get('salary_max_usd')
+                    band = f'${lo}K-${hi}K' if lo and hi else ''
+                    where = '; '.join(j.get('locations') or []) + (' (remote)' if j.get('remote_type') == 'fully_remote' else '')
+                    posted = datetime.datetime.fromtimestamp((j.get('posted_at') or 0) / 1000, UTC).isoformat()[:16]
+                    add('jobdatalake', j.get('company_name', ''), j.get('title', ''), where, j.get('url', ''), posted, band,
+                        'Skills: ' + ', '.join(j.get('required_skills') or [])); added += 1
+                log(f'jobdatalake REST {q} / {list(pl.values())[0]} p{page}: {len(jobs)}')
+                if len(jobs) < 100: break
+                time.sleep(0.15)
+    open(stamp, 'w').write(str(now_ms)); log(f'jobdatalake REST: {calls} credits, {added} rows'); return True
+
 def jobdatalake():
+    if jobdatalake_rest(): return True
     try:
         from jobdatalake import Client
         cl = Client()

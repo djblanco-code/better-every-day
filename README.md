@@ -1,21 +1,108 @@
 <div align="center">
 
-# please-hire-me
+# Better Every Day
 
-**An agent that fills out real job applications while you sleep.**
+**A private, local app for the whole job hunt: track applications, practice for interviews one hour a day, and remember the people who can help.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-black.svg)](CONTRIBUTING.md)
 [![Runs on Claude Code](https://img.shields.io/badge/runs%20on-Claude%20Code-black.svg)](https://claude.com/claude-code)
-[![macOS | Linux](https://img.shields.io/badge/macOS-%7C%20Linux-black.svg)](#quick-start)
+[![Windows | macOS | Linux](https://img.shields.io/badge/Windows%20%7C%20macOS%20%7C%20Linux-black.svg)](#better-every-day-setup)
+
+Three apps in one page, served from your own machine, with your own AI key. Nothing about you leaves
+your computer. Plus the application agent that fills real ATS forms for you (below).
+
+</div>
+
+| App | What it does |
+|---|---|
+| **Job Tracker** | Every application in one place with stages (applied → intro call → interviewing → final → offer), a Sankey funnel, assessments to do, intro calls to book, Gmail sync that suggests stage changes from recruiter email, and "start a new job search" when it is time for a fresh window. |
+| **Recall** | A 26-week, 60-minutes-a-day interview program. Each day: 25 min LeetCode, 25 min of Python / System Design / Data Structures & Algorithms / Debugging (rotating), and a textbook reading or homework item. A Google-Doc-style page shows the problem; you write, nothing runs; Claude or Gemini grades it against a rubric. Spaced repetition, interleaving, mastery gating, readiness per track, and metrics over six months. |
+| **Network** | People you met, mentors, recruiters, events, who can connect you to what, and follow-ups. |
+| **Home journal** | Say or type what you did today ("went to a job fair, met three people, aced a mock interview, Google screen went okay") and it is sorted into Network and Recall. |
+
+## Better Every Day setup
+
+**You need:** Python 3.10+ (python.org on Windows, `brew install python` on macOS), Chrome, and an
+[Anthropic API key](https://console.anthropic.com/) (or a Gemini key) for grading and journal parsing.
+
+```bash
+git clone https://github.com/djblanco-code/better-every-day.git
+cd better-every-day
+python3 scripts/fetch_statements.py     # optional: LeetCode problem statements from the open leetcode-problems dataset
+python3 scripts/tracker_ui.py           # Windows: double-click tracker.cmd
+```
+
+Open <http://127.0.0.1:8787>. Then, once:
+
+1. **Recall → Settings**: pick Anthropic or Gemini, paste your key, click *Test the key*. The key is saved
+   to `config/recall.json` (gitignored) and sent only to that provider. Set *Program start* if today is
+   not day one.
+2. **Job Tracker**: it reads `logs/job-tracker.md` (the agent writes it, or add rows by hand with
+   *Manual applications → Add by link*, which auto-fills from Greenhouse / Ashby / Lever / any
+   JobPosting page). Stages and notes live in `state/tracker.json`.
+3. **Gmail sync (optional)**: a read-only IMAP check that suggests stage changes from recruiter
+   email. Create a Google app password, store it yourself (never in chat):
+   `cmdkey /generic:jobapply-gmail-imap /user:you@gmail.com /pass` on Windows, or
+   `security add-generic-password -s jobapply-gmail-imap -a you@gmail.com -w` on macOS, and set
+   `broker.gmail_account` in `config/settings.json`.
+
+**Use it from your phone** without exposing it: see [docs/HOSTING.md](docs/HOSTING.md) (Tailscale in
+ten minutes, or Cloudflare Tunnel with a Google login screen).
+
+<details>
+<summary><b>How Recall decides what you do today</b></summary>
+
+The plan is generated once per day and does not move. It is deterministic, no model involved:
+
+1. **Due reviews first**, weakest best-score first (SM-2-style spacing: 8+ doubles the interval,
+   5-7 repeats tomorrow, under 5 comes back today).
+2. **New problems from this week's focus category** (`data/recall-curriculum.json` walks the NeetCode
+   roadmap over 18 learning weeks, then 8 speed weeks).
+3. **Earliest unmastered category** on the roadmap. A category is mastered at three problems scored 8+.
+4. Difficulty steps Easy → Medium → Hard as a category collects strong scores.
+5. Yesterday's category is pushed down unless due (interleaving).
+
+The second slot rotates Python / System Design / DSA / Debugging: most reviews due wins, else the lowest
+readiness, never the same track two days running. Readiness per track is 70% difficulty-weighted
+coverage of problems scored 8+ (LeetCode measured against NeetCode 150) and 30% your last ten scores.
+
+Grading is pinned for stability: temperature 0, a JSON schema enforced by the provider (Claude tool use
+/ Gemini responseSchema), anchored score bands, retries with backoff, and a grader version stamped on
+every session.
+
+Banks you can edit: `data/recall-python.json`, `recall-systemdesign.json`, `recall-dsa.json`,
+`recall-debugging.json`, and the curriculum. LeetCode lists come from NeetCode 150/250 and Blind 75 with
+company frequency from [leetcode-company-wise-problems](https://github.com/liquidslr/leetcode-company-wise-problems).
+Problem text is not redistributed; `fetch_statements.py` pulls it from
+[leetcode-problems](https://github.com/prathameshakole/leetcode-problems) into a gitignored folder.
+
+</details>
+
+<details>
+<summary><b>Privacy and what stays local</b></summary>
+
+`config/profile.json`, `config/answers.md`, `config/settings.json`, `config/recall.json` (your key),
+`state/` (progress, journal, network, plans), `logs/`, `applications/`, `screenshots/`, your resume, and
+your interview tracker are all gitignored. The server binds to `127.0.0.1` only and rejects cross-origin
+POSTs. The only outbound calls are the model provider you chose (grading, journal parsing), the ATS APIs
+used for link auto-fill and sourcing, and Gmail IMAP if you set it up.
+
+</details>
+
+---
+
+# The application agent (please-hire-me)
+
+**An agent that fills out real job applications while you sleep.** Originally
+[alecswang/please-hire-me](https://github.com/alecswang/please-hire-me), extended here with Windows
+support, a Python lead collector, and the Better Every Day UI above.
 
 You set it up once, in one conversation of about five minutes, and it writes your config from your
 resume. After that it runs autonomously, finding live openings, internships and new-grad roles
 alike, filling the company's own Greenhouse / Lever / Ashby form field by field in your real Chrome,
 and submitting. Every answer is logged before it clicks, every submit is screenshotted, and it never
 invents a fact about you.
-
-</div>
 
 ---
 
@@ -42,8 +129,8 @@ so you are not debugging it halfway through a filled form.
 </details>
 
 ```bash
-git clone https://github.com/alecswang/please-hire-me.git
-cd please-hire-me
+git clone https://github.com/djblanco-code/better-every-day.git
+cd better-every-day
 ```
 
 Open the repo in Claude Code and say *"set me up"*. Setup is one conversation, about five minutes,
@@ -236,7 +323,11 @@ answer, a line in the log, a confirmation screenshot, and `state/status.md` as m
 <summary><b>Repo layout</b></summary>
 
 ```
-please-hire-me/
+better-every-day/
+├── tracker.cmd / scripts/tracker_ui.py   # Better Every Day UI (Jobs, Recall, Network) at 127.0.0.1:8787
+├── scripts/recall.py         # program, recommender, grading, metrics
+├── scripts/journal.py        # daily journal parsing + networking store
+├── data/recall-*.json        # question banks + 26-week curriculum
 ├── setup.sh                  # one-time interactive setup
 ├── run.sh                    # one bounded run
 ├── CLAUDE.md                 # the agent's playbook: browser method, widget recipes, rules

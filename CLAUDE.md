@@ -119,8 +119,11 @@ yours and must never be closed, navigated, or read.
   holds leftover job-application tabs from a previous crashed run, close them with `tabs_close_mcp`
   and work in one fresh tab. Only close tabs that are BOTH in your group AND clearly a
   job-application page. If unsure, leave it.
-- **One tab, reused.** Navigate the same tab from posting to posting instead of opening a new tab
-  per company.
+- **One tab, reused. NEVER open a second tab: new tabs open HIDDEN** (`document.visibilityState` is
+  `hidden`), so typing does not register and screenshots time out ("renderer frozen"). Work in the group's
+  existing visible tab (`tabs_context_mcp` with `createIfEmpty`). If typing seems to do nothing, check
+  `document.visibilityState`, then read values back with JS after the first batch before going further.
+  Navigate that same tab from posting to posting instead of opening a new tab per company.
 - **Resume or abandon cleanly — never leave a form half-filled.** After finishing a company
   (submitted OR logged NEEDS HUMAN), navigate that tab straight to the NEXT posting. If the tab
   group vanishes mid-fill, do NOT resume the half-filled form (its trusted-input state is gone and

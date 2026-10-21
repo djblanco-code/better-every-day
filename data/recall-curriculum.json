@@ -1,0 +1,1411 @@
+{
+ "program_weeks": 26,
+ "daily_minutes": 60,
+ "principles": [
+  [
+   "Spaced repetition",
+   "Review timing grows with each success (SM-2 style). Cepeda et al. 2006: spacing beats massing for retention over months."
+  ],
+  [
+   "Retrieval practice",
+   "You write the solution from memory before seeing anything. Roediger & Karpicke 2006: testing beats re-reading."
+  ],
+  [
+   "Interleaving",
+   "Today's problem avoids yesterday's category unless it is due. Rohrer & Taylor 2007: mixed practice transfers better."
+  ],
+  [
+   "Deliberate practice",
+   "New problems come from your weakest category, and the grader gives specific feedback. Ericsson 1993."
+  ],
+  [
+   "Time-boxing",
+   "25-minute blocks match interview pacing and the Pomodoro unit. Over-time is recorded, not hidden."
+  ],
+  [
+   "Mastery gating",
+   "A category counts as mastered at 3 problems scoring 8+. Bloom 1968 on mastery learning."
+  ]
+ ],
+ "weeks": [
+  {
+   "week": 1,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Arrays & Hashing",
+    "python": "Core language",
+    "system_design": "Classic"
+   },
+   "reading": [
+    {
+     "id": "r1-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 1: Reliable, Scalable, and Maintainable Applications (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r1-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 1: The Python Data Model",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r1-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 1: Scale From Zero To Millions Of Users",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r1-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Big-O and the RAM model: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h1-1",
+     "text": "Hand-write the Arrays & Hashing template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h1-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h1-3",
+     "text": "Python: implement one idea from Fluent Python ch. 1 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Two Pointers",
+    "python": "Gotchas",
+    "system_design": "Infrastructure"
+   },
+   "reading": [
+    {
+     "id": "r2-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 1: Reliable, Scalable, and Maintainable Applications (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r2-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 2: An Array of Sequences",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r2-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 2: Back-of-the-envelope Estimation",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r2-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Arrays, strings, hashing: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h2-1",
+     "text": "Hand-write the Two Pointers template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h2-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h2-3",
+     "text": "Python: implement one idea from Fluent Python ch. 2 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Sliding Window",
+    "python": "Iterators & generators",
+    "system_design": "Storage"
+   },
+   "reading": [
+    {
+     "id": "r3-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 2: Data Models and Query Languages (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r3-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 3: Dictionaries and Sets",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r3-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 3: A Framework For System Design Interviews",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r3-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Two pointers and sliding window: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h3-1",
+     "text": "Hand-write the Sliding Window template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h3-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h3-3",
+     "text": "Python: implement one idea from Fluent Python ch. 3 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Stack",
+    "python": "Decorators",
+    "system_design": "Messaging"
+   },
+   "reading": [
+    {
+     "id": "r4-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 2: Data Models and Query Languages (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r4-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 4: Unicode Text vs Bytes",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r4-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 4: Design A Rate Limiter",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r4-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Stacks, queues, monotonic structures: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h4-1",
+     "text": "Hand-write the Stack template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h4-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h4-3",
+     "text": "Python: implement one idea from Fluent Python ch. 4 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Binary Search",
+    "python": "Data structures",
+    "system_design": "Real-time"
+   },
+   "reading": [
+    {
+     "id": "r5-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 3: Storage and Retrieval (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r5-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 5: Data Class Builders",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r5-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 5: Design Consistent Hashing",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r5-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Binary search on answers: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h5-1",
+     "text": "Hand-write the Binary Search template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h5-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h5-3",
+     "text": "Python: implement one idea from Fluent Python ch. 5 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Linked List",
+    "python": "Object model",
+    "system_design": "Observability"
+   },
+   "reading": [
+    {
+     "id": "r6-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 3: Storage and Retrieval (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r6-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 6: Object References, Mutability, and Recycling",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r6-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 6: Design A Key-value Store",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r6-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Linked lists: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h6-1",
+     "text": "Hand-write the Linked List template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h6-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h6-3",
+     "text": "Python: implement one idea from Fluent Python ch. 6 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Trees",
+    "python": "Concurrency",
+    "system_design": "API"
+   },
+   "reading": [
+    {
+     "id": "r7-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 4: Encoding and Evolution (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r7-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 7: Functions as First-Class Objects",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r7-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 7: Design A Unique ID Generator",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r7-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Trees and traversals: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h7-1",
+     "text": "Hand-write the Trees template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h7-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h7-3",
+     "text": "Python: implement one idea from Fluent Python ch. 7 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Heap / Priority Queue",
+    "python": "Typing",
+    "system_design": "Geo"
+   },
+   "reading": [
+    {
+     "id": "r8-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 4: Encoding and Evolution (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r8-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 8: Type Hints in Functions",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r8-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 8: Design A URL Shortener",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r8-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Heaps and priority queues: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h8-1",
+     "text": "Hand-write the Heap / Priority Queue template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h8-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h8-3",
+     "text": "Python: implement one idea from Fluent Python ch. 8 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Backtracking",
+    "python": "Standard library",
+    "system_design": "Media"
+   },
+   "reading": [
+    {
+     "id": "r9-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 5: Replication (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r9-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 9: Decorators and Closures",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r9-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 9: Design A Web Crawler",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r9-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Backtracking: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h9-1",
+     "text": "Hand-write the Backtracking template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h9-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h9-3",
+     "text": "Python: implement one idea from Fluent Python ch. 9 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Tries",
+    "python": "Performance",
+    "system_design": "Fintech"
+   },
+   "reading": [
+    {
+     "id": "r10-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 5: Replication (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r10-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 10: Design Patterns with First-Class Functions",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r10-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 10: Design A Notification System",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r10-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Tries: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h10-1",
+     "text": "Hand-write the Tries template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h10-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h10-3",
+     "text": "Python: implement one idea from Fluent Python ch. 10 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Graphs",
+    "python": "Testing",
+    "system_design": "Networking"
+   },
+   "reading": [
+    {
+     "id": "r11-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 6: Partitioning (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r11-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 11: A Pythonic Object",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r11-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 11: Design A News Feed System",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r11-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "BFS/DFS, topological sort: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h11-1",
+     "text": "Hand-write the Graphs template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h11-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h11-3",
+     "text": "Python: implement one idea from Fluent Python ch. 11 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Advanced Graphs",
+    "python": "Production",
+    "system_design": "Reliability"
+   },
+   "reading": [
+    {
+     "id": "r12-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 6: Partitioning (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r12-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 12: Special Methods for Sequences",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r12-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 12: Design A Chat System",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r12-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Shortest paths and union-find: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h12-1",
+     "text": "Hand-write the Advanced Graphs template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h12-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h12-3",
+     "text": "Python: implement one idea from Fluent Python ch. 12 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "1-D Dynamic Programming",
+    "python": "Tooling",
+    "system_design": "Classic"
+   },
+   "reading": [
+    {
+     "id": "r13-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 7: Transactions (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r13-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 13: Interfaces, Protocols, and ABCs",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r13-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 13: Design A Search Autocomplete System",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r13-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "1-D DP: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h13-1",
+     "text": "Hand-write the 1-D Dynamic Programming template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h13-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h13-3",
+     "text": "Python: implement one idea from Fluent Python ch. 13 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "2-D Dynamic Programming",
+    "python": "Core language",
+    "system_design": "Infrastructure"
+   },
+   "reading": [
+    {
+     "id": "r14-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 7: Transactions (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r14-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 14: Inheritance: For Better or for Worse",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r14-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 14: Design YouTube",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r14-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "2-D DP: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h14-1",
+     "text": "Hand-write the 2-D Dynamic Programming template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h14-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h14-3",
+     "text": "Python: implement one idea from Fluent Python ch. 14 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Greedy",
+    "python": "Gotchas",
+    "system_design": "Storage"
+   },
+   "reading": [
+    {
+     "id": "r15-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 8: The Trouble with Distributed Systems (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r15-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 15: More About Type Hints",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r15-xu",
+     "book": "System Design Interview, Vol. 1 (Xu)",
+     "what": "Ch. 15: Design Google Drive",
+     "est_min": 25,
+     "track": "system_design"
+    },
+    {
+     "id": "r15-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Greedy and exchange arguments: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h15-1",
+     "text": "Hand-write the Greedy template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h15-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h15-3",
+     "text": "Python: implement one idea from Fluent Python ch. 15 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Intervals",
+    "python": "Iterators & generators",
+    "system_design": "Messaging"
+   },
+   "reading": [
+    {
+     "id": "r16-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 8: The Trouble with Distributed Systems (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r16-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 16: Operator Overloading",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r16-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Intervals and sweep line: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h16-1",
+     "text": "Hand-write the Intervals template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h16-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h16-3",
+     "text": "Python: implement one idea from Fluent Python ch. 16 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 17,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Math & Geometry",
+    "python": "Decorators",
+    "system_design": "Real-time"
+   },
+   "reading": [
+    {
+     "id": "r17-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 9: Consistency and Consensus (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r17-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 17: Iterators, Generators, and Classic Coroutines",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r17-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Math and geometry: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h17-1",
+     "text": "Hand-write the Math & Geometry template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h17-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h17-3",
+     "text": "Python: implement one idea from Fluent Python ch. 17 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 18,
+   "phase": "learn",
+   "focus": {
+    "leetcode": "Bit Manipulation",
+    "python": "Data structures",
+    "system_design": "Observability"
+   },
+   "reading": [
+    {
+     "id": "r18-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 9: Consistency and Consensus (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r18-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 18: with, match, and else Blocks",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r18-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Bit tricks: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h18-1",
+     "text": "Hand-write the Bit Manipulation template (no IDE) and list 3 problems it solves and 1 it does not.",
+     "est_min": 30
+    },
+    {
+     "id": "h18-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h18-3",
+     "text": "Python: implement one idea from Fluent Python ch. 18 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 19,
+   "phase": "speed",
+   "focus": {
+    "leetcode": "Arrays & Hashing",
+    "python": "Object model",
+    "system_design": "API"
+   },
+   "reading": [
+    {
+     "id": "r19-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 10: Batch Processing (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r19-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 19: Concurrency Models in Python",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r19-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Big-O and the RAM model: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h19-1",
+     "text": "Re-solve two Arrays & Hashing problems you scored under 8 on, each in under 20 minutes, without looking at past answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h19-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h19-3",
+     "text": "Python: implement one idea from Fluent Python ch. 19 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 20,
+   "phase": "speed",
+   "focus": {
+    "leetcode": "Two Pointers",
+    "python": "Concurrency",
+    "system_design": "Geo"
+   },
+   "reading": [
+    {
+     "id": "r20-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 10: Batch Processing (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r20-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 20: Concurrent Executors",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r20-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Arrays, strings, hashing: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h20-1",
+     "text": "Re-solve two Two Pointers problems you scored under 8 on, each in under 20 minutes, without looking at past answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h20-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h20-3",
+     "text": "Python: implement one idea from Fluent Python ch. 20 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 21,
+   "phase": "speed",
+   "focus": {
+    "leetcode": "Sliding Window",
+    "python": "Typing",
+    "system_design": "Media"
+   },
+   "reading": [
+    {
+     "id": "r21-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 11: Stream Processing (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r21-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 21: Asynchronous Programming",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r21-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Two pointers and sliding window: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h21-1",
+     "text": "Re-solve two Sliding Window problems you scored under 8 on, each in under 20 minutes, without looking at past answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h21-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h21-3",
+     "text": "Python: implement one idea from Fluent Python ch. 21 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 22,
+   "phase": "speed",
+   "focus": {
+    "leetcode": "Stack",
+    "python": "Standard library",
+    "system_design": "Fintech"
+   },
+   "reading": [
+    {
+     "id": "r22-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 11: Stream Processing (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r22-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 22: Dynamic Attributes and Properties",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r22-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Stacks, queues, monotonic structures: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h22-1",
+     "text": "Re-solve two Stack problems you scored under 8 on, each in under 20 minutes, without looking at past answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h22-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h22-3",
+     "text": "Python: implement one idea from Fluent Python ch. 22 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 23,
+   "phase": "speed",
+   "focus": {
+    "leetcode": "Binary Search",
+    "python": "Performance",
+    "system_design": "Networking"
+   },
+   "reading": [
+    {
+     "id": "r23-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 12: The Future of Data Systems (first half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r23-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 23: Attribute Descriptors",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r23-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Binary search on answers: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h23-1",
+     "text": "Re-solve two Binary Search problems you scored under 8 on, each in under 20 minutes, without looking at past answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h23-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h23-3",
+     "text": "Python: implement one idea from Fluent Python ch. 23 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 24,
+   "phase": "speed",
+   "focus": {
+    "leetcode": "Linked List",
+    "python": "Testing",
+    "system_design": "Reliability"
+   },
+   "reading": [
+    {
+     "id": "r24-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Ch. 12: The Future of Data Systems (second half)",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r24-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Ch. 24: Class Metaprogramming",
+     "est_min": 40,
+     "track": "python"
+    },
+    {
+     "id": "r24-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Linked lists: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h24-1",
+     "text": "Re-solve two Linked List problems you scored under 8 on, each in under 20 minutes, without looking at past answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h24-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h24-3",
+     "text": "Python: implement one idea from Fluent Python ch. 24 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 25,
+   "phase": "speed",
+   "focus": {
+    "leetcode": "Trees",
+    "python": "Production",
+    "system_design": "Classic"
+   },
+   "reading": [
+    {
+     "id": "r25-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Review: re-read your notes for chapters 1-6",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r25-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Review the chapters you scored lowest on",
+     "est_min": 30,
+     "track": "python"
+    },
+    {
+     "id": "r25-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Trees and traversals: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h25-1",
+     "text": "Re-solve two Trees problems you scored under 8 on, each in under 20 minutes, without looking at past answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h25-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h25-3",
+     "text": "Python: implement one idea from Fluent Python ch. 24 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  },
+  {
+   "week": 26,
+   "phase": "speed",
+   "focus": {
+    "leetcode": "Heap / Priority Queue",
+    "python": "Tooling",
+    "system_design": "Infrastructure"
+   },
+   "reading": [
+    {
+     "id": "r26-ddia",
+     "book": "Designing Data-Intensive Applications (Kleppmann)",
+     "what": "Review: re-read your notes for chapters 7-12",
+     "est_min": 30,
+     "track": "system_design"
+    },
+    {
+     "id": "r26-fluent",
+     "book": "Fluent Python, 2nd ed. (Ramalho)",
+     "what": "Review the chapters you scored lowest on",
+     "est_min": 30,
+     "track": "python"
+    },
+    {
+     "id": "r26-pat",
+     "book": "Pattern notes (NeetCode roadmap page + your own notes)",
+     "what": "Heaps and priority queues: write the pattern template from memory, then compare",
+     "est_min": 15,
+     "track": "leetcode"
+    }
+   ],
+   "homework": [
+    {
+     "id": "h26-1",
+     "text": "Re-solve two Heap / Priority Queue problems you scored under 8 on, each in under 20 minutes, without looking at past answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h26-2",
+     "text": "Write a one-page summary of this week's DDIA reading in your own words, ending with 3 interview questions it answers.",
+     "est_min": 30
+    },
+    {
+     "id": "h26-3",
+     "text": "Python: implement one idea from Fluent Python ch. 24 in a 30-line script and explain it out loud.",
+     "est_min": 20
+    }
+   ]
+  }
+ ]
+}

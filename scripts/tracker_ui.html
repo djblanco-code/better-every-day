@@ -1,0 +1,579 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Better Every Day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script>
+/* Apple HIG-style tokens (system colors, label alphas, grouped backgrounds) mapped into Tailwind */
+const rgbTok=n=>`rgb(var(--${n}) / <alpha-value>)`;
+tailwind.config={darkMode:'class',theme:{extend:{
+ fontFamily:{sans:['-apple-system','BlinkMacSystemFont','"SF Pro Text"','"SF Pro Display"','Inter','system-ui','sans-serif']},
+ colors:{bg:rgbTok('bg'),bg2:rgbTok('bg2'),bg3:rgbTok('bg3'),fill:rgbTok('fill'),label:rgbTok('label'),accent:rgbTok('accent'),green:rgbTok('green'),orange:rgbTok('orange'),red:rgbTok('red'),sep:rgbTok('sep')},
+ fontSize:{'large-title':['34px',{lineHeight:'41px',fontWeight:'700',letterSpacing:'-0.02em'}],'title1':['28px',{lineHeight:'34px',fontWeight:'700',letterSpacing:'-0.015em'}],'title2':['22px',{lineHeight:'28px',fontWeight:'700',letterSpacing:'-0.01em'}],'title3':['20px',{lineHeight:'25px',fontWeight:'600'}],
+  headline:['15px',{lineHeight:'20px',fontWeight:'600'}],body:['15px',{lineHeight:'20px'}],callout:['14px',{lineHeight:'19px'}],subhead:['13px',{lineHeight:'18px'}],footnote:['12px',{lineHeight:'16px'}],caption:['11px',{lineHeight:'13px'}]},
+ borderRadius:{ctl:'10px',card:'12px',sheet:'16px'},
+ boxShadow:{sheet:'0 24px 48px -12px rgb(0 0 0 / .25), 0 2px 6px rgb(0 0 0 / .12)',thumb:'0 3px 8px rgb(0 0 0 / .12), 0 1px 1px rgb(0 0 0 / .04)'},
+ transitionDuration:{fast:'150ms',med:'220ms'}}}};
+</script>
+<style>
+:root{--bg:236 241 249;--bg2:250 251 254;--bg3:240 244 251;--paper:252 251 247;--fill:118 118 128;--label:0 0 0;--sep:60 60 67;--green:52 199 89;--orange:255 149 0;--red:255 59 48;--accent:0 122 255;--fill-a:.12}
+.dark{--bg:16 19 26;--bg2:28 32 42;--bg3:38 43 56;--paper:30 32 38;--fill:120 120 128;--label:255 255 255;--sep:84 84 88;--green:48 209 88;--orange:255 159 10;--red:255 69 58;--accent:10 132 255;--fill-a:.24}
+[data-accent=purple]{--accent:175 82 222}.dark[data-accent=purple]{--accent:191 90 242}
+[data-accent=mint]{--accent:0 199 190}.dark[data-accent=mint]{--accent:99 230 226}
+[data-accent=orange]{--accent:255 149 0}.dark[data-accent=orange]{--accent:255 159 10}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:radial-gradient(900px 380px at 50% -140px,rgb(var(--accent)/.16),transparent 70%) no-repeat,rgb(var(--bg));color:rgb(var(--label));font-variant-numeric:tabular-nums}
+.t1{color:rgb(var(--label))}.t2{color:rgb(var(--label)/.6)}.t3{color:rgb(var(--label)/.3)}.t4{color:rgb(var(--label)/.18)}
+.hair{border-color:rgb(var(--sep)/.29)}.dark .hair{border-color:rgb(var(--sep)/.65)}
+.material{background:rgb(var(--bg2)/.7);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}
+.card{background:rgb(var(--bg2));border-radius:12px;box-shadow:0 1px 2px rgb(var(--label)/.04)}.dark .card{box-shadow:inset 0 0 0 1px rgb(255 255 255/.06)}
+.fill{background:rgb(var(--fill)/var(--fill-a))}
+.ctl{background:rgb(var(--fill)/var(--fill-a));border:1px solid transparent;border-radius:10px;height:36px;padding:0 12px;font-size:15px;line-height:20px;color:rgb(var(--label));outline:none;transition:box-shadow .15s ease-out,background .15s ease-out;min-width:0;width:100%}
+.ctl::placeholder{color:rgb(var(--label)/.3)}.ctl:focus{box-shadow:0 0 0 3px rgb(var(--accent)/.35);background:rgb(var(--bg2))}
+select.ctl{appearance:none;-webkit-appearance:none;padding-right:30px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238e8e93' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
+textarea.ctl{height:auto;padding:8px 12px;resize:vertical}
+input[type=date].ctl{width:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:36px;padding:0 14px;border-radius:10px;font-size:15px;font-weight:600;line-height:1;white-space:nowrap;transition:background .15s ease-out,opacity .15s ease-out,transform .15s ease-out;cursor:pointer;user-select:none}
+.btn:active{transform:scale(.98)}.btn:disabled{opacity:.4;pointer-events:none}
+.btn-filled{background:rgb(var(--accent));color:#fff}.btn-filled:hover{background:rgb(var(--accent)/.9)}
+.btn-tint{background:rgb(var(--accent)/.15);color:rgb(var(--accent))}.btn-tint:hover{background:rgb(var(--accent)/.22)}
+.btn-gray{background:rgb(var(--fill)/var(--fill-a));color:rgb(var(--label))}.btn-gray:hover{background:rgb(var(--fill)/calc(var(--fill-a) + .06))}
+.btn-plain{background:transparent;color:rgb(var(--accent))}.btn-plain:hover{background:rgb(var(--fill)/var(--fill-a))}
+.btn-red{background:rgb(var(--red)/.15);color:rgb(var(--red))}.btn-red:hover{background:rgb(var(--red)/.22)}
+.btn-sm{height:30px;padding:0 10px;font-size:13px;border-radius:8px}.btn-icon{width:36px;padding:0}.btn-sm.btn-icon{width:30px}
+.badge{display:inline-flex;align-items:center;height:22px;padding:0 8px;border-radius:6px;font-size:12px;font-weight:600;line-height:1;white-space:nowrap}
+.seg{display:inline-flex;padding:2px;border-radius:9px;background:rgb(var(--fill)/var(--fill-a));gap:2px}
+.seg button,.seg a{position:relative;text-decoration:none;display:inline-flex;align-items:center;border-radius:7px;height:28px;padding:0 12px;font-size:13px;font-weight:500;color:rgb(var(--label)/.75);transition:color .15s ease-out;white-space:nowrap}
+.seg button[aria-selected=true],.seg a[aria-selected=true]{background:rgb(var(--bg2));color:rgb(var(--label));font-weight:600;box-shadow:0 3px 8px rgb(0 0 0/.12),0 1px 1px rgb(0 0 0/.04)}
+.dark .seg button[aria-selected=true],.dark .seg a[aria-selected=true]{background:rgb(99 99 102)}
+.row{display:flex;align-items:center;gap:12px;min-height:44px;padding:10px 16px}
+.row+.row{border-top:1px solid rgb(var(--sep)/.29);margin-left:16px;padding-left:0}.dark .row+.row{border-top-color:rgb(var(--sep)/.65)}
+.list>.row:not(:first-child){border-top:1px solid rgb(var(--sep)/.29)}.dark .list>.row:not(:first-child){border-top-color:rgb(var(--sep)/.65)}
+.list>.row{margin-left:0;padding-left:16px}
+.sec{font-size:13px;line-height:18px;font-weight:400;color:rgb(var(--label)/.6);text-transform:uppercase;letter-spacing:.02em;padding:0 16px;margin-bottom:6px}
+.sheet{border:0;padding:0;background:rgb(var(--bg2));color:rgb(var(--label));border-radius:16px;box-shadow:0 24px 48px -12px rgb(0 0 0/.25),0 2px 6px rgb(0 0 0/.12);width:min(560px,94vw);max-height:92vh;overflow:auto}
+.sheet::backdrop{background:rgb(0 0 0/.3)}.sheet[open]{animation:rise .22s ease-out}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.grab{width:36px;height:5px;border-radius:3px;background:rgb(var(--label)/.18);margin:8px auto 0}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(8px);opacity:0;background:rgb(var(--label)/.86);color:rgb(var(--bg2));padding:10px 16px;border-radius:12px;font-size:13px;font-weight:500;z-index:50;transition:opacity .2s ease-out,transform .2s ease-out;pointer-events:none;display:flex;align-items:center;gap:8px}
+.toast.on{opacity:1;transform:translateX(-50%)}
+.chk{appearance:none;width:22px;height:22px;border-radius:11px;border:1.5px solid rgb(var(--label)/.3);display:inline-grid;place-items:center;cursor:pointer;transition:background .15s ease-out,border-color .15s ease-out;flex:none}
+.chk:checked{background:rgb(var(--accent));border-color:rgb(var(--accent))}.chk:checked::after{content:'';width:6px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:translateY(-1px) rotate(45deg)}
+.sw{width:22px;height:22px;border-radius:11px;border:2px solid transparent;transition:transform .15s ease-out}.sw[aria-checked=true]{border-color:rgb(var(--label));transform:scale(1.1)}
+.chev{color:rgb(var(--label)/.3)}
+main>section{display:flex;flex-direction:column;gap:20px}main>section>*{min-width:0}
+summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}
+th{font-weight:400}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style></head>
+<body class="min-h-screen font-sans text-body">
+<header class="material sticky top-0 z-20 border-b hair">
+ <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-2 px-5 py-2.5 sm:px-8">
+  <a href="/" class="flex items-center gap-2 text-headline"><i data-lucide="sunrise" class="h-[18px] w-[18px]" style="color:rgb(var(--accent))"></i><span>Better Every Day</span><span id="appname" class="t2 font-normal"></span></a>
+  <nav id="tabs" class="seg" role="tablist"></nav>
+  <div class="ml-auto flex items-center gap-3"><span id="stamp" class="hidden text-footnote t2 sm:inline"></span>
+   <div class="seg" id="appsw"><a role="tab" href="/jobs" data-app="jobs">Jobs</a><a role="tab" href="/recall" data-app="recall">Recall</a><a role="tab" href="/network" data-app="network">Network</a></div>
+   <button id="theme" class="btn btn-gray btn-icon" aria-label="Toggle light or dark"><i data-lucide="sun-moon" class="h-4 w-4"></i></button></div>
+ </div></header>
+<main class="mx-auto w-full max-w-6xl px-5 py-6 sm:px-8"><section id="home" class="hidden"></section><section id="ov"></section><section id="man" class="hidden"></section><section id="pipe" class="hidden"></section><section id="all" class="hidden"></section><section id="recall" class="hidden"></section><section id="network" class="hidden"></section></main>
+<dialog id="dlg" class="sheet"></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+/* ---------- state + api ---------- */
+let S=null,tab=localStorage.getItem('tab')||'ov',pending=null,chart=null;
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const api=(p,b)=>fetch(p,b?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}:{}).then(r=>r.json());
+const LABEL={applied:'Applied',intro_call:'Intro call',interview:'Interviewing',final:'Final round',offer:'Offer',ghosted:'Ghosted',rejected:'They rejected me',passed:'I passed'};
+const STAGE_TONE={applied:'gray',intro_call:'accent',interview:'accent',final:'green',offer:'green',ghosted:'orange',rejected:'red',passed:'red'};
+const APP=location.pathname.replace(/\/+$/,'')==='/jobs'?'jobs':location.pathname.startsWith('/recall')?'recall':location.pathname.startsWith('/network')?'network':'home';
+let JN=null,NW=null,ntab=localStorage.getItem('ntab')||'npeople';
+const TABS=APP==='jobs'?[['ov','Overview'],['pipe','Action needed'],['man','Manual applications'],['all','All applications']]:APP==='recall'?[['rtoday','Today'],['rhome','Practice'],['rprogram','Program'],['rhistory','History'],['rsettings','Settings']]:APP==='network'?[['npeople','People'],['nevents','Events']]:[];
+const RVIEW={rtoday:'today',rhome:'home',rprogram:'program',rhistory:'history',rsettings:'settings'},RTAB=Object.fromEntries(Object.entries(RVIEW).map(([k,v])=>[v,k]));
+if(APP==='jobs'&&!['ov','pipe','man','all'].includes(tab))tab='ov';
+
+/* ---------- Apple-style components ---------- */
+const ico=(n,c='h-4 w-4')=>`<i data-lucide="${n}" class="${c}"></i>`;
+const button=(label,{v='filled',s='',icon='',attrs=''}={})=>`<button class="btn btn-${v} ${s==='sm'?'btn-sm':''} ${!label?'btn-icon':''}" ${attrs}>${icon?ico(icon,s==='sm'?'h-3.5 w-3.5':'h-4 w-4'):''}${label}</button>`;
+const TONE={gray:'background:rgb(var(--fill)/var(--fill-a));color:rgb(var(--label)/.75)',accent:'background:rgb(var(--accent)/.15);color:rgb(var(--accent))',green:'background:rgb(var(--green)/.16);color:rgb(var(--green))',orange:'background:rgb(var(--orange)/.18);color:rgb(var(--orange))',red:'background:rgb(var(--red)/.15);color:rgb(var(--red))'};
+const badge=(t,tone='gray')=>`<span class="badge" style="${TONE[tone]||TONE.gray}">${esc(t)}</span>`;
+const input=(attrs='',extra='')=>`<input class="ctl ${extra}" ${attrs}>`;
+const select=(opts,val,attrs='',extra='')=>`<select class="ctl ${extra}" ${attrs}>${opts.map(([v,l])=>`<option value="${esc(v)}" ${String(val)===String(v)?'selected':''}>${esc(l)}</option>`).join('')}</select>`;
+const search=(attrs='',extra='')=>`<div class="relative ${extra}">${ico('search','pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 t3')}<input class="ctl pl-9" ${attrs}></div>`;
+const card=(inner,extra='')=>`<div class="card ${extra}">${inner}</div>`;
+const cardHeader=(title,desc='',right='')=>`<div class="flex items-start justify-between gap-3 px-5 pt-5 pb-2"><div><h3 class="text-headline">${title}</h3>${desc?`<p class="mt-0.5 text-subhead t2">${desc}</p>`:''}</div>${right}</div>`;
+const cardBody=(inner,extra='')=>`<div class="px-5 pb-5 pt-2 ${extra}">${inner}</div>`;
+const section=(title,right='')=>`<div class="mt-2 flex items-end justify-between gap-3"><div class="sec !mb-0 !px-0">${title}</div>${right}</div>`;
+const group=(rows,extra='')=>`<div class="card list overflow-hidden ${extra}">${rows.join('')}</div>`;
+const banner=(title,desc,tone='orange',extra='')=>`<div role="alert" class="flex items-start gap-3 rounded-card px-4 py-3" style="background:rgb(var(--${tone})/.14)">${ico('bell-ring',`mt-0.5 h-4 w-4 flex-none`)}<div class="min-w-0"><div class="text-headline">${title}</div><div class="mt-0.5 text-subhead t2">${desc}</div>${extra}</div></div>`;
+const TH='h-10 px-4 text-left align-middle text-footnote t2',TD='px-4 py-3 align-middle',TR='border-t hair transition-colors duration-fast hover:bg-[rgb(var(--fill)/.08)]';
+const table=(heads,rows,emptyText='Nothing here.')=>`<div class="w-full overflow-auto"><table class="w-full text-callout"><thead><tr>${heads.map(h=>`<th class="${TH}">${h}</th>`).join('')}</tr></thead><tbody>${rows.join('')||`<tr><td colspan="${heads.length}" class="p-10 text-center t2">${emptyText}</td></tr>`}</tbody></table></div>`;
+const empty=t=>card(`<div class="p-8 text-center text-callout t2">${t}</div>`);
+const stat=(label,value,icon,tone='')=>card(`<div class="p-4"><div class="flex items-center justify-between text-footnote t2"><span>${label}</span>${ico(icon,'h-4 w-4 t3')}</div><div class="mt-2 text-title1" style="${tone?`color:rgb(var(--${tone}))`:''}">${value}</div></div>`);
+const paint=()=>{if(window.lucide)lucide.createIcons({attrs:{'stroke-width':1.75}})};
+const linkOut=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener" class="inline-flex items-center gap-1 hover:underline" style="color:rgb(var(--accent))">${esc(t)}${ico('arrow-up-right','h-3 w-3 t3')}</a>`:esc(t);
+const debounceKeep=(id,fn)=>e=>{window['_'+id]=e.target.value;const p=e.target.selectionStart;fn();const n=$('#'+id);n.focus();n.setSelectionRange(p,p)};
+let toastT;function toast(msg,icon='check'){const t=$('#toast');t.innerHTML=ico(icon,'h-4 w-4')+esc(msg);t.classList.add('on');paint();clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('on'),1800)}
+const confirmRemove=what=>confirm(`Remove ${what}? This can't be undone.`);
+
+/* ---------- shell: tabs, theme, load ---------- */
+function drawTabs(){$('#appname').textContent=APP==='jobs'?' · Job Tracker':APP==='recall'?' · Recall':APP==='network'?' · Network':'';document.querySelectorAll('#appsw [data-app]').forEach(a=>a.setAttribute('aria-selected',a.dataset.app===APP));
+ if(APP==='network'){$('#tabs').innerHTML=TABS.map(([k,l])=>`<button role="tab" data-nt="${k}" aria-selected="${ntab===k}">${l}</button>`).join('');document.querySelectorAll('#tabs [data-nt]').forEach(b=>b.onclick=()=>{ntab=b.dataset.nt;localStorage.setItem('ntab',ntab);render()});return}
+ if(APP==='recall'){const v=(rv.view||'today'),cur=RTAB[v]||'rhome';$('#tabs').innerHTML=TABS.map(([k,l])=>`<button role="tab" data-rt="${k}" aria-selected="${cur===k}">${l}</button>`).join('');document.querySelectorAll('#tabs [data-rt]').forEach(b=>b.onclick=()=>{setRv({view:RVIEW[b.dataset.rt]});recall();paint()});return}
+ $('#tabs').innerHTML=TABS.map(([k,l])=>`<button role="tab" data-t="${k}" aria-selected="${tab===k}">${l}${k==='pipe'&&nAct()?` <span class="ml-1 inline-flex h-[18px] min-w-[18px] items-center justify-center rounded-full px-1 text-[11px] font-semibold" style="background:rgb(var(--orange)/.2);color:rgb(var(--orange))">${nAct()}</span>`:''}</button>`).join('');
+ document.querySelectorAll('#tabs [data-t]').forEach(b=>b.onclick=()=>{tab=b.dataset.t;localStorage.setItem('tab',tab);render()})}
+const nAct=()=>S?(S.actions||[]).filter(a=>!a.done).length+(S.assessments||[]).filter(a=>['todo','expired'].includes(a.status)).length:0;
+const ACCENTS=[['blue','#007AFF','Blue'],['purple','#AF52DE','Purple'],['mint','#00C7BE','Mint'],['orange','#FF9500','Orange']];
+function drawSwatches(){const cur=localStorage.getItem('accent')||'blue';$('#swatches').innerHTML=ACCENTS.map(([k,c,l])=>`<button role="radio" aria-checked="${cur===k}" aria-label="${l}" title="${l}" data-ac="${k}" class="sw" style="background:${c}"></button>`).join('');document.querySelectorAll('#swatches [data-ac]').forEach(b=>b.onclick=()=>{localStorage.setItem('accent',b.dataset.ac);render()})}
+function applyTheme(){const d=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.toggle('dark',d==='dark');return d}
+$('#theme').onclick=()=>{localStorage.setItem('theme',applyTheme()==='dark'?'light':'dark');applyTheme();if(S)render()};
+async function load(msg){S=await api('/api/state?search='+encodeURIComponent(localStorage.getItem('sid')||''));if(APP!=='jobs')RC=await api('/api/recall/state');if(APP==='home')JN=await api('/api/journal');if(APP!=='jobs')NW=await api('/api/network');$('#stamp').textContent='Updated '+new Date().toLocaleTimeString();render();if(msg)toast(msg)}
+function render(){applyTheme();drawTabs();const show=APP==='jobs'?tab:APP;['home','ov','man','pipe','all','recall','network'].forEach(t=>$('#'+t).classList.toggle('hidden',t!==show));if(APP!=='recall'&&rtimer)clearInterval(rtimer);({ov,man,pipe,all,recall,home,network})[show]();paint()}
+const days=n=>{const o=[];for(let i=n-1;i>=0;i--){const d=new Date(S.today+'T12:00');d.setDate(d.getDate()-i);o.push(d.toISOString().slice(0,10))}return o};
+
+/* ---------- Funnel (Sankey) ---------- */
+function sankey(paths,col,cols,order,W,H,color){
+ const val={},link={},padL=24,nw=11,gap=34,labW=165;
+ paths.forEach(p=>p.forEach((n,i)=>{val[n]=(val[n]||0)+1;if(i){const k=p[i-1]+'>'+n;link[k]=(link[k]||0)+1}}));
+ const cx=i=>padL+i*((W-padL-nw-labW)/(cols-1)),N=paths.length||1;
+ const nh=n=>34+(H-170)*Math.sqrt(val[n]/N)*.6;
+ const byc=Array.from({length:cols},()=>[]);Object.keys(val).forEach(n=>byc[col[n]].push(n));
+ byc.forEach(c=>c.sort((a,b)=>(order[a]??5)-(order[b]??5)));
+ // reduce crossings: order each column by the weighted average position of the nodes feeding it
+ const frac=n=>{const c=byc[col[n]];return c.length>1?c.indexOf(n)/(c.length-1):.5};
+ for(let pass=0;pass<3;pass++)for(let i=1;i<cols;i++){
+  const bary={};byc[i].forEach(n=>{let s=0,w=0;Object.entries(link).forEach(([k,v])=>{const[a,b]=k.split('>');if(b===n){s+=frac(a)*v;w+=v}});bary[n]=w?s/w+(order[n]??5)*1e-4:(order[n]??5)});
+  byc[i].sort((a,b)=>bary[a]-bary[b])}
+ const pos={};
+ byc.forEach((c,i)=>{const tot=c.reduce((t,n)=>t+nh(n),0)+Math.max(0,c.length-1)*gap;let y=Math.max(14,(H-tot)/2);c.forEach(n=>{const h=nh(n);pos[n]={x:cx(i),y,h,i,outs:0,ins:0};y+=h+gap})});
+ let svg='';
+ const L=Object.entries(link),dstY=k=>pos[k.split('>')[1]].y,srcY=k=>pos[k.split('>')[0]].y;
+ const outs=n=>L.filter(([k])=>k.split('>')[0]===n).sort((a,b)=>dstY(a[0])-dstY(b[0]));
+ const ins=n=>L.filter(([k])=>k.split('>')[1]===n).sort((a,b)=>srcY(a[0])-srcY(b[0]));
+ const slotOut={},slotIn={};
+ Object.keys(pos).forEach(n=>{let o=0;outs(n).forEach(([k,v])=>{const w=pos[n].h*v/val[n];slotOut[k]=[pos[n].y+o,w];o+=w});let q=0;ins(n).forEach(([k,v])=>{const w=pos[n].h*v/val[n];slotIn[k]=[pos[n].y+q,w];q+=w})});
+ L.forEach(([k,v])=>{const[a,b]=k.split('>'),[a0,wa]=slotOut[k],[b0,wb]=slotIn[k],a1=a0+wa,b1=b0+wb,x0=pos[a].x+nw,x1=pos[b].x,m=(x0+x1)/2;
+  svg+=`<path d="M${x0},${a0} C${m},${a0} ${m},${b0} ${x1},${b0} L${x1},${b1} C${m},${b1} ${m},${a1} ${x0},${a1} Z" fill="${color[b]}" fill-opacity=".42"><title>${a} to ${b}: ${v}</title></path>`});
+ Object.entries(pos).forEach(([n,p])=>{
+  svg+=`<rect x="${p.x}" y="${p.y}" width="${nw}" height="${p.h}" fill="${color[n]}"/>`;
+  const tw=Math.min(labW-14,n.length*6.9+14),ty=p.y+p.h/2-15;
+  svg+=`<rect x="${p.x+nw+5}" y="${ty}" width="${tw}" height="30" rx="4" fill="#fff" fill-opacity=".9" stroke="#ddd" stroke-width=".5"/><text x="${p.x+nw+11}" y="${ty+13}" font-size="12" font-weight="700" fill="#111">${n}</text><text x="${p.x+nw+11}" y="${ty+26}" font-size="12" fill="#111">${val[n]}</text>`});
+ return {svg,val}}
+function funParts(){
+ const A=S.apps,AS=S.assessments||[];
+ const toks=s=>new Set(String(s||'').toLowerCase().split(/[^a-z0-9+]+/).filter(w=>w.length>2));
+ const asOf=new Map();   // app key -> assessment
+ AS.forEach(as=>{let best=null,bs=-1;A.forEach(a=>{if((a.company||'').toLowerCase()!==as.company.toLowerCase())return;const t=toks(as.role),sc=[...toks(a.role)].filter(w=>t.has(w)).length;if(sc>bs){bs=sc;best=a}});if(best&&!asOf.has(best.key))asOf.set(best.key,as)});
+ const paths=A.map(a=>{
+  const h=new Set((a.history||[]).map(x=>x.stage)),st=a.stage,as=asOf.get(a.key);
+  const ints=h.has('intro_call')||h.has('interview')||h.has('final')||['intro_call','interview','final','offer'].includes(st);
+  if(!ints&&!as){ if(['rejected','passed'].includes(st)) return ['Jobs applied to','Rejections']; return ['Jobs applied to','No replies'] }
+  const base=['Jobs applied to','Replies'];
+  if(as) base.push('Assessment requested');
+  if(!ints){ const r=as.status==='expired'?'Assessment expired':as.status==='done'?'Assessment done, waiting':'Assessment to do'; return [...base,r] }
+  base.push('Initial interviews');
+  const fin=h.has('final')||['final','offer'].includes(st);
+  if(!fin){ if(st==='passed') return [...base,'Rejected by me']; if(st==='rejected') return [...base,'Rejected by company']; return [...base,'Still in early rounds'] }
+  const tail=st==='offer'?['Offer received']:st==='rejected'||st==='passed'?['Rejected before offer']:['Still in final rounds'];
+  return [...base,'Final interview',...tail]});
+ const col={'Jobs applied to':0,'Replies':1,'Rejections':1,'No replies':1,'Assessment requested':2,'Initial interviews':3,'Assessment to do':3,'Assessment expired':3,'Assessment done, waiting':3,'Rejected by me':4,'Rejected by company':4,'Still in early rounds':4,'Final interview':4,'Offer received':5,'Rejected before offer':5,'Still in final rounds':5};
+ const G='#1aa31a',R='#b30000',B='#d4a017',color={'Jobs applied to':G,'Replies':G,'Rejections':R,'No replies':R,'Assessment requested':B,'Initial interviews':G,'Assessment to do':B,'Assessment expired':R,'Assessment done, waiting':B,'Rejected by me':R,'Rejected by company':R,'Still in early rounds':B,'Final interview':G,'Offer received':G,'Rejected before offer':R,'Still in final rounds':B};
+ const order={'Replies':0,'Rejections':1,'No replies':2,'Assessment requested':0,'Initial interviews':1,'Assessment to do':0,'Assessment done, waiting':1,'Assessment expired':2,'Final interview':0,'Still in early rounds':1,'Rejected by me':2,'Rejected by company':3,'Offer received':0,'Still in final rounds':1,'Rejected before offer':2};
+ const W=1100,H=640,main=sankey(paths,col,6,order,W,H,color),val=main.val;
+ const dts=A.map(a=>a.applied_on).filter(Boolean).sort(),wk=dts.length?Math.max(1,Math.round((new Date(S.today)-new Date(dts[0]))/6048e5)):0;
+ const ints=val['Initial interviews']||0,fin=val['Final interview']||0,off=val['Offer received']||0,asn=val['Assessment requested']||0;
+ const stats=`<div class="grid stats"><div class="card stat"><b>${A.length}</b><span>Applications</span></div>
+ <div class="card stat"><b>${val['No replies']||0}</b><span>No reply</span></div>
+ <div class="card stat"><b>${val['Rejections']||0}</b><span>Rejected, no interview</span></div>
+ <div class="card stat"><b>${asn}</b><span>Assessments sent</span></div>
+ <div class="card stat"><b>${ints}</b><span>Got interviews (${A.length?(ints/A.length*100).toFixed(1):0}%)</span></div>
+ <div class="card stat"><b>${fin}</b><span>Reached final interview</span></div>
+ <div class="card stat"><b>${off}</b><span>Offers</span></div></div>`;
+ const chart=`<div class="overflow-x-auto rounded-lg bg-white p-3 text-[#111]"><div style="text-align:center;font-size:30px;font-weight:800;color:#1a4f7a;margin:6px 0 0">Job hunting: software engineer roles (${wk} weeks)</div>
+ <svg viewBox="0 0 ${W} ${H}" style="width:100%;min-width:760px;height:auto" role="img" aria-label="Application funnel">${main.svg}</svg>
+ <div style="text-align:center;font-size:12px;color:#666">Green = moving forward, red = ended, gold = waiting on something. Assessments are a separate step from interviews. Generated from your tracker.</div></div>
+ `;
+ return {stats,chart,note:`<div class="mut" style="margin-top:8px">Built live from each application's stage and history, plus the Assessments tab (matched by company and role). Roblox is not shown because it isn't one of your tracked applications.</div>`}}
+
+
+
+/* ---------- Kibo UI-style primitives (Pill, Status, Announcement, List, sortable Table), rendered as plain HTML ---------- */
+const pill=(t,tone='gray',icon='')=>`<span class="badge !rounded-full" style="${TONE[tone]||TONE.gray}">${icon?ico(icon,'mr-1 h-3 w-3'):''}${esc(t)}</span>`;
+const status=(t,tone='gray',ping=false)=>`<span class="inline-flex items-center gap-1.5 text-subhead"><span class="relative flex h-2 w-2">${ping?`<span class="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60" style="background:rgb(var(--${tone==='gray'?'fill':tone}))"></span>`:''}<span class="relative inline-flex h-2 w-2 rounded-full" style="background:rgb(var(--${tone==='gray'?'fill':tone}))"></span></span>${esc(t)}</span>`;
+const announcement=(tag,title,tone='orange',attrs='')=>`<button class="inline-flex max-w-full items-center gap-2 rounded-full border hair py-1 pl-1 pr-3 text-subhead transition-shadow duration-fast hover:shadow-thumb" style="background:rgb(var(--bg2))" ${attrs}><span class="badge !rounded-full" style="${TONE[tone]}">${esc(tag)}</span><span class="truncate">${title}</span>${ico('chevron-right','h-3.5 w-3.5 t3')}</button>`;
+const listGroup=(name,count,tone,items,emptyText)=>`<div><div class="mb-2 flex items-center gap-2 px-1">${status(name,tone)}<span class="text-footnote t3">${count}</span></div>${items.length?`<div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">${items.join('')}</div>`:empty(emptyText)}</div>`;
+const sortTH=(label,key,cur,dir)=>`<th class="${TH}"><button class="inline-flex items-center gap-1 hover:text-[rgb(var(--label))]" data-sort="${key}">${label}${cur===key?ico(dir>0?'chevron-up':'chevron-down','h-3 w-3'):ico('chevrons-up-down','h-3 w-3 opacity-40')}</button></th>`;
+
+/* ---------- Overview ---------- */
+function ov(){
+ const A=S.apps,agent=A.filter(a=>a.source==='agent').length,me=A.filter(a=>a.source==='me').length,wk=days(7);
+ const wkN=A.filter(a=>wk.includes(a.applied_on)).length,active=A.filter(a=>['intro_call','interview','final'].includes(a.stage)).length;
+ const asN=(S.assessments||[]).filter(a=>['todo','expired'].includes(a.status)).length,callN=(S.actions||[]).filter(a=>!a.done&&a.type==='schedule').length;
+ const d21=days(21),cnt=d=>A.filter(a=>a.applied_on===d).length,by={};A.forEach(a=>by[a.stage]=(by[a.stage]||0)+1);
+ const today=new Date(S.today+'T12:00').toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'});
+ const sv=S.searches.find(s=>s.id===S.viewing)||{name:'All time',start:(A.map(a=>a.applied_on).sort()[0]||S.today),end:''};
+ $('#ov').innerHTML=`
+ <div class="flex flex-wrap items-end justify-between gap-3"><div><div class="text-footnote t2">${today}</div><h1 class="text-large-title">Overview</h1><p class="mt-1 text-subhead t2">${esc(sv.name)} · ${sv.end?`${esc(sv.start)} to ${esc(sv.end)} (finished)`:`since ${esc(sv.start)}`}</p></div>
+  <div class="flex flex-wrap items-center gap-2">${select([...S.searches.map(s=>[s.id,s.name+(s.end?'':' (current)')]),['all','All time']],S.viewing,'id="spick"','!w-auto')}${S.viewing===S.search?button('Start a new job search',{v:'tint',icon:'plus',attrs:'id="snew"'}):''}</div></div>
+ ${nAct()?`<div>${announcement(`${nAct()} to do`,`${asN} assessment${asN===1?'':'s'} and ${callN} intro call${callN===1?'':'s'} need you`,'orange','id="goact"')}</div>`:''}
+ <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+  ${stat('Total applied',A.length,'send')}${stat('By the agent',agent,'bot')}${stat('By you',me,'user')}${stat('Last 7 days',wkN,'calendar-days')}
+  ${stat('In calls / interviews',active,'phone-call')}${stat('Assessments needed',asN,'clipboard-check',asN?'orange':'')}${stat('Intro calls to set up',callN,'calendar-plus',callN?'orange':'')}${stat('Waiting for you to apply',S.todo.length,'hourglass')}
+ </div>
+ <div class="grid gap-3 lg:grid-cols-3">
+  ${card(cardHeader('Applications per day','Last 21 days')+cardBody('<div class="h-56"><canvas id="perday"></canvas></div>'),'lg:col-span-2')}
+  ${card(cardHeader('Where everything stands','Every application by stage')+`<div class="list">${S.stages.map(s=>`<div class="row !min-h-0 !py-2.5">${status(LABEL[s],STAGE_TONE[s],['intro_call','interview'].includes(s)&&by[s]>0)}<span class="ml-auto text-callout font-semibold">${by[s]||0}</span></div>`).join('')}</div><div class="h-2"></div>`)}
+ </div>
+ ${card(cardHeader('Application funnel','From applied to offer. Assessments are a separate step from interviews.')+cardBody(funParts().chart))}`;
+ const go=$('#goact');if(go)go.onclick=()=>{tab='pipe';localStorage.setItem('tab',tab);render()};
+ $('#spick').onchange=e=>{localStorage.setItem('sid',e.target.value);load()};
+ const sn=$('#snew');if(sn)sn.onclick=async()=>{const name=prompt('Name the new search (for example "Spring 2027 search"). The current one is closed today and stays viewable from the picker.','Job search '+(S.searches.length+1));if(name===null)return;const r=await api('/api/search',{action:'start',name});localStorage.setItem('sid',r.id);load('New search started. The Jobs app now shows only applications from today on.')};
+ const cs=getComputedStyle(document.documentElement),fg=`rgb(${cs.getPropertyValue('--label')} / .5)`,pr=`rgb(${cs.getPropertyValue('--accent')})`,gr=`rgb(${cs.getPropertyValue('--label')} / .08)`;
+ if(chart)chart.destroy();
+ chart=new Chart($('#perday'),{type:'bar',data:{labels:d21.map(d=>d.slice(5)),datasets:[{data:d21.map(cnt),backgroundColor:pr,borderRadius:5,maxBarThickness:22}]},
+  options:{responsive:true,maintainAspectRatio:false,animation:{duration:matchMedia('(prefers-reduced-motion: reduce)').matches?0:250},plugins:{legend:{display:false},tooltip:{displayColors:false}},scales:{x:{grid:{display:false},ticks:{color:fg,font:{size:10}}},y:{beginAtZero:true,grid:{color:gr},border:{display:false},ticks:{color:fg,precision:0}}}}})}
+
+/* ---------- Action needed ---------- */
+function pipe(){
+ const T=S.today,AC=(S.actions||[]).filter(a=>!a.done),AL=S.assessments||[];
+ const late=d=>d&&d<T,isT=d=>d===T,dPill=d=>d?pill(late(d)?'Overdue '+d:isT(d)?'Today':d,late(d)?'red':isT(d)?'orange':'gray',late(d)||isT(d)?'clock':''):'';
+ const asCard=a=>{const exp=a.status==='expired',done=a.status==='done',due=exp||done?'':a.due,hot=late(due)||isT(due);
+  const txt=exp?`Ask for a new ${a.platform} link`:done?`${a.platform} done`:`Do the ${a.platform} assessment${a.minutes?' ('+a.minutes+' min)':''}`;
+  return card(`<div class="flex h-full flex-col gap-2 p-4"><div class="flex flex-wrap items-center gap-2"><span class="text-headline">${esc(a.company)}</span>${pill(exp?'Expired':done?'Done':'To do',exp?'red':done?'green':'orange')}${dPill(due)}</div>
+   <div class="text-body">${esc(txt)}<span class="t2"> · ${esc(a.role)}</span></div>
+   <div class="text-footnote t2">${esc(a.platform)}${a.minutes?' · '+esc(a.minutes)+' min':''} · invited ${esc(a.invited||'?')}</div>
+   ${a.notes?`<p class="text-subhead t2">${esc(a.notes)}</p>`:''}
+   <div class="mt-auto flex flex-wrap items-center gap-2 pt-2">${done?button('Reopen',{v:'gray',s:'sm',attrs:`data-pa="as" data-v="todo" data-id="${a.id}"`}):exp?button('Got a new link',{v:'filled',s:'sm',icon:'link',attrs:`data-pa="as" data-v="todo" data-id="${a.id}"`})+button('Skip it',{v:'gray',s:'sm',attrs:`data-pa="as" data-v="skipped" data-id="${a.id}"`}):button('Mark done',{v:'filled',s:'sm',icon:'check',attrs:`data-pa="as" data-v="done" data-id="${a.id}"`})+button('It expired',{v:'gray',s:'sm',attrs:`data-pa="as" data-v="expired" data-id="${a.id}"`})+input(`type="date" data-pa="asdue" data-id="${a.id}" value="${esc(a.due||'')}" title="Due date"`,'!h-[30px] !text-[13px]')}
+   ${button('',{v:'plain',s:'sm',icon:'trash-2',attrs:`data-pa="asdel" data-id="${a.id}" data-name="${esc(a.company)} assessment" aria-label="Remove" class="ml-auto"`})}</div></div>`,hot?'ring-1 ring-[rgb(var(--orange)/.5)]':'')};
+ const acCard=a=>card(`<div class="flex h-full flex-col gap-2 p-4"><div class="flex flex-wrap items-center gap-2"><span class="text-headline">${esc(a.company)}</span>${pill(a.type==='schedule'?'Book a call':a.type==='prep'?'Prep':a.type==='reply'?'Reply':'To do',a.type==='prep'?'green':'accent')}${dPill(a.due)}</div>
+   <div class="text-body">${esc(a.text)}</div>${a.note?`<p class="text-subhead t2">${esc(a.note)}</p>`:''}
+   <div class="mt-auto flex flex-wrap items-center gap-2 pt-2">${button('Done',{v:'filled',s:'sm',icon:'check',attrs:`data-pa="done" data-id="${a.id}"`})}${input(`type="date" data-pa="due" data-id="${a.id}" value="${esc(a.due||'')}" title="Due date"`,'!h-[30px] !text-[13px]')}
+   ${button('',{v:'plain',s:'sm',icon:'trash-2',attrs:`data-pa="del" data-id="${a.id}" data-name="this to-do" aria-label="Remove" class="ml-auto"`})}</div></div>`,late(a.due)||isT(a.due)?'ring-1 ring-[rgb(var(--orange)/.5)]':'');
+ const rank={todo:0,expired:1},aTodo=AL.filter(a=>['todo','expired'].includes(a.status)).sort((x,y)=>(rank[x.status]-rank[y.status])||String(x.due||'9').localeCompare(String(y.due||'9')));
+ const aDone=AL.filter(a=>a.status==='done'),calls=AC.filter(a=>a.type==='schedule').sort((x,y)=>String(x.due||'9').localeCompare(String(y.due||'9'))),other=AC.filter(a=>a.type!=='schedule'),sg=S.suggestions||[];
+ const disc=(label,inner)=>`<details class="card overflow-hidden"><summary class="row !min-h-[44px] text-callout" style="color:rgb(var(--accent))">${ico('plus-circle','h-4 w-4')}${label}</summary><div class="border-t hair p-4 space-y-3">${inner}</div></details>`;
+ $('#pipe').innerHTML=`
+ <div><h1 class="text-large-title">Action needed</h1><p class="mt-1 text-subhead t2">Only the things that are waiting on you.</p></div>
+ <div class="grid gap-3 sm:grid-cols-3">${stat('Assessments needed',aTodo.length,'clipboard-check',aTodo.length?'orange':'')}${stat('Intro calls to set up',calls.length,'calendar-plus',calls.length?'orange':'')}${stat('Other',other.length,'list-todo')}</div>
+ ${listGroup('Assessments needed',aTodo.length,aTodo.length?'orange':'gray',aTodo.map(asCard),'No assessments waiting on you.')}
+ ${disc('Add an assessment',`<div class="grid gap-2 sm:grid-cols-3">${input('id="ac" placeholder="Company"')}${input('id="ar" placeholder="Role"')}${select(['HackerRank','CodeSignal','Codility','CoderPad','Karat','HireVue','Take-home','Other'].map(x=>[x,x]),'HackerRank','id="ap"')}</div>
+  <div class="grid gap-2 sm:grid-cols-4">${input('id="am" type="number" placeholder="Minutes"')}${input(`id="ai" type="date" value="${T}" title="Invited"`,'!w-full')}${input('id="ad" type="date" title="Due"','!w-full')}${input('id="an" placeholder="Notes (where the link is)"')}</div><div>${button('Add assessment',{icon:'plus',attrs:'id="aadd"'})}</div>`)}
+ ${aDone.length?`<details class="card overflow-hidden"><summary class="row !min-h-[44px] text-callout t2">${ico('check-circle-2','h-4 w-4')}Done (${aDone.length})</summary><div class="border-t hair p-4"><div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">${aDone.map(asCard).join('')}</div></div></details>`:''}
+ ${listGroup('Intro calls to set up',calls.length,calls.length?'accent':'gray',calls.map(acCard),'No calls waiting to be booked.')}
+ ${other.length?listGroup('Other',other.length,'gray',other.map(acCard),''):''}
+ ${disc('Add a call to set up or another to-do',`<div class="grid gap-2 sm:grid-cols-4">${input('id="xc" placeholder="Company"')}${input('id="xt" placeholder="What you need to do"','sm:col-span-2')}${select([['schedule','Intro call to set up'],['reply','Reply'],['prep','Prep'],['other','To do']],'schedule','id="xk"')}</div>
+  <div class="flex flex-wrap gap-2">${input('id="xd" type="date" title="Due date"')}${button('Add',{icon:'plus',attrs:'id="xadd"'})}</div>`)}
+ ${sg.length?listGroup('Gmail suggestions',sg.length,'accent',sg.map(x=>card(`<div class="flex h-full flex-col gap-2 p-4"><div class="flex items-center gap-2"><span class="text-headline">${esc(x.company)}</span>${pill(LABEL[x.stage],STAGE_TONE[x.stage])}</div><div class="text-body">${esc(x.subject)}</div><div class="text-footnote t2">${esc(x.from)} · ${esc(x.date)}</div><p class="text-subhead t2">${esc(x.snippet)}</p>
+   <div class="mt-auto flex gap-2 pt-2">${button('Accept',{v:'filled',s:'sm',attrs:`data-sa="accept" data-id="${esc(x.id)}" data-k="${x.key}" data-st="${x.stage}"`})}${button('Dismiss',{v:'gray',s:'sm',attrs:`data-sa="dismiss" data-id="${esc(x.id)}"`})}</div></div>`)),''):''}
+ <div class="flex items-center gap-3">${button('Check Gmail now',{v:'tint',icon:'refresh-cw',attrs:'id="gsync"'})}<span id="gmsg" class="text-subhead t2"></span></div>`;
+ const post=(p,b,msg)=>api(p,b).then(()=>load(msg));
+ document.querySelectorAll('#pipe [data-pa]').forEach(el=>{const a=el.dataset.pa,id=el.dataset.id;
+  if(a==='due')el.onchange=()=>post('/api/action',{action:'update',id,due:el.value},'Due date saved');
+  else if(a==='asdue')el.onchange=()=>post('/api/assess',{action:'update',id,due:el.value},'Due date saved');
+  else el.onclick=()=>{if(a==='done')return post('/api/action',{action:'update',id,done:'1'},'Marked done');if(a==='del'){if(confirmRemove(el.dataset.name))post('/api/action',{action:'delete',id},'Removed');return}if(a==='asdel'){if(confirmRemove(el.dataset.name))post('/api/assess',{action:'delete',id},'Removed');return}post('/api/assess',{action:'update',id,status:el.dataset.v},'Saved')}});
+ document.querySelectorAll('[data-sa]').forEach(b=>b.onclick=async()=>{await api('/api/suggest',{action:b.dataset.sa,id:b.dataset.id,key:b.dataset.k,stage:b.dataset.st});load(b.dataset.sa==='accept'?'Stage updated':'Dismissed')});
+ $('#xadd').onclick=()=>{const c=$('#xc').value.trim(),t=$('#xt').value.trim();if(!c||!t){toast('Add a company and what to do','alert-circle');return}post('/api/action',{action:'add',company:c,text:t,type:$('#xk').value,due:$('#xd').value},'Added')};
+ $('#aadd').onclick=()=>{const c=$('#ac').value.trim();if(!c){toast('Add a company','alert-circle');return}post('/api/assess',{action:'add',company:c,role:$('#ar').value,platform:$('#ap').value,minutes:$('#am').value,invited:$('#ai').value,due:$('#ad').value,notes:$('#an').value},'Assessment added')};
+ $('#gsync').onclick=async()=>{$('#gmsg').textContent='Reading Gmail…';const r=await api('/api/gmail-sync',{});$('#gmsg').textContent=r.status==='ok'?`Scanned ${r.scanned} messages, ${r.new_suggestions} suggestions`:(r.detail||r.status);if(r.status==='ok')load('Gmail checked')}}
+
+/* ---------- Manual applications ---------- */
+function man(){
+ const todo=S.todo,q=(window._mq||'').toLowerCase(),list=todo.filter(t=>(t.company+t.role+t.blocker).toLowerCase().includes(q));
+ $('#man').innerHTML=`
+ <div><h1 class="text-large-title">Manual applications</h1><p class="mt-1 text-subhead t2">Roles the agent could not submit, and a place to log what you applied to by hand.</p></div>
+ ${card(cardHeader('Log a job you applied to by hand','Paste the posting link and the details fill in.')+cardBody(`<div class="relative">${ico('link','pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 t3')}<input class="ctl pl-9 pr-32" id="lk" type="url" placeholder="https://…"><div class="absolute right-1 top-1/2 -translate-y-1/2">${button('Fill from link',{v:'tint',s:'sm',icon:'wand-2',attrs:'id="fill"'})}</div></div><div id="prev" class="mt-4 hidden"></div>`))}
+ ${section(`Apply yourself · ${todo.length} open`,search(`id="mq" placeholder="Search company, role, blocker" value="${esc(window._mq||'')}"`,'w-72 max-w-full'))}
+ ${card(table(['','Company','Role','Pay',"Why the agent couldn't",'What to do',''],list.slice(0,300).map(t=>`<tr class="${TR}"><td class="${TD} w-12"><input type="checkbox" class="chk" data-mark="${esc(t.url)}" data-k="${t.key}" title="I applied"></td>
+  <td class="${TD}"><div class="font-medium">${esc(t.company)}</div><div class="text-footnote t2">${esc(t.date)}</div></td><td class="${TD}">${linkOut(t.url,t.role)}<div class="text-footnote t2">${esc(t.location)}</div></td><td class="${TD} whitespace-nowrap">${esc(t.pay)}</td><td class="${TD} t2">${esc(t.blocker)}</td><td class="${TD}">${esc(t.todo)}</td><td class="${TD} w-8">${t.url?`<a href="${esc(t.url)}" target="_blank" rel="noopener" aria-label="Open posting">${ico('chevron-right','chev h-4 w-4')}</a>`:''}</td></tr>`),'Nothing left to apply to by hand.'),'overflow-hidden')}
+ ${list.length>300?`<p class="text-footnote t2">Showing 300 of ${list.length}; use search to narrow.</p>`:''}`;
+ $('#mq').oninput=debounceKeep('mq',()=>{man();paint()});
+ $('#fill').onclick=async()=>{const u=$('#lk').value.trim();if(!u){toast('Paste a link first','alert-circle');return}$('#fill').disabled=true;pending=await api('/api/lookup',{url:u});$('#fill').disabled=false;prev()};
+ document.querySelectorAll('[data-mark]').forEach(c=>c.onchange=async()=>{if(!c.checked)return;await api('/api/mark',{url:c.dataset.mark,key:c.dataset.k,applied:true});load('Logged as applied')})}
+function prev(){const p=pending,e=$('#prev');e.classList.remove('hidden');
+ e.innerHTML=`<div class="space-y-3">${p.error?banner('Could not read the page fully',esc(p.error)+'. Fill in what you know.','orange'):`<p class="text-subhead t2">Check the details, fix anything wrong, then save.</p>`}
+ <div class="grid gap-2 sm:grid-cols-2">${input(`id="pc" placeholder="Company" value="${esc(p.company)}"`)}${input(`id="pr" placeholder="Role" value="${esc(p.role)}"`)}${input(`id="pl" placeholder="Location" value="${esc(p.location)}"`)}${input(`id="pp" placeholder="Pay" value="${esc(p.pay)}"`)}</div>
+ ${p.summary?`<details class="rounded-ctl fill"><summary class="px-3 py-2 text-subhead" style="color:rgb(var(--accent))">Posting summary</summary><p class="px-3 pb-3 text-subhead t2">${esc(p.summary)}</p></details>`:''}
+ <textarea id="pn" rows="2" class="ctl" placeholder="Notes (recruiter name, referral, anything)"></textarea>
+ <div class="flex gap-2">${button('I applied: save to my log',{icon:'check',attrs:'id="sv"'})}${button('Cancel',{v:'gray',attrs:'id="cx"'})}</div></div>`;paint();
+ $('#cx').onclick=()=>{pending=null;e.classList.add('hidden')};
+ $('#sv').onclick=async()=>{await api('/api/add',{url:p.url,company:$('#pc').value,role:$('#pr').value,location:$('#pl').value,pay:$('#pp').value,notes:$('#pn').value});pending=null;load('Saved to your log')}}
+
+/* ---------- All applications (sortable table, row opens a sheet) ---------- */
+function all(){
+ const q=(window._aq||'').toLowerCase(),sf=window._as||'',sk=window._sk||'applied_on',sd=window._sd||-1;
+ const L=S.apps.filter(a=>(a.company+a.role+a.stage).toLowerCase().includes(q)&&(!sf||a.stage===sf)).sort((a,b)=>String(a[sk]||'').localeCompare(String(b[sk]||''))*sd||b.applied_on.localeCompare(a.applied_on));
+ $('#all').innerHTML=`<div class="flex flex-wrap items-end justify-between gap-3"><div><h1 class="text-large-title">All applications</h1><p class="mt-1 text-subhead t2">${L.length} of ${S.apps.length}. Select a row to change its stage, add notes or set a follow-up.</p></div>
+  <div class="flex flex-wrap gap-2">${search(`id="aq" placeholder="Search" value="${esc(window._aq||'')}"`,'w-56')}${select([['','All stages'],...S.stages.map(s=>[s,LABEL[s]])],sf,'id="as"','!w-44')}</div></div>
+ ${card(table([sortTH('Date','applied_on',sk,sd),sortTH('Company','company',sk,sd),sortTH('Role','role',sk,sd),'Location','Pay','Who',sortTH('Stage','stage',sk,sd),''],L.slice(0,400).map(a=>`<tr class="${TR} cursor-pointer" data-open="${a.key}"><td class="${TD} whitespace-nowrap t2">${esc(a.applied_on)}</td><td class="${TD} font-medium">${esc(a.company)}</td>
+  <td class="${TD}">${linkOut(a.url,a.role)}</td><td class="${TD} t2">${esc(a.location)}</td><td class="${TD} whitespace-nowrap">${esc(a.pay)}</td><td class="${TD}">${pill(a.source==='me'?'You':'Agent','gray')}</td><td class="${TD}">${status(LABEL[a.stage],STAGE_TONE[a.stage])}</td><td class="${TD} w-8">${ico('chevron-right','chev h-4 w-4')}</td></tr>`),'No applications match.'),'overflow-hidden')}
+ ${L.length>400?`<p class="text-footnote t2">Showing 400; narrow with search.</p>`:''}`;
+ $('#aq').oninput=debounceKeep('aq',()=>{all();paint()});$('#as').onchange=e=>{window._as=e.target.value;all();paint()};
+ document.querySelectorAll('[data-sort]').forEach(b=>b.onclick=()=>{const k=b.dataset.sort;window._sd=window._sk===k?-(window._sd||-1):1;window._sk=k;all();paint()});
+ document.querySelectorAll('[data-open]').forEach(r=>r.onclick=e=>{if(e.target.closest('a'))return;openApp(r.dataset.open)})}
+function openApp(k){const a=S.apps.find(x=>x.key===k);if(!a)return;const d=$('#dlg');
+ d.innerHTML=`<div class="grab"></div><div class="flex items-center justify-between px-4 pt-2 pb-1">${button('Cancel',{v:'plain',attrs:'id="dc"'})}<span class="text-headline">Edit</span>${button('Done',{v:'plain',attrs:'id="dsv" style="font-weight:700"'})}</div>
+  <div class="space-y-4 px-5 pb-5"><div><h3 class="text-title2">${esc(a.company)}</h3><p class="mt-0.5 text-subhead">${linkOut(a.url,a.role)}</p></div>
+  <div class="sec !px-0">Status</div><div class="card list overflow-hidden" style="background:rgb(var(--bg3))"><label class="row"><span class="text-body">Stage</span>${select(S.stages.map(s=>[s,LABEL[s]]),a.stage,'id="ds"','!w-auto ml-auto !h-8 !text-[13px]')}</label><label class="row"><span class="text-body">Follow up on</span>${input(`id="df" type="date" value="${esc(a.follow_up||'')}"`,'ml-auto !h-8 !text-[13px]')}</label></div>
+  <div class="sec !px-0">Notes</div><textarea id="dn" rows="4" class="ctl" placeholder="Recruiter name, referral, what happened">${esc(a.notes)}</textarea>
+  ${a.history&&a.history.length?`<div class="text-footnote t2">${a.history.map(h=>esc(LABEL[h.stage])+' '+esc(h.on.slice(5))).join(' → ')}</div>`:''}
+  <div class="text-footnote t2">${esc(a.location)} · ${esc(a.pay)} · applied ${esc(a.applied_on)} by ${a.source==='me'?'you':'the agent'}</div></div>`;paint();
+ $('#dc').onclick=()=>d.close();
+ $('#dsv').onclick=async()=>{const b={key:k,stage:$('#ds').value,notes:$('#dn').value,follow_up:$('#df').value};await api('/api/item',b);d.close();load('Saved')};
+ d.showModal()}
+
+/* launcher */
+function home(){
+ const A=S.apps,asN=(S.assessments||[]).filter(a=>['todo','expired'].includes(a.status)).length,callN=(S.actions||[]).filter(a=>!a.done&&a.type==='schedule').length,today=new Date(S.today+'T12:00').toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'});
+ const T=RC||{daily:[],streak:0,items:{},sessions:[]},todayN=(T.daily.find(d=>d.date===S.today)||{}).count||0,due=Object.values(T.items).filter(v=>v.next_due&&v.next_due<=S.today).length;
+ const tile=(href,icon,name,blurb,stats,cta)=>`<a href="${href}" class="card block p-6 transition-shadow duration-fast hover:shadow-thumb"><div class="flex items-center gap-2 text-title3">${ico(icon,'h-5 w-5')}<span>${name}</span></div><p class="mt-1 text-subhead t2">${blurb}</p><div class="mt-5 grid grid-cols-3 gap-3">${stats.map(([l,v,tone])=>`<div><div class="text-title2" style="${tone?`color:rgb(var(--${tone}))`:''}">${v}</div><div class="text-caption t2">${l}</div></div>`).join('')}</div><div class="mt-5">${button(cta,{icon:'arrow-right'})}</div></a>`;
+ $('#home').innerHTML=`<div><div class="text-footnote t2">${today}</div><h1 class="text-large-title">Better Every Day</h1><p class="mt-1 text-subhead t2">Two things, every day: move the job search forward, and get sharper for the interviews.</p></div>
+ ${journalCard()}
+ <div class="grid gap-4 md:grid-cols-3">${tile('/jobs','briefcase','Job Tracker','Applications, follow-ups, assessments to do, calls to book.',[['applied',A.length],['need you',asN+callN,asN+callN?'orange':''],['in interviews',A.filter(a=>['intro_call','interview','final'].includes(a.stage)).length]],'Open Job Tracker')}${tile('/recall','brain','Recall','One hour a day for six months: LeetCode, Python, System Design, DSA and debugging, graded and scheduled.',[['day streak',T.streak,T.streak?'orange':''],['minutes today',T.metrics?Math.round(T.metrics.today_minutes):todayN,(T.metrics&&T.metrics.today_minutes>=60)?'green':''],['readiness',T.metrics?T.metrics.readiness_overall+'%':due,'']],'Open Recall')}${tile('/network','users','Network','People you met, mentors, events, and who can connect you to what.',[['people',NW?NW.people.length:0],['events',NW?NW.events.length:0],['follow-ups',NW?NW.follow_ups.length:0,NW&&NW.follow_ups.length?'orange':'']],'Open Network')}</div>`;wireJournal()}
+
+/* ---------- Journal: tell it what you did today (typed or dictated) ---------- */
+const ITEM_ICON={mock_interview:'mic',interview:'building-2',event:'calendar',person:'user-plus',study:'book-open',other:'sticky-note'};
+const itemLine=i=>{const t=i.type;const r=i.rating?pill(i.rating+'/10',scoreTone(i.rating)):'';
+ if(t==='mock_interview')return `Mock interview${i.with?' with '+esc(i.with):''}${i.format?' · '+esc(i.format):''} ${r}`;
+ if(t==='interview')return `Interview · ${esc(i.company||'')}${i.stage?' · '+esc(i.stage):''} ${r}`;
+ if(t==='event')return `Event · ${esc(i.name||'')}${i.kind?' · '+esc(i.kind):''}`;
+ if(t==='person')return `Met ${esc(i.name||'someone')}${i.company?' ('+esc(i.company)+')':''}${i.how_they_can_help?' · '+esc(i.how_they_can_help):''}`;
+ if(t==='study')return `Study · ${esc(i.what||'')}${i.minutes?' · '+i.minutes+' min':''}`;return esc(i.notes||'')};
+function journalCard(){const J=JN||{entries:[]},todays=J.entries.filter(e=>e.date===S.today),rest=J.entries.filter(e=>e.date!==S.today).slice(0,5),canMic=!!(window.SpeechRecognition||window.webkitSpeechRecognition);
+ const entry=e=>`<div class="px-5 py-3 border-t hair"><div class="flex items-start gap-3"><div class="min-w-0 flex-1"><div class="text-footnote t2">${esc(e.date)} ${esc(e.time)}</div><div class="text-body">${esc(e.summary||e.text)}</div>${e.items.length?`<div class="mt-2 flex flex-wrap gap-1.5">${e.items.map(i=>`<span class="badge inline-flex items-center gap-1" style="${TONE.gray}">${ico(ITEM_ICON[i.type]||'dot','h-3 w-3')}${itemLine(i)}</span>`).join('')}</div>`:e.parse_error?`<div class="mt-1 text-footnote" style="color:rgb(var(--orange))">Saved as a note only: ${esc(e.parse_error)}</div>`:!RC||!RC.settings.has_key?'<div class="mt-1 text-footnote t3">Saved as a note. Add an AI key in Recall → Settings and new notes get sorted into people, events and interviews.</div>':''}</div>${button('',{v:'plain',s:'sm',icon:'trash-2',attrs:`data-jdel="${e.id}" aria-label="Delete"`})}</div></div>`;
+ return card(cardHeader('What did you do today?','A job fair, people you met, a mock interview, a real one. Say it or type it; it gets sorted into Network and Recall.')+cardBody(`<div class="flex flex-col gap-2"><textarea id="jtext" class="ctl !h-auto min-h-[88px] resize-y py-2" placeholder="Went to the the NYC tech meetup event, met three people. Did a mock interview, aced it. Google phone screen went okay."></textarea>
+  <div class="flex flex-wrap items-center gap-2">${canMic?button('Speak',{v:'tint',icon:'mic',attrs:'id="jmic"'}):'<span class="text-footnote t3">Dictation needs Chrome.</span>'}${button('Save',{icon:'check',attrs:'id="jsave"'})}<span id="jmsg" class="text-subhead t2"></span></div></div>`)+(todays.length||rest.length?`<div class="px-5 pb-2 text-footnote t2">${todays.length?'Today':'Recent'}</div>${todays.map(entry).join('')}${rest.length&&todays.length?'<div class="px-5 pb-2 pt-3 text-footnote t2">Earlier</div>':''}${rest.map(entry).join('')}<div class="h-2"></div>`:''))}
+let jrec=null;
+function wireJournal(){const ta=$('#jtext');if(!ta)return;
+ $('#jsave').onclick=async()=>{const text=ta.value.trim();if(text.length<3){toast('Say or type what happened first','alert-circle');return}$('#jsave').disabled=true;$('#jmsg').textContent=RC&&RC.settings.has_key?'Sorting it out…':'Saving…';const r=await api('/api/journal',{text});if(r.error){toast(r.error.slice(0,140),'alert-circle');$('#jsave').disabled=false;$('#jmsg').textContent='';return}ta.value='';load(r.items&&r.items.length?`Logged ${r.items.length} thing${r.items.length===1?'':'s'}`:'Saved')};
+ document.querySelectorAll('[data-jdel]').forEach(b=>b.onclick=async()=>{if(!confirmRemove('this entry and what it added'))return;await api('/api/journal',{action:'delete',id:b.dataset.jdel});load('Removed')});
+ const mic=$('#jmic');if(!mic)return;
+ mic.onclick=()=>{if(jrec){jrec.stop();return}const SR=window.SpeechRecognition||window.webkitSpeechRecognition;jrec=new SR();jrec.continuous=true;jrec.interimResults=true;jrec.lang='en-US';let base=ta.value?ta.value.replace(/\s*$/,' '):'',fin='';
+  jrec.onresult=e=>{let interim='';for(let i=e.resultIndex;i<e.results.length;i++){const t=e.results[i][0].transcript;if(e.results[i].isFinal)fin+=t+' ';else interim+=t}ta.value=base+fin+interim};
+  jrec.onerror=e=>{toast(e.error==='not-allowed'?'Allow the microphone in the address bar':'Mic: '+e.error,'alert-circle')};
+  jrec.onend=()=>{jrec=null;mic.innerHTML=ico('mic','h-4 w-4')+'Speak';mic.classList.remove('btn-red');paint()};
+  jrec.start();mic.innerHTML=ico('square','h-4 w-4')+'Stop';mic.classList.add('btn-red');paint();$('#jmsg').textContent='Listening… press Stop when you are done.'}}
+
+/* ---------- Network: people, mentors, events ---------- */
+const REL={contact:'gray',mentor:'green',recruiter:'accent',peer:'orange'};
+function network(){if(!NW){$('#network').innerHTML='<div class="p-10 text-center t2">Loading…</div>';return}(ntab==='nevents'?nEvents:nPeople)()}
+function nPeople(){const q=(window._nq||'').toLowerCase(),L=NW.people.filter(p=>!q||(p.name+' '+p.company+' '+p.role+' '+p.met_at+' '+p.how_they_can_help).toLowerCase().includes(q));
+ $('#network').innerHTML=`<div class="flex flex-wrap items-end justify-between gap-3"><div><h1 class="text-large-title">People</h1><p class="mt-1 text-subhead t2">${NW.people.length} people · ${NW.people.filter(p=>p.relationship==='mentor').length} mentors · ${NW.follow_ups.length} follow-up${NW.follow_ups.length===1?'':'s'} open</p></div>${button('Add a person',{icon:'user-plus',attrs:'id="nadd"'})}</div>
+ ${NW.follow_ups.length?card(cardHeader('Follow-ups','Promised or planned next steps')+`<div class="list">${NW.follow_ups.map(p=>`<div class="row"><input type="checkbox" class="chk" data-fu="${p.id}"><div class="min-w-0 flex-1"><div class="text-body">${esc(p.follow_up)}</div><div class="text-footnote t2">${esc(p.name)}${p.company?' · '+esc(p.company):''}</div></div></div>`).join('')}</div><div class="h-2"></div>`):''}
+ ${search(`id="nq" placeholder="Search people" value="${esc(window._nq||'')}"`,'w-72')}
+ ${card(table(['Name','Company · role','Met at','How they can help','Follow-up',''],L.map(p=>`<tr class="${TR} cursor-pointer" data-np="${p.id}"><td class="${TD}"><div class="font-medium">${esc(p.name)}</div><div class="mt-0.5">${pill(p.relationship||'contact',REL[p.relationship]||'gray')}</div></td><td class="${TD} t2">${esc(p.company)}${p.role?' · '+esc(p.role):''}</td><td class="${TD} t2">${esc(p.met_at)}<div class="text-footnote t3">${esc(p.date||'')}</div></td><td class="${TD}">${esc(p.how_they_can_help)}</td><td class="${TD} t2">${p.follow_up?(p.follow_up_done?'<s>'+esc(p.follow_up)+'</s>':esc(p.follow_up)):'–'}</td><td class="${TD} w-8">${ico('chevron-right','chev h-4 w-4')}</td></tr>`),'No one yet. Add a person, or tell the home page who you met today.'),'overflow-hidden')}`;
+ $('#nq').oninput=debounceKeep('nq',nPeople);$('#nadd').onclick=()=>personDlg({});document.querySelectorAll('[data-np]').forEach(r=>r.onclick=()=>personDlg(NW.people.find(p=>p.id===r.dataset.np)));
+ document.querySelectorAll('[data-fu]').forEach(c=>c.onchange=async()=>{const p=NW.people.find(x=>x.id===c.dataset.fu);await api('/api/network',{kind:'person',record:{...p,follow_up_done:true}});load('Follow-up done')});paint()}
+function personDlg(p){const d=$('#dlg');const f=(id,l,v,ph='')=>`<label class="block"><span class="text-footnote t2">${l}</span>${input(`id="${id}" value="${esc(v||'')}" placeholder="${ph}"`,'mt-1')}</label>`;
+ d.innerHTML=`<div class="p-6 space-y-3"><h2 class="text-title2">${p.id?esc(p.name):'Add a person'}</h2><div class="grid gap-3 sm:grid-cols-2">${f('pn','Name',p.name)}${f('pc','Company',p.company)}${f('pr','Role',p.role)}<label class="block"><span class="text-footnote t2">Relationship</span>${select([['contact','Contact'],['mentor','Mentor'],['recruiter','Recruiter'],['peer','Peer']],p.relationship||'contact','id="prel"','mt-1')}</label>${f('pm','Met at',p.met_at,'the NYC tech meetup')}${f('pd','Date',p.date||S.today)}${f('pe','Email',p.email)}${f('pl','LinkedIn',p.linkedin)}</div>${f('ph','How they can help',p.how_they_can_help,'Referral at X, intro to Y, resume feedback')}${f('pf','Follow-up',p.follow_up,'Send resume by Friday')}<label class="block"><span class="text-footnote t2">Notes</span><textarea id="pno" class="ctl mt-1 !h-auto min-h-[72px] py-2">${esc(p.notes||'')}</textarea></label>
+ <div class="flex flex-wrap gap-2">${button('Save',{icon:'check',attrs:'id="psave"'})}${button('Cancel',{v:'gray',attrs:'id="pcancel"'})}${p.id?button('Remove',{v:'red',attrs:'id="pdel"'}):''}</div></div>`;d.showModal();paint();
+ $('#pcancel').onclick=()=>d.close();
+ $('#psave').onclick=async()=>{const rec={...p,name:$('#pn').value.trim(),company:$('#pc').value.trim(),role:$('#pr').value.trim(),relationship:$('#prel').value,met_at:$('#pm').value.trim(),date:$('#pd').value.trim(),email:$('#pe').value.trim(),linkedin:$('#pl').value.trim(),how_they_can_help:$('#ph').value.trim(),follow_up:$('#pf').value.trim(),follow_up_done:p.follow_up_done&&$('#pf').value.trim()===p.follow_up,notes:$('#pno').value.trim()};if(!rec.name){toast('Name is required','alert-circle');return}await api('/api/network',{kind:'person',record:rec});d.close();load('Saved')};
+ const del=$('#pdel');if(del)del.onclick=async()=>{if(!confirmRemove(p.name))return;await api('/api/network',{action:'delete',kind:'person',id:p.id});d.close();load('Removed')}}
+function nEvents(){const L=NW.events;
+ $('#network').innerHTML=`<div class="flex flex-wrap items-end justify-between gap-3"><div><h1 class="text-large-title">Events</h1><p class="mt-1 text-subhead t2">${L.length} event${L.length===1?'':'s'} · job fairs, meetups, info sessions</p></div>${button('Add an event',{icon:'calendar-plus',attrs:'id="eadd"'})}</div>
+ ${card(table(['Date','Event','Kind','Host','People met','Notes',''],L.map(e=>`<tr class="${TR} cursor-pointer" data-ne="${e.id}"><td class="${TD} t2 whitespace-nowrap">${esc(e.date)}</td><td class="${TD} font-medium">${esc(e.name)}</td><td class="${TD}">${pill(e.kind||'other','gray')}</td><td class="${TD} t2">${esc(e.org)}</td><td class="${TD}">${e.people||0}</td><td class="${TD} t2">${esc(e.notes)}</td><td class="${TD} w-8">${ico('chevron-right','chev h-4 w-4')}</td></tr>`),'No events yet.'),'overflow-hidden')}`;
+ $('#eadd').onclick=()=>eventDlg({});document.querySelectorAll('[data-ne]').forEach(r=>r.onclick=()=>eventDlg(NW.events.find(e=>e.id===r.dataset.ne)));paint()}
+function eventDlg(e){const d=$('#dlg');const f=(id,l,v,ph='')=>`<label class="block"><span class="text-footnote t2">${l}</span>${input(`id="${id}" value="${esc(v||'')}" placeholder="${ph}"`,'mt-1')}</label>`;
+ d.innerHTML=`<div class="p-6 space-y-3"><h2 class="text-title2">${e.id?esc(e.name):'Add an event'}</h2><div class="grid gap-3 sm:grid-cols-2">${f('en','Event',e.name,'the NYC tech meetup')}<label class="block"><span class="text-footnote t2">Kind</span>${select([['job fair','Job fair'],['meetup','Meetup'],['conference','Conference'],['info session','Info session'],['other','Other']],e.kind||'other','id="ek"','mt-1')}</label>${f('eo','Host',e.org)}${f('ed','Date',e.date||S.today)}</div><label class="block"><span class="text-footnote t2">Notes</span><textarea id="eno" class="ctl mt-1 !h-auto min-h-[72px] py-2">${esc(e.notes||'')}</textarea></label>
+ <div class="flex flex-wrap gap-2">${button('Save',{icon:'check',attrs:'id="esave"'})}${button('Cancel',{v:'gray',attrs:'id="ecancel"'})}${e.id?button('Remove',{v:'red',attrs:'id="edel"'}):''}</div></div>`;d.showModal();paint();
+ $('#ecancel').onclick=()=>d.close();
+ $('#esave').onclick=async()=>{const rec={...e,name:$('#en').value.trim(),kind:$('#ek').value,org:$('#eo').value.trim(),date:$('#ed').value.trim(),notes:$('#eno').value.trim()};if(!rec.name){toast('Event name is required','alert-circle');return}await api('/api/network',{kind:'event',record:rec});d.close();load('Saved')};
+ const del=$('#edel');if(del)del.onclick=async()=>{if(!confirmRemove(e.name))return;await api('/api/network',{action:'delete',kind:'event',id:e.id});d.close();load('Removed')}}
+
+/* ---------- Recall: interview prep (LeetCode, Python, System Design) ---------- */
+let RC=null,rv=JSON.parse(localStorage.getItem('rv')||'{"view":"today"}'),rtimer=null,rchart=null,rchart2=null;
+const TRACK={leetcode:{name:'LeetCode',icon:'code-2',blurb:'NeetCode 150, NeetCode 250, Blind 75, and company lists'},python:{name:'Python',icon:'braces',blurb:'Language depth, concurrency, the object model, tooling'},system_design:{name:'System Design',icon:'network',blurb:'Classic prompts plus infra and reliability'},dsa:{name:'Data Structures & Algorithms',icon:'binary',blurb:'Build the structures from scratch and explain the cost of each operation'},debugging:{name:'Debugging',icon:'bug',blurb:'A short Python script with a symptom. Find the root cause, fix it, prevent it'}};
+const DIFF={Easy:'green',Medium:'orange',Hard:'red'};
+const setRv=o=>{rv={...rv,...o};localStorage.setItem('rv',JSON.stringify(rv))};
+async function loadRecall(){RC=await api('/api/recall/state');if(RC.error){$('#recall').innerHTML=banner('Recall could not load',esc(RC.error),'red');paint();return}recall()}
+function recall(){if(!RC){loadRecall();$('#recall').innerHTML=`<div class="p-10 text-center t2">Loading…</div>`;return}
+ if(APP==='recall')drawTabs();
+ ({today:rToday,program:rProgram,home:rHome,pick:rPick,session:rSession,result:rResult,history:rHistory,settings:rSettings})[rv.view||'today']();paint()}
+const itemOf=(t,id)=>RC.banks[t].items.find(i=>i.id===id);
+const prog=(t,id)=>RC.items[t+':'+id]||{attempts:0,best:0};
+const scoreTone=s=>s>=8?'green':s>=5?'orange':'red';
+const rTop=(title,sub,back='home')=>`<div class="flex flex-wrap items-end justify-between gap-3"><div>${back?`<button class="btn btn-plain btn-sm !px-0" data-rv="${back}">${ico('chevron-left','h-4 w-4')}Back</button>`:''}<h1 class="text-large-title">${title}</h1>${sub?`<p class="mt-1 text-subhead t2">${sub}</p>`:''}</div></div>`;
+function wireRv(){document.querySelectorAll('#recall [data-rv]').forEach(b=>b.onclick=()=>{setRv({view:b.dataset.rv});recall()})}
+
+/* home: streak, daily chart, tracks */
+function rHome(){
+ const T=RC.today,todayN=(RC.daily.find(d=>d.date===T)||{}).count||0,last7=RC.sessions.filter(s=>days(7).includes(s.date)),avg7=last7.length?(last7.reduce((a,s)=>a+s.score,0)/last7.length).toFixed(1):'–';
+ const due=Object.entries(RC.items).filter(([k,v])=>v.next_due&&v.next_due<=T).length;
+ const trackCard=t=>{const b=RC.banks[t].items,done=b.filter(i=>prog(t,i.id).attempts).length,strong=b.filter(i=>prog(t,i.id).best>=8).length,sc=RC.sessions.filter(s=>s.track===t),avg=sc.length?(sc.reduce((a,s)=>a+s.score,0)/sc.length).toFixed(1):'–';
+  return card(`<div class="flex h-full flex-col gap-3 p-5"><div class="flex items-center gap-2 text-headline">${ico(TRACK[t].icon,'h-4 w-4')} ${TRACK[t].name}</div><p class="text-subhead t2">${TRACK[t].blurb}</p>
+   <div class="grid grid-cols-3 gap-2 text-center"><div><div class="text-title3">${done}<span class="text-footnote t3">/${b.length}</span></div><div class="text-caption t2">attempted</div></div><div><div class="text-title3">${strong}</div><div class="text-caption t2">mastered (8+)</div></div><div><div class="text-title3">${avg}</div><div class="text-caption t2">avg score</div></div></div>
+   <div class="mt-auto h-1.5 overflow-hidden rounded-full fill"><div class="h-full rounded-full" style="width:${b.length?done/b.length*100:0}%;background:rgb(var(--accent))"></div></div>
+   <div class="flex gap-2">${button('Practice',{icon:'play',attrs:`data-pick="${t}"`})}${button('Browse',{v:'gray',attrs:`data-browse="${t}"`})}</div></div>`)};
+ $('#recall').innerHTML=`${rTop('Recall','Daily interview practice. Write it, get graded, come back when it is due.','')}
+ ${!RC.settings.has_key?banner('Add an AI key to get graded','Grading uses your own Anthropic or Gemini key, saved only on this computer. Open Settings to paste it.','orange',`<div class="mt-2">${button('Open Settings',{v:'tint',s:'sm',attrs:'data-rv="settings"'})}</div>`):''}
+ <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">${stat('Day streak',RC.streak,'flame',RC.streak?'orange':'')}${stat('Done today',todayN,'check-circle-2',todayN?'green':'')}${stat('Due for review',due,'repeat',due?'orange':'')}${stat('Avg score, 7 days',avg7,'target')}${stat('Total sessions',RC.sessions.length,'layers')}</div>
+ ${card(cardHeader('Daily progress','Sessions per day and average score, last 30 days')+cardBody('<div class="h-56"><canvas id="rdaily"></canvas></div>'))}
+ <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">${Object.keys(TRACK).map(trackCard).join('')}</div>
+ ${due?listGroup('Due for review',due,'orange',Object.entries(RC.items).filter(([k,v])=>v.next_due&&v.next_due<=T).slice(0,6).map(([k,v])=>{const[t,id]=k.split(/:(.+)/);const it=itemOf(t,id);return it?card(`<div class="flex items-center gap-3 p-4"><div class="min-w-0 flex-1"><div class="truncate text-headline">${esc(it.title)}</div><div class="text-footnote t2">${TRACK[t].name} · best ${v.best}/10 · ${v.attempts} attempt${v.attempts===1?'':'s'}</div></div>${button('Review',{v:'tint',s:'sm',attrs:`data-start="${t}" data-id="${esc(id)}"`})}</div>`):''}),''):''}`;
+ wireRv();document.querySelectorAll('[data-pick]').forEach(b=>b.onclick=()=>{setRv({view:'pick',track:b.dataset.pick,mode:'due',f:b.dataset.pick==='leetcode'?{list:'neetcode150'}:{}});recall()});
+ document.querySelectorAll('[data-browse]').forEach(b=>b.onclick=()=>{setRv({view:'pick',track:b.dataset.browse,mode:'all'});recall()});
+ document.querySelectorAll('[data-start]').forEach(b=>b.onclick=()=>startSession(b.dataset.start,b.dataset.id));
+ const d30=days(30),cs=getComputedStyle(document.documentElement),acc=`rgb(${cs.getPropertyValue('--accent')})`,grn=`rgb(${cs.getPropertyValue('--green')})`,fg=`rgb(${cs.getPropertyValue('--label')} / .5)`,gr=`rgb(${cs.getPropertyValue('--label')} / .08)`;
+ const byd=Object.fromEntries(RC.daily.map(d=>[d.date,d]));if(rchart)rchart.destroy();
+ rchart=new Chart($('#rdaily'),{data:{labels:d30.map(d=>d.slice(5)),datasets:[{type:'bar',label:'Sessions',data:d30.map(d=>(byd[d]||{}).count||0),backgroundColor:acc,borderRadius:5,maxBarThickness:18,yAxisID:'y'},{type:'line',label:'Avg score',data:d30.map(d=>byd[d]?byd[d].avg:null),borderColor:grn,backgroundColor:grn,tension:.3,spanGaps:true,pointRadius:3,yAxisID:'y2'}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:fg,boxWidth:10}}},scales:{x:{grid:{display:false},ticks:{color:fg,font:{size:10}}},y:{beginAtZero:true,grid:{color:gr},border:{display:false},ticks:{color:fg,precision:0}},y2:{position:'right',min:0,max:10,grid:{display:false},ticks:{color:fg}}}}})}
+
+/* pick: filters + table */
+function rPick(){
+ const t=rv.track||'leetcode',B=RC.banks[t],f=rv.f||{},T=RC.today;
+ let L=B.items.filter(i=>(!f.q||(i.title+' '+(i.topics||[]).join(' ')).toLowerCase().includes(f.q.toLowerCase()))&&(!f.d||i.difficulty===f.d)&&(!f.c||i.topic===f.c)&&(!f.list||(i.lists||[]).includes(f.list))&&(!f.co||(i.companies||[]).includes(f.co)));
+ if(rv.mode==='due')L=L.filter(i=>{const p=prog(t,i.id);return !p.attempts||(p.next_due&&p.next_due<=T)});
+ const nextDue=L.find(i=>{const p=prog(t,i.id);return p.next_due&&p.next_due<=T})||L.find(i=>!prog(t,i.id).attempts)||L[0];
+ const sel=(id,opts,val,ph)=>select([['',ph],...opts.map(x=>[x,x])],val,`data-f="${id}"`,'!w-auto');
+ $('#recall').innerHTML=`${rTop(TRACK[t].name,rv.mode==='due'?'Due and unattempted first. Pick one, or let Recall choose.':'Everything in this track.')}
+ <div class="seg self-start">${Object.keys(TRACK).map(k=>`<button role="tab" aria-selected="${k===t}" data-track="${k}">${TRACK[k].name}</button>`).join('')}</div>
+ <div class="flex flex-wrap items-center gap-2">${search(`data-f="q" placeholder="Search" value="${esc(f.q||'')}"`,'w-56')}${sel('d',['Easy','Medium','Hard'],f.d||'','Any difficulty')}${sel('c',B.categories,f.c||'','Any topic')}${t==='leetcode'?select([['','Any list'],['neetcode150','NeetCode 150'],['blind75','Blind 75'],['neetcode250','NeetCode 250']],f.list||'','data-f="list"','!w-auto')+sel('co',B.companies,f.co||'','Any company'):''}
+  <label class="ml-auto flex items-center gap-2 text-subhead t2"><input type="checkbox" class="chk" id="rdue" ${rv.mode==='due'?'checked':''}>Due and new only</label></div>
+ <div class="flex flex-wrap items-center gap-2">${nextDue?button(`Start next: ${esc(nextDue.title)}`,{icon:'play',attrs:`data-start="${t}" data-id="${esc(nextDue.id)}"`}):''}${L.length?button('Random',{v:'tint',icon:'shuffle',attrs:'id="rrand"'}):''}<span class="text-footnote t2">${L.length} of ${B.items.length}</span></div>
+ ${card(table(['Problem','Difficulty','Topic',t==='leetcode'?'Companies':'','Best','Attempts','Next due',''],L.slice(0,300).map(i=>{const p=prog(t,i.id),due=p.next_due&&p.next_due<=T;return `<tr class="${TR} cursor-pointer" data-start="${t}" data-id="${esc(i.id)}"><td class="${TD}"><div class="font-medium">${esc(i.title)}</div>${t==='leetcode'?`<div class="text-footnote t2">${(i.lists||[]).includes('blind75')?'Blind 75 · ':''}${(i.lists||[]).includes('neetcode150')?'NeetCode 150':'NeetCode 250'}</div>`:''}</td><td class="${TD}">${pill(i.difficulty||'–',DIFF[i.difficulty]||'gray')}</td><td class="${TD} t2">${esc(i.topic)}</td><td class="${TD} t2">${t==='leetcode'?esc((i.companies||[]).slice(0,3).join(', '))+(i.company_count>3?` +${i.company_count-3}`:''):''}</td><td class="${TD}">${p.attempts?pill(p.best+'/10',scoreTone(p.best)):'<span class="t3">–</span>'}</td><td class="${TD} t2">${p.attempts||'–'}</td><td class="${TD}">${p.next_due?pill(due?'Due':p.next_due,due?'orange':'gray'):'<span class="t3">new</span>'}</td><td class="${TD} w-8">${ico('chevron-right','chev h-4 w-4')}</td></tr>`}),'Nothing matches.'),'overflow-hidden')}`;
+ wireRv();document.querySelectorAll('[data-track]').forEach(b=>b.onclick=()=>{setRv({track:b.dataset.track,f:{}});recall()});
+ document.querySelectorAll('[data-f]').forEach(el=>{const h=()=>{setRv({f:{...(rv.f||{}),[el.dataset.f]:el.value}});recall();if(el.dataset.f==='q'){const n=document.querySelector('[data-f=q]');n.focus();n.setSelectionRange(n.value.length,n.value.length)}};el.tagName==='SELECT'?el.onchange=h:el.oninput=h});
+ $('#rdue').onchange=e=>{setRv({mode:e.target.checked?'due':'all'});recall()};
+ const rr=$('#rrand');if(rr)rr.onclick=()=>{const i=L[Math.floor(Math.random()*L.length)];startSession(t,i.id)};
+ document.querySelectorAll('[data-start]').forEach(b=>b.onclick=e=>{if(e.target.closest('a'))return;startSession(b.dataset.start,b.dataset.id)})}
+
+/* session: a single document, statement on top, your writing below */
+function startSession(t,id){const mins=RC.settings.default_minutes||25;setRv({view:'session',track:t,id,started:0,mins,paused:0,pauseAt:0,overtime:false});recall()}
+function rSession(){
+ const t=rv.track,it=itemOf(t,rv.id);if(!it){setRv({view:'home'});return recall()}
+ const draftKey='rdraft:'+t+':'+rv.id,draft=localStorage.getItem(draftKey)||'',p=prog(t,rv.id);
+ $('#recall').innerHTML=`<div class="flex flex-wrap items-center justify-between gap-3"><button class="btn btn-plain btn-sm !px-0" id="rquit">${ico('chevron-left','h-4 w-4')}Leave</button>
+  <div class="card flex items-center gap-3 px-4 py-2"><div id="rclock" class="text-title1 tabular-nums" style="min-width:5ch">${String(rv.mins).padStart(2,'0')}:00</div><div class="flex gap-1">${button('Start',{v:'filled',s:'sm',icon:'play',attrs:'id="rstartt"'})}${button('',{v:'gray',s:'sm',icon:'pause',attrs:'id="rpause" aria-label="Pause" class="hidden"'})}${select([['15','15 min'],['25','25 min'],['35','35 min'],['45','45 min'],['60','60 min']],String(rv.mins),'id="rmins"','!h-[30px] !w-auto !text-[13px]')}</div></div></div>
+ <div class="mx-auto w-full max-w-[860px] rounded-card" style="background:rgb(var(--paper));color:rgb(var(--label));box-shadow:0 1px 3px rgb(var(--label)/.08),0 8px 24px -12px rgb(var(--label)/.12)"><div class="px-10 pt-10 pb-6 sm:px-14">
+   <h1 class="text-title1">${esc(it.title)}</h1>
+   <div class="mt-2 flex flex-wrap items-center gap-2 text-footnote t2">${pill(it.difficulty||'–',DIFF[it.difficulty]||'gray')}${it.topic?`<span>${esc(it.topic)}</span>`:''}${t==='leetcode'?`<span>·</span>${linkOut(it.url,'LeetCode')}`:''}${p.attempts?`<span>·</span><span>best ${p.best}/10</span>`:''}</div>
+   <div id="rstate" class="prose-doc mt-6 text-[15px] leading-7"><span class="t3">Loading the problem…</span></div>
+   <hr class="my-8 hair">
+   <textarea id="reditor" class="w-full resize-none bg-transparent font-mono text-[14px] leading-7 outline-none" style="min-height:520px;color:rgb(var(--label))" spellcheck="false">${esc(draft)}</textarea>
+ </div></div>
+ <div class="mx-auto flex w-full max-w-[860px] flex-wrap items-center gap-2">${button('Submit for grading',{icon:'send',attrs:'id="rsubmit"'})}${button('Skip, come back later',{v:'gray',attrs:'id="rskip"'})}<span id="rmsg" class="text-subhead t2"></span><span id="rcount" class="ml-auto text-footnote t2">${draft.length} chars · autosaves</span></div>`;paint();
+ const ed=$('#reditor');ed.oninput=()=>{localStorage.setItem(draftKey,ed.value);$('#rcount').textContent=ed.value.length+' chars · autosaves';ed.style.height='auto';ed.style.height=Math.max(520,ed.scrollHeight)+'px'};
+ api('/api/recall/statement',{track:t,id:rv.id}).then(r=>{const el=$('#rstate');if(!el)return;if(r.error||!r.text){el.innerHTML=`<span class="t3">No local statement for this problem. ${t==='leetcode'?linkOut(it.url,'Read it on LeetCode'):''}</span>`;paint();return}el.innerHTML=renderDoc(r.text,r.format)});
+ $('#rmins').onchange=e=>{setRv({mins:+e.target.value});tick()};
+ $('#rquit').onclick=$('#rskip').onclick=()=>{clearInterval(rtimer);setRv({view:'pick'});recall()};
+ $('#rstartt').onclick=()=>{setRv({started:Date.now(),paused:0,pauseAt:0,overtime:false});$('#rstartt').classList.add('hidden');$('#rpause').classList.remove('hidden');tick();clearInterval(rtimer);rtimer=setInterval(tick,1000)};
+ if(rv.started){$('#rstartt').classList.add('hidden');$('#rpause').classList.remove('hidden')}
+ $('#rpause').onclick=()=>{if(rv.pauseAt){setRv({paused:rv.paused+(Date.now()-rv.pauseAt),pauseAt:0});$('#rpause').innerHTML=ico('pause','h-3.5 w-3.5')}else{setRv({pauseAt:Date.now()});$('#rpause').innerHTML=ico('play','h-3.5 w-3.5')}paint();tick()};
+ $('#rsubmit').onclick=async()=>{const a=ed.value.trim();if(a.length<20){toast('Write your answer first','alert-circle');return}if(!RC.settings.has_key){toast('Add an AI key in Settings first','alert-circle');return}
+  const used=Math.round(elapsed()/60000*10)/10;$('#rsubmit').disabled=true;$('#rmsg').textContent='Grading…';clearInterval(rtimer);
+  const r=await api('/api/recall/assess',{track:t,id:rv.id,answer:a,minutes_used:used,timer_minutes:rv.mins});
+  if(r.error){toast(r.error.slice(0,140),'alert-circle');$('#rsubmit').disabled=false;$('#rmsg').textContent='';tick();rtimer=setInterval(tick,1000);return}
+  localStorage.removeItem(draftKey);RC=await api('/api/recall/state');setRv({view:'result',last:r.id});recall()};
+ const elapsed=()=>rv.started?Date.now()-rv.started-rv.paused-(rv.pauseAt?Date.now()-rv.pauseAt:0):0;
+ function tick(){const el=$('#rclock');if(!el)return clearInterval(rtimer);const left=rv.mins*60000-elapsed(),a=Math.abs(left),m=Math.floor(a/60000),s=Math.floor(a%60000/1000);el.textContent=(left<0?'-':'')+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');el.style.color=left<0?'rgb(var(--red))':left<120000?'rgb(var(--orange))':'';if(left<0&&!rv.overtime){setRv({overtime:true});toast('Time is up. Finish your thought and submit.','timer')}}
+ clearInterval(rtimer);if(rv.started){tick();rtimer=setInterval(tick,1000)}}
+/* tiny markdown/html renderer for statements: headings, bold, code, lists, paragraphs */
+function renderDoc(text,fmt){
+ if(fmt==='html'){const d=document.createElement('div');d.innerHTML=text;d.querySelectorAll('script,style,iframe').forEach(x=>x.remove());return d.innerHTML}
+ const lines=text.replace(/\r/g,'').split('\n');let out='',inCode=false,inList=false;
+ const inline=s=>esc(s).replace(/`([^`]+)`/g,'<code class="rounded px-1 fill">$1</code>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/\^(\d+)/g,'<sup>$1</sup>');
+ for(const l of lines){
+  if(l.startsWith('```')){if(inList){out+='</ul>';inList=false}inCode=!inCode;out+=inCode?'<pre class="my-3 overflow-x-auto rounded-lg p-3 font-mono text-[13px] leading-6 fill">':'</pre>';continue}
+  if(inCode){out+=esc(l)+'\n';continue}
+  const m=l.match(/^(#{1,4})\s+(.*)/);if(m){if(inList){out+='</ul>';inList=false}out+=`<h3 class="mt-5 mb-1 text-headline">${inline(m[2])}</h3>`;continue}
+  if(/^\s*[-*]\s+/.test(l)){if(!inList){out+='<ul class="my-2 list-disc pl-6">';inList=true}out+=`<li>${inline(l.replace(/^\s*[-*]\s+/,''))}</li>`;continue}
+  if(inList){out+='</ul>';inList=false}
+  if(/^(Example \d+:|Constraints:|Follow[- ]up:?)/i.test(l)){out+=`<p class="mt-5 mb-1 text-headline">${inline(l)}</p>`;continue}
+  if(/^(Input:|Output:|Explanation:)/.test(l)){out+=`<p class="my-0.5 font-mono text-[13px] t2">${inline(l)}</p>`;continue}
+  if(l.trim()==='')continue;
+  out+=`<p class="my-2">${inline(l)}</p>`}
+ if(inList)out+='</ul>';if(inCode)out+='</pre>';return out}
+
+/* result */
+function rResult(){
+ const s=RC.sessions.find(x=>x.id===rv.last)||RC.sessions[RC.sessions.length-1];if(!s){setRv({view:'home'});return recall()}
+ const it=itemOf(s.track,s.item),p=prog(s.track,s.item);
+ const ring=`<div class="relative grid h-28 w-28 place-items-center rounded-full" style="background:conic-gradient(rgb(var(--${scoreTone(s.score)})) ${s.score*36}deg, rgb(var(--fill)/var(--fill-a)) 0)"><div class="grid h-[88px] w-[88px] place-items-center rounded-full card"><div class="text-title1">${s.score}<span class="text-footnote t3">/10</span></div></div></div>`;
+ const sub=(k,l)=>`<div class="flex items-center justify-between text-subhead"><span class="t2">${l}</span><div class="flex items-center gap-2"><div class="h-1.5 w-24 overflow-hidden rounded-full fill"><div class="h-full rounded-full" style="width:${s.sub[k]*10}%;background:rgb(var(--${scoreTone(s.sub[k])}))"></div></div><span class="w-5 text-right font-semibold">${s.sub[k]}</span></div></div>`;
+ $('#recall').innerHTML=`${rTop(esc(s.title),`${TRACK[s.track].name} · ${s.date} ${s.time} · ${s.minutes_used} of ${s.timer_minutes} min`,'home')}
+ <div class="grid gap-3 lg:grid-cols-3">${card(`<div class="flex items-center gap-5 p-5">${ring}<div class="min-w-0 flex-1"><div class="text-headline">${esc(s.verdict)}</div><div class="mt-1 text-footnote t2">Best on this problem: ${p.best}/10 · next review ${esc(p.next_due||'–')}</div></div></div>`,'lg:col-span-2')}
+  ${card(`<div class="space-y-2 p-5">${sub('correctness',s.track==='debugging'?'Root cause':'Correctness')}${sub('complexity',s.track==='system_design'?'Scalability':s.track==='debugging'?'Method':'Complexity')}${sub('code_quality',s.track==='system_design'?'Structure':s.track==='debugging'?'The fix':'Code quality')}${sub('communication','Communication')}</div>`)}</div>
+ <div class="grid gap-3 lg:grid-cols-2">${card(cardHeader('Strengths')+cardBody(`<ul class="list-disc space-y-1 pl-5 text-body">${s.strengths.map(x=>`<li>${esc(x)}</li>`).join('')||'<li class="t2">None noted.</li>'}</ul>`))}${card(cardHeader('Gaps to fix')+cardBody(`<ul class="list-disc space-y-1 pl-5 text-body">${s.gaps.map(x=>`<li>${esc(x)}</li>`).join('')||'<li class="t2">None noted.</li>'}</ul>`))}</div>
+ ${card(cardHeader('Next step')+cardBody(`<p class="text-body">${esc(s.next_step)}</p>`))}
+ <details class="card overflow-hidden"><summary class="row !min-h-[44px] text-callout" style="color:rgb(var(--accent))">${ico('eye','h-4 w-4')}Outline of a strong answer</summary><pre class="whitespace-pre-wrap border-t hair p-5 font-sans text-body">${esc(s.model_outline)}</pre></details>
+ <details class="card overflow-hidden"><summary class="row !min-h-[44px] text-callout t2">${ico('file-text','h-4 w-4')}What you wrote</summary><pre class="whitespace-pre-wrap border-t hair p-5 font-mono text-[13px] leading-6">${esc(s.answer)}</pre></details>
+ <div class="flex flex-wrap gap-2">${button('Try it again',{v:'tint',icon:'rotate-ccw',attrs:`data-start="${s.track}" data-id="${esc(s.item)}"`})}${button('Next problem',{icon:'play',attrs:`data-next="${s.track}"`})}${button('Back to Recall',{v:'gray',attrs:'data-rv="home"'})}</div>`;
+ wireRv();document.querySelectorAll('[data-start]').forEach(b=>b.onclick=()=>startSession(b.dataset.start,b.dataset.id));document.querySelectorAll('[data-next]').forEach(b=>b.onclick=()=>{setRv({view:'pick',track:b.dataset.next,mode:'due',f:b.dataset.next==='leetcode'?{list:'neetcode150'}:{}});recall()})}
+
+/* today: the daily plan (25 LeetCode + 25 second track + reading or homework), minutes ring, readiness */
+const KIND_ICON={practice:'play',reading:'book-open',homework:'pencil-line'};
+const ring=(pct,inner,size=112,tone='accent')=>`<div class="relative grid place-items-center rounded-full" style="height:${size}px;width:${size}px;background:conic-gradient(rgb(var(--${tone})) ${Math.min(100,pct)*3.6}deg, rgb(var(--fill)/var(--fill-a)) 0)"><div class="grid place-items-center rounded-full card" style="height:${size-24}px;width:${size-24}px">${inner}</div></div>`;
+const bar=(pct,tone='accent')=>`<div class="h-1.5 w-full overflow-hidden rounded-full fill"><div class="h-full rounded-full" style="width:${Math.max(0,Math.min(100,pct))}%;background:rgb(var(--${tone}))"></div></div>`;
+function rToday(){
+ const P=RC.plan,M=RC.metrics,G=RC.program,T=RC.today,wk=G.weeks.find(w=>w.week===G.week)||{},date=new Date(T+'T12:00').toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'});
+ const due=Object.values(RC.items).filter(v=>v.next_due&&v.next_due<=T).length,pct=Math.round(100*P.minutes_done/P.target);
+ const slot=(s,i)=>{const isP=s.kind==='practice',tone=s.done?'green':'accent';
+  const meta=isP?[TRACK[s.track].name,s.difficulty,s.topic,s.minutes+' min'].filter(Boolean).join(' · '):[s.kind==='reading'?'Reading':'Homework',s.book,s.minutes+' min'].filter(Boolean).join(' · ');
+  const why=isP?(s.track_why?`Second slot is ${TRACK[s.track].name}: ${esc(s.track_why)}. `:'')+esc(s.why||''):`Week ${s.week} of the program.`;
+  const right=s.done?`<div class="flex items-center gap-2">${isP&&s.score!=null?pill(s.score+'/10',scoreTone(s.score)):''}${pill(s.substituted?'Done (different problem)':'Done','green')}${!isP?button('',{v:'plain',s:'sm',icon:'undo-2',attrs:`data-undo="${esc(s.id)}" aria-label="Undo"`}):''}</div>`
+   :isP?`<div class="flex items-center gap-2">${button('Swap',{v:'plain',s:'sm',icon:'shuffle',attrs:`data-swap="${i}"`})}${button('Start',{s:'sm',icon:'play',attrs:`data-start="${s.track}" data-id="${esc(s.id)}"`})}</div>`
+   :`<div class="flex items-center gap-2"><input class="ctl !h-8 !w-20 !text-[13px]" type="number" min="1" max="240" value="${s.minutes}" data-min="${esc(s.id)}" aria-label="Minutes spent">${button('Done',{s:'sm',icon:'check',attrs:`data-done="${esc(s.id)}"`})}</div>`;
+  return card(`<div class="flex flex-wrap items-center gap-4 p-5"><div class="grid h-10 w-10 flex-none place-items-center rounded-full" style="background:rgb(var(--${tone})/.15);color:rgb(var(--${tone}))">${s.done?ico('check','h-5 w-5'):ico(KIND_ICON[s.kind],'h-5 w-5')}</div><div class="min-w-0 flex-1"><div class="text-footnote t2">${i+1} · ${meta}</div><div class="text-headline ${s.done?'line-through t2':''}">${esc(s.title||'(nothing left in this track)')}</div><div class="mt-0.5 text-footnote t3">${why}</div></div>${right}</div>`)};
+ $('#recall').innerHTML=`${rTop('Today',`${date} · Week ${G.week} of ${G.of} · ${G.phase==='speed'?'speed phase: timed, mixed practice':'learning phase: one category at a time'}${wk.focus?` · focus ${esc(wk.focus.leetcode)}`:''}`,'')}
+ ${!RC.settings.has_key?banner('Add an AI key to get graded','Grading uses your own Anthropic or Gemini key, saved only on this computer. Open Settings to paste it.','orange',`<div class="mt-2">${button('Open Settings',{v:'tint',s:'sm',attrs:'data-rv="settings"'})}</div>`):''}
+ ${P.complete?banner('Day done. Every slot is finished.',`${Math.round(P.minutes_done)} minutes today. Come back tomorrow; the plan regenerates overnight.`,'green'):''}
+ <div class="grid gap-3 lg:grid-cols-[auto_1fr]">${card(`<div class="flex items-center gap-5 p-5">${ring(pct,`<div class="text-center"><div class="text-title2">${Math.round(P.minutes_done)}</div><div class="text-caption t2">of ${P.target} min</div></div>`,120,pct>=100?'green':'accent')}<div><div class="text-headline">${pct>=100?'Hour done':pct?`${P.target-Math.round(P.minutes_done)} min to go`:'Start the first slot'}</div><div class="mt-1 text-subhead t2">Plan: ${P.minutes_planned} min across ${P.slots.length} slots</div><div class="mt-3 flex items-center gap-2"><input class="ctl !h-8 !w-20 !text-[13px]" type="number" min="1" max="300" placeholder="min" id="rextra" aria-label="Extra minutes">${button('Log extra time',{v:'gray',s:'sm',attrs:'id="rlog"'})}</div></div></div>`)}
+  <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">${stat('Readiness',M.readiness_overall+'%','gauge',M.readiness_overall>=70?'green':'')}${stat('Day streak',RC.streak,'flame',RC.streak?'orange':'')}${stat('Hit the hour, 7 days',M.adherence_7+'%','calendar-check',M.adherence_7>=80?'green':M.adherence_7<50?'orange':'')}${stat('Due for review',due,'repeat',due?'orange':'')}${stat('Mock interviews, 30 days',M.reps.mocks_30d+(M.reps.mock_avg?` <span class="text-footnote t2">avg ${M.reps.mock_avg}</span>`:''),'mic')}${stat('Real interviews, 30 days',M.reps.interviews_30d+(M.reps.interview_avg?` <span class="text-footnote t2">avg ${M.reps.interview_avg}</span>`:''),'building-2')}</div></div>
+ ${(RC.external||[]).filter(e=>e.date===T).length?card(cardHeader('Also today','Logged from the home page journal')+`<div class="list">${RC.external.filter(e=>e.date===T).map(e=>`<div class="row !min-h-0 !py-2.5">${ico(e.kind==='mock_interview'?'mic':e.kind==='interview'?'building-2':'book-open','h-4 w-4 t2')}<span class="text-body">${e.kind==='mock_interview'?'Mock interview':e.kind==='interview'?'Interview':'Study'}${e.with?' · '+esc(e.with):''}${e.format?' · '+esc(e.format):''}${e.minutes?' · '+e.minutes+' min':''}</span>${e.rating?`<span class="ml-auto">${pill(e.rating+'/10',scoreTone(e.rating))}</span>`:''}</div>`).join('')}</div><div class="h-2"></div>`):''}
+ ${section('The plan',`<span class="text-footnote t2">made ${esc(P.generated)} · it stays fixed all day</span>`)}
+ <div class="space-y-3">${P.slots.map(slot).join('')}</div>
+ <div class="grid gap-3 lg:grid-cols-2">${card(cardHeader('Readiness by track','70% coverage of problems you scored 8+ on, 30% your last ten scores')+cardBody(`<div class="space-y-3">${Object.keys(TRACK).map(t=>`<div><div class="mb-1 flex items-center justify-between text-subhead"><span class="flex items-center gap-2">${ico(TRACK[t].icon,'h-4 w-4 t2')}${TRACK[t].name}</span><span class="font-semibold">${M.readiness[t]}%</span></div>${bar(M.readiness[t],M.readiness[t]>=70?'green':'accent')}</div>`).join('')}</div>`))}
+  ${card(cardHeader('Minutes per day','Last 30 days against the 60-minute line')+cardBody('<div class="h-52"><canvas id="rmin"></canvas></div>'))}</div>`;
+ wireRv();document.querySelectorAll('[data-start]').forEach(b=>b.onclick=()=>startSession(b.dataset.start,b.dataset.id));
+ document.querySelectorAll('[data-swap]').forEach(b=>b.onclick=async()=>{b.disabled=true;const r=await api('/api/recall/swap',{slot:+b.dataset.swap});if(r.error){toast(r.error,'alert-circle');b.disabled=false;return}RC=await api('/api/recall/state');recall()});
+ document.querySelectorAll('[data-done]').forEach(b=>b.onclick=async()=>{const m=+document.querySelector(`[data-min="${b.dataset.done}"]`).value||0;await api('/api/recall/done',{id:b.dataset.done,minutes:m});RC=await api('/api/recall/state');toast('Nice. Logged '+m+' min');recall()});
+ document.querySelectorAll('[data-undo]').forEach(b=>b.onclick=async()=>{await api('/api/recall/done',{id:b.dataset.undo,undo:true});RC=await api('/api/recall/state');recall()});
+ $('#rlog').onclick=async()=>{const m=+$('#rextra').value||0;if(!m)return;await api('/api/recall/minutes',{minutes:m});RC=await api('/api/recall/state');toast('Logged '+m+' min');recall()};
+ const cs=getComputedStyle(document.documentElement),acc=`rgb(${cs.getPropertyValue('--accent')})`,grn=`rgb(${cs.getPropertyValue('--green')})`,org=`rgb(${cs.getPropertyValue('--orange')})`,fg=`rgb(${cs.getPropertyValue('--label')} / .5)`,gr=`rgb(${cs.getPropertyValue('--label')} / .08)`;
+ if(rchart)rchart.destroy();rchart=new Chart($('#rmin'),{data:{labels:M.days.map(d=>d.date.slice(5)),datasets:[{type:'bar',label:'Minutes',data:M.days.map(d=>d.minutes),backgroundColor:M.days.map(d=>d.hit?grn:acc),borderRadius:5,maxBarThickness:18},{type:'line',label:'Target',data:M.days.map(()=>M.target),borderColor:org,borderDash:[4,4],borderWidth:1.5,pointRadius:0}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{color:fg,font:{size:10}}},y:{beginAtZero:true,grid:{color:gr},border:{display:false},ticks:{color:fg}}}}})}
+
+/* program: 26 weeks, readings and homework, mastery by category, readiness over time */
+function rProgram(){
+ const G=RC.program,M=RC.metrics,n=rv.pweek||G.week,w=G.weeks.find(x=>x.week===n)||G.weeks[0]||{reading:[],homework:[]},done=G.done||{};
+ const check=(r,kind)=>{const d=done[r.id];return `<label class="row cursor-pointer"><input type="checkbox" class="chk" data-ck="${esc(r.id)}" data-est="${r.est_min||20}" ${d?'checked':''}><div class="min-w-0 flex-1"><div class="text-body ${d?'line-through t2':''}">${esc(r.what||r.text)}</div><div class="text-footnote t2">${esc(r.book||'')}${r.book?' · ':''}${r.est_min} min${d?` · done ${esc(d.date)}`:''}</div></div></label>`};
+ const mast=(t)=>{const m=M.mastery[t],cats=t==='leetcode'?RC.banks.leetcode.categories:Object.keys(m);return cats.filter(c=>m[c]).map(c=>`<div class="flex items-center gap-3 text-subhead"><span class="w-44 flex-none truncate">${esc(c)}</span>${bar(100*m[c].strong/Math.min(3,m[c].total),m[c].mastered?'green':'accent')}<span class="w-14 flex-none text-right t2">${m[c].strong}/${Math.min(3,m[c].total)}</span></div>`).join('')};
+ const weeksDone=G.weeks.filter(x=>x.reading_done===x.reading.length&&x.homework_done===x.homework.length).length;
+ $('#recall').innerHTML=`${rTop('Program',`Week ${G.week} of ${G.of} · started ${esc(G.start||'today')}${G.end?` · ends ${esc(G.end)}`:''} · ${G.daily_minutes} minutes a day`,'')}
+ <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">${stat('Readiness',M.readiness_overall+'%','gauge')}${stat('Hours logged',M.total_hours,'clock')}${stat('Days active',M.days_active,'calendar')}${stat('Hit the hour, 30 days',M.adherence_30+'%','calendar-check',M.adherence_30>=80?'green':'')}${stat('On time and 7+',M.under_time_rate==null?'–':M.under_time_rate+'%','timer')}${stat('Score trend, 14 days',M.trend_14d==null?'–':(M.trend_14d>0?'+':'')+M.trend_14d,'trending-up',M.trend_14d>0?'green':M.trend_14d<0?'red':'')}</div>
+ ${card(cardHeader('Readiness over time','One snapshot a day. The goal is a steady climb, not a spike.')+cardBody(M.snapshots.length>1?'<div class="h-48"><canvas id="rready"></canvas></div>':`<p class="text-subhead t2">Your first point is today (${M.readiness_overall}%). The curve appears from tomorrow.</p>`))}
+ <div class="grid gap-3 lg:grid-cols-[1fr_1fr]">${card(cardHeader(`Week ${w.week||n}`,`${w.phase==='speed'?'Speed phase':'Learning phase'} · LeetCode ${esc((w.focus||{}).leetcode||'')} · Python ${esc((w.focus||{}).python||'')} · System Design ${esc((w.focus||{}).system_design||'')}`,select(G.weeks.map(x=>[x.week,`Week ${x.week}${x.week===G.week?' (now)':''}`]),n,'id="rpweek"','!w-auto !h-8 !text-[13px]'))+`<div class="px-5 pb-2 text-footnote t2">Reading · ${w.reading_done}/${w.reading.length}</div><div class="list">${w.reading.map(r=>check(r,'reading')).join('')}</div><div class="px-5 pb-2 pt-4 text-footnote t2">Homework · ${w.homework_done}/${w.homework.length}</div><div class="list">${w.homework.map(r=>check(r,'homework')).join('')}</div><div class="p-5 text-footnote t3">${weeksDone} of ${G.of} weeks fully complete.</div>`)}
+  <div class="space-y-3">${card(cardHeader('LeetCode mastery','A category is mastered at three problems scored 8+')+cardBody(`<div class="space-y-2">${mast('leetcode')}</div>`))}${card(cardHeader('Other tracks')+cardBody(`<div class="space-y-2">${['python','system_design','dsa','debugging'].map(t=>`<div class="text-footnote t2 mt-2">${TRACK[t].name} · ${M.readiness[t]}%</div>${mast(t)}`).join('')}</div>`))}</div></div>
+ ${card(cardHeader('How the recommender works','The principles behind every plan')+cardBody(`<ul class="space-y-2 text-subhead">${G.principles.map(([k,v])=>`<li><span class="font-semibold">${esc(k)}.</span> <span class="t2">${esc(v)}</span></li>`).join('')}</ul>`))}`;
+ wireRv();$('#rpweek').onchange=e=>{setRv({pweek:+e.target.value});recall()};
+ document.querySelectorAll('[data-ck]').forEach(c=>c.onchange=async()=>{if(c.checked){const m=prompt('Minutes spent?',c.dataset.est);if(m===null){c.checked=false;return}await api('/api/recall/done',{id:c.dataset.ck,minutes:+m||0})}else await api('/api/recall/done',{id:c.dataset.ck,undo:true});RC=await api('/api/recall/state');recall()});
+ if(M.snapshots.length>1){const cs=getComputedStyle(document.documentElement),acc=`rgb(${cs.getPropertyValue('--accent')})`,fg=`rgb(${cs.getPropertyValue('--label')} / .5)`,gr=`rgb(${cs.getPropertyValue('--label')} / .08)`;if(rchart2)rchart2.destroy();
+  rchart2=new Chart($('#rready'),{type:'line',data:{labels:M.snapshots.map(s=>s.date.slice(5)),datasets:[{data:M.snapshots.map(s=>s.readiness),borderColor:acc,backgroundColor:acc,tension:.3,pointRadius:2,fill:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{color:fg,font:{size:10}}},y:{min:0,max:100,grid:{color:gr},border:{display:false},ticks:{color:fg}}}}})}}
+
+/* history */
+function rHistory(){
+ const L=[...RC.sessions].reverse();
+ $('#recall').innerHTML=`${rTop('History',`${RC.sessions.length} graded session${RC.sessions.length===1?'':'s'}`)}
+ ${card(table(['When','Track','Problem','Score','Time',''],L.slice(0,300).map(s=>`<tr class="${TR} cursor-pointer" data-res="${esc(s.id)}"><td class="${TD} whitespace-nowrap t2">${esc(s.date)} ${esc(s.time)}</td><td class="${TD}">${esc(TRACK[s.track].name)}</td><td class="${TD}"><div class="font-medium">${esc(s.title)}</div><div class="text-footnote t2">${esc(s.verdict)}</div></td><td class="${TD}">${pill(s.score+'/10',scoreTone(s.score))}</td><td class="${TD} t2 whitespace-nowrap">${esc(s.minutes_used)} / ${esc(s.timer_minutes)} min</td><td class="${TD} w-8">${ico('chevron-right','chev h-4 w-4')}</td></tr>`),'No sessions yet. Start one from the Recall home.'),'overflow-hidden')}`;
+ wireRv();document.querySelectorAll('[data-res]').forEach(r=>r.onclick=()=>{setRv({view:'result',last:r.dataset.res});recall()})}
+
+/* settings: provider, model, key (typed by you, stored locally), timer default */
+function rSettings(){
+ const s=RC.settings;
+ $('#recall').innerHTML=`${rTop('Recall settings','The key is saved to config/recall.json on this computer (gitignored) and only sent to the provider you choose.')}
+ ${card(`<div class="list"><label class="row"><span class="text-body">Provider</span>${select([['anthropic','Anthropic (Claude)'],['gemini','Google (Gemini)']],s.provider,'id="rprov"','!w-auto ml-auto !h-8 !text-[13px]')}</label>
+  <label class="row"><span class="text-body">Model</span>${input(`id="rmodel" value="${esc(s.model)}" placeholder="claude-sonnet-5-5 or gemini-2.5-flash"`,'ml-auto !h-8 !w-64 !text-[13px]')}</label>
+  <label class="row"><span class="text-body">Default timer</span>${select([['15','15 min'],['25','25 min'],['35','35 min'],['45','45 min'],['60','60 min']],String(s.default_minutes),'id="rdef"','!w-auto ml-auto !h-8 !text-[13px]')}</label>
+  <label class="row"><span class="text-body">Program start</span>${input(`id="rpstart" type="date" value="${esc(RC.program.start||'')}"`,'ml-auto !h-8 !w-44 !text-[13px]')}</label>
+  <label class="row"><span class="text-body">API key</span><div class="ml-auto flex items-center gap-2">${s.has_key?pill('Saved','green'):pill('Not set','orange')}${input('id="rkey" type="password" placeholder="Paste a new key to replace" autocomplete="off"','!h-8 !w-64 !text-[13px]')}</div></label></div>`)}
+ <div class="flex flex-wrap gap-2">${button('Save',{icon:'check',attrs:'id="rsave"'})}${button('Test the key',{v:'tint',icon:'zap',attrs:'id="rtest"'})}${s.has_key?button('Remove key',{v:'red',attrs:'id="rclear"'}):''}<span id="rsmsg" class="self-center text-subhead t2"></span></div>
+ ${card(cardHeader('Where the problems come from')+cardBody(`<ul class="list-disc space-y-1 pl-5 text-subhead t2"><li>LeetCode: NeetCode 150 and 250 (with Blind 75 flagged) plus company frequency from the public <a class="underline" href="https://github.com/liquidslr/leetcode-company-wise-problems" target="_blank" rel="noopener">leetcode-company-wise-problems</a> dataset (${RC.banks.leetcode.companies.length} companies).</li><li>Python, System Design, DSA and Debugging: question banks in <code>data/recall-python.json</code>, <code>recall-systemdesign.json</code>, <code>recall-dsa.json</code> and <code>recall-debugging.json</code>. Edit them to add your own.</li><li>The 26-week reading and homework plan is <code>data/recall-curriculum.json</code> (DDIA, Fluent Python, System Design Interview vol. 1).</li><li>Spacing: a score of 8+ doubles the review interval, 5 to 7 repeats tomorrow, under 5 comes back today.</li></ul>`))}`;
+ wireRv();const say=m=>$('#rsmsg').textContent=m;
+ $('#rsave').onclick=async()=>{const b={provider:$('#rprov').value,model:$('#rmodel').value.trim(),default_minutes:+$('#rdef').value};const k=$('#rkey').value.trim();if(k)b.api_key=k;const r=await api('/api/recall/settings',b);$('#rkey').value='';const ps=$('#rpstart').value;if(ps&&ps!==RC.program.start)await api('/api/recall/program',{start:ps,reset_plan:true});if(r.error)say(r.error);else{RC=await api('/api/recall/state');toast('Settings saved');recall()}};
+ $('#rtest').onclick=async()=>{say('Testing…');const r=await api('/api/recall/test',{});say(r.error?r.error:(r.ok?'Key works.':'Unexpected reply: '+r.reply))};
+ const rc=$('#rclear');if(rc)rc.onclick=async()=>{if(!confirm('Remove the saved API key?'))return;await api('/api/recall/settings',{clear_key:true});RC=await api('/api/recall/state');toast('Key removed');recall()}}
+
+$('#dlg').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.close()});
+
+applyTheme();load();setInterval(()=>{const t=document.activeElement&&document.activeElement.tagName;if(!['INPUT','TEXTAREA','SELECT'].includes(t)&&!$('#dlg').open)load()},60000);
+</script></body></html>

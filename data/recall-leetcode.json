@@ -1,0 +1,13663 @@
+{
+"problems": [
+{
+"slug": "concatenation-of-array",
+"title": "Concatenation of Array",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Simulation"
+],
+"url": "https://leetcode.com/problems/concatenation-of-array/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 53.4,
+"all": 51.8
+},
+"Bloomberg": {
+"6m": 60.7,
+"all": 51.1
+},
+"Google": {
+"6m": 67.0,
+"all": 61.4
+},
+"Meta": {
+"6m": 46.4,
+"all": 41.2
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 47.8
+}
+}
+},
+{
+"slug": "contains-duplicate",
+"title": "Contains Duplicate",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/contains-duplicate/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 56.5,
+"all": 57.8
+},
+"Apple": {
+"all": 29.7
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 61.4
+},
+"Google": {
+"6m": 57.1,
+"all": 54.8
+},
+"IBM": {
+"all": 43.6
+},
+"Meta": {
+"6m": 58.8,
+"all": 51.1
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 56.7
+},
+"Netflix": {
+"all": 69.4
+},
+"Nvidia": {
+"all": 38.7
+}
+}
+},
+{
+"slug": "valid-anagram",
+"title": "Valid Anagram",
+"difficulty": "Easy",
+"topics": [
+"Hash Table",
+"String",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/valid-anagram/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Affirm": {
+"all": 59.5
+},
+"Amazon": {
+"6m": 59.2,
+"all": 65.4
+},
+"Apple": {
+"all": 29.7
+},
+"Bloomberg": {
+"6m": 58.3,
+"all": 73.9
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 57.6,
+"all": 57.7
+},
+"IBM": {
+"6m": 74.4,
+"all": 68.7
+},
+"Meta": {
+"6m": 60.6,
+"all": 55.9
+},
+"Microsoft": {
+"6m": 57.4,
+"all": 62.6
+},
+"Nvidia": {
+"all": 54.6
+},
+"Oracle": {
+"all": 59.9
+},
+"Spotify": {
+"all": 50.7
+},
+"Uber": {
+"all": 56.6
+}
+}
+},
+{
+"slug": "two-sum",
+"title": "Two Sum",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table"
+],
+"url": "https://leetcode.com/problems/two-sum/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Adobe": {
+"all": 100.0
+},
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 100.0,
+"all": 100.0
+},
+"Anduril": {
+"all": 49.2
+},
+"Apple": {
+"6m": 68.6,
+"all": 85.8
+},
+"Atlassian": {
+"all": 34.3
+},
+"Bloomberg": {
+"6m": 100.0,
+"all": 100.0
+},
+"Capital One": {
+"all": 42.8
+},
+"Citadel": {
+"6m": 67.0,
+"all": 63.9
+},
+"Databricks": {
+"all": 36.9
+},
+"DE Shaw": {
+"all": 37.9
+},
+"DoorDash": {
+"all": 44.9
+},
+"Dropbox": {
+"all": 92.1
+},
+"Goldman Sachs": {
+"all": 54.3
+},
+"Google": {
+"6m": 100.0,
+"all": 100.0
+},
+"IBM": {
+"all": 84.7
+},
+"Intuit": {
+"all": 58.0
+},
+"Jane Street": {
+"all": 67.8
+},
+"LinkedIn": {
+"all": 51.0
+},
+"Meta": {
+"6m": 100.0,
+"all": 92.9
+},
+"Microsoft": {
+"6m": 100.0,
+"all": 100.0
+},
+"MongoDB": {
+"6m": 100.0,
+"all": 70.6
+},
+"Nvidia": {
+"6m": 73.7,
+"all": 85.4
+},
+"Oracle": {
+"6m": 93.7,
+"all": 85.3
+},
+"Roblox": {
+"all": 50.9
+},
+"Salesforce": {
+"all": 35.3
+},
+"Snowflake": {
+"all": 66.8
+},
+"Spotify": {
+"all": 78.6
+},
+"TikTok": {
+"6m": 62.1,
+"all": 66.5
+},
+"Uber": {
+"all": 54.6
+}
+}
+},
+{
+"slug": "longest-common-prefix",
+"title": "Longest Common Prefix",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"String",
+"Trie"
+],
+"url": "https://leetcode.com/problems/longest-common-prefix/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Adobe": {
+"all": 69.3
+},
+"Amazon": {
+"6m": 64.4,
+"all": 73.8
+},
+"Apple": {
+"6m": 76.5,
+"all": 75.8
+},
+"Bloomberg": {
+"6m": 76.3,
+"all": 78.5
+},
+"Google": {
+"6m": 66.1,
+"all": 73.8
+},
+"Hudson River Trading": {
+"all": 62.5
+},
+"IBM": {
+"6m": 63.9,
+"all": 63.0
+},
+"Jane Street": {
+"all": 58.5
+},
+"Meta": {
+"6m": 58.8,
+"all": 71.2
+},
+"Microsoft": {
+"6m": 65.9,
+"all": 72.4
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 49.2
+},
+"Roblox": {
+"all": 37.1
+},
+"TikTok": {
+"all": 49.5
+},
+"Uber": {
+"all": 35.4
+}
+}
+},
+{
+"slug": "group-anagrams",
+"title": "Group Anagrams",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"String",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/group-anagrams/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Adobe": {
+"all": 96.0
+},
+"Affirm": {
+"all": 59.5
+},
+"Amazon": {
+"6m": 75.5,
+"all": 80.1
+},
+"Anduril": {
+"all": 66.4
+},
+"Apple": {
+"6m": 76.5,
+"all": 73.8
+},
+"Atlassian": {
+"all": 34.3
+},
+"Bloomberg": {
+"6m": 68.3,
+"all": 69.8
+},
+"Goldman Sachs": {
+"all": 56.6
+},
+"Google": {
+"6m": 60.0,
+"all": 58.3
+},
+"IBM": {
+"all": 68.7
+},
+"Intuit": {
+"all": 43.1
+},
+"Meta": {
+"6m": 63.8,
+"all": 60.7
+},
+"Microsoft": {
+"6m": 55.2,
+"all": 70.0
+},
+"Millennium": {
+"all": 76.1
+},
+"Nvidia": {
+"6m": 100.0,
+"all": 82.1
+},
+"Oracle": {
+"6m": 74.2,
+"all": 81.0
+},
+"Salesforce": {
+"all": 56.9
+},
+"Snap": {
+"all": 44.8
+},
+"TikTok": {
+"all": 45.5
+},
+"Twilio": {
+"all": 64.0
+},
+"Uber": {
+"all": 61.8
+}
+}
+},
+{
+"slug": "remove-element",
+"title": "Remove Element",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Two Pointers"
+],
+"url": "https://leetcode.com/problems/remove-element/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 46.6,
+"all": 54.8
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 62.3
+},
+"Google": {
+"6m": 46.8,
+"all": 57.9
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"6m": 49.5,
+"all": 48.9
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 55.3
+}
+}
+},
+{
+"slug": "majority-element",
+"title": "Majority Element",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"Divide and Conquer",
+"Sorting",
+"Counting",
+"Boyer\u2013Moore Majority Vote Algorithm"
+],
+"url": "https://leetcode.com/problems/majority-element/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Adobe": {
+"all": 91.3
+},
+"Amazon": {
+"6m": 65.0,
+"all": 69.4
+},
+"Bloomberg": {
+"6m": 66.6,
+"all": 75.0
+},
+"DE Shaw": {
+"all": 46.9
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 59.5,
+"all": 66.6
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"6m": 54.7,
+"all": 59.1
+},
+"Microsoft": {
+"6m": 55.2,
+"all": 69.8
+},
+"Oracle": {
+"all": 52.4
+}
+}
+},
+{
+"slug": "design-hashset",
+"title": "Design HashSet",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"Linked List",
+"Design",
+"Hash Function"
+],
+"url": "https://leetcode.com/problems/design-hashset/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 7.2
+},
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"all": 18.2
+},
+"Meta": {
+"all": 11.9
+}
+}
+},
+{
+"slug": "design-hashmap",
+"title": "Design HashMap",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"Linked List",
+"Design",
+"Hash Function"
+],
+"url": "https://leetcode.com/problems/design-hashmap/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 38.2
+},
+"Apple": {
+"6m": 47.2,
+"all": 55.2
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 48.4
+},
+"Google": {
+"6m": 11.8,
+"all": 16.6
+},
+"LinkedIn": {
+"all": 32.4
+},
+"Meta": {
+"all": 20.2
+},
+"Microsoft": {
+"all": 31.5
+},
+"Oracle": {
+"all": 49.2
+},
+"Snowflake": {
+"all": 54.1
+},
+"TikTok": {
+"all": 58.4
+}
+}
+},
+{
+"slug": "sort-an-array",
+"title": "Sort an Array",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Divide and Conquer",
+"Sorting",
+"Heap (Priority Queue)",
+"Merge Sort",
+"Bucket Sort",
+"Radix Sort",
+"Counting Sort"
+],
+"url": "https://leetcode.com/problems/sort-an-array/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 36.0
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 42.7
+},
+"Google": {
+"6m": 44.8,
+"all": 47.9
+},
+"Meta": {
+"6m": 42.7,
+"all": 31.8
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 34.7
+},
+"Oracle": {
+"all": 34.7
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "sort-colors",
+"title": "Sort Colors",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Two Pointers",
+"Sorting",
+"Quicksort",
+"Bubble Sort"
+],
+"url": "https://leetcode.com/problems/sort-colors/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Amazon": {
+"6m": 58.4,
+"all": 61.5
+},
+"Apple": {
+"all": 35.3
+},
+"Bloomberg": {
+"6m": 52.7,
+"all": 60.9
+},
+"Capital One": {
+"all": 35.0
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 38.5,
+"all": 53.5
+},
+"IBM": {
+"all": 43.6
+},
+"Meta": {
+"6m": 38.1,
+"all": 56.8
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 64.7
+},
+"Nvidia": {
+"all": 54.6
+},
+"Oracle": {
+"all": 52.4
+},
+"Salesforce": {
+"all": 40.9
+},
+"Snowflake": {
+"all": 38.6
+},
+"TikTok": {
+"all": 45.5
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "top-k-frequent-elements",
+"title": "Top K Frequent Elements",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Divide and Conquer",
+"Sorting",
+"Heap (Priority Queue)",
+"Bucket Sort",
+"Counting",
+"Quickselect"
+],
+"url": "https://leetcode.com/problems/top-k-frequent-elements/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Adobe": {
+"all": 69.3
+},
+"Amazon": {
+"6m": 68.5,
+"all": 71.5
+},
+"Apple": {
+"6m": 47.2,
+"all": 77.1
+},
+"Atlassian": {
+"all": 47.5
+},
+"Bloomberg": {
+"6m": 64.8,
+"all": 58.0
+},
+"Goldman Sachs": {
+"all": 48.4
+},
+"Google": {
+"6m": 50.2,
+"all": 58.6
+},
+"Meta": {
+"6m": 49.5,
+"all": 82.3
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 57.1
+},
+"Netflix": {
+"all": 49.2
+},
+"Nvidia": {
+"6m": 85.3,
+"all": 67.6
+},
+"Oracle": {
+"all": 77.6
+},
+"Robinhood": {
+"all": 76.5
+},
+"Salesforce": {
+"all": 48.9
+},
+"Snap": {
+"all": 79.5
+},
+"Snowflake": {
+"6m": 62.9,
+"all": 66.8
+},
+"TikTok": {
+"all": 66.5
+},
+"Twilio": {
+"all": 73.1
+},
+"Uber": {
+"all": 56.6
+}
+}
+},
+{
+"slug": "encode-and-decode-strings",
+"title": "Encode and Decode Strings",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"String",
+"Design"
+],
+"url": "https://leetcode.com/problems/encode-and-decode-strings/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Amazon": {
+"all": 20.1
+},
+"Google": {
+"all": 28.3
+},
+"Meta": {
+"all": 15.0
+},
+"Microsoft": {
+"all": 19.8
+},
+"OpenAI": {
+"all": 86.7
+},
+"Oracle": {
+"all": 26.6
+},
+"Snowflake": {
+"all": 38.6
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "range-sum-query-2d-immutable",
+"title": "Range Sum Query 2D - Immutable",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Design",
+"Matrix",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/range-sum-query-2d-immutable/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 20.1
+},
+"Bloomberg": {
+"all": 17.9
+},
+"Google": {
+"6m": 28.4,
+"all": 30.6
+},
+"Lyft": {
+"all": 43.4
+},
+"Meta": {
+"all": 22.3
+},
+"Microsoft": {
+"all": 12.3
+},
+"Salesforce": {
+"all": 27.6
+}
+}
+},
+{
+"slug": "product-of-array-except-self",
+"title": "Product of Array Except Self",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/product-of-array-except-self/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Amazon": {
+"6m": 59.2,
+"all": 67.6
+},
+"Apple": {
+"all": 67.1
+},
+"Bloomberg": {
+"6m": 55.7,
+"all": 59.5
+},
+"Goldman Sachs": {
+"all": 44.5
+},
+"Google": {
+"6m": 43.7,
+"all": 53.0
+},
+"LinkedIn": {
+"all": 47.3
+},
+"Meta": {
+"6m": 56.8,
+"all": 53.8
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 63.5
+},
+"Nvidia": {
+"all": 59.8
+},
+"Oracle": {
+"all": 45.3
+},
+"Salesforce": {
+"all": 35.3
+},
+"Snap": {
+"all": 44.8
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"all": 72.3
+}
+}
+},
+{
+"slug": "valid-sudoku",
+"title": "Valid Sudoku",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/valid-sudoku/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Amazon": {
+"6m": 52.2,
+"all": 58.9
+},
+"Apple": {
+"6m": 47.2,
+"all": 74.5
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 50.4
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 28.4,
+"all": 46.6
+},
+"Meta": {
+"6m": 42.7,
+"all": 40.5
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 44.7
+},
+"Oracle": {
+"all": 34.7
+},
+"Snap": {
+"all": 79.5
+},
+"Uber": {
+"all": 63.2
+},
+"Verkada": {
+"all": 75.6
+}
+}
+},
+{
+"slug": "longest-consecutive-sequence",
+"title": "Longest Consecutive Sequence",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Union-Find"
+],
+"url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Arrays & Hashing",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 65.0,
+"all": 70.9
+},
+"Apple": {
+"6m": 47.2,
+"all": 53.3
+},
+"Atlassian": {
+"all": 34.3
+},
+"Bloomberg": {
+"6m": 62.8,
+"all": 70.6
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Goldman Sachs": {
+"all": 39.5
+},
+"Google": {
+"6m": 66.7,
+"all": 70.8
+},
+"IBM": {
+"all": 50.2
+},
+"Intuit": {
+"all": 43.1
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Lyft": {
+"all": 43.4
+},
+"Meta": {
+"6m": 52.3,
+"all": 55.6
+},
+"Microsoft": {
+"6m": 62.9,
+"all": 63.2
+},
+"Nvidia": {
+"all": 54.6
+},
+"Oracle": {
+"all": 55.2
+},
+"Salesforce": {
+"all": 27.6
+},
+"TikTok": {
+"all": 66.5
+},
+"Uber": {
+"all": 29.5
+}
+}
+},
+{
+"slug": "best-time-to-buy-and-sell-stock-ii",
+"title": "Best Time to Buy and Sell Stock II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Greedy"
+],
+"url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 41.1,
+"all": 58.0
+},
+"Apple": {
+"6m": 56.6,
+"all": 67.1
+},
+"Atlassian": {
+"all": 34.3
+},
+"Bloomberg": {
+"6m": 58.3,
+"all": 56.4
+},
+"Goldman Sachs": {
+"all": 48.4
+},
+"Google": {
+"6m": 46.8,
+"all": 48.1
+},
+"Meta": {
+"6m": 52.3,
+"all": 48.9
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 45.5
+},
+"Nvidia": {
+"all": 38.7
+},
+"Optiver": {
+"all": 56.6
+},
+"TikTok": {
+"all": 34.5
+}
+}
+},
+{
+"slug": "majority-element-ii",
+"title": "Majority Element II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Sorting",
+"Counting",
+"Boyer\u2013Moore Majority Vote Algorithm"
+],
+"url": "https://leetcode.com/problems/majority-element-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 43.1,
+"all": 43.1
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 41.5
+},
+"Google": {
+"6m": 30.9,
+"all": 40.4
+},
+"Meta": {
+"6m": 38.1,
+"all": 35.2
+},
+"Microsoft": {
+"all": 39.8
+}
+}
+},
+{
+"slug": "subarray-sum-equals-k",
+"title": "Subarray Sum Equals K",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/subarray-sum-equals-k/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 69.5,
+"all": 74.0
+},
+"Apple": {
+"6m": 56.6,
+"all": 61.4
+},
+"Bloomberg": {
+"6m": 71.3,
+"all": 71.2
+},
+"Capital One": {
+"all": 35.0
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 57.1,
+"all": 65.8
+},
+"IBM": {
+"all": 75.3
+},
+"LinkedIn": {
+"all": 27.3
+},
+"Meta": {
+"6m": 69.0,
+"all": 88.0
+},
+"Microsoft": {
+"6m": 70.9,
+"all": 75.2
+},
+"Nvidia": {
+"all": 59.8
+},
+"Oracle": {
+"all": 40.7
+},
+"Salesforce": {
+"6m": 55.3,
+"all": 27.6
+},
+"TikTok": {
+"all": 71.1
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "first-missing-positive",
+"title": "First Missing Positive",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Hash Table"
+],
+"url": "https://leetcode.com/problems/first-missing-positive/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 46.6,
+"all": 60.9
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 40.2
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 41.3,
+"all": 47.9
+},
+"Meta": {
+"all": 40.5
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 49.2
+},
+"Netflix": {
+"all": 49.2
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 45.3
+},
+"Salesforce": {
+"all": 35.3
+}
+}
+},
+{
+"slug": "reverse-string",
+"title": "Reverse String",
+"difficulty": "Easy",
+"topics": [
+"Two Pointers",
+"String"
+],
+"url": "https://leetcode.com/problems/reverse-string/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 48.2,
+"all": 45.6
+},
+"Apple": {
+"all": 43.2
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 55.2
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 49.5,
+"all": 47.1
+},
+"Meta": {
+"6m": 42.7,
+"all": 38.9
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 45.5
+},
+"Nvidia": {
+"all": 38.7
+}
+}
+},
+{
+"slug": "valid-palindrome",
+"title": "Valid Palindrome",
+"difficulty": "Easy",
+"topics": [
+"Two Pointers",
+"String"
+],
+"url": "https://leetcode.com/problems/valid-palindrome/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Two Pointers",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 57.5,
+"all": 55.0
+},
+"Apple": {
+"6m": 47.2,
+"all": 69.9
+},
+"Bloomberg": {
+"6m": 66.6,
+"all": 63.5
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 46.8,
+"all": 52.2
+},
+"Intuit": {
+"all": 43.1
+},
+"Meta": {
+"6m": 60.6,
+"all": 83.8
+},
+"Microsoft": {
+"6m": 46.7,
+"all": 59.1
+},
+"Oracle": {
+"all": 52.4
+},
+"Salesforce": {
+"all": 27.6
+},
+"Spotify": {
+"all": 50.7
+},
+"TikTok": {
+"all": 34.5
+},
+"Uber": {
+"all": 49.9
+}
+}
+},
+{
+"slug": "valid-palindrome-ii",
+"title": "Valid Palindrome II",
+"difficulty": "Easy",
+"topics": [
+"Two Pointers",
+"String",
+"Greedy"
+],
+"url": "https://leetcode.com/problems/valid-palindrome-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 41.1,
+"all": 43.7
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 29.9
+},
+"Google": {
+"6m": 36.9,
+"all": 37.9
+},
+"IBM": {
+"all": 50.2
+},
+"Meta": {
+"6m": 24.6,
+"all": 95.7
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 36.2
+},
+"TikTok": {
+"all": 34.5
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "merge-strings-alternately",
+"title": "Merge Strings Alternately",
+"difficulty": "Easy",
+"topics": [
+"Two Pointers",
+"String"
+],
+"url": "https://leetcode.com/problems/merge-strings-alternately/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 41.1,
+"all": 55.6
+},
+"Bloomberg": {
+"6m": 45.2,
+"all": 55.8
+},
+"Google": {
+"6m": 49.5,
+"all": 67.0
+},
+"IBM": {
+"all": 50.2
+},
+"Meta": {
+"6m": 52.3,
+"all": 57.4
+},
+"Microsoft": {
+"6m": 46.7,
+"all": 61.6
+},
+"Oracle": {
+"all": 26.6
+},
+"Uber": {
+"all": 52.4
+}
+}
+},
+{
+"slug": "merge-sorted-array",
+"title": "Merge Sorted Array",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Two Pointers",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/merge-sorted-array/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 56.5,
+"all": 67.4
+},
+"Apple": {
+"all": 56.9
+},
+"Bloomberg": {
+"6m": 60.7,
+"all": 72.9
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 60.0,
+"all": 69.2
+},
+"IBM": {
+"all": 34.6
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Meta": {
+"6m": 54.7,
+"all": 86.8
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 71.8
+},
+"Nvidia": {
+"all": 54.6
+},
+"TikTok": {
+"all": 26.1
+},
+"Verkada": {
+"all": 60.3
+}
+}
+},
+{
+"slug": "remove-duplicates-from-sorted-array",
+"title": "Remove Duplicates from Sorted Array",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Two Pointers"
+],
+"url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 61.6,
+"all": 64.2
+},
+"Apple": {
+"all": 46.2
+},
+"Bloomberg": {
+"6m": 66.6,
+"all": 73.2
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 62.0,
+"all": 65.7
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"6m": 67.8,
+"all": 69.2
+},
+"Microsoft": {
+"6m": 68.5,
+"all": 72.0
+},
+"Oracle": {
+"all": 40.7
+}
+}
+},
+{
+"slug": "two-sum-ii-input-array-is-sorted",
+"title": "Two Sum II - Input Array Is Sorted",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Two Pointers",
+"Binary Search"
+],
+"url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Two Pointers",
+"companies": {
+"Amazon": {
+"6m": 52.2,
+"all": 55.6
+},
+"Apple": {
+"all": 39.6
+},
+"Bloomberg": {
+"all": 48.7
+},
+"Google": {
+"6m": 45.9,
+"all": 49.9
+},
+"Meta": {
+"6m": 42.7,
+"all": 48.4
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 49.2
+},
+"Oracle": {
+"all": 34.7
+},
+"Snowflake": {
+"all": 38.6
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "3sum",
+"title": "3Sum",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Two Pointers",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/3sum/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Two Pointers",
+"companies": {
+"Adobe": {
+"all": 85.7
+},
+"Amazon": {
+"6m": 75.5,
+"all": 78.6
+},
+"Apple": {
+"6m": 68.6,
+"all": 58.5
+},
+"Bloomberg": {
+"6m": 71.3,
+"all": 79.5
+},
+"Cloudflare": {
+"all": 79.3
+},
+"Goldman Sachs": {
+"all": 42.2
+},
+"Google": {
+"6m": 70.4,
+"all": 72.8
+},
+"IBM": {
+"all": 59.4
+},
+"Meta": {
+"6m": 76.5,
+"all": 72.4
+},
+"Microsoft": {
+"6m": 71.9,
+"all": 74.9
+},
+"Nvidia": {
+"all": 54.6
+},
+"Oracle": {
+"all": 63.8
+},
+"Salesforce": {
+"all": 40.9
+},
+"TikTok": {
+"all": 68.2
+}
+}
+},
+{
+"slug": "4sum",
+"title": "4Sum",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Two Pointers",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/4sum/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 54.5,
+"all": 59.9
+},
+"Apple": {
+"all": 29.7
+},
+"Bloomberg": {
+"6m": 45.2,
+"all": 62.7
+},
+"Cloudflare": {
+"all": 73.7
+},
+"DE Shaw": {
+"all": 37.9
+},
+"DoorDash": {
+"all": 35.9
+},
+"Google": {
+"6m": 46.8,
+"all": 56.5
+},
+"Meta": {
+"6m": 46.4,
+"all": 51.5
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 52.8
+},
+"Nvidia": {
+"all": 64.0
+},
+"Oracle": {
+"6m": 74.2,
+"all": 26.6
+}
+}
+},
+{
+"slug": "rotate-array",
+"title": "Rotate Array",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Math",
+"Two Pointers"
+],
+"url": "https://leetcode.com/problems/rotate-array/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 46.6,
+"all": 57.8
+},
+"Apple": {
+"6m": 56.6,
+"all": 77.7
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 63.5
+},
+"Google": {
+"6m": 51.7,
+"all": 56.4
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"6m": 52.3,
+"all": 49.8
+},
+"Microsoft": {
+"6m": 55.2,
+"all": 62.0
+},
+"Oracle": {
+"all": 26.6
+},
+"TikTok": {
+"6m": 52.7,
+"all": 55.8
+}
+}
+},
+{
+"slug": "container-with-most-water",
+"title": "Container With Most Water",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Two Pointers",
+"Greedy"
+],
+"url": "https://leetcode.com/problems/container-with-most-water/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Two Pointers",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 70.0,
+"all": 76.2
+},
+"Apple": {
+"all": 46.2
+},
+"Bloomberg": {
+"6m": 71.3,
+"all": 76.2
+},
+"Capital One": {
+"all": 56.3
+},
+"Goldman Sachs": {
+"6m": 63.0,
+"all": 65.8
+},
+"Google": {
+"6m": 63.9,
+"all": 68.4
+},
+"IBM": {
+"6m": 74.4,
+"all": 63.0
+},
+"Meta": {
+"6m": 67.8,
+"all": 64.6
+},
+"Microsoft": {
+"6m": 65.9,
+"all": 71.2
+},
+"Nvidia": {
+"all": 70.7
+},
+"Oracle": {
+"all": 63.8
+},
+"Salesforce": {
+"all": 40.9
+},
+"TikTok": {
+"all": 55.8
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "boats-to-save-people",
+"title": "Boats to Save People",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Two Pointers",
+"Greedy",
+"Sorting",
+"Timsort"
+],
+"url": "https://leetcode.com/problems/boats-to-save-people/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 45.0,
+"all": 42.6
+},
+"Bloomberg": {
+"all": 34.0
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Google": {
+"6m": 25.4,
+"all": 29.1
+},
+"IBM": {
+"all": 50.2
+},
+"Meta": {
+"6m": 24.6,
+"all": 29.1
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 19.8
+},
+"Snowflake": {
+"all": 38.6
+}
+}
+},
+{
+"slug": "trapping-rain-water",
+"title": "Trapping Rain Water",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Two Pointers",
+"Dynamic Programming",
+"Stack",
+"Monotonic Stack"
+],
+"url": "https://leetcode.com/problems/trapping-rain-water/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Two Pointers",
+"companies": {
+"Adobe": {
+"all": 74.4
+},
+"Airbnb": {
+"all": 73.0
+},
+"Amazon": {
+"6m": 84.9,
+"all": 87.9
+},
+"Apple": {
+"all": 62.7
+},
+"Bloomberg": {
+"6m": 73.9,
+"all": 80.2
+},
+"Citadel": {
+"all": 56.7
+},
+"DE Shaw": {
+"all": 58.3
+},
+"Goldman Sachs": {
+"6m": 100.0,
+"all": 100.0
+},
+"Google": {
+"6m": 67.6,
+"all": 73.5
+},
+"IBM": {
+"all": 43.6
+},
+"IMC": {
+"all": 83.4
+},
+"Intuit": {
+"all": 43.1
+},
+"Meta": {
+"6m": 62.2,
+"all": 64.2
+},
+"Microsoft": {
+"6m": 65.9,
+"all": 77.9
+},
+"Nvidia": {
+"6m": 73.7,
+"all": 70.7
+},
+"OpenAI": {
+"all": 48.7
+},
+"Oracle": {
+"all": 52.4
+},
+"Roblox": {
+"all": 50.9
+},
+"Salesforce": {
+"all": 40.9
+},
+"Snowflake": {
+"6m": 78.8,
+"all": 85.7
+},
+"TikTok": {
+"all": 79.1
+},
+"Uber": {
+"all": 35.4
+}
+}
+},
+{
+"slug": "contains-duplicate-ii",
+"title": "Contains Duplicate II",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"Sliding Window"
+],
+"url": "https://leetcode.com/problems/contains-duplicate-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Airbnb": {
+"all": 71.0
+},
+"Amazon": {
+"6m": 41.1,
+"all": 48.6
+},
+"Bloomberg": {
+"6m": 52.7,
+"all": 56.9
+},
+"Google": {
+"6m": 43.7,
+"all": 48.8
+},
+"Meta": {
+"6m": 46.4,
+"all": 60.7
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 43.8
+},
+"Netflix": {
+"all": 69.4
+}
+}
+},
+{
+"slug": "best-time-to-buy-and-sell-stock",
+"title": "Best Time to Buy and Sell Stock",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Sliding Window",
+"companies": {
+"Adobe": {
+"6m": 79.4,
+"all": 78.7
+},
+"Amazon": {
+"6m": 79.4,
+"all": 83.8
+},
+"Apple": {
+"6m": 79.6,
+"all": 79.9
+},
+"Atlassian": {
+"6m": 92.3,
+"all": 55.3
+},
+"Bloomberg": {
+"6m": 78.5,
+"all": 83.8
+},
+"Capital One": {
+"all": 42.8
+},
+"Citadel": {
+"all": 89.1
+},
+"Coinbase": {
+"all": 51.0
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Goldman Sachs": {
+"all": 55.5
+},
+"Google": {
+"6m": 69.7,
+"all": 71.9
+},
+"IBM": {
+"6m": 63.9,
+"all": 87.1
+},
+"Meta": {
+"6m": 74.0,
+"all": 84.2
+},
+"Microsoft": {
+"6m": 68.5,
+"all": 78.0
+},
+"Millennium": {
+"all": 100.0
+},
+"Nvidia": {
+"6m": 85.3,
+"all": 86.9
+},
+"Optiver": {
+"all": 71.1
+},
+"Oracle": {
+"all": 55.2
+},
+"Robinhood": {
+"all": 60.4
+},
+"Salesforce": {
+"all": 45.3
+},
+"Snowflake": {
+"all": 38.6
+},
+"TikTok": {
+"all": 62.8
+},
+"Uber": {
+"all": 74.1
+}
+}
+},
+{
+"slug": "longest-substring-without-repeating-characters",
+"title": "Longest Substring Without Repeating Characters",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"String",
+"Sliding Window"
+],
+"url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Sliding Window",
+"companies": {
+"Adobe": {
+"all": 98.1
+},
+"Amazon": {
+"6m": 80.6,
+"all": 83.9
+},
+"Apple": {
+"6m": 68.6,
+"all": 69.0
+},
+"Atlassian": {
+"all": 42.0
+},
+"Bloomberg": {
+"6m": 76.3,
+"all": 84.8
+},
+"DE Shaw": {
+"all": 46.9
+},
+"Goldman Sachs": {
+"6m": 56.8,
+"all": 64.4
+},
+"Google": {
+"6m": 69.2,
+"all": 72.6
+},
+"IBM": {
+"6m": 63.9,
+"all": 88.2
+},
+"LinkedIn": {
+"all": 32.4
+},
+"Lyft": {
+"all": 43.4
+},
+"Meta": {
+"6m": 74.0,
+"all": 70.8
+},
+"Microsoft": {
+"6m": 70.9,
+"all": 80.0
+},
+"Netflix": {
+"6m": 74.7,
+"all": 90.5
+},
+"Nvidia": {
+"6m": 73.7,
+"all": 85.4
+},
+"Oracle": {
+"6m": 74.2,
+"all": 84.6
+},
+"Roblox": {
+"all": 37.1
+},
+"Salesforce": {
+"all": 56.9
+},
+"Snap": {
+"all": 44.8
+},
+"Spotify": {
+"6m": 100.0,
+"all": 86.8
+},
+"TikTok": {
+"all": 84.3
+},
+"Twilio": {
+"all": 64.0
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "longest-repeating-character-replacement",
+"title": "Longest Repeating Character Replacement",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"String",
+"Sliding Window"
+],
+"url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Sliding Window",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 51.0,
+"all": 59.9
+},
+"Bloomberg": {
+"6m": 58.3,
+"all": 62.3
+},
+"DE Shaw": {
+"6m": 91.4,
+"all": 58.3
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 44.5
+},
+"Google": {
+"6m": 44.8,
+"all": 53.9
+},
+"Meta": {
+"6m": 32.4,
+"all": 48.4
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 55.8
+}
+}
+},
+{
+"slug": "permutation-in-string",
+"title": "Permutation in String",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"Two Pointers",
+"String",
+"Sliding Window"
+],
+"url": "https://leetcode.com/problems/permutation-in-string/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Sliding Window",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 36.3,
+"all": 46.1
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 45.2,
+"all": 41.5
+},
+"Databricks": {
+"all": 53.9
+},
+"Google": {
+"6m": 21.9,
+"all": 38.8
+},
+"Meta": {
+"6m": 56.8,
+"all": 39.7
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 49.8
+},
+"Oracle": {
+"all": 26.6
+},
+"Salesforce": {
+"all": 27.6
+}
+}
+},
+{
+"slug": "minimum-size-subarray-sum",
+"title": "Minimum Size Subarray Sum",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search",
+"Sliding Window",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 38.9,
+"all": 48.6
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 58.3,
+"all": 54.6
+},
+"DoorDash": {
+"all": 50.9
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 43.7,
+"all": 45.8
+},
+"Meta": {
+"6m": 56.8,
+"all": 47.9
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 49.2
+},
+"Oracle": {
+"all": 40.7
+},
+"TikTok": {
+"6m": 52.7,
+"all": 52.9
+}
+}
+},
+{
+"slug": "find-k-closest-elements",
+"title": "Find K Closest Elements",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Two Pointers",
+"Binary Search",
+"Sliding Window",
+"Sorting",
+"Heap (Priority Queue)"
+],
+"url": "https://leetcode.com/problems/find-k-closest-elements/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 45.2
+},
+"Apple": {
+"all": 46.2
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 24.7
+},
+"DE Shaw": {
+"all": 37.9
+},
+"DoorDash": {
+"all": 65.5
+},
+"Google": {
+"6m": 11.8,
+"all": 37.9
+},
+"LinkedIn": {
+"all": 39.8
+},
+"Meta": {
+"6m": 24.6,
+"all": 44.6
+},
+"Microsoft": {
+"all": 34.7
+},
+"Salesforce": {
+"all": 27.6
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "minimum-window-substring",
+"title": "Minimum Window Substring",
+"difficulty": "Hard",
+"topics": [
+"Hash Table",
+"String",
+"Sliding Window"
+],
+"url": "https://leetcode.com/problems/minimum-window-substring/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Sliding Window",
+"companies": {
+"Adobe": {
+"all": 78.7
+},
+"Airbnb": {
+"all": 37.6
+},
+"Amazon": {
+"6m": 62.4,
+"all": 62.0
+},
+"Anduril": {
+"all": 40.9
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 43.9
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 28.4,
+"all": 42.2
+},
+"IBM": {
+"all": 55.2
+},
+"LinkedIn": {
+"all": 67.0
+},
+"Lyft": {
+"6m": 100.0,
+"all": 94.1
+},
+"Meta": {
+"6m": 42.7,
+"all": 73.4
+},
+"Microsoft": {
+"6m": 57.4,
+"all": 54.8
+},
+"Oracle": {
+"all": 52.4
+},
+"Salesforce": {
+"all": 48.9
+},
+"Snap": {
+"all": 91.8
+},
+"Snowflake": {
+"all": 91.9
+},
+"TikTok": {
+"all": 72.5
+},
+"Uber": {
+"all": 56.6
+}
+}
+},
+{
+"slug": "sliding-window-maximum",
+"title": "Sliding Window Maximum",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Queue",
+"Sliding Window",
+"Heap (Priority Queue)",
+"Monotonic Queue",
+"Range Minimum/Maximum Query"
+],
+"url": "https://leetcode.com/problems/sliding-window-maximum/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Sliding Window",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 58.4,
+"all": 66.4
+},
+"Apple": {
+"all": 35.3
+},
+"Bloomberg": {
+"6m": 60.7,
+"all": 52.6
+},
+"Citadel": {
+"all": 100.0
+},
+"DE Shaw": {
+"6m": 100.0,
+"all": 71.4
+},
+"DoorDash": {
+"all": 41.0
+},
+"Goldman Sachs": {
+"all": 46.6
+},
+"Google": {
+"6m": 50.2,
+"all": 55.2
+},
+"IBM": {
+"all": 50.2
+},
+"Meta": {
+"6m": 42.7,
+"all": 54.9
+},
+"Microsoft": {
+"6m": 62.9,
+"all": 56.2
+},
+"MongoDB": {
+"all": 60.7
+},
+"Nvidia": {
+"6m": 73.7,
+"all": 64.0
+},
+"Oracle": {
+"all": 76.7
+},
+"Roblox": {
+"all": 37.1
+},
+"Salesforce": {
+"all": 40.9
+},
+"TikTok": {
+"all": 49.5
+},
+"Uber": {
+"all": 47.1
+}
+}
+},
+{
+"slug": "baseball-game",
+"title": "Baseball Game",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Stack",
+"Simulation"
+],
+"url": "https://leetcode.com/problems/baseball-game/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 27.9
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 32.0
+},
+"Google": {
+"6m": 17.5,
+"all": 19.7
+},
+"Meta": {
+"6m": 24.6,
+"all": 27.7
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 22.8
+}
+}
+},
+{
+"slug": "valid-parentheses",
+"title": "Valid Parentheses",
+"difficulty": "Easy",
+"topics": [
+"String",
+"Stack",
+"Bracket Sequences"
+],
+"url": "https://leetcode.com/problems/valid-parentheses/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Stack",
+"companies": {
+"Adobe": {
+"all": 74.4
+},
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 64.4,
+"all": 74.3
+},
+"Anduril": {
+"all": 40.9
+},
+"Apple": {
+"all": 69.9
+},
+"Bloomberg": {
+"6m": 64.8,
+"all": 83.1
+},
+"DE Shaw": {
+"all": 53.3
+},
+"Goldman Sachs": {
+"all": 39.5
+},
+"Google": {
+"6m": 62.4,
+"all": 67.4
+},
+"IBM": {
+"6m": 87.7,
+"all": 83.4
+},
+"Intuit": {
+"6m": 76.8,
+"all": 100.0
+},
+"Jane Street": {
+"all": 58.5
+},
+"LinkedIn": {
+"6m": 71.4,
+"all": 78.8
+},
+"Meta": {
+"6m": 74.0,
+"all": 76.4
+},
+"Microsoft": {
+"6m": 67.2,
+"all": 72.0
+},
+"Nvidia": {
+"all": 78.1
+},
+"Oracle": {
+"all": 73.6
+},
+"Roblox": {
+"all": 62.1
+},
+"Salesforce": {
+"all": 35.3
+},
+"Spotify": {
+"all": 72.8
+},
+"TikTok": {
+"all": 58.4
+},
+"Two Sigma": {
+"all": 67.3
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "implement-stack-using-queues",
+"title": "Implement Stack using Queues",
+"difficulty": "Easy",
+"topics": [
+"Stack",
+"Design",
+"Queue"
+],
+"url": "https://leetcode.com/problems/implement-stack-using-queues/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 33.3
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"all": 38.8
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 28.4,
+"all": 37.5
+},
+"Meta": {
+"all": 30.5
+},
+"Microsoft": {
+"all": 34.7
+}
+}
+},
+{
+"slug": "implement-queue-using-stacks",
+"title": "Implement Queue using Stacks",
+"difficulty": "Easy",
+"topics": [
+"Stack",
+"Design",
+"Queue"
+],
+"url": "https://leetcode.com/problems/implement-queue-using-stacks/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 36.7
+},
+"Apple": {
+"all": 46.2
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 43.9
+},
+"Google": {
+"6m": 28.4,
+"all": 34.4
+},
+"Meta": {
+"all": 20.2
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 45.5
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "min-stack",
+"title": "Min Stack",
+"difficulty": "Medium",
+"topics": [
+"Stack",
+"Design"
+],
+"url": "https://leetcode.com/problems/min-stack/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Stack",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 48.2,
+"all": 60.1
+},
+"Apple": {
+"all": 60.0
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 70.6
+},
+"Citadel": {
+"all": 46.8
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 35.1,
+"all": 50.5
+},
+"IBM": {
+"all": 34.6
+},
+"LinkedIn": {
+"all": 32.4
+},
+"Lyft": {
+"all": 60.9
+},
+"Meta": {
+"6m": 38.1,
+"all": 45.7
+},
+"Microsoft": {
+"6m": 46.7,
+"all": 55.3
+},
+"Nvidia": {
+"all": 47.9
+},
+"Oracle": {
+"all": 59.9
+},
+"Salesforce": {
+"all": 51.9
+},
+"Snap": {
+"all": 79.5
+},
+"Snowflake": {
+"6m": 62.9,
+"all": 54.1
+},
+"Uber": {
+"all": 52.4
+}
+}
+},
+{
+"slug": "evaluate-reverse-polish-notation",
+"title": "Evaluate Reverse Polish Notation",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Math",
+"Stack"
+],
+"url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Stack",
+"companies": {
+"Amazon": {
+"6m": 33.4,
+"all": 47.0
+},
+"Anduril": {
+"all": 55.0
+},
+"Apple": {
+"all": 29.7
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 47.8
+},
+"Citadel": {
+"6m": 76.6,
+"all": 77.8
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 25.4,
+"all": 36.5
+},
+"LinkedIn": {
+"all": 51.0
+},
+"Meta": {
+"6m": 42.7,
+"all": 34.1
+},
+"Microsoft": {
+"all": 37.5
+},
+"Oracle": {
+"all": 26.6
+}
+}
+},
+{
+"slug": "generate-parentheses",
+"title": "Generate Parentheses",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Dynamic Programming",
+"Backtracking",
+"Bracket Sequences"
+],
+"url": "https://leetcode.com/problems/generate-parentheses/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Stack",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Amazon": {
+"6m": 56.5,
+"all": 69.8
+},
+"Apple": {
+"all": 43.2
+},
+"Bloomberg": {
+"6m": 64.8,
+"all": 67.4
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 50.2,
+"all": 61.5
+},
+"IBM": {
+"all": 43.6
+},
+"Intuit": {
+"all": 43.1
+},
+"Meta": {
+"6m": 46.4,
+"all": 60.9
+},
+"Microsoft": {
+"6m": 55.2,
+"all": 64.7
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 57.7
+},
+"Salesforce": {
+"all": 40.9
+},
+"TikTok": {
+"all": 62.8
+},
+"Uber": {
+"all": 52.4
+}
+}
+},
+{
+"slug": "asteroid-collision",
+"title": "Asteroid Collision",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Stack",
+"Simulation"
+],
+"url": "https://leetcode.com/problems/asteroid-collision/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 56.5,
+"all": 60.7
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 38.8
+},
+"DE Shaw": {
+"6m": 91.4,
+"all": 58.3
+},
+"DoorDash": {
+"all": 44.9
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 11.8,
+"all": 37.0
+},
+"IBM": {
+"all": 43.6
+},
+"Meta": {
+"6m": 32.4,
+"all": 43.3
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 42.9
+},
+"Nvidia": {
+"all": 54.6
+},
+"OpenAI": {
+"all": 48.7
+},
+"Oracle": {
+"all": 63.8
+},
+"Salesforce": {
+"6m": 64.9,
+"all": 54.5
+},
+"TikTok": {
+"all": 40.7
+},
+"Uber": {
+"all": 54.6
+}
+}
+},
+{
+"slug": "daily-temperatures",
+"title": "Daily Temperatures",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Stack",
+"Monotonic Stack"
+],
+"url": "https://leetcode.com/problems/daily-temperatures/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Stack",
+"companies": {
+"Amazon": {
+"6m": 52.2,
+"all": 57.8
+},
+"Anduril": {
+"6m": 65.6,
+"all": 73.8
+},
+"Bloomberg": {
+"6m": 55.7,
+"all": 56.9
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 39.5
+},
+"Google": {
+"6m": 47.8,
+"all": 48.3
+},
+"Intuit": {
+"all": 51.8
+},
+"Meta": {
+"6m": 38.1,
+"all": 44.6
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 54.4
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 26.6
+},
+"TikTok": {
+"all": 62.8
+}
+}
+},
+{
+"slug": "online-stock-span",
+"title": "Online Stock Span",
+"difficulty": "Medium",
+"topics": [
+"Stack",
+"Design",
+"Monotonic Stack",
+"Data Stream"
+],
+"url": "https://leetcode.com/problems/online-stock-span/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 20.8,
+"all": 45.2
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 47.8
+},
+"Google": {
+"6m": 28.4,
+"all": 37.9
+},
+"IBM": {
+"all": 43.6
+},
+"Meta": {
+"6m": 32.4,
+"all": 27.7
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 46.3
+}
+}
+},
+{
+"slug": "car-fleet",
+"title": "Car Fleet",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Stack",
+"Sorting",
+"Monotonic Stack"
+],
+"url": "https://leetcode.com/problems/car-fleet/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Stack",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 31.4
+},
+"Bloomberg": {
+"all": 21.6
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 17.5,
+"all": 32.6
+},
+"Meta": {
+"all": 11.9
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 25.4
+}
+}
+},
+{
+"slug": "simplify-path",
+"title": "Simplify Path",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Stack"
+],
+"url": "https://leetcode.com/problems/simplify-path/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 43.7
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 41.5
+},
+"Capital One": {
+"all": 71.4
+},
+"Google": {
+"6m": 21.9,
+"all": 36.5
+},
+"Meta": {
+"all": 83.7
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 45.5
+},
+"Nvidia": {
+"all": 38.7
+},
+"OpenAI": {
+"all": 62.7
+},
+"Oracle": {
+"all": 57.7
+},
+"Roblox": {
+"6m": 84.2,
+"all": 55.3
+},
+"Snowflake": {
+"6m": 62.9,
+"all": 66.8
+},
+"TikTok": {
+"all": 58.4
+},
+"Uber": {
+"all": 35.4
+}
+}
+},
+{
+"slug": "decode-string",
+"title": "Decode String",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Stack",
+"Recursion"
+],
+"url": "https://leetcode.com/problems/decode-string/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 41.1,
+"all": 49.0
+},
+"Apple": {
+"all": 43.2
+},
+"Bloomberg": {
+"6m": 72.7,
+"all": 75.8
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 40.0,
+"all": 57.4
+},
+"Meta": {
+"6m": 38.1,
+"all": 53.5
+},
+"Microsoft": {
+"all": 42.9
+},
+"Nvidia": {
+"6m": 85.3,
+"all": 59.8
+},
+"Oracle": {
+"6m": 85.6,
+"all": 63.8
+},
+"Salesforce": {
+"all": 27.6
+},
+"Snowflake": {
+"all": 38.6
+},
+"TikTok": {
+"6m": 74.1,
+"all": 72.5
+}
+}
+},
+{
+"slug": "maximum-frequency-stack",
+"title": "Maximum Frequency Stack",
+"difficulty": "Hard",
+"topics": [
+"Hash Table",
+"Stack",
+"Design",
+"Ordered Set"
+],
+"url": "https://leetcode.com/problems/maximum-frequency-stack/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 25.2
+},
+"Apple": {
+"all": 35.3
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"all": 8.2
+},
+"Meta": {
+"all": 8.5
+},
+"Microsoft": {
+"all": 16.4
+},
+"Salesforce": {
+"all": 56.9
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "largest-rectangle-in-histogram",
+"title": "Largest Rectangle in Histogram",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Stack",
+"Monotonic Stack",
+"Range Minimum/Maximum Query"
+],
+"url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Stack",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 55.5,
+"all": 60.7
+},
+"Bloomberg": {
+"6m": 52.7,
+"all": 56.4
+},
+"Capital One": {
+"all": 64.2
+},
+"DoorDash": {
+"all": 50.9
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 49.5,
+"all": 56.8
+},
+"IBM": {
+"all": 34.6
+},
+"LinkedIn": {
+"all": 27.3
+},
+"Meta": {
+"6m": 38.1,
+"all": 45.7
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 57.1
+},
+"Oracle": {
+"all": 26.6
+},
+"Salesforce": {
+"all": 27.6
+},
+"TikTok": {
+"all": 45.5
+},
+"Uber": {
+"all": 47.1
+}
+}
+},
+{
+"slug": "binary-search",
+"title": "Binary Search",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Binary Search"
+],
+"url": "https://leetcode.com/problems/binary-search/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Binary Search",
+"companies": {
+"Amazon": {
+"6m": 51.0,
+"all": 46.5
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 55.7,
+"all": 55.8
+},
+"Google": {
+"6m": 48.6,
+"all": 52.3
+},
+"Meta": {
+"6m": 49.5,
+"all": 45.7
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 47.1
+},
+"Oracle": {
+"all": 26.6
+}
+}
+},
+{
+"slug": "search-insert-position",
+"title": "Search Insert Position",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Binary Search"
+],
+"url": "https://leetcode.com/problems/search-insert-position/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 52.2,
+"all": 56.1
+},
+"Bloomberg": {
+"6m": 60.7,
+"all": 58.0
+},
+"Google": {
+"6m": 51.7,
+"all": 55.2
+},
+"Meta": {
+"6m": 52.3,
+"all": 48.9
+},
+"Microsoft": {
+"6m": 46.7,
+"all": 57.1
+}
+}
+},
+{
+"slug": "guess-number-higher-or-lower",
+"title": "Guess Number Higher or Lower",
+"difficulty": "Easy",
+"topics": [
+"Binary Search",
+"Interactive"
+],
+"url": "https://leetcode.com/problems/guess-number-higher-or-lower/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 18.0
+},
+"Bloomberg": {
+"all": 27.5
+},
+"Google": {
+"6m": 11.8,
+"all": 24.5
+},
+"Meta": {
+"all": 8.5
+},
+"Microsoft": {
+"all": 22.8
+}
+}
+},
+{
+"slug": "sqrtx",
+"title": "Sqrt(x)",
+"difficulty": "Easy",
+"topics": [
+"Math",
+"Binary Search",
+"Newton's Method"
+],
+"url": "https://leetcode.com/problems/sqrtx/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 53.4,
+"all": 58.7
+},
+"Apple": {
+"all": 51.2
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 62.3
+},
+"Citadel": {
+"all": 63.9
+},
+"Goldman Sachs": {
+"all": 42.2
+},
+"Google": {
+"6m": 54.9,
+"all": 52.2
+},
+"LinkedIn": {
+"all": 42.6
+},
+"Meta": {
+"6m": 38.1,
+"all": 48.9
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 48.5
+},
+"Oracle": {
+"all": 34.7
+},
+"TikTok": {
+"all": 64.8
+},
+"Uber": {
+"all": 29.5
+}
+}
+},
+{
+"slug": "search-a-2d-matrix",
+"title": "Search a 2D Matrix",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/search-a-2d-matrix/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Binary Search",
+"companies": {
+"Adobe": {
+"all": 63.1
+},
+"Amazon": {
+"6m": 38.9,
+"all": 58.0
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"all": 50.4
+},
+"DE Shaw": {
+"all": 46.9
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 42.2
+},
+"Google": {
+"6m": 33.2,
+"all": 41.9
+},
+"Meta": {
+"6m": 38.1,
+"all": 41.2
+},
+"Microsoft": {
+"6m": 57.4,
+"all": 52.8
+},
+"Oracle": {
+"all": 40.7
+},
+"TikTok": {
+"all": 34.5
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "koko-eating-bananas",
+"title": "Koko Eating Bananas",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search"
+],
+"url": "https://leetcode.com/problems/koko-eating-bananas/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Binary Search",
+"companies": {
+"Adobe": {
+"all": 74.4
+},
+"Amazon": {
+"6m": 73.1,
+"all": 74.9
+},
+"Apple": {
+"all": 22.3
+},
+"Atlassian": {
+"all": 42.0
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 63.5
+},
+"Citadel": {
+"all": 46.8
+},
+"DoorDash": {
+"all": 75.5
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 56.1,
+"all": 59.2
+},
+"IBM": {
+"all": 34.6
+},
+"LinkedIn": {
+"all": 27.3
+},
+"Meta": {
+"6m": 52.3,
+"all": 58.6
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 63.5
+},
+"Netflix": {
+"all": 58.1
+},
+"Nvidia": {
+"6m": 85.3,
+"all": 54.6
+},
+"Oracle": {
+"all": 62.0
+},
+"Salesforce": {
+"all": 40.9
+},
+"Snap": {
+"all": 44.8
+},
+"TikTok": {
+"all": 49.5
+},
+"Uber": {
+"all": 40.0
+}
+}
+},
+{
+"slug": "capacity-to-ship-packages-within-d-days",
+"title": "Capacity To Ship Packages Within D Days",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search"
+],
+"url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 60.1,
+"all": 60.7
+},
+"Apple": {
+"all": 29.7
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 45.9
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 30.9,
+"all": 43.8
+},
+"Meta": {
+"all": 45.1
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 45.5
+},
+"Oracle": {
+"all": 40.7
+},
+"Snap": {
+"6m": 89.1,
+"all": 44.8
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "find-minimum-in-rotated-sorted-array",
+"title": "Find Minimum in Rotated Sorted Array",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search"
+],
+"url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Binary Search",
+"companies": {
+"Amazon": {
+"6m": 48.2,
+"all": 48.2
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 38.8
+},
+"Goldman Sachs": {
+"all": 54.3
+},
+"Google": {
+"6m": 38.5,
+"all": 40.0
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Meta": {
+"6m": 24.6,
+"all": 38.0
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 50.5
+},
+"Oracle": {
+"all": 34.7
+},
+"TikTok": {
+"all": 40.7
+},
+"Uber": {
+"all": 29.5
+}
+}
+},
+{
+"slug": "search-in-rotated-sorted-array",
+"title": "Search in Rotated Sorted Array",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search"
+],
+"url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Binary Search",
+"companies": {
+"Adobe": {
+"all": 63.1
+},
+"Amazon": {
+"6m": 68.0,
+"all": 72.0
+},
+"Anduril": {
+"all": 49.2
+},
+"Apple": {
+"all": 39.6
+},
+"Bloomberg": {
+"6m": 60.7,
+"all": 69.2
+},
+"Goldman Sachs": {
+"all": 57.7
+},
+"Google": {
+"6m": 53.7,
+"all": 57.3
+},
+"IBM": {
+"all": 34.6
+},
+"LinkedIn": {
+"all": 67.0
+},
+"Meta": {
+"6m": 54.7,
+"all": 59.1
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 68.7
+},
+"Nvidia": {
+"all": 73.5
+},
+"Oracle": {
+"6m": 85.6,
+"all": 69.9
+},
+"Salesforce": {
+"all": 27.6
+},
+"Snap": {
+"all": 44.8
+},
+"TikTok": {
+"6m": 52.7,
+"all": 72.5
+},
+"Uber": {
+"all": 56.6
+}
+}
+},
+{
+"slug": "search-in-rotated-sorted-array-ii",
+"title": "Search in Rotated Sorted Array II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search"
+],
+"url": "https://leetcode.com/problems/search-in-rotated-sorted-array-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 38.9,
+"all": 41.5
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 44.9
+},
+"Google": {
+"6m": 35.1,
+"all": 37.5
+},
+"LinkedIn": {
+"all": 27.3
+},
+"Meta": {
+"all": 40.5
+},
+"Microsoft": {
+"all": 27.7
+}
+}
+},
+{
+"slug": "time-based-key-value-store",
+"title": "Time Based Key-Value Store",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"String",
+"Binary Search",
+"Design"
+],
+"url": "https://leetcode.com/problems/time-based-key-value-store/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Binary Search",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 48.6
+},
+"Anduril": {
+"all": 59.6
+},
+"Apple": {
+"6m": 72.9,
+"all": 68.1
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 27.5
+},
+"Citadel": {
+"6m": 93.1,
+"all": 84.1
+},
+"Coinbase": {
+"all": 90.7
+},
+"Databricks": {
+"all": 77.8
+},
+"Google": {
+"6m": 21.9,
+"all": 32.6
+},
+"Lyft": {
+"6m": 96.6,
+"all": 86.6
+},
+"Meta": {
+"all": 20.2
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 34.7
+},
+"MongoDB": {
+"all": 70.6
+},
+"Netflix": {
+"6m": 74.7,
+"all": 88.7
+},
+"OpenAI": {
+"all": 79.2
+},
+"Oracle": {
+"all": 59.9
+},
+"Snowflake": {
+"all": 63.3
+},
+"TikTok": {
+"all": 34.5
+},
+"Uber": {
+"all": 56.6
+},
+"Verkada": {
+"all": 80.6
+}
+}
+},
+{
+"slug": "split-array-largest-sum",
+"title": "Split Array Largest Sum",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Binary Search",
+"Dynamic Programming",
+"Greedy",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/split-array-largest-sum/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 54.5,
+"all": 54.2
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 58.3,
+"all": 53.3
+},
+"DE Shaw": {
+"all": 46.9
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 54.3,
+"all": 58.2
+},
+"Meta": {
+"all": 45.7
+},
+"Microsoft": {
+"6m": 46.7,
+"all": 46.3
+},
+"Pinterest": {
+"6m": 72.9,
+"all": 70.3
+},
+"Snap": {
+"6m": 100.0,
+"all": 54.8
+},
+"Uber": {
+"6m": 57.2,
+"all": 52.4
+}
+}
+},
+{
+"slug": "median-of-two-sorted-arrays",
+"title": "Median of Two Sorted Arrays",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Binary Search",
+"Divide and Conquer"
+],
+"url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Binary Search",
+"companies": {
+"Adobe": {
+"all": 85.7
+},
+"Amazon": {
+"6m": 74.3,
+"all": 76.8
+},
+"Apple": {
+"all": 62.7
+},
+"Bloomberg": {
+"6m": 76.3,
+"all": 79.0
+},
+"DE Shaw": {
+"all": 53.3
+},
+"Dropbox": {
+"all": 92.1
+},
+"Goldman Sachs": {
+"6m": 67.8,
+"all": 80.0
+},
+"Google": {
+"6m": 70.4,
+"all": 74.3
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"6m": 77.3,
+"all": 69.9
+},
+"Microsoft": {
+"6m": 64.4,
+"all": 75.2
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 52.4
+},
+"Salesforce": {
+"all": 27.6
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"all": 35.4
+}
+}
+},
+{
+"slug": "find-in-mountain-array",
+"title": "Find in Mountain Array",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Binary Search",
+"Interactive",
+"Ternary Search"
+],
+"url": "https://leetcode.com/problems/find-in-mountain-array/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 18.0
+},
+"Bloomberg": {
+"all": 32.0
+},
+"Google": {
+"all": 29.9
+},
+"Meta": {
+"all": 11.9
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 19.8
+},
+"Oracle": {
+"all": 26.6
+}
+}
+},
+{
+"slug": "reverse-linked-list",
+"title": "Reverse Linked List",
+"difficulty": "Easy",
+"topics": [
+"Linked List",
+"Recursion"
+],
+"url": "https://leetcode.com/problems/reverse-linked-list/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Linked List",
+"companies": {
+"Adobe": {
+"all": 85.7
+},
+"Amazon": {
+"6m": 48.2,
+"all": 57.8
+},
+"Apple": {
+"6m": 56.6,
+"all": 77.1
+},
+"Bloomberg": {
+"6m": 45.2,
+"all": 64.2
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 51.0,
+"all": 59.4
+},
+"IBM": {
+"all": 43.6
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Meta": {
+"6m": 32.4,
+"all": 50.7
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 65.8
+},
+"Nvidia": {
+"all": 47.9
+},
+"Oracle": {
+"all": 65.5
+},
+"Snap": {
+"all": 79.5
+},
+"TikTok": {
+"6m": 52.7,
+"all": 58.4
+},
+"Uber": {
+"all": 49.9
+}
+}
+},
+{
+"slug": "merge-two-sorted-lists",
+"title": "Merge Two Sorted Lists",
+"difficulty": "Easy",
+"topics": [
+"Linked List",
+"Recursion"
+],
+"url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Linked List",
+"companies": {
+"Adobe": {
+"6m": 79.4,
+"all": 55.2
+},
+"Amazon": {
+"6m": 55.5,
+"all": 66.3
+},
+"Apple": {
+"all": 61.4
+},
+"Bloomberg": {
+"6m": 60.7,
+"all": 72.7
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 55.5,
+"all": 61.6
+},
+"LinkedIn": {
+"all": 49.2
+},
+"Meta": {
+"6m": 54.7,
+"all": 60.2
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 65.0
+},
+"Oracle": {
+"all": 40.7
+},
+"Salesforce": {
+"all": 35.3
+},
+"Snowflake": {
+"all": 59.2
+},
+"TikTok": {
+"all": 34.5
+}
+}
+},
+{
+"slug": "linked-list-cycle",
+"title": "Linked List Cycle",
+"difficulty": "Easy",
+"topics": [
+"Hash Table",
+"Linked List",
+"Two Pointers",
+"Floyd's Cycle Finding Algorithm"
+],
+"url": "https://leetcode.com/problems/linked-list-cycle/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Linked List",
+"companies": {
+"Amazon": {
+"6m": 51.0,
+"all": 53.3
+},
+"Bloomberg": {
+"all": 53.3
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 38.5,
+"all": 47.1
+},
+"IBM": {
+"all": 43.6
+},
+"Meta": {
+"6m": 49.5,
+"all": 43.3
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 54.8
+},
+"Nvidia": {
+"6m": 73.7,
+"all": 54.6
+},
+"Oracle": {
+"all": 34.7
+}
+}
+},
+{
+"slug": "reorder-list",
+"title": "Reorder List",
+"difficulty": "Medium",
+"topics": [
+"Linked List",
+"Two Pointers",
+"Stack",
+"Recursion"
+],
+"url": "https://leetcode.com/problems/reorder-list/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Linked List",
+"companies": {
+"Amazon": {
+"6m": 41.1,
+"all": 54.5
+},
+"Apple": {
+"6m": 47.2,
+"all": 35.3
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 55.8
+},
+"Google": {
+"6m": 40.0,
+"all": 40.4
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Meta": {
+"6m": 42.7,
+"all": 44.6
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 47.1
+},
+"Snap": {
+"all": 54.8
+},
+"TikTok": {
+"all": 52.9
+}
+}
+},
+{
+"slug": "remove-nth-node-from-end-of-list",
+"title": "Remove Nth Node From End of List",
+"difficulty": "Medium",
+"topics": [
+"Linked List",
+"Two Pointers"
+],
+"url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Linked List",
+"companies": {
+"Amazon": {
+"6m": 46.6,
+"all": 53.0
+},
+"Apple": {
+"all": 43.2
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 50.4
+},
+"Google": {
+"6m": 30.9,
+"all": 49.9
+},
+"Meta": {
+"6m": 46.4,
+"all": 65.2
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 52.8
+},
+"Oracle": {
+"all": 26.6
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "copy-list-with-random-pointer",
+"title": "Copy List with Random Pointer",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"Linked List"
+],
+"url": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Linked List",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 56.5,
+"all": 68.9
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 54.6
+},
+"Google": {
+"6m": 33.2,
+"all": 38.4
+},
+"Meta": {
+"all": 77.7
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 56.2
+},
+"Nvidia": {
+"6m": 73.7,
+"all": 64.0
+},
+"Oracle": {
+"all": 45.3
+},
+"Snowflake": {
+"all": 59.2
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"all": 52.4
+}
+}
+},
+{
+"slug": "add-two-numbers",
+"title": "Add Two Numbers",
+"difficulty": "Medium",
+"topics": [
+"Linked List",
+"Math",
+"Recursion"
+],
+"url": "https://leetcode.com/problems/add-two-numbers/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Linked List",
+"companies": {
+"Adobe": {
+"all": 91.3
+},
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 76.5,
+"all": 79.7
+},
+"Apple": {
+"all": 39.6
+},
+"Bloomberg": {
+"6m": 80.4,
+"all": 85.2
+},
+"Capital One": {
+"all": 42.8
+},
+"DoorDash": {
+"all": 28.9
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 75.0,
+"all": 78.6
+},
+"IBM": {
+"all": 43.6
+},
+"Jane Street": {
+"all": 67.8
+},
+"Meta": {
+"6m": 73.1,
+"all": 75.3
+},
+"Microsoft": {
+"6m": 79.7,
+"all": 81.6
+},
+"Nvidia": {
+"all": 54.6
+},
+"Oracle": {
+"all": 45.3
+},
+"Snowflake": {
+"all": 38.6
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "find-the-duplicate-number",
+"title": "Find the Duplicate Number",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Two Pointers",
+"Binary Search",
+"Bit Manipulation",
+"Pigeonhole Principle",
+"Floyd's Cycle Finding Algorithm"
+],
+"url": "https://leetcode.com/problems/find-the-duplicate-number/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Linked List",
+"companies": {
+"Amazon": {
+"6m": 48.2,
+"all": 56.8
+},
+"Anduril": {
+"all": 49.2
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 49.5
+},
+"Citadel": {
+"all": 63.9
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 32.6
+},
+"Google": {
+"6m": 44.8,
+"all": 45.8
+},
+"Meta": {
+"6m": 38.1,
+"all": 38.9
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 47.8
+},
+"Nvidia": {
+"all": 59.8
+},
+"Salesforce": {
+"all": 27.6
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "reverse-linked-list-ii",
+"title": "Reverse Linked List II",
+"difficulty": "Medium",
+"topics": [
+"Linked List"
+],
+"url": "https://leetcode.com/problems/reverse-linked-list-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 43.1,
+"all": 44.7
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 41.5
+},
+"Google": {
+"6m": 30.9,
+"all": 40.0
+},
+"Meta": {
+"6m": 24.6,
+"all": 36.2
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 40.9
+},
+"Nvidia": {
+"all": 47.9
+},
+"Oracle": {
+"all": 34.7
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "design-circular-queue",
+"title": "Design Circular Queue",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Linked List",
+"Design",
+"Queue"
+],
+"url": "https://leetcode.com/problems/design-circular-queue/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 38.2
+},
+"Apple": {
+"all": 62.7
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 21.6
+},
+"Citadel": {
+"all": 46.8
+},
+"Cloudflare": {
+"all": 100.0
+},
+"Coinbase": {
+"all": 51.0
+},
+"Datadog": {
+"all": 72.3
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"all": 25.6
+},
+"Meta": {
+"all": 26.0
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 37.5
+},
+"Nvidia": {
+"6m": 73.7,
+"all": 54.6
+},
+"Optiver": {
+"6m": 71.7,
+"all": 97.2
+},
+"Snowflake": {
+"all": 38.6
+}
+}
+},
+{
+"slug": "lru-cache",
+"title": "LRU Cache",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"Linked List",
+"Design",
+"Doubly-Linked List"
+],
+"url": "https://leetcode.com/problems/lru-cache/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Linked List",
+"companies": {
+"Adobe": {
+"6m": 79.4,
+"all": 91.3
+},
+"Amazon": {
+"6m": 74.7,
+"all": 87.9
+},
+"Anduril": {
+"all": 40.9
+},
+"Apple": {
+"6m": 92.8,
+"all": 100.0
+},
+"Atlassian": {
+"all": 42.0
+},
+"Bloomberg": {
+"6m": 66.6,
+"all": 71.7
+},
+"Capital One": {
+"all": 35.0
+},
+"Citadel": {
+"all": 74.0
+},
+"Cloudflare": {
+"all": 70.1
+},
+"DE Shaw": {
+"all": 46.9
+},
+"DoorDash": {
+"all": 35.9
+},
+"Goldman Sachs": {
+"6m": 56.8,
+"all": 65.1
+},
+"Google": {
+"6m": 50.2,
+"all": 56.8
+},
+"IBM": {
+"all": 50.2
+},
+"Intuit": {
+"all": 75.5
+},
+"Jane Street": {
+"all": 74.5
+},
+"LinkedIn": {
+"all": 64.7
+},
+"Meta": {
+"6m": 42.7,
+"all": 79.2
+},
+"Microsoft": {
+"6m": 64.4,
+"all": 77.9
+},
+"Millennium": {
+"all": 76.1
+},
+"MongoDB": {
+"6m": 88.6,
+"all": 87.5
+},
+"Netflix": {
+"all": 58.1
+},
+"Nvidia": {
+"6m": 93.6,
+"all": 93.3
+},
+"OpenAI": {
+"all": 48.7
+},
+"Optiver": {
+"all": 71.1
+},
+"Oracle": {
+"all": 100.0
+},
+"Salesforce": {
+"all": 64.2
+},
+"Shopify": {
+"all": 83.3
+},
+"Snap": {
+"all": 100.0
+},
+"Snowflake": {
+"all": 59.2
+},
+"TikTok": {
+"6m": 100.0,
+"all": 100.0
+},
+"Uber": {
+"all": 75.0
+},
+"Verkada": {
+"all": 88.0
+}
+}
+},
+{
+"slug": "lfu-cache",
+"title": "LFU Cache",
+"difficulty": "Hard",
+"topics": [
+"Hash Table",
+"Linked List",
+"Design",
+"Doubly-Linked List"
+],
+"url": "https://leetcode.com/problems/lfu-cache/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 54.2
+},
+"Apple": {
+"6m": 47.2,
+"all": 48.9
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Citadel": {
+"all": 74.0
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 27.7
+},
+"Google": {
+"6m": 21.9,
+"all": 36.5
+},
+"IMC": {
+"6m": 100.0,
+"all": 95.6
+},
+"LinkedIn": {
+"all": 32.4
+},
+"Meta": {
+"all": 15.0
+},
+"Microsoft": {
+"all": 40.9
+},
+"Netflix": {
+"all": 49.2
+},
+"Oracle": {
+"all": 69.9
+},
+"Salesforce": {
+"6m": 71.8,
+"all": 80.1
+},
+"Snap": {
+"all": 54.8
+},
+"TikTok": {
+"all": 34.5
+},
+"Uber": {
+"all": 35.4
+}
+}
+},
+{
+"slug": "merge-k-sorted-lists",
+"title": "Merge k Sorted Lists",
+"difficulty": "Hard",
+"topics": [
+"Linked List",
+"Divide and Conquer",
+"Heap (Priority Queue)",
+"Merge Sort",
+"Tournament Sort"
+],
+"url": "https://leetcode.com/problems/merge-k-sorted-lists/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Linked List",
+"companies": {
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 63.1,
+"all": 73.5
+},
+"Anduril": {
+"all": 59.6
+},
+"Apple": {
+"6m": 47.2,
+"all": 65.0
+},
+"Bloomberg": {
+"6m": 45.2,
+"all": 57.5
+},
+"Citadel": {
+"all": 56.7
+},
+"Cloudflare": {
+"all": 73.7
+},
+"DoorDash": {
+"all": 35.9
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 30.9,
+"all": 49.2
+},
+"IBM": {
+"all": 34.6
+},
+"LinkedIn": {
+"all": 49.2
+},
+"Meta": {
+"6m": 32.4,
+"all": 75.6
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 64.4
+},
+"MongoDB": {
+"all": 70.6
+},
+"Nvidia": {
+"6m": 73.7,
+"all": 82.1
+},
+"Oracle": {
+"6m": 85.6,
+"all": 75.7
+},
+"Pinterest": {
+"all": 36.3
+},
+"Salesforce": {
+"6m": 55.3,
+"all": 45.3
+},
+"Snap": {
+"6m": 89.1,
+"all": 44.8
+},
+"Snowflake": {
+"all": 69.9
+},
+"TikTok": {
+"all": 62.8
+},
+"Two Sigma": {
+"all": 67.3
+},
+"Uber": {
+"all": 56.6
+}
+}
+},
+{
+"slug": "reverse-nodes-in-k-group",
+"title": "Reverse Nodes in k-Group",
+"difficulty": "Hard",
+"topics": [
+"Linked List",
+"Recursion"
+],
+"url": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Linked List",
+"companies": {
+"Amazon": {
+"6m": 41.1,
+"all": 54.5
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 48.7
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 41.3,
+"all": 46.9
+},
+"Meta": {
+"6m": 24.6,
+"all": 40.5
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 61.3
+},
+"Salesforce": {
+"all": 51.9
+},
+"TikTok": {
+"6m": 68.9,
+"all": 58.4
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "binary-tree-inorder-traversal",
+"title": "Binary Tree Inorder Traversal",
+"difficulty": "Easy",
+"topics": [
+"Stack",
+"Tree",
+"Depth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 38.9,
+"all": 40.9
+},
+"Anduril": {
+"6m": 65.6,
+"all": 49.2
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 42.7
+},
+"Google": {
+"6m": 44.8,
+"all": 42.2
+},
+"Meta": {
+"6m": 24.6,
+"all": 40.5
+},
+"Microsoft": {
+"all": 45.5
+},
+"Snowflake": {
+"all": 38.6
+}
+}
+},
+{
+"slug": "binary-tree-preorder-traversal",
+"title": "Binary Tree Preorder Traversal",
+"difficulty": "Easy",
+"topics": [
+"Stack",
+"Tree",
+"Depth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 27.9
+},
+"Bloomberg": {
+"all": 17.9
+},
+"Google": {
+"6m": 11.8,
+"all": 28.3
+},
+"Meta": {
+"6m": 32.4,
+"all": 22.3
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 22.8
+}
+}
+},
+{
+"slug": "binary-tree-postorder-traversal",
+"title": "Binary Tree Postorder Traversal",
+"difficulty": "Easy",
+"topics": [
+"Stack",
+"Tree",
+"Depth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/binary-tree-postorder-traversal/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 13.2
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"all": 12.8
+},
+"Meta": {
+"all": 5.0
+},
+"Microsoft": {
+"all": 7.5
+}
+}
+},
+{
+"slug": "invert-binary-tree",
+"title": "Invert Binary Tree",
+"difficulty": "Easy",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Breadth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/invert-binary-tree/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 41.5
+},
+"Bloomberg": {
+"all": 24.7
+},
+"Google": {
+"6m": 21.9,
+"all": 40.4
+},
+"LinkedIn": {
+"all": 27.3
+},
+"Meta": {
+"6m": 38.1,
+"all": 30.5
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 33.2
+},
+"Oracle": {
+"all": 26.6
+}
+}
+},
+{
+"slug": "maximum-depth-of-binary-tree",
+"title": "Maximum Depth of Binary Tree",
+"difficulty": "Easy",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Breadth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"6m": 33.4,
+"all": 45.2
+},
+"Apple": {
+"all": 48.9
+},
+"Bloomberg": {
+"6m": 52.7,
+"all": 48.7
+},
+"Google": {
+"6m": 41.3,
+"all": 39.6
+},
+"LinkedIn": {
+"6m": 61.8,
+"all": 66.3
+},
+"Meta": {
+"6m": 24.6,
+"all": 37.1
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 51.1
+},
+"Oracle": {
+"all": 26.6
+},
+"Spotify": {
+"all": 50.7
+},
+"Uber": {
+"all": 49.9
+}
+}
+},
+{
+"slug": "diameter-of-binary-tree",
+"title": "Diameter of Binary Tree",
+"difficulty": "Easy",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Binary Tree",
+"DP on Trees"
+],
+"url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"6m": 43.1,
+"all": 51.5
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 43.9
+},
+"DE Shaw": {
+"all": 37.9
+},
+"DoorDash": {
+"all": 28.9
+},
+"Google": {
+"6m": 40.0,
+"all": 44.1
+},
+"Meta": {
+"6m": 46.4,
+"all": 87.9
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 42.9
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 52.4
+},
+"Roblox": {
+"6m": 91.9,
+"all": 62.1
+},
+"TikTok": {
+"all": 26.1
+},
+"Verkada": {
+"all": 60.3
+}
+}
+},
+{
+"slug": "balanced-binary-tree",
+"title": "Balanced Binary Tree",
+"difficulty": "Easy",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/balanced-binary-tree/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"6m": 43.1,
+"all": 49.7
+},
+"Anduril": {
+"6m": 65.6,
+"all": 49.2
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 45.2,
+"all": 53.3
+},
+"Google": {
+"6m": 35.1,
+"all": 36.0
+},
+"Meta": {
+"6m": 38.1,
+"all": 36.2
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 44.7
+}
+}
+},
+{
+"slug": "same-tree",
+"title": "Same Tree",
+"difficulty": "Easy",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Breadth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/same-tree/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"6m": 45.0,
+"all": 47.0
+},
+"Apple": {
+"all": 29.7
+},
+"Bloomberg": {
+"all": 51.9
+},
+"Google": {
+"6m": 38.5,
+"all": 45.6
+},
+"LinkedIn": {
+"all": 32.4
+},
+"Meta": {
+"6m": 38.1,
+"all": 38.9
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 44.7
+},
+"Oracle": {
+"all": 26.6
+}
+}
+},
+{
+"slug": "subtree-of-another-tree",
+"title": "Subtree of Another Tree",
+"difficulty": "Easy",
+"topics": [
+"Tree",
+"Depth-First Search",
+"String Matching",
+"Binary Tree",
+"Hash Function"
+],
+"url": "https://leetcode.com/problems/subtree-of-another-tree/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"all": 26.6
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 27.5
+},
+"Google": {
+"6m": 17.5,
+"all": 21.0
+},
+"Meta": {
+"all": 33.0
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 22.8
+}
+}
+},
+{
+"slug": "lowest-common-ancestor-of-a-binary-search-tree",
+"title": "Lowest Common Ancestor of a Binary Search Tree",
+"difficulty": "Medium",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Binary Search Tree",
+"Binary Tree",
+"Binary Lifting",
+"Lowest Common Ancestor"
+],
+"url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 45.2
+},
+"Atlassian": {
+"all": 34.3
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 42.7
+},
+"Google": {
+"6m": 30.9,
+"all": 28.3
+},
+"LinkedIn": {
+"all": 64.7
+},
+"Meta": {
+"all": 51.1
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 41.9
+}
+}
+},
+{
+"slug": "insert-into-a-binary-search-tree",
+"title": "Insert into a Binary Search Tree",
+"difficulty": "Medium",
+"topics": [
+"Tree",
+"Binary Search Tree",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/insert-into-a-binary-search-tree/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 29.1
+},
+"Anduril": {
+"6m": 65.6,
+"all": 55.0
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"6m": 21.9,
+"all": 27.4
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Meta": {
+"all": 8.5
+},
+"Microsoft": {
+"all": 27.7
+}
+}
+},
+{
+"slug": "delete-node-in-a-bst",
+"title": "Delete Node in a BST",
+"difficulty": "Medium",
+"topics": [
+"Tree",
+"Binary Search Tree",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/delete-node-in-a-bst/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 36.7
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 34.0
+},
+"Google": {
+"all": 31.3
+},
+"LinkedIn": {
+"all": 32.4
+},
+"Meta": {
+"all": 20.2
+},
+"Microsoft": {
+"all": 19.8
+},
+"Oracle": {
+"all": 52.4
+},
+"Uber": {
+"all": 54.6
+}
+}
+},
+{
+"slug": "binary-tree-level-order-traversal",
+"title": "Binary Tree Level Order Traversal",
+"difficulty": "Medium",
+"topics": [
+"Tree",
+"Breadth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 41.1,
+"all": 54.8
+},
+"Apple": {
+"all": 55.2
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 56.9
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 41.3,
+"all": 43.5
+},
+"LinkedIn": {
+"all": 49.2
+},
+"Meta": {
+"6m": 32.4,
+"all": 49.8
+},
+"Microsoft": {
+"all": 53.8
+},
+"Oracle": {
+"all": 45.3
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "binary-tree-right-side-view",
+"title": "Binary Tree Right Side View",
+"difficulty": "Medium",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Breadth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/binary-tree-right-side-view/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"6m": 41.1,
+"all": 57.1
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"all": 37.3
+},
+"Google": {
+"6m": 28.4,
+"all": 35.0
+},
+"Meta": {
+"6m": 24.6,
+"all": 86.2
+},
+"Microsoft": {
+"all": 36.2
+},
+"Oracle": {
+"all": 59.9
+},
+"TikTok": {
+"6m": 52.7,
+"all": 58.4
+},
+"Uber": {
+"all": 49.9
+}
+}
+},
+{
+"slug": "construct-quad-tree",
+"title": "Construct Quad Tree",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Divide and Conquer",
+"Tree",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/construct-quad-tree/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 10.3
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"6m": 11.8,
+"all": 18.2
+},
+"Meta": {
+"all": 8.5
+},
+"Snowflake": {
+"6m": 62.9,
+"all": 38.6
+},
+"Uber": {
+"6m": 80.2,
+"all": 89.3
+}
+}
+},
+{
+"slug": "count-good-nodes-in-binary-tree",
+"title": "Count Good Nodes in Binary Tree",
+"difficulty": "Medium",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Breadth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/count-good-nodes-in-binary-tree/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"all": 15.8
+},
+"Google": {
+"all": 10.6
+},
+"Meta": {
+"all": 17.8
+},
+"Microsoft": {
+"all": 34.7
+}
+}
+},
+{
+"slug": "validate-binary-search-tree",
+"title": "Validate Binary Search Tree",
+"difficulty": "Medium",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Binary Search Tree",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/validate-binary-search-tree/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"6m": 46.6,
+"all": 54.5
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 55.7,
+"all": 63.9
+},
+"Citadel": {
+"all": 46.8
+},
+"Google": {
+"6m": 35.1,
+"all": 36.0
+},
+"IBM": {
+"all": 34.6
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Lyft": {
+"6m": 72.3,
+"all": 51.1
+},
+"Meta": {
+"6m": 38.1,
+"all": 46.8
+},
+"Microsoft": {
+"6m": 46.7,
+"all": 54.8
+},
+"Millennium": {
+"all": 76.1
+},
+"Oracle": {
+"all": 45.3
+},
+"Salesforce": {
+"all": 35.3
+}
+}
+},
+{
+"slug": "kth-smallest-element-in-a-bst",
+"title": "Kth Smallest Element in a BST",
+"difficulty": "Medium",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Binary Search Tree",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 44.2
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 49.5
+},
+"Google": {
+"6m": 11.8,
+"all": 40.8
+},
+"Meta": {
+"all": 35.2
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 42.9
+},
+"Oracle": {
+"all": 49.2
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"6m": 67.3,
+"all": 83.6
+}
+}
+},
+{
+"slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+"title": "Construct Binary Tree from Preorder and Inorder Traversal",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Divide and Conquer",
+"Tree",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Amazon": {
+"6m": 30.0,
+"all": 45.6
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 51.9
+},
+"Google": {
+"6m": 33.2,
+"all": 37.9
+},
+"Meta": {
+"all": 29.1
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 40.9
+},
+"Salesforce": {
+"all": 27.6
+},
+"Snowflake": {
+"all": 38.6
+},
+"TikTok": {
+"all": 60.7
+}
+}
+},
+{
+"slug": "house-robber-iii",
+"title": "House Robber III",
+"difficulty": "Medium",
+"topics": [
+"Dynamic Programming",
+"Tree",
+"Depth-First Search",
+"Binary Tree",
+"DP on Trees"
+],
+"url": "https://leetcode.com/problems/house-robber-iii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 38.9,
+"all": 44.2
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"6m": 11.8,
+"all": 27.4
+},
+"Meta": {
+"all": 8.5
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 22.8
+},
+"Salesforce": {
+"all": 27.6
+},
+"TikTok": {
+"all": 34.5
+},
+"Two Sigma": {
+"all": 57.8
+},
+"Uber": {
+"all": 54.6
+}
+}
+},
+{
+"slug": "delete-leaves-with-a-given-value",
+"title": "Delete Leaves With a Given Value",
+"difficulty": "Medium",
+"topics": [
+"Tree",
+"Depth-First Search",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/delete-leaves-with-a-given-value/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 21.9
+},
+"Google": {
+"all": 10.6
+}
+}
+},
+{
+"slug": "binary-tree-maximum-path-sum",
+"title": "Binary Tree Maximum Path Sum",
+"difficulty": "Hard",
+"topics": [
+"Dynamic Programming",
+"Tree",
+"Depth-First Search",
+"Binary Tree",
+"DP on Trees"
+],
+"url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Adobe": {
+"all": 69.3
+},
+"Amazon": {
+"6m": 54.5,
+"all": 60.1
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 52.7,
+"all": 48.7
+},
+"Citadel": {
+"all": 63.9
+},
+"Datadog": {
+"all": 53.3
+},
+"DoorDash": {
+"all": 88.5
+},
+"Goldman Sachs": {
+"6m": 56.8,
+"all": 36.4
+},
+"Google": {
+"6m": 28.4,
+"all": 47.4
+},
+"Meta": {
+"6m": 24.6,
+"all": 51.5
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 49.2
+},
+"Oracle": {
+"all": 40.7
+},
+"Salesforce": {
+"all": 51.9
+},
+"Snap": {
+"all": 44.8
+},
+"TikTok": {
+"6m": 52.7,
+"all": 55.8
+},
+"Uber": {
+"all": 35.4
+}
+}
+},
+{
+"slug": "serialize-and-deserialize-binary-tree",
+"title": "Serialize and Deserialize Binary Tree",
+"difficulty": "Hard",
+"topics": [
+"String",
+"Tree",
+"Depth-First Search",
+"Breadth-First Search",
+"Design",
+"Binary Tree"
+],
+"url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Trees",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 55.8
+},
+"Apple": {
+"all": 51.2
+},
+"Atlassian": {
+"all": 34.3
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 43.9
+},
+"Citadel": {
+"all": 56.7
+},
+"DoorDash": {
+"all": 44.9
+},
+"Google": {
+"6m": 21.9,
+"all": 37.5
+},
+"LinkedIn": {
+"all": 63.9
+},
+"Meta": {
+"6m": 32.4,
+"all": 46.8
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 58.8
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 26.6
+},
+"TikTok": {
+"all": 55.8
+},
+"Uber": {
+"all": 60.2
+}
+}
+},
+{
+"slug": "kth-largest-element-in-a-stream",
+"title": "Kth Largest Element in a Stream",
+"difficulty": "Easy",
+"topics": [
+"Tree",
+"Design",
+"Binary Search Tree",
+"Heap (Priority Queue)",
+"Binary Tree",
+"Data Stream"
+],
+"url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Heap / Priority Queue",
+"companies": {
+"Adobe": {
+"all": 82.4
+},
+"Amazon": {
+"6m": 20.8,
+"all": 40.9
+},
+"Bloomberg": {
+"all": 17.9
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 21.9,
+"all": 32.6
+},
+"Meta": {
+"all": 37.1
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 25.4
+}
+}
+},
+{
+"slug": "last-stone-weight",
+"title": "Last Stone Weight",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Heap (Priority Queue)"
+],
+"url": "https://leetcode.com/problems/last-stone-weight/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Heap / Priority Queue",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 30.3
+},
+"Apple": {
+"6m": 47.2,
+"all": 22.3
+},
+"Bloomberg": {
+"all": 24.7
+},
+"Google": {
+"6m": 21.9,
+"all": 21.0
+},
+"IBM": {
+"all": 43.6
+},
+"Meta": {
+"all": 15.0
+},
+"Microsoft": {
+"all": 22.8
+},
+"Nvidia": {
+"all": 75.9
+},
+"Salesforce": {
+"6m": 55.3,
+"all": 35.3
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "k-closest-points-to-origin",
+"title": "K Closest Points to Origin",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Math",
+"Divide and Conquer",
+"Geometry",
+"Sorting",
+"Heap (Priority Queue)",
+"Quickselect",
+"K-D Tree"
+],
+"url": "https://leetcode.com/problems/k-closest-points-to-origin/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Heap / Priority Queue",
+"companies": {
+"Airbnb": {
+"6m": 81.8,
+"all": 37.6
+},
+"Amazon": {
+"6m": 38.9,
+"all": 47.8
+},
+"Apple": {
+"all": 29.7
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 24.7
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"all": 27.4
+},
+"LinkedIn": {
+"all": 27.3
+},
+"Meta": {
+"all": 76.6
+},
+"Microsoft": {
+"all": 22.8
+},
+"Oracle": {
+"all": 26.6
+},
+"Salesforce": {
+"all": 35.3
+}
+}
+},
+{
+"slug": "kth-largest-element-in-an-array",
+"title": "Kth Largest Element in an Array",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Divide and Conquer",
+"Sorting",
+"Heap (Priority Queue)",
+"Quickselect"
+],
+"url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Heap / Priority Queue",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 49.6,
+"all": 62.5
+},
+"Apple": {
+"all": 68.1
+},
+"Bloomberg": {
+"6m": 45.2,
+"all": 56.9
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Goldman Sachs": {
+"all": 46.6
+},
+"Google": {
+"6m": 43.7,
+"all": 54.9
+},
+"IBM": {
+"all": 50.2
+},
+"LinkedIn": {
+"6m": 61.8,
+"all": 61.2
+},
+"Meta": {
+"6m": 63.8,
+"all": 93.9
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 61.3
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 49.2
+},
+"Salesforce": {
+"all": 40.9
+},
+"Spotify": {
+"6m": 84.5,
+"all": 83.2
+},
+"TikTok": {
+"all": 62.8
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "task-scheduler",
+"title": "Task Scheduler",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Greedy",
+"Sorting",
+"Heap (Priority Queue)",
+"Counting"
+],
+"url": "https://leetcode.com/problems/task-scheduler/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Backtracking",
+"companies": {
+"Amazon": {
+"6m": 53.4,
+"all": 62.4
+},
+"Apple": {
+"6m": 56.6,
+"all": 48.9
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 34.0
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 35.1,
+"all": 40.8
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Meta": {
+"6m": 24.6,
+"all": 38.9
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 45.5
+},
+"Oracle": {
+"all": 52.4
+},
+"Roblox": {
+"all": 80.0
+},
+"Snowflake": {
+"all": 59.2
+},
+"TikTok": {
+"all": 34.5
+},
+"Uber": {
+"all": 35.4
+}
+}
+},
+{
+"slug": "design-twitter",
+"title": "Design Twitter",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"Linked List",
+"Design",
+"Heap (Priority Queue)"
+],
+"url": "https://leetcode.com/problems/design-twitter/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Backtracking",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 14.3,
+"all": 39.6
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"6m": 17.5,
+"all": 23.4
+},
+"Microsoft": {
+"all": 19.8
+},
+"Salesforce": {
+"all": 40.9
+}
+}
+},
+{
+"slug": "single-threaded-cpu",
+"title": "Single-Threaded CPU",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Sorting",
+"Heap (Priority Queue)"
+],
+"url": "https://leetcode.com/problems/single-threaded-cpu/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 15.8
+},
+"DoorDash": {
+"all": 71.2
+},
+"Google": {
+"6m": 21.9,
+"all": 32.6
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"all": 8.5
+},
+"Microsoft": {
+"all": 22.8
+},
+"TikTok": {
+"6m": 52.7,
+"all": 34.5
+}
+}
+},
+{
+"slug": "reorganize-string",
+"title": "Reorganize String",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"String",
+"Greedy",
+"Sorting",
+"Heap (Priority Queue)",
+"Counting"
+],
+"url": "https://leetcode.com/problems/reorganize-string/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 67.4,
+"all": 78.0
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 29.9
+},
+"DE Shaw": {
+"6m": 100.0,
+"all": 68.8
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 11.8,
+"all": 34.4
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"all": 20.2
+},
+"Microsoft": {
+"all": 29.7
+},
+"Oracle": {
+"all": 34.7
+},
+"Pinterest": {
+"all": 43.9
+},
+"Roblox": {
+"all": 88.5
+},
+"Salesforce": {
+"all": 35.3
+}
+}
+},
+{
+"slug": "longest-happy-string",
+"title": "Longest Happy String",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Greedy",
+"Heap (Priority Queue)"
+],
+"url": "https://leetcode.com/problems/longest-happy-string/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 5.0
+},
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"all": 5.0
+},
+"Microsoft": {
+"all": 12.3
+},
+"TikTok": {
+"all": 68.2
+}
+}
+},
+{
+"slug": "car-pooling",
+"title": "Car Pooling",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Sorting",
+"Heap (Priority Queue)",
+"Simulation",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/car-pooling/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 33.4,
+"all": 27.9
+},
+"Bloomberg": {
+"all": 17.9
+},
+"Goldman Sachs": {
+"all": 50.1
+},
+"Google": {
+"6m": 28.4,
+"all": 29.9
+},
+"Lyft": {
+"all": 70.0
+},
+"Meta": {
+"all": 41.9
+},
+"Microsoft": {
+"all": 16.4
+}
+}
+},
+{
+"slug": "find-median-from-data-stream",
+"title": "Find Median from Data Stream",
+"difficulty": "Hard",
+"topics": [
+"Two Pointers",
+"Design",
+"Sorting",
+"Heap (Priority Queue)",
+"Data Stream"
+],
+"url": "https://leetcode.com/problems/find-median-from-data-stream/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Backtracking",
+"companies": {
+"Adobe": {
+"6m": 91.4,
+"all": 69.3
+},
+"Amazon": {
+"6m": 53.4,
+"all": 63.2
+},
+"Anduril": {
+"all": 66.4
+},
+"Apple": {
+"6m": 47.2,
+"all": 61.4
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 38.8
+},
+"Citadel": {
+"all": 89.1
+},
+"DE Shaw": {
+"6m": 79.2,
+"all": 37.9
+},
+"Goldman Sachs": {
+"all": 39.5
+},
+"Google": {
+"6m": 40.0,
+"all": 50.5
+},
+"Intuit": {
+"6m": 76.8,
+"all": 66.7
+},
+"Meta": {
+"all": 50.2
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 53.3
+},
+"Oracle": {
+"all": 59.9
+},
+"Pinterest": {
+"all": 49.4
+},
+"Salesforce": {
+"all": 27.6
+},
+"Snowflake": {
+"all": 38.6
+},
+"Spotify": {
+"6m": 84.5,
+"all": 69.2
+},
+"TikTok": {
+"6m": 62.1,
+"all": 58.4
+},
+"Uber": {
+"all": 49.9
+}
+}
+},
+{
+"slug": "ipo",
+"title": "IPO",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Greedy",
+"Sorting",
+"Heap (Priority Queue)"
+],
+"url": "https://leetcode.com/problems/ipo/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 29.1
+},
+"Bloomberg": {
+"all": 21.6
+},
+"Google": {
+"6m": 17.5,
+"all": 21.0
+},
+"Meta": {
+"all": 8.5
+},
+"Microsoft": {
+"all": 29.7
+},
+"Uber": {
+"all": 29.5
+}
+}
+},
+{
+"slug": "sum-of-all-subset-xor-totals",
+"title": "Sum of All Subset XOR Totals",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Math",
+"Backtracking",
+"Bit Manipulation",
+"Combinatorics",
+"Enumeration"
+],
+"url": "https://leetcode.com/problems/sum-of-all-subset-xor-totals/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Amazon": {
+"all": 27.9
+},
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"all": 12.8
+},
+"Microsoft": {
+"all": 16.4
+}
+}
+},
+{
+"slug": "subsets",
+"title": "Subsets",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Backtracking",
+"Bit Manipulation"
+],
+"url": "https://leetcode.com/problems/subsets/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Backtracking",
+"companies": {
+"Amazon": {
+"6m": 62.4,
+"all": 64.5
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 55.7,
+"all": 69.5
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 33.2,
+"all": 52.2
+},
+"Meta": {
+"6m": 56.8,
+"all": 63.8
+},
+"Microsoft": {
+"6m": 57.4,
+"all": 58.8
+},
+"Oracle": {
+"all": 26.6
+},
+"TikTok": {
+"all": 49.5
+},
+"Uber": {
+"all": 52.4
+}
+}
+},
+{
+"slug": "combination-sum",
+"title": "Combination Sum",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Backtracking"
+],
+"url": "https://leetcode.com/problems/combination-sum/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Backtracking",
+"companies": {
+"Airbnb": {
+"all": 60.3
+},
+"Amazon": {
+"6m": 25.9,
+"all": 52.7
+},
+"Apple": {
+"all": 29.7
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 53.9
+},
+"Citadel": {
+"all": 46.8
+},
+"Google": {
+"6m": 44.8,
+"all": 47.4
+},
+"LinkedIn": {
+"all": 27.3
+},
+"Meta": {
+"6m": 46.4,
+"all": 46.8
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 48.5
+},
+"Oracle": {
+"all": 26.6
+},
+"Pinterest": {
+"all": 43.9
+},
+"Salesforce": {
+"all": 27.6
+},
+"Snap": {
+"all": 82.5
+},
+"TikTok": {
+"all": 49.5
+},
+"Uber": {
+"all": 52.4
+}
+}
+},
+{
+"slug": "combination-sum-ii",
+"title": "Combination Sum II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Backtracking"
+],
+"url": "https://leetcode.com/problems/combination-sum-ii/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Backtracking",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 25.9,
+"all": 33.3
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 37.3
+},
+"Google": {
+"6m": 25.4,
+"all": 33.8
+},
+"LinkedIn": {
+"all": 36.5
+},
+"Meta": {
+"all": 39.7
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 37.5
+},
+"Oracle": {
+"all": 34.7
+},
+"Salesforce": {
+"all": 27.6
+},
+"Snap": {
+"all": 79.5
+},
+"TikTok": {
+"all": 34.5
+}
+}
+},
+{
+"slug": "combinations",
+"title": "Combinations",
+"difficulty": "Medium",
+"topics": [
+"Backtracking"
+],
+"url": "https://leetcode.com/problems/combinations/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 33.3
+},
+"Bloomberg": {
+"all": 34.0
+},
+"Google": {
+"6m": 30.9,
+"all": 33.2
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"6m": 32.4,
+"all": 41.2
+},
+"Microsoft": {
+"all": 25.4
+}
+}
+},
+{
+"slug": "permutations",
+"title": "Permutations",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Backtracking"
+],
+"url": "https://leetcode.com/problems/permutations/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Backtracking",
+"companies": {
+"Amazon": {
+"6m": 51.0,
+"all": 57.1
+},
+"Apple": {
+"all": 46.2
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 50.4
+},
+"Citadel": {
+"all": 46.8
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 35.1,
+"all": 49.2
+},
+"LinkedIn": {
+"all": 56.8
+},
+"Meta": {
+"6m": 24.6,
+"all": 42.6
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 55.3
+},
+"Oracle": {
+"all": 26.6
+},
+"TikTok": {
+"all": 49.5
+},
+"Uber": {
+"all": 35.4
+}
+}
+},
+{
+"slug": "subsets-ii",
+"title": "Subsets II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Backtracking",
+"Bit Manipulation"
+],
+"url": "https://leetcode.com/problems/subsets-ii/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Backtracking",
+"companies": {
+"Amazon": {
+"6m": 33.4,
+"all": 43.7
+},
+"Bloomberg": {
+"6m": 45.2,
+"all": 49.5
+},
+"Google": {
+"6m": 28.4,
+"all": 44.4
+},
+"Meta": {
+"6m": 38.1,
+"all": 42.6
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 45.5
+}
+}
+},
+{
+"slug": "permutations-ii",
+"title": "Permutations II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Backtracking",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/permutations-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 34.3
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"all": 27.5
+},
+"Google": {
+"6m": 21.9,
+"all": 30.6
+},
+"LinkedIn": {
+"all": 47.3
+},
+"Meta": {
+"all": 8.5
+},
+"Microsoft": {
+"all": 41.9
+},
+"TikTok": {
+"all": 45.5
+}
+}
+},
+{
+"slug": "word-search",
+"title": "Word Search",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"String",
+"Backtracking",
+"Depth-First Search",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/word-search/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Backtracking",
+"companies": {
+"Amazon": {
+"6m": 45.0,
+"all": 64.7
+},
+"Apple": {
+"all": 39.6
+},
+"Atlassian": {
+"all": 63.1
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 77.4
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 25.4,
+"all": 42.2
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"6m": 24.6,
+"all": 42.6
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 54.4
+},
+"Netflix": {
+"all": 73.4
+},
+"Oracle": {
+"all": 40.7
+},
+"Salesforce": {
+"all": 35.3
+},
+"Snap": {
+"all": 62.0
+},
+"TikTok": {
+"all": 69.7
+},
+"Uber": {
+"6m": 67.3,
+"all": 79.4
+}
+}
+},
+{
+"slug": "palindrome-partitioning",
+"title": "Palindrome Partitioning",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Dynamic Programming",
+"Backtracking"
+],
+"url": "https://leetcode.com/problems/palindrome-partitioning/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Tries",
+"companies": {
+"Amazon": {
+"6m": 41.1,
+"all": 50.4
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 59.0
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Google": {
+"6m": 36.9,
+"all": 46.1
+},
+"Meta": {
+"6m": 49.5,
+"all": 47.4
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 45.5
+},
+"Salesforce": {
+"6m": 55.3,
+"all": 27.6
+}
+}
+},
+{
+"slug": "letter-combinations-of-a-phone-number",
+"title": "Letter Combinations of a Phone Number",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"String",
+"Backtracking"
+],
+"url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Tries",
+"companies": {
+"Amazon": {
+"6m": 55.5,
+"all": 65.7
+},
+"Apple": {
+"all": 48.9
+},
+"Bloomberg": {
+"6m": 52.7,
+"all": 53.3
+},
+"Capital One": {
+"all": 42.8
+},
+"DE Shaw": {
+"all": 71.4
+},
+"Dropbox": {
+"all": 92.1
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 51.7,
+"all": 57.8
+},
+"IBM": {
+"all": 50.2
+},
+"LinkedIn": {
+"6m": 87.9,
+"all": 75.0
+},
+"Lyft": {
+"all": 43.4
+},
+"Meta": {
+"6m": 42.7,
+"all": 54.9
+},
+"Microsoft": {
+"6m": 59.4,
+"all": 59.1
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 45.3
+},
+"Pinterest": {
+"all": 43.9
+},
+"Snap": {
+"all": 54.8
+},
+"Uber": {
+"6m": 57.2,
+"all": 63.2
+}
+}
+},
+{
+"slug": "matchsticks-to-square",
+"title": "Matchsticks to Square",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Backtracking",
+"Bit Manipulation",
+"Bitmask"
+],
+"url": "https://leetcode.com/problems/matchsticks-to-square/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 7.2
+},
+"Google": {
+"all": 10.6
+},
+"Meta": {
+"all": 8.5
+},
+"TikTok": {
+"all": 34.5
+}
+}
+},
+{
+"slug": "partition-to-k-equal-sum-subsets",
+"title": "Partition to K Equal Sum Subsets",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Backtracking",
+"Bit Manipulation",
+"Memoization",
+"Bitmask"
+],
+"url": "https://leetcode.com/problems/partition-to-k-equal-sum-subsets/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 31.4
+},
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"6m": 11.8,
+"all": 19.7
+},
+"LinkedIn": {
+"all": 67.0
+},
+"Meta": {
+"all": 8.5
+},
+"Microsoft": {
+"all": 19.8
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "n-queens",
+"title": "N-Queens",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Backtracking",
+"Algorithm X"
+],
+"url": "https://leetcode.com/problems/n-queens/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Tries",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Amazon": {
+"6m": 52.2,
+"all": 60.9
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 56.4
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 51.7,
+"all": 58.5
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"6m": 49.5,
+"all": 48.9
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 59.9
+},
+"Oracle": {
+"all": 40.7
+},
+"TikTok": {
+"all": 74.9
+}
+}
+},
+{
+"slug": "n-queens-ii",
+"title": "N-Queens II",
+"difficulty": "Hard",
+"topics": [
+"Backtracking",
+"Algorithm X"
+],
+"url": "https://leetcode.com/problems/n-queens-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 26.6
+},
+"Bloomberg": {
+"all": 27.5
+},
+"Google": {
+"all": 22.3
+},
+"Meta": {
+"all": 22.3
+},
+"Microsoft": {
+"all": 25.4
+},
+"Snowflake": {
+"all": 38.6
+}
+}
+},
+{
+"slug": "word-break-ii",
+"title": "Word Break II",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Hash Table",
+"String",
+"Dynamic Programming",
+"Backtracking",
+"Trie",
+"Memoization"
+],
+"url": "https://leetcode.com/problems/word-break-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 50.1
+},
+"Anduril": {
+"all": 49.2
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 63.9
+},
+"Dropbox": {
+"all": 92.1
+},
+"Google": {
+"all": 29.9
+},
+"Meta": {
+"all": 34.1
+},
+"Microsoft": {
+"all": 27.7
+},
+"Oracle": {
+"all": 45.3
+},
+"Snap": {
+"all": 85.1
+},
+"TikTok": {
+"all": 45.5
+},
+"Uber": {
+"all": 49.9
+}
+}
+},
+{
+"slug": "implement-trie-prefix-tree",
+"title": "Implement Trie (Prefix Tree)",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"String",
+"Design",
+"Trie"
+],
+"url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Heap / Priority Queue",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 36.7
+},
+"Apple": {
+"all": 53.3
+},
+"Bloomberg": {
+"all": 44.9
+},
+"Citadel": {
+"all": 46.8
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 28.4,
+"all": 36.0
+},
+"Lyft": {
+"all": 43.4
+},
+"Meta": {
+"6m": 24.6,
+"all": 35.2
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 45.5
+},
+"MongoDB": {
+"all": 100.0
+},
+"Oracle": {
+"all": 52.4
+},
+"Roblox": {
+"all": 50.9
+},
+"Snowflake": {
+"all": 38.6
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"all": 49.9
+}
+}
+},
+{
+"slug": "design-add-and-search-words-data-structure",
+"title": "Design Add and Search Words Data Structure",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Depth-First Search",
+"Design",
+"Trie"
+],
+"url": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Heap / Priority Queue",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 35.1
+},
+"Apple": {
+"all": 35.3
+},
+"Atlassian": {
+"all": 34.3
+},
+"Bloomberg": {
+"all": 17.9
+},
+"Datadog": {
+"all": 86.7
+},
+"Google": {
+"all": 22.3
+},
+"Meta": {
+"all": 24.3
+},
+"Microsoft": {
+"all": 29.7
+},
+"Oracle": {
+"all": 26.6
+},
+"Snap": {
+"all": 44.8
+},
+"Snowflake": {
+"all": 59.2
+},
+"TikTok": {
+"all": 55.8
+}
+}
+},
+{
+"slug": "extra-characters-in-a-string",
+"title": "Extra Characters in a String",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"String",
+"Dynamic Programming",
+"Trie"
+],
+"url": "https://leetcode.com/problems/extra-characters-in-a-string/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 5.0
+},
+"Google": {
+"all": 10.6
+}
+}
+},
+{
+"slug": "word-search-ii",
+"title": "Word Search II",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"String",
+"Backtracking",
+"Trie",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/word-search-ii/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Heap / Priority Queue",
+"companies": {
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 41.1,
+"all": 51.5
+},
+"Apple": {
+"all": 29.7
+},
+"Bloomberg": {
+"all": 13.5
+},
+"DoorDash": {
+"all": 41.0
+},
+"Google": {
+"6m": 11.8,
+"all": 33.8
+},
+"Meta": {
+"all": 24.3
+},
+"Microsoft": {
+"all": 41.9
+},
+"Oracle": {
+"all": 34.7
+},
+"Snap": {
+"all": 54.8
+},
+"Snowflake": {
+"all": 89.6
+},
+"TikTok": {
+"all": 58.4
+},
+"Two Sigma": {
+"all": 83.6
+},
+"Uber": {
+"6m": 57.2,
+"all": 70.4
+}
+}
+},
+{
+"slug": "island-perimeter",
+"title": "Island Perimeter",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Depth-First Search",
+"Breadth-First Search",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/island-perimeter/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 20.1
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"all": 27.5
+},
+"Google": {
+"6m": 17.5,
+"all": 29.1
+},
+"Meta": {
+"all": 15.0
+},
+"Microsoft": {
+"all": 12.3
+},
+"Oracle": {
+"all": 26.6
+}
+}
+},
+{
+"slug": "verifying-an-alien-dictionary",
+"title": "Verifying an Alien Dictionary",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"String"
+],
+"url": "https://leetcode.com/problems/verifying-an-alien-dictionary/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 13.2
+},
+"Anduril": {
+"all": 49.2
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"all": 8.2
+},
+"Meta": {
+"all": 35.2
+},
+"Uber": {
+"all": 35.4
+}
+}
+},
+{
+"slug": "find-the-town-judge",
+"title": "Find the Town Judge",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"Graph Theory"
+],
+"url": "https://leetcode.com/problems/find-the-town-judge/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 23.6
+},
+"Bloomberg": {
+"all": 17.9
+},
+"Google": {
+"all": 19.7
+},
+"Meta": {
+"all": 5.0
+}
+}
+},
+{
+"slug": "number-of-islands",
+"title": "Number of Islands",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/number-of-islands/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Adobe": {
+"all": 69.3
+},
+"Amazon": {
+"6m": 73.9,
+"all": 85.0
+},
+"Anduril": {
+"6m": 100.0,
+"all": 100.0
+},
+"Apple": {
+"6m": 56.6,
+"all": 79.9
+},
+"Bloomberg": {
+"6m": 62.8,
+"all": 83.9
+},
+"Capital One": {
+"all": 64.2
+},
+"Citadel": {
+"all": 63.9
+},
+"Cloudflare": {
+"all": 65.7
+},
+"DE Shaw": {
+"all": 46.9
+},
+"DoorDash": {
+"all": 35.9
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 59.6
+},
+"Google": {
+"6m": 53.7,
+"all": 64.1
+},
+"IBM": {
+"all": 50.2
+},
+"Intuit": {
+"all": 43.1
+},
+"LinkedIn": {
+"6m": 61.8,
+"all": 74.5
+},
+"Meta": {
+"6m": 52.3,
+"all": 65.0
+},
+"Microsoft": {
+"6m": 57.4,
+"all": 72.4
+},
+"Nvidia": {
+"6m": 85.3,
+"all": 73.5
+},
+"Oracle": {
+"6m": 100.0,
+"all": 83.3
+},
+"Pinterest": {
+"all": 36.3
+},
+"Salesforce": {
+"all": 56.9
+},
+"Snap": {
+"all": 100.0
+},
+"Snowflake": {
+"all": 38.6
+},
+"TikTok": {
+"6m": 94.7,
+"all": 95.9
+},
+"Two Sigma": {
+"all": 57.8
+},
+"Uber": {
+"6m": 74.6,
+"all": 88.5
+}
+}
+},
+{
+"slug": "max-area-of-island",
+"title": "Max Area of Island",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/max-area-of-island/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 30.0,
+"all": 39.6
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 29.9
+},
+"DoorDash": {
+"all": 44.9
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 17.5,
+"all": 31.3
+},
+"Intuit": {
+"all": 72.9
+},
+"LinkedIn": {
+"all": 39.8
+},
+"Meta": {
+"all": 46.8
+},
+"Microsoft": {
+"all": 27.7
+},
+"Oracle": {
+"all": 45.3
+},
+"Snowflake": {
+"all": 66.8
+},
+"TikTok": {
+"all": 55.8
+}
+}
+},
+{
+"slug": "clone-graph",
+"title": "Clone Graph",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"Depth-First Search",
+"Breadth-First Search",
+"Graph Theory"
+],
+"url": "https://leetcode.com/problems/clone-graph/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 40.2
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"all": 27.5
+},
+"Google": {
+"6m": 25.4,
+"all": 39.6
+},
+"Meta": {
+"6m": 24.6,
+"all": 71.2
+},
+"Microsoft": {
+"all": 22.8
+},
+"MongoDB": {
+"all": 60.7
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 34.7
+},
+"Uber": {
+"all": 49.9
+}
+}
+},
+{
+"slug": "walls-and-gates",
+"title": "Walls and Gates",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Breadth-First Search",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/walls-and-gates/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 26.6
+},
+"Bloomberg": {
+"all": 13.5
+},
+"DoorDash": {
+"all": 100.0
+},
+"Google": {
+"all": 25.6
+},
+"Meta": {
+"all": 42.6
+},
+"Microsoft": {
+"all": 12.3
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "rotting-oranges",
+"title": "Rotting Oranges",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Breadth-First Search",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/rotting-oranges/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Amazon": {
+"6m": 68.5,
+"all": 73.3
+},
+"Anduril": {
+"6m": 88.3,
+"all": 63.3
+},
+"Apple": {
+"all": 39.6
+},
+"Bloomberg": {
+"6m": 52.7,
+"all": 56.4
+},
+"Databricks": {
+"all": 44.4
+},
+"DE Shaw": {
+"all": 46.9
+},
+"DoorDash": {
+"all": 28.9
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 39.5
+},
+"Google": {
+"6m": 42.6,
+"all": 51.1
+},
+"IBM": {
+"all": 50.2
+},
+"Intuit": {
+"all": 43.1
+},
+"LinkedIn": {
+"all": 27.3
+},
+"Lyft": {
+"all": 100.0
+},
+"Meta": {
+"6m": 38.1,
+"all": 41.2
+},
+"Microsoft": {
+"6m": 55.2,
+"all": 58.0
+},
+"Nvidia": {
+"all": 38.7
+},
+"OpenAI": {
+"6m": 74.1,
+"all": 81.4
+},
+"Oracle": {
+"all": 55.2
+},
+"Pinterest": {
+"all": 36.3
+},
+"Roblox": {
+"6m": 63.3,
+"all": 37.1
+},
+"Salesforce": {
+"6m": 55.3,
+"all": 40.9
+},
+"Snowflake": {
+"all": 47.6
+},
+"TikTok": {
+"all": 49.5
+},
+"Uber": {
+"all": 52.4
+}
+}
+},
+{
+"slug": "pacific-atlantic-water-flow",
+"title": "Pacific Atlantic Water Flow",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Depth-First Search",
+"Breadth-First Search",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 38.9,
+"all": 45.6
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"6m": 28.4,
+"all": 42.2
+},
+"Meta": {
+"all": 22.3
+},
+"Microsoft": {
+"all": 25.4
+},
+"TikTok": {
+"all": 49.5
+}
+}
+},
+{
+"slug": "surrounded-regions",
+"title": "Surrounded Regions",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/surrounded-regions/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 33.4,
+"all": 46.1
+},
+"Anduril": {
+"all": 49.2
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 43.9
+},
+"Google": {
+"6m": 21.9,
+"all": 40.4
+},
+"Meta": {
+"6m": 42.7,
+"all": 33.0
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 34.7
+},
+"Oracle": {
+"all": 34.7
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "open-the-lock",
+"title": "Open the Lock",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"String",
+"Breadth-First Search",
+"Bidirectional Search"
+],
+"url": "https://leetcode.com/problems/open-the-lock/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 36.3,
+"all": 40.9
+},
+"Bloomberg": {
+"all": 17.9
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"all": 10.6
+},
+"LinkedIn": {
+"all": 27.3
+},
+"Meta": {
+"all": 26.0
+},
+"Microsoft": {
+"all": 22.8
+},
+"Oracle": {
+"all": 40.7
+},
+"Snap": {
+"all": 54.8
+},
+"TikTok": {
+"all": 34.5
+},
+"Uber": {
+"all": 49.9
+}
+}
+},
+{
+"slug": "course-schedule",
+"title": "Course Schedule",
+"difficulty": "Medium",
+"topics": [
+"Depth-First Search",
+"Breadth-First Search",
+"Graph Theory",
+"Topological Sort",
+"Directed Acyclic Graph"
+],
+"url": "https://leetcode.com/problems/course-schedule/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 68.5,
+"all": 74.5
+},
+"Anduril": {
+"6m": 65.6,
+"all": 71.6
+},
+"Apple": {
+"6m": 47.2,
+"all": 71.6
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 42.7
+},
+"Cloudflare": {
+"all": 60.1
+},
+"DoorDash": {
+"all": 41.0
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 41.3,
+"all": 51.4
+},
+"LinkedIn": {
+"all": 27.3
+},
+"Meta": {
+"6m": 42.7,
+"all": 66.5
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 51.7
+},
+"MongoDB": {
+"all": 60.7
+},
+"Nvidia": {
+"all": 47.9
+},
+"Oracle": {
+"all": 55.2
+},
+"Roblox": {
+"all": 62.1
+},
+"Salesforce": {
+"6m": 55.3,
+"all": 51.9
+},
+"Snap": {
+"all": 54.8
+},
+"Snowflake": {
+"6m": 62.9,
+"all": 72.5
+},
+"TikTok": {
+"6m": 68.9,
+"all": 82.7
+},
+"Uber": {
+"all": 63.2
+}
+}
+},
+{
+"slug": "course-schedule-ii",
+"title": "Course Schedule II",
+"difficulty": "Medium",
+"topics": [
+"Depth-First Search",
+"Breadth-First Search",
+"Graph Theory",
+"Topological Sort"
+],
+"url": "https://leetcode.com/problems/course-schedule-ii/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Amazon": {
+"6m": 51.0,
+"all": 64.7
+},
+"Anduril": {
+"6m": 96.7,
+"all": 83.4
+},
+"Apple": {
+"6m": 72.9,
+"all": 73.8
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 41.5
+},
+"Citadel": {
+"6m": 67.0,
+"all": 69.4
+},
+"Coinbase": {
+"all": 51.0
+},
+"DoorDash": {
+"all": 48.1
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 30.9,
+"all": 37.0
+},
+"IBM": {
+"all": 34.6
+},
+"Intuit": {
+"all": 43.1
+},
+"LinkedIn": {
+"all": 49.2
+},
+"Meta": {
+"all": 45.1
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 49.8
+},
+"MongoDB": {
+"6m": 88.6,
+"all": 77.6
+},
+"Netflix": {
+"all": 88.7
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 49.2
+},
+"Roblox": {
+"all": 82.2
+},
+"Salesforce": {
+"6m": 71.8,
+"all": 62.6
+},
+"Snap": {
+"all": 82.5
+},
+"Snowflake": {
+"all": 96.7
+},
+"TikTok": {
+"all": 71.1
+},
+"Uber": {
+"all": 65.9
+}
+}
+},
+{
+"slug": "graph-valid-tree",
+"title": "Graph Valid Tree",
+"difficulty": "Medium",
+"topics": [
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Graph Theory"
+],
+"url": "https://leetcode.com/problems/graph-valid-tree/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Google": {
+"all": 28.3
+},
+"LinkedIn": {
+"all": 42.6
+},
+"Meta": {
+"all": 27.7
+},
+"Microsoft": {
+"all": 12.3
+},
+"Snowflake": {
+"all": 47.6
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "course-schedule-iv",
+"title": "Course Schedule IV",
+"difficulty": "Medium",
+"topics": [
+"Depth-First Search",
+"Breadth-First Search",
+"Graph Theory",
+"Topological Sort"
+],
+"url": "https://leetcode.com/problems/course-schedule-iv/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 20.1
+},
+"Google": {
+"all": 10.6
+},
+"Meta": {
+"all": 11.9
+},
+"TikTok": {
+"all": 45.5
+},
+"Uber": {
+"all": 49.9
+}
+}
+},
+{
+"slug": "number-of-connected-components-in-an-undirected-graph",
+"title": "Number of Connected Components in an Undirected Graph",
+"difficulty": "Medium",
+"topics": [
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Graph Theory"
+],
+"url": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Amazon": {
+"all": 33.3
+},
+"Google": {
+"all": 22.3
+},
+"LinkedIn": {
+"all": 42.6
+},
+"Meta": {
+"all": 11.9
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "redundant-connection",
+"title": "Redundant Connection",
+"difficulty": "Medium",
+"topics": [
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Graph Theory"
+],
+"url": "https://leetcode.com/problems/redundant-connection/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 26.6
+},
+"Bloomberg": {
+"all": 29.9
+},
+"Google": {
+"6m": 17.5,
+"all": 35.5
+},
+"Meta": {
+"all": 26.0
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 16.4
+},
+"Oracle": {
+"all": 26.6
+}
+}
+},
+{
+"slug": "accounts-merge",
+"title": "Accounts Merge",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"String",
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/accounts-merge/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Airbnb": {
+"all": 56.5
+},
+"Amazon": {
+"6m": 33.4,
+"all": 42.6
+},
+"Anduril": {
+"all": 49.2
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 41.5
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 27.7
+},
+"Google": {
+"6m": 30.9,
+"all": 37.0
+},
+"LinkedIn": {
+"all": 47.3
+},
+"Meta": {
+"all": 61.9
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 34.7
+},
+"Oracle": {
+"6m": 74.2,
+"all": 26.6
+},
+"Pinterest": {
+"all": 43.9
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"all": 29.5
+}
+}
+},
+{
+"slug": "evaluate-division",
+"title": "Evaluate Division",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"String",
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Graph Theory",
+"Shortest Path",
+"Bellman\u2013Ford Algorithm",
+"Floyd\u2013Warshall Algorithm"
+],
+"url": "https://leetcode.com/problems/evaluate-division/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 38.9,
+"all": 49.7
+},
+"Bloomberg": {
+"6m": 58.3,
+"all": 62.3
+},
+"Citadel": {
+"all": 81.2
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 11.8,
+"all": 36.0
+},
+"Meta": {
+"all": 20.2
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 22.8
+},
+"Snap": {
+"all": 67.6
+},
+"TikTok": {
+"all": 52.9
+},
+"Uber": {
+"all": 70.4
+}
+}
+},
+{
+"slug": "minimum-height-trees",
+"title": "Minimum Height Trees",
+"difficulty": "Medium",
+"topics": [
+"Depth-First Search",
+"Breadth-First Search",
+"Graph Theory",
+"Topological Sort"
+],
+"url": "https://leetcode.com/problems/minimum-height-trees/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 21.9
+},
+"Bloomberg": {
+"all": 17.9
+},
+"Google": {
+"6m": 28.4,
+"all": 32.6
+},
+"Meta": {
+"all": 8.5
+},
+"Microsoft": {
+"all": 12.3
+}
+}
+},
+{
+"slug": "word-ladder",
+"title": "Word Ladder",
+"difficulty": "Hard",
+"topics": [
+"Hash Table",
+"String",
+"Breadth-First Search",
+"Bidirectional Search"
+],
+"url": "https://leetcode.com/problems/word-ladder/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Graphs",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Amazon": {
+"6m": 54.5,
+"all": 67.1
+},
+"Apple": {
+"6m": 76.5,
+"all": 65.0
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 51.1
+},
+"Capital One": {
+"all": 35.0
+},
+"Citadel": {
+"all": 63.9
+},
+"Google": {
+"6m": 30.9,
+"all": 41.5
+},
+"LinkedIn": {
+"all": 77.6
+},
+"Meta": {
+"6m": 24.6,
+"all": 57.4
+},
+"Microsoft": {
+"all": 43.8
+},
+"Oracle": {
+"all": 52.4
+},
+"Reddit": {
+"all": 89.7
+},
+"Salesforce": {
+"all": 35.3
+},
+"Snap": {
+"all": 93.6
+},
+"TikTok": {
+"all": 58.4
+},
+"Uber": {
+"all": 43.8
+}
+}
+},
+{
+"slug": "path-with-minimum-effort",
+"title": "Path With Minimum Effort",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search",
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Heap (Priority Queue)",
+"Matrix",
+"Dijkstra's Algorithm"
+],
+"url": "https://leetcode.com/problems/path-with-minimum-effort/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 26.6
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 27.5
+},
+"Google": {
+"6m": 30.9,
+"all": 37.9
+},
+"Meta": {
+"all": 17.8
+},
+"Microsoft": {
+"all": 19.8
+},
+"Snowflake": {
+"all": 38.6
+}
+}
+},
+{
+"slug": "network-delay-time",
+"title": "Network Delay Time",
+"difficulty": "Medium",
+"topics": [
+"Depth-First Search",
+"Breadth-First Search",
+"Graph Theory",
+"Heap (Priority Queue)",
+"Shortest Path",
+"Dijkstra's Algorithm"
+],
+"url": "https://leetcode.com/problems/network-delay-time/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Advanced Graphs",
+"companies": {
+"Akuna Capital": {
+"all": 97.0
+},
+"Amazon": {
+"6m": 14.3,
+"all": 27.9
+},
+"Bloomberg": {
+"all": 21.6
+},
+"Google": {
+"6m": 36.9,
+"all": 37.5
+},
+"Meta": {
+"all": 15.0
+},
+"Microsoft": {
+"all": 19.8
+},
+"Netflix": {
+"all": 69.4
+},
+"Nvidia": {
+"6m": 85.3,
+"all": 47.9
+},
+"Salesforce": {
+"all": 40.9
+}
+}
+},
+{
+"slug": "reconstruct-itinerary",
+"title": "Reconstruct Itinerary",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"String",
+"Depth-First Search",
+"Graph Theory",
+"Sorting",
+"Heap (Priority Queue)",
+"Eulerian Circuit",
+"Eulerian Path",
+"Semi-Eulerian Graph"
+],
+"url": "https://leetcode.com/problems/reconstruct-itinerary/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Advanced Graphs",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"all": 30.3
+},
+"Apple": {
+"all": 35.3
+},
+"Bloomberg": {
+"all": 24.7
+},
+"Capital One": {
+"all": 35.0
+},
+"Citadel": {
+"all": 63.9
+},
+"Google": {
+"6m": 21.9,
+"all": 33.8
+},
+"Meta": {
+"all": 11.9
+},
+"Microsoft": {
+"all": 12.3
+},
+"Netflix": {
+"all": 84.7
+},
+"Pinterest": {
+"6m": 100.0,
+"all": 100.0
+},
+"Salesforce": {
+"all": 35.3
+},
+"Uber": {
+"all": 43.8
+}
+}
+},
+{
+"slug": "min-cost-to-connect-all-points",
+"title": "Min Cost to Connect All Points",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Union-Find",
+"Graph Theory",
+"Minimum Spanning Tree",
+"Prim's Algorithm",
+"Kruskal's Algorithm",
+"Bor\u016fvka's Algorithm"
+],
+"url": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Advanced Graphs",
+"companies": {
+"Amazon": {
+"all": 29.1
+},
+"Google": {
+"6m": 21.9,
+"all": 22.3
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"all": 11.9
+},
+"Microsoft": {
+"all": 12.3
+},
+"TikTok": {
+"all": 40.7
+},
+"Uber": {
+"all": 40.0
+}
+}
+},
+{
+"slug": "swim-in-rising-water",
+"title": "Swim in Rising Water",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Binary Search",
+"Depth-First Search",
+"Breadth-First Search",
+"Union-Find",
+"Minimax",
+"Heap (Priority Queue)",
+"Matrix",
+"Dijkstra's Algorithm"
+],
+"url": "https://leetcode.com/problems/swim-in-rising-water/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Advanced Graphs",
+"companies": {
+"Amazon": {
+"all": 27.9
+},
+"Bloomberg": {
+"all": 8.3
+},
+"DoorDash": {
+"all": 28.9
+},
+"Google": {
+"6m": 33.2,
+"all": 40.8
+},
+"Meta": {
+"6m": 24.6,
+"all": 40.5
+},
+"Microsoft": {
+"all": 12.3
+},
+"Salesforce": {
+"all": 27.6
+}
+}
+},
+{
+"slug": "alien-dictionary",
+"title": "Alien Dictionary",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"String",
+"Depth-First Search",
+"Breadth-First Search",
+"Graph Theory",
+"Topological Sort",
+"Directed Acyclic Graph"
+],
+"url": "https://leetcode.com/problems/alien-dictionary/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Advanced Graphs",
+"companies": {
+"Airbnb": {
+"all": 71.0
+},
+"Amazon": {
+"6m": 20.8,
+"all": 36.7
+},
+"Apple": {
+"all": 35.3
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"6m": 17.5,
+"all": 34.4
+},
+"Intuit": {
+"6m": 62.2,
+"all": 43.1
+},
+"Meta": {
+"all": 54.2
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 25.4
+},
+"Snap": {
+"all": 79.5
+},
+"TikTok": {
+"all": 52.9
+},
+"Uber": {
+"6m": 74.6,
+"all": 96.4
+}
+}
+},
+{
+"slug": "cheapest-flights-within-k-stops",
+"title": "Cheapest Flights Within K Stops",
+"difficulty": "Medium",
+"topics": [
+"Dynamic Programming",
+"Depth-First Search",
+"Breadth-First Search",
+"Graph Theory",
+"Heap (Priority Queue)",
+"Shortest Path"
+],
+"url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Advanced Graphs",
+"companies": {
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 36.3,
+"all": 44.7
+},
+"Apple": {
+"all": 43.2
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 29.9
+},
+"Google": {
+"6m": 25.4,
+"all": 36.0
+},
+"Intuit": {
+"all": 43.1
+},
+"Meta": {
+"6m": 24.6,
+"all": 27.7
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 29.7
+},
+"Oracle": {
+"6m": 74.2,
+"all": 34.7
+},
+"Snap": {
+"all": 44.8
+},
+"Snowflake": {
+"all": 47.6
+},
+"Stripe": {
+"all": 86.0
+},
+"TikTok": {
+"6m": 68.9,
+"all": 49.5
+},
+"Uber": {
+"all": 29.5
+}
+}
+},
+{
+"slug": "find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree",
+"title": "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
+"difficulty": "Hard",
+"topics": [
+"Union-Find",
+"Graph Theory",
+"Sorting",
+"Minimum Spanning Tree",
+"Strongly Connected Component",
+"Prim's Algorithm",
+"Kruskal's Algorithm",
+"Bor\u016fvka's Algorithm"
+],
+"url": "https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 20.1
+},
+"Google": {
+"all": 8.2
+},
+"Meta": {
+"all": 5.0
+},
+"Uber": {
+"all": 29.5
+}
+}
+},
+{
+"slug": "build-a-matrix-with-conditions",
+"title": "Build a Matrix With Conditions",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Graph Theory",
+"Topological Sort",
+"Matrix",
+"Directed Acyclic Graph"
+],
+"url": "https://leetcode.com/problems/build-a-matrix-with-conditions/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Google": {
+"all": 22.3
+}
+}
+},
+{
+"slug": "greatest-common-divisor-traversal",
+"title": "Greatest Common Divisor Traversal",
+"difficulty": "",
+"topics": [],
+"url": "https://leetcode.com/problems/greatest-common-divisor-traversal/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {}
+},
+{
+"slug": "climbing-stairs",
+"title": "Climbing Stairs",
+"difficulty": "Easy",
+"topics": [
+"Math",
+"Dynamic Programming",
+"Memoization"
+],
+"url": "https://leetcode.com/problems/climbing-stairs/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Adobe": {
+"all": 88.6
+},
+"Amazon": {
+"6m": 58.4,
+"all": 66.7
+},
+"Apple": {
+"all": 55.2
+},
+"Bloomberg": {
+"6m": 69.8,
+"all": 68.0
+},
+"Citadel": {
+"all": 46.8
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 56.6,
+"all": 62.8
+},
+"IBM": {
+"all": 34.6
+},
+"Intuit": {
+"6m": 76.8,
+"all": 58.0
+},
+"Meta": {
+"6m": 54.7,
+"all": 58.3
+},
+"Microsoft": {
+"6m": 57.4,
+"all": 66.3
+},
+"Nvidia": {
+"all": 47.9
+},
+"Oracle": {
+"all": 34.7
+},
+"TikTok": {
+"all": 45.5
+}
+}
+},
+{
+"slug": "min-cost-climbing-stairs",
+"title": "Min Cost Climbing Stairs",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/min-cost-climbing-stairs/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 42.0
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 29.9
+},
+"Google": {
+"6m": 17.5,
+"all": 33.2
+},
+"Meta": {
+"6m": 24.6,
+"all": 33.0
+},
+"Microsoft": {
+"all": 19.8
+}
+}
+},
+{
+"slug": "n-th-tribonacci-number",
+"title": "N-th Tribonacci Number",
+"difficulty": "Easy",
+"topics": [
+"Math",
+"Dynamic Programming",
+"Memoization"
+],
+"url": "https://leetcode.com/problems/n-th-tribonacci-number/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 20.1
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"6m": 17.5,
+"all": 25.6
+},
+"Meta": {
+"all": 8.5
+},
+"Microsoft": {
+"all": 12.3
+}
+}
+},
+{
+"slug": "house-robber",
+"title": "House Robber",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/house-robber/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 59.2,
+"all": 67.1
+},
+"Anduril": {
+"all": 40.9
+},
+"Apple": {
+"6m": 68.6,
+"all": 48.9
+},
+"Bloomberg": {
+"6m": 60.7,
+"all": 60.5
+},
+"Databricks": {
+"all": 79.8
+},
+"Datadog": {
+"all": 72.3
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 49.5,
+"all": 57.4
+},
+"Intuit": {
+"all": 43.1
+},
+"LinkedIn": {
+"all": 47.3
+},
+"Meta": {
+"6m": 38.1,
+"all": 42.6
+},
+"Microsoft": {
+"6m": 61.2,
+"all": 59.9
+},
+"Nvidia": {
+"all": 54.6
+},
+"Oracle": {
+"all": 26.6
+},
+"TikTok": {
+"all": 68.2
+},
+"Uber": {
+"all": 35.4
+}
+}
+},
+{
+"slug": "house-robber-ii",
+"title": "House Robber II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/house-robber-ii/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 42.0
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 41.5
+},
+"Databricks": {
+"all": 76.8
+},
+"Datadog": {
+"all": 61.7
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Google": {
+"6m": 35.1,
+"all": 37.0
+},
+"LinkedIn": {
+"all": 27.3
+},
+"Meta": {
+"6m": 32.4,
+"all": 33.0
+},
+"Microsoft": {
+"all": 43.8
+},
+"Salesforce": {
+"all": 27.6
+},
+"TikTok": {
+"all": 40.7
+}
+}
+},
+{
+"slug": "longest-palindromic-substring",
+"title": "Longest Palindromic Substring",
+"difficulty": "Medium",
+"topics": [
+"Two Pointers",
+"String",
+"Dynamic Programming",
+"Manacher"
+],
+"url": "https://leetcode.com/problems/longest-palindromic-substring/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Adobe": {
+"6m": 79.4,
+"all": 82.4
+},
+"Amazon": {
+"6m": 73.9,
+"all": 78.6
+},
+"Apple": {
+"all": 46.2
+},
+"Bloomberg": {
+"6m": 72.7,
+"all": 79.4
+},
+"Capital One": {
+"all": 35.0
+},
+"Citadel": {
+"all": 46.8
+},
+"DoorDash": {
+"all": 28.9
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 44.5
+},
+"Google": {
+"6m": 62.0,
+"all": 69.4
+},
+"IBM": {
+"6m": 74.4,
+"all": 75.3
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Meta": {
+"6m": 62.2,
+"all": 68.0
+},
+"Microsoft": {
+"6m": 74.9,
+"all": 79.9
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 63.8
+},
+"Salesforce": {
+"all": 48.9
+},
+"TikTok": {
+"all": 64.8
+},
+"Uber": {
+"all": 40.0
+}
+}
+},
+{
+"slug": "palindromic-substrings",
+"title": "Palindromic Substrings",
+"difficulty": "Medium",
+"topics": [
+"Two Pointers",
+"String",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/palindromic-substrings/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 40.9
+},
+"Anduril": {
+"all": 49.2
+},
+"Apple": {
+"all": 35.3
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 32.0
+},
+"Capital One": {
+"all": 35.0
+},
+"Citadel": {
+"all": 95.1
+},
+"Goldman Sachs": {
+"6m": 56.8,
+"all": 42.2
+},
+"Google": {
+"6m": 11.8,
+"all": 30.6
+},
+"IBM": {
+"6m": 74.4,
+"all": 55.2
+},
+"Intuit": {
+"all": 51.8
+},
+"LinkedIn": {
+"all": 47.3
+},
+"Meta": {
+"all": 64.2
+},
+"Microsoft": {
+"all": 38.7
+},
+"Oracle": {
+"all": 49.2
+},
+"Salesforce": {
+"all": 54.5
+}
+}
+},
+{
+"slug": "decode-ways",
+"title": "Decode Ways",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/decode-ways/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"all": 36.7
+},
+"Anduril": {
+"6m": 65.6,
+"all": 40.9
+},
+"Bloomberg": {
+"all": 27.5
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Goldman Sachs": {
+"all": 51.6
+},
+"Google": {
+"6m": 21.9,
+"all": 29.9
+},
+"Lyft": {
+"6m": 72.3,
+"all": 64.4
+},
+"Meta": {
+"6m": 24.6,
+"all": 41.9
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 42.9
+},
+"Oracle": {
+"all": 26.6
+},
+"Snap": {
+"all": 67.6
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"all": 52.4
+}
+}
+},
+{
+"slug": "coin-change",
+"title": "Coin Change",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Breadth-First Search",
+"Knapsack Problem",
+"Complete Knapsack"
+],
+"url": "https://leetcode.com/problems/coin-change/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Affirm": {
+"all": 51.8
+},
+"Airbnb": {
+"all": 37.6
+},
+"Amazon": {
+"6m": 53.4,
+"all": 63.2
+},
+"Apple": {
+"all": 35.3
+},
+"Bloomberg": {
+"6m": 55.7,
+"all": 61.4
+},
+"Datadog": {
+"all": 92.1
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Goldman Sachs": {
+"all": 44.5
+},
+"Google": {
+"6m": 42.6,
+"all": 48.1
+},
+"IBM": {
+"all": 43.6
+},
+"Intuit": {
+"all": 70.0
+},
+"Meta": {
+"6m": 54.7,
+"all": 49.8
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 53.3
+},
+"Oracle": {
+"all": 52.4
+},
+"Pinterest": {
+"all": 75.8
+},
+"Salesforce": {
+"all": 35.3
+},
+"TikTok": {
+"all": 69.7
+},
+"Uber": {
+"all": 56.6
+}
+}
+},
+{
+"slug": "maximum-product-subarray",
+"title": "Maximum Product Subarray",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/maximum-product-subarray/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Adobe": {
+"all": 74.4
+},
+"Amazon": {
+"6m": 52.2,
+"all": 53.3
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 52.6
+},
+"DE Shaw": {
+"all": 58.3
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 44.8,
+"all": 50.9
+},
+"IBM": {
+"all": 43.6
+},
+"LinkedIn": {
+"6m": 71.4,
+"all": 72.0
+},
+"Meta": {
+"6m": 49.5,
+"all": 40.5
+},
+"Microsoft": {
+"all": 42.9
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "word-break",
+"title": "Word Break",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"String",
+"Dynamic Programming",
+"Trie",
+"Memoization",
+"Brute-Force Search"
+],
+"url": "https://leetcode.com/problems/word-break/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 45.0,
+"all": 58.7
+},
+"Apple": {
+"all": 58.5
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 57.5
+},
+"Google": {
+"6m": 30.9,
+"all": 43.8
+},
+"Intuit": {
+"all": 70.0
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Meta": {
+"6m": 24.6,
+"all": 53.8
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 50.5
+},
+"Millennium": {
+"all": 76.1
+},
+"MongoDB": {
+"all": 91.3
+},
+"Netflix": {
+"all": 58.1
+},
+"Oracle": {
+"all": 26.6
+},
+"TikTok": {
+"all": 55.8
+},
+"Uber": {
+"all": 61.8
+}
+}
+},
+{
+"slug": "longest-increasing-subsequence",
+"title": "Longest Increasing Subsequence",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Binary Search",
+"Dynamic Programming",
+"Longest Increasing Subsequence"
+],
+"url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 36.3,
+"all": 52.1
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 49.5
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 35.1,
+"all": 52.2
+},
+"Intuit": {
+"all": 51.8
+},
+"Meta": {
+"6m": 38.1,
+"all": 39.7
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 56.2
+},
+"Nvidia": {
+"all": 47.9
+},
+"Oracle": {
+"all": 40.7
+},
+"Salesforce": {
+"all": 40.9
+},
+"TikTok": {
+"all": 85.7
+}
+}
+},
+{
+"slug": "partition-equal-subset-sum",
+"title": "Partition Equal Subset Sum",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Knapsack Problem",
+"0-1 Knapsack"
+],
+"url": "https://leetcode.com/problems/partition-equal-subset-sum/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "1-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 45.0,
+"all": 51.5
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 48.7
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 41.3,
+"all": 45.8
+},
+"Meta": {
+"all": 35.2
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 43.8
+},
+"Salesforce": {
+"all": 27.6
+},
+"TikTok": {
+"all": 49.5
+}
+}
+},
+{
+"slug": "combination-sum-iv",
+"title": "Combination Sum IV",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/combination-sum-iv/",
+"lists": [
+"blind75",
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 18.0
+},
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"6m": 11.8,
+"all": 32.6
+},
+"Meta": {
+"all": 27.7
+},
+"Snap": {
+"all": 79.5
+}
+}
+},
+{
+"slug": "perfect-squares",
+"title": "Perfect Squares",
+"difficulty": "Medium",
+"topics": [
+"Math",
+"Dynamic Programming",
+"Breadth-First Search",
+"Knapsack Problem",
+"Complete Knapsack"
+],
+"url": "https://leetcode.com/problems/perfect-squares/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 18.0
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 35.7
+},
+"Google": {
+"6m": 11.8,
+"all": 38.8
+},
+"Meta": {
+"6m": 32.4,
+"all": 15.0
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 38.7
+}
+}
+},
+{
+"slug": "integer-break",
+"title": "Integer Break",
+"difficulty": "Medium",
+"topics": [
+"Math",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/integer-break/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 15.8
+},
+"Bloomberg": {
+"all": 17.9
+},
+"Google": {
+"6m": 11.8,
+"all": 19.7
+},
+"Meta": {
+"6m": 38.1,
+"all": 29.1
+},
+"Microsoft": {
+"all": 12.3
+}
+}
+},
+{
+"slug": "stone-game-iii",
+"title": "Stone Game III",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Math",
+"Dynamic Programming",
+"Minimax",
+"Game Theory",
+"Zero-Sum Game"
+],
+"url": "https://leetcode.com/problems/stone-game-iii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 7.2
+},
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"6m": 30.9,
+"all": 29.9
+},
+"Meta": {
+"all": 8.5
+},
+"Microsoft": {
+"all": 7.5
+}
+}
+},
+{
+"slug": "unique-paths",
+"title": "Unique Paths",
+"difficulty": "Medium",
+"topics": [
+"Math",
+"Dynamic Programming",
+"Combinatorics"
+],
+"url": "https://leetcode.com/problems/unique-paths/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "2-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 49.6,
+"all": 60.5
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 51.9
+},
+"Goldman Sachs": {
+"all": 39.5
+},
+"Google": {
+"6m": 35.1,
+"all": 49.0
+},
+"Meta": {
+"6m": 32.4,
+"all": 51.5
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 49.8
+},
+"Nvidia": {
+"all": 47.9
+},
+"TikTok": {
+"all": 26.1
+}
+}
+},
+{
+"slug": "unique-paths-ii",
+"title": "Unique Paths II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/unique-paths-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 40.9
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 50.4
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 17.5,
+"all": 31.3
+},
+"IMC": {
+"6m": 80.0,
+"all": 73.7
+},
+"Meta": {
+"6m": 24.6,
+"all": 22.3
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 22.8
+},
+"Nvidia": {
+"all": 59.8
+},
+"TikTok": {
+"all": 34.5
+}
+}
+},
+{
+"slug": "minimum-path-sum",
+"title": "Minimum Path Sum",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/minimum-path-sum/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 43.7
+},
+"Apple": {
+"6m": 47.2,
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 40.2
+},
+"Goldman Sachs": {
+"6m": 63.0,
+"all": 70.3
+},
+"Google": {
+"6m": 25.4,
+"all": 36.5
+},
+"Meta": {
+"all": 29.1
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 53.8
+},
+"Nvidia": {
+"all": 47.9
+},
+"TikTok": {
+"all": 40.7
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "longest-common-subsequence",
+"title": "Longest Common Subsequence",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Dynamic Programming",
+"Longest Common Subsequence"
+],
+"url": "https://leetcode.com/problems/longest-common-subsequence/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "2-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 36.7
+},
+"Apple": {
+"6m": 68.6,
+"all": 46.2
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 29.9
+},
+"DoorDash": {
+"all": 44.9
+},
+"Google": {
+"6m": 21.9,
+"all": 38.8
+},
+"Meta": {
+"6m": 32.4,
+"all": 35.2
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 46.3
+},
+"Salesforce": {
+"all": 54.5
+},
+"TikTok": {
+"all": 34.5
+}
+}
+},
+{
+"slug": "last-stone-weight-ii",
+"title": "Last Stone Weight II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Knapsack Problem",
+"0-1 Knapsack"
+],
+"url": "https://leetcode.com/problems/last-stone-weight-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 18.0
+},
+"Apple": {
+"6m": 72.9,
+"all": 43.2
+},
+"Google": {
+"6m": 21.9,
+"all": 22.3
+},
+"Meta": {
+"all": 8.5
+}
+}
+},
+{
+"slug": "best-time-to-buy-and-sell-stock-with-cooldown",
+"title": "Best Time to Buy and Sell Stock with Cooldown",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "2-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 18.0
+},
+"Apple": {
+"all": 39.6
+},
+"Bloomberg": {
+"all": 24.7
+},
+"Google": {
+"all": 32.0
+},
+"Microsoft": {
+"all": 12.3
+},
+"TikTok": {
+"all": 34.5
+}
+}
+},
+{
+"slug": "coin-change-ii",
+"title": "Coin Change II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Knapsack Problem",
+"Complete Knapsack"
+],
+"url": "https://leetcode.com/problems/coin-change-ii/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "2-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 36.7
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"all": 24.7
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Google": {
+"6m": 28.4,
+"all": 38.4
+},
+"Meta": {
+"all": 24.3
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 33.2
+},
+"Salesforce": {
+"all": 27.6
+},
+"TikTok": {
+"all": 34.5
+}
+}
+},
+{
+"slug": "target-sum",
+"title": "Target Sum",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Backtracking",
+"Knapsack Problem",
+"0-1 Knapsack"
+],
+"url": "https://leetcode.com/problems/target-sum/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "2-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 33.4,
+"all": 44.2
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 34.0
+},
+"Google": {
+"6m": 17.5,
+"all": 41.2
+},
+"Meta": {
+"6m": 24.6,
+"all": 44.6
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 38.7
+},
+"Pinterest": {
+"6m": 72.9,
+"all": 70.3
+}
+}
+},
+{
+"slug": "interleaving-string",
+"title": "Interleaving String",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/interleaving-string/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "2-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 46.6,
+"all": 40.2
+},
+"Bloomberg": {
+"all": 32.0
+},
+"Google": {
+"6m": 17.5,
+"all": 27.4
+},
+"Meta": {
+"all": 20.2
+},
+"Microsoft": {
+"all": 34.7
+}
+}
+},
+{
+"slug": "stone-game",
+"title": "Stone Game",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Math",
+"Dynamic Programming",
+"Minimax",
+"Game Theory",
+"Zero-Sum Game"
+],
+"url": "https://leetcode.com/problems/stone-game/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 7.2
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 21.6
+},
+"Google": {
+"6m": 38.5,
+"all": 31.3
+},
+"Meta": {
+"6m": 32.4,
+"all": 22.3
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 19.8
+}
+}
+},
+{
+"slug": "stone-game-ii",
+"title": "Stone Game II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Math",
+"Dynamic Programming",
+"Minimax",
+"Prefix Sum",
+"Game Theory",
+"Zero-Sum Game"
+],
+"url": "https://leetcode.com/problems/stone-game-ii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 15.8
+},
+"Google": {
+"6m": 25.4,
+"all": 14.8
+},
+"Meta": {
+"6m": 24.6,
+"all": 11.9
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 7.5
+}
+}
+},
+{
+"slug": "longest-increasing-path-in-a-matrix",
+"title": "Longest Increasing Path in a Matrix",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Depth-First Search",
+"Breadth-First Search",
+"Graph Theory",
+"Topological Sort",
+"Memoization",
+"Matrix",
+"Directed Acyclic Graph"
+],
+"url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "2-D Dynamic Programming",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Amazon": {
+"6m": 14.3,
+"all": 26.6
+},
+"Apple": {
+"all": 35.3
+},
+"Bloomberg": {
+"all": 17.9
+},
+"DoorDash": {
+"all": 92.3
+},
+"Duolingo": {
+"all": 74.3
+},
+"Google": {
+"6m": 17.5,
+"all": 37.9
+},
+"Meta": {
+"all": 46.8
+},
+"Microsoft": {
+"all": 27.7
+},
+"Salesforce": {
+"all": 35.3
+},
+"TikTok": {
+"all": 49.5
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "distinct-subsequences",
+"title": "Distinct Subsequences",
+"difficulty": "Hard",
+"topics": [
+"String",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/distinct-subsequences/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "2-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 36.3,
+"all": 38.2
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 35.7
+},
+"Google": {
+"6m": 33.2,
+"all": 32.6
+},
+"Meta": {
+"6m": 42.7,
+"all": 31.8
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 33.2
+},
+"Salesforce": {
+"all": 60.9
+}
+}
+},
+{
+"slug": "edit-distance",
+"title": "Edit Distance",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/edit-distance/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "2-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 38.9,
+"all": 52.7
+},
+"Apple": {
+"6m": 47.2,
+"all": 39.6
+},
+"Bloomberg": {
+"all": 51.1
+},
+"Google": {
+"6m": 28.4,
+"all": 45.8
+},
+"IBM": {
+"all": 34.6
+},
+"LinkedIn": {
+"all": 47.3
+},
+"Meta": {
+"6m": 38.1,
+"all": 34.1
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 47.1
+},
+"TikTok": {
+"all": 49.5
+}
+}
+},
+{
+"slug": "burst-balloons",
+"title": "Burst Balloons",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/burst-balloons/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "2-D Dynamic Programming",
+"companies": {
+"Amazon": {
+"6m": 33.4,
+"all": 37.5
+},
+"Bloomberg": {
+"all": 21.6
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 36.9,
+"all": 42.2
+},
+"Meta": {
+"6m": 32.4,
+"all": 20.2
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 34.7
+},
+"Salesforce": {
+"all": 27.6
+},
+"Snap": {
+"all": 79.5
+},
+"Uber": {
+"all": 43.8
+}
+}
+},
+{
+"slug": "regular-expression-matching",
+"title": "Regular Expression Matching",
+"difficulty": "Hard",
+"topics": [
+"String",
+"Dynamic Programming",
+"Recursion"
+],
+"url": "https://leetcode.com/problems/regular-expression-matching/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "2-D Dynamic Programming",
+"companies": {
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 38.9,
+"all": 54.5
+},
+"Apple": {
+"all": 46.2
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 53.9
+},
+"Google": {
+"6m": 36.9,
+"all": 51.2
+},
+"Meta": {
+"6m": 32.4,
+"all": 47.9
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 44.7
+},
+"Oracle": {
+"all": 26.6
+},
+"Snowflake": {
+"all": 47.6
+},
+"TikTok": {
+"all": 52.9
+},
+"Two Sigma": {
+"all": 57.8
+},
+"Uber": {
+"all": 52.4
+}
+}
+},
+{
+"slug": "lemonade-change",
+"title": "Lemonade Change",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Greedy"
+],
+"url": "https://leetcode.com/problems/lemonade-change/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 27.9
+},
+"Bloomberg": {
+"all": 37.3
+},
+"Google": {
+"6m": 17.5,
+"all": 23.4
+},
+"Meta": {
+"6m": 24.6,
+"all": 26.0
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 16.4
+}
+}
+},
+{
+"slug": "maximum-subarray",
+"title": "Maximum Subarray",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Divide and Conquer",
+"Dynamic Programming"
+],
+"url": "https://leetcode.com/problems/maximum-subarray/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Greedy",
+"companies": {
+"Amazon": {
+"6m": 65.0,
+"all": 72.0
+},
+"Apple": {
+"all": 65.0
+},
+"Atlassian": {
+"all": 42.0
+},
+"Bloomberg": {
+"6m": 55.7,
+"all": 68.0
+},
+"Citadel": {
+"all": 56.7
+},
+"Goldman Sachs": {
+"all": 51.6
+},
+"Google": {
+"6m": 59.1,
+"all": 64.8
+},
+"IBM": {
+"all": 55.2
+},
+"LinkedIn": {
+"6m": 78.3,
+"all": 80.6
+},
+"Meta": {
+"6m": 66.5,
+"all": 62.6
+},
+"Microsoft": {
+"6m": 65.9,
+"all": 74.8
+},
+"Nvidia": {
+"all": 73.5
+},
+"Oracle": {
+"6m": 74.2,
+"all": 62.0
+},
+"Salesforce": {
+"all": 35.3
+},
+"TikTok": {
+"all": 49.5
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "maximum-sum-circular-subarray",
+"title": "Maximum Sum Circular Subarray",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Divide and Conquer",
+"Dynamic Programming",
+"Queue",
+"Monotonic Queue"
+],
+"url": "https://leetcode.com/problems/maximum-sum-circular-subarray/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 33.4,
+"all": 30.3
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"all": 21.6
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 25.4,
+"all": 26.5
+},
+"Meta": {
+"all": 24.3
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 29.7
+},
+"TikTok": {
+"all": 26.1
+},
+"Two Sigma": {
+"all": 90.4
+}
+}
+},
+{
+"slug": "longest-turbulent-subarray",
+"title": "Longest Turbulent Subarray",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Sliding Window"
+],
+"url": "https://leetcode.com/problems/longest-turbulent-subarray/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 7.2
+},
+"Google": {
+"all": 5.6
+},
+"Microsoft": {
+"all": 7.5
+}
+}
+},
+{
+"slug": "jump-game",
+"title": "Jump Game",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Greedy"
+],
+"url": "https://leetcode.com/problems/jump-game/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Greedy",
+"companies": {
+"Adobe": {
+"all": 69.3
+},
+"Amazon": {
+"6m": 49.6,
+"all": 65.7
+},
+"Apple": {
+"6m": 47.2,
+"all": 35.3
+},
+"Bloomberg": {
+"6m": 52.7,
+"all": 60.5
+},
+"DoorDash": {
+"all": 35.9
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 47.8,
+"all": 55.8
+},
+"Meta": {
+"6m": 54.7,
+"all": 49.8
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 57.1
+},
+"Nvidia": {
+"all": 47.9
+},
+"Oracle": {
+"all": 45.3
+},
+"TikTok": {
+"all": 49.5
+}
+}
+},
+{
+"slug": "jump-game-ii",
+"title": "Jump Game II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Greedy"
+],
+"url": "https://leetcode.com/problems/jump-game-ii/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Greedy",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 41.1,
+"all": 58.9
+},
+"Apple": {
+"all": 22.3
+},
+"Atlassian": {
+"all": 42.0
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 44.9
+},
+"DoorDash": {
+"all": 28.9
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 38.5,
+"all": 45.3
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"all": 37.1
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 53.3
+},
+"Oracle": {
+"all": 26.6
+},
+"Salesforce": {
+"6m": 55.3,
+"all": 27.6
+},
+"Snowflake": {
+"all": 38.6
+},
+"TikTok": {
+"all": 45.5
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "jump-game-vii",
+"title": "Jump Game VII",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Dynamic Programming",
+"Sliding Window",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/jump-game-vii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 15.8
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 17.9
+},
+"Google": {
+"6m": 11.8,
+"all": 23.4
+},
+"Meta": {
+"6m": 24.6,
+"all": 8.5
+}
+}
+},
+{
+"slug": "gas-station",
+"title": "Gas Station",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Greedy"
+],
+"url": "https://leetcode.com/problems/gas-station/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Greedy",
+"companies": {
+"Adobe": {
+"6m": 79.4,
+"all": 63.1
+},
+"Amazon": {
+"6m": 38.9,
+"all": 51.5
+},
+"Apple": {
+"all": 39.6
+},
+"Bloomberg": {
+"6m": 45.2,
+"all": 54.6
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 39.5
+},
+"Google": {
+"6m": 17.5,
+"all": 38.8
+},
+"Meta": {
+"all": 34.1
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 48.5
+},
+"Oracle": {
+"all": 49.2
+},
+"Salesforce": {
+"all": 40.9
+},
+"Scale AI": {
+"all": 100.0
+},
+"TikTok": {
+"6m": 52.7,
+"all": 45.5
+}
+}
+},
+{
+"slug": "hand-of-straights",
+"title": "Hand of Straights",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Greedy",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/hand-of-straights/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Greedy",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 15.8
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 21.6
+},
+"Google": {
+"6m": 17.5,
+"all": 21.0
+},
+"Meta": {
+"all": 17.8
+},
+"Microsoft": {
+"all": 12.3
+}
+}
+},
+{
+"slug": "dota2-senate",
+"title": "Dota2 Senate",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Greedy",
+"Queue"
+],
+"url": "https://leetcode.com/problems/dota2-senate/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 10.3
+},
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"all": 12.8
+},
+"Meta": {
+"all": 11.9
+}
+}
+},
+{
+"slug": "merge-triplets-to-form-target-triplet",
+"title": "Merge Triplets to Form Target Triplet",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Greedy"
+],
+"url": "https://leetcode.com/problems/merge-triplets-to-form-target-triplet/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Greedy",
+"companies": {
+"Google": {
+"all": 19.7
+}
+}
+},
+{
+"slug": "partition-labels",
+"title": "Partition Labels",
+"difficulty": "Medium",
+"topics": [
+"Hash Table",
+"Two Pointers",
+"String",
+"Greedy"
+],
+"url": "https://leetcode.com/problems/partition-labels/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Greedy",
+"companies": {
+"Amazon": {
+"6m": 25.9,
+"all": 42.0
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"6m": 17.5,
+"all": 18.2
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Meta": {
+"all": 17.8
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 22.8
+}
+}
+},
+{
+"slug": "valid-parenthesis-string",
+"title": "Valid Parenthesis String",
+"difficulty": "Medium",
+"topics": [
+"String",
+"Dynamic Programming",
+"Stack",
+"Greedy",
+"Bracket Sequences"
+],
+"url": "https://leetcode.com/problems/valid-parenthesis-string/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Greedy",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 37.5
+},
+"Apple": {
+"6m": 47.2,
+"all": 29.7
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 35.7
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 30.9,
+"all": 32.0
+},
+"LinkedIn": {
+"all": 36.5
+},
+"Meta": {
+"6m": 38.1,
+"all": 38.9
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 34.7
+},
+"Oracle": {
+"6m": 74.2,
+"all": 34.7
+},
+"Salesforce": {
+"all": 40.9
+},
+"TikTok": {
+"all": 64.8
+}
+}
+},
+{
+"slug": "candy",
+"title": "Candy",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Greedy"
+],
+"url": "https://leetcode.com/problems/candy/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 38.9,
+"all": 53.3
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 55.2
+},
+"Dropbox": {
+"all": 67.9
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 28.4,
+"all": 47.1
+},
+"Intuit": {
+"all": 43.1
+},
+"Meta": {
+"6m": 24.6,
+"all": 34.1
+},
+"Microsoft": {
+"all": 45.5
+},
+"Oracle": {
+"all": 26.6
+},
+"TikTok": {
+"all": 34.5
+},
+"Uber": {
+"all": 43.8
+}
+}
+},
+{
+"slug": "insert-interval",
+"title": "Insert Interval",
+"difficulty": "Medium",
+"topics": [
+"Array"
+],
+"url": "https://leetcode.com/problems/insert-interval/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Intervals",
+"companies": {
+"Amazon": {
+"6m": 36.3,
+"all": 38.9
+},
+"Apple": {
+"all": 39.6
+},
+"Bloomberg": {
+"all": 29.9
+},
+"Google": {
+"6m": 28.4,
+"all": 44.7
+},
+"LinkedIn": {
+"all": 49.2
+},
+"Meta": {
+"all": 36.2
+},
+"Microsoft": {
+"all": 39.8
+},
+"Oracle": {
+"all": 26.6
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"all": 40.0
+}
+}
+},
+{
+"slug": "merge-intervals",
+"title": "Merge Intervals",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Sorting",
+"Quicksort"
+],
+"url": "https://leetcode.com/problems/merge-intervals/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Intervals",
+"companies": {
+"Adobe": {
+"all": 91.3
+},
+"Amazon": {
+"6m": 71.4,
+"all": 76.4
+},
+"Anduril": {
+"all": 63.3
+},
+"Apple": {
+"6m": 87.1,
+"all": 84.1
+},
+"Atlassian": {
+"6m": 92.3,
+"all": 83.5
+},
+"Bloomberg": {
+"6m": 79.5,
+"all": 87.9
+},
+"Capital One": {
+"6m": 58.6,
+"all": 52.8
+},
+"Citadel": {
+"all": 89.1
+},
+"Databricks": {
+"all": 36.9
+},
+"DoorDash": {
+"all": 41.0
+},
+"Dropbox": {
+"all": 58.0
+},
+"Goldman Sachs": {
+"6m": 48.0,
+"all": 60.5
+},
+"Google": {
+"6m": 50.2,
+"all": 64.8
+},
+"IBM": {
+"6m": 81.9,
+"all": 94.9
+},
+"Intuit": {
+"all": 51.8
+},
+"LinkedIn": {
+"all": 58.0
+},
+"Meta": {
+"6m": 52.3,
+"all": 84.7
+},
+"Microsoft": {
+"6m": 61.2,
+"all": 72.2
+},
+"Millennium": {
+"all": 86.7
+},
+"MongoDB": {
+"6m": 88.6,
+"all": 70.6
+},
+"Netflix": {
+"all": 84.7
+},
+"Nvidia": {
+"all": 59.8
+},
+"Oracle": {
+"all": 68.5
+},
+"Pinterest": {
+"all": 36.3
+},
+"Roblox": {
+"all": 45.1
+},
+"Salesforce": {
+"6m": 77.1,
+"all": 59.0
+},
+"Snap": {
+"all": 62.0
+},
+"Stripe": {
+"6m": 100.0,
+"all": 73.9
+},
+"TikTok": {
+"6m": 68.9,
+"all": 81.9
+},
+"Uber": {
+"6m": 57.2,
+"all": 49.9
+},
+"Verkada": {
+"all": 69.2
+}
+}
+},
+{
+"slug": "non-overlapping-intervals",
+"title": "Non-overlapping Intervals",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Dynamic Programming",
+"Greedy",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/non-overlapping-intervals/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Intervals",
+"companies": {
+"Amazon": {
+"6m": 38.9,
+"all": 44.2
+},
+"Bloomberg": {
+"all": 38.8
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 21.9,
+"all": 33.8
+},
+"IBM": {
+"all": 50.2
+},
+"Meta": {
+"all": 33.0
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 29.7
+},
+"Oracle": {
+"all": 26.6
+},
+"Roblox": {
+"all": 37.1
+},
+"TikTok": {
+"all": 34.5
+},
+"Uber": {
+"all": 21.7
+},
+"Verkada": {
+"all": 84.6
+}
+}
+},
+{
+"slug": "meeting-rooms",
+"title": "Meeting Rooms",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Sorting",
+"Quicksort"
+],
+"url": "https://leetcode.com/problems/meeting-rooms/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Intervals",
+"companies": {
+"Amazon": {
+"6m": 33.4,
+"all": 31.4
+},
+"Apple": {
+"all": 46.2
+},
+"Google": {
+"all": 19.7
+},
+"Meta": {
+"all": 31.8
+},
+"Microsoft": {
+"all": 27.7
+},
+"Oracle": {
+"all": 40.7
+},
+"TikTok": {
+"all": 45.5
+},
+"Uber": {
+"all": 21.7
+}
+}
+},
+{
+"slug": "meeting-rooms-ii",
+"title": "Meeting Rooms II",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Two Pointers",
+"Greedy",
+"Sorting",
+"Heap (Priority Queue)",
+"Prefix Sum"
+],
+"url": "https://leetcode.com/problems/meeting-rooms-ii/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Intervals",
+"companies": {
+"Amazon": {
+"6m": 54.5,
+"all": 61.3
+},
+"Anduril": {
+"all": 59.6
+},
+"Apple": {
+"all": 63.9
+},
+"Atlassian": {
+"all": 72.9
+},
+"Bloomberg": {
+"6m": 58.3,
+"all": 64.6
+},
+"Citadel": {
+"all": 56.7
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 47.8,
+"all": 57.9
+},
+"IBM": {
+"all": 55.2
+},
+"Lyft": {
+"all": 43.4
+},
+"Meta": {
+"all": 54.2
+},
+"Microsoft": {
+"all": 53.3
+},
+"Netflix": {
+"all": 76.8
+},
+"Oracle": {
+"6m": 85.6,
+"all": 71.2
+},
+"Pinterest": {
+"all": 36.3
+},
+"Salesforce": {
+"6m": 55.3,
+"all": 40.9
+},
+"Snap": {
+"6m": 100.0,
+"all": 100.0
+},
+"Snowflake": {
+"all": 38.6
+},
+"TikTok": {
+"6m": 78.4,
+"all": 85.7
+},
+"Two Sigma": {
+"all": 57.8
+},
+"Uber": {
+"all": 58.5
+}
+}
+},
+{
+"slug": "meeting-rooms-iii",
+"title": "Meeting Rooms III",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Hash Table",
+"Sorting",
+"Heap (Priority Queue)",
+"Simulation"
+],
+"url": "https://leetcode.com/problems/meeting-rooms-iii/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 29.1
+},
+"Apple": {
+"6m": 68.6,
+"all": 39.6
+},
+"Atlassian": {
+"all": 34.3
+},
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"6m": 28.4,
+"all": 40.8
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"all": 11.9
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 22.8
+},
+"Oracle": {
+"all": 34.7
+},
+"Pinterest": {
+"all": 60.0
+},
+"TikTok": {
+"all": 55.8
+},
+"Uber": {
+"all": 52.4
+}
+}
+},
+{
+"slug": "minimum-interval-to-include-each-query",
+"title": "Minimum Interval to Include Each Query",
+"difficulty": "Hard",
+"topics": [
+"Array",
+"Binary Search",
+"Sweep Line",
+"Sorting",
+"Heap (Priority Queue)"
+],
+"url": "https://leetcode.com/problems/minimum-interval-to-include-each-query/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Intervals",
+"companies": {
+"Amazon": {
+"all": 5.0
+},
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"6m": 11.8,
+"all": 29.9
+}
+}
+},
+{
+"slug": "excel-sheet-column-title",
+"title": "Excel Sheet Column Title",
+"difficulty": "Easy",
+"topics": [
+"Math",
+"String"
+],
+"url": "https://leetcode.com/problems/excel-sheet-column-title/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 35.1
+},
+"Bloomberg": {
+"6m": 34.0,
+"all": 35.7
+},
+"DE Shaw": {
+"all": 37.9
+},
+"Google": {
+"6m": 17.5,
+"all": 29.9
+},
+"Meta": {
+"all": 29.1
+},
+"Microsoft": {
+"all": 45.5
+}
+}
+},
+{
+"slug": "greatest-common-divisor-of-strings",
+"title": "Greatest Common Divisor of Strings",
+"difficulty": "Easy",
+"topics": [
+"Math",
+"String",
+"Euclidean Algorithm",
+"Greatest Common Divisor"
+],
+"url": "https://leetcode.com/problems/greatest-common-divisor-of-strings/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 33.3
+},
+"Bloomberg": {
+"all": 24.7
+},
+"Google": {
+"6m": 35.1,
+"all": 41.2
+},
+"Meta": {
+"6m": 24.6,
+"all": 34.1
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 37.5
+},
+"Oracle": {
+"all": 26.6
+}
+}
+},
+{
+"slug": "insert-greatest-common-divisors-in-linked-list",
+"title": "Insert Greatest Common Divisors in Linked List",
+"difficulty": "Medium",
+"topics": [
+"Linked List",
+"Math",
+"Number Theory"
+],
+"url": "https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"all": 5.0
+},
+"Meta": {
+"all": 5.0
+},
+"Microsoft": {
+"all": 7.5
+}
+}
+},
+{
+"slug": "transpose-matrix",
+"title": "Transpose Matrix",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Matrix",
+"Simulation"
+],
+"url": "https://leetcode.com/problems/transpose-matrix/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 21.9
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 32.0
+},
+"Google": {
+"all": 29.1
+},
+"Meta": {
+"all": 22.3
+},
+"Microsoft": {
+"all": 22.8
+},
+"Verkada": {
+"all": 75.6
+}
+}
+},
+{
+"slug": "rotate-image",
+"title": "Rotate Image",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Math",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/rotate-image/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Math & Geometry",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 56.5,
+"all": 63.1
+},
+"Anduril": {
+"all": 40.9
+},
+"Apple": {
+"all": 65.0
+},
+"Bloomberg": {
+"6m": 64.8,
+"all": 65.7
+},
+"Capital One": {
+"all": 66.3
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 51.0,
+"all": 56.1
+},
+"IBM": {
+"all": 55.2
+},
+"Meta": {
+"6m": 49.5,
+"all": 54.2
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 65.5
+},
+"Nvidia": {
+"6m": 73.7,
+"all": 59.8
+},
+"Oracle": {
+"all": 40.7
+},
+"Roblox": {
+"all": 67.1
+},
+"TikTok": {
+"all": 34.5
+},
+"Uber": {
+"all": 40.0
+}
+}
+},
+{
+"slug": "spiral-matrix",
+"title": "Spiral Matrix",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Matrix",
+"Simulation"
+],
+"url": "https://leetcode.com/problems/spiral-matrix/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Math & Geometry",
+"companies": {
+"Adobe": {
+"all": 63.1
+},
+"Amazon": {
+"6m": 51.0,
+"all": 64.4
+},
+"Anduril": {
+"all": 59.6
+},
+"Apple": {
+"6m": 47.2,
+"all": 68.1
+},
+"Bloomberg": {
+"6m": 52.7,
+"all": 59.5
+},
+"Capital One": {
+"all": 81.7
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 53.1,
+"all": 59.3
+},
+"IBM": {
+"all": 43.6
+},
+"Meta": {
+"6m": 42.7,
+"all": 53.1
+},
+"Microsoft": {
+"6m": 49.9,
+"all": 66.6
+},
+"Nvidia": {
+"all": 47.9
+},
+"Oracle": {
+"all": 63.8
+},
+"Roblox": {
+"all": 37.1
+},
+"Salesforce": {
+"all": 27.6
+},
+"TikTok": {
+"6m": 62.1,
+"all": 72.5
+},
+"Uber": {
+"all": 65.9
+}
+}
+},
+{
+"slug": "set-matrix-zeroes",
+"title": "Set Matrix Zeroes",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Matrix"
+],
+"url": "https://leetcode.com/problems/set-matrix-zeroes/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Math & Geometry",
+"companies": {
+"Amazon": {
+"6m": 45.0,
+"all": 54.8
+},
+"Apple": {
+"all": 35.3
+},
+"Bloomberg": {
+"6m": 52.7,
+"all": 57.5
+},
+"Goldman Sachs": {
+"all": 32.6
+},
+"Google": {
+"6m": 30.9,
+"all": 50.5
+},
+"Meta": {
+"6m": 49.5,
+"all": 57.1
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 55.8
+},
+"Nvidia": {
+"all": 47.9
+},
+"Oracle": {
+"all": 34.7
+}
+}
+},
+{
+"slug": "happy-number",
+"title": "Happy Number",
+"difficulty": "Easy",
+"topics": [
+"Hash Table",
+"Math",
+"Two Pointers",
+"Floyd's Cycle Finding Algorithm"
+],
+"url": "https://leetcode.com/problems/happy-number/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Math & Geometry",
+"companies": {
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 45.0,
+"all": 51.8
+},
+"Apple": {
+"all": 35.3
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 49.5
+},
+"Google": {
+"6m": 46.8,
+"all": 54.8
+},
+"Jump Trading": {
+"all": 100.0
+},
+"Meta": {
+"6m": 42.7,
+"all": 45.7
+},
+"Microsoft": {
+"6m": 24.6,
+"all": 54.8
+},
+"Oracle": {
+"all": 26.6
+},
+"Snowflake": {
+"6m": 72.2,
+"all": 100.0
+},
+"TikTok": {
+"all": 26.1
+},
+"Uber": {
+"all": 49.9
+}
+}
+},
+{
+"slug": "plus-one",
+"title": "Plus One",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Math"
+],
+"url": "https://leetcode.com/problems/plus-one/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Math & Geometry",
+"companies": {
+"Amazon": {
+"6m": 30.0,
+"all": 49.4
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 58.0
+},
+"Google": {
+"6m": 45.9,
+"all": 56.2
+},
+"Intuit": {
+"all": 81.7
+},
+"Meta": {
+"6m": 49.5,
+"all": 54.6
+},
+"Microsoft": {
+"6m": 32.5,
+"all": 49.2
+}
+}
+},
+{
+"slug": "roman-to-integer",
+"title": "Roman to Integer",
+"difficulty": "Easy",
+"topics": [
+"Hash Table",
+"Math",
+"String"
+],
+"url": "https://leetcode.com/problems/roman-to-integer/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Amazon": {
+"6m": 52.2,
+"all": 60.3
+},
+"Apple": {
+"all": 39.6
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 70.1
+},
+"DoorDash": {
+"all": 28.9
+},
+"Goldman Sachs": {
+"all": 27.7
+},
+"Google": {
+"6m": 54.9,
+"all": 65.1
+},
+"IBM": {
+"6m": 63.9,
+"all": 84.7
+},
+"Meta": {
+"6m": 49.5,
+"all": 63.0
+},
+"Microsoft": {
+"6m": 59.4,
+"all": 68.7
+},
+"Oracle": {
+"all": 55.2
+},
+"Salesforce": {
+"all": 27.6
+},
+"Snowflake": {
+"all": 47.6
+},
+"TikTok": {
+"all": 34.5
+},
+"Uber": {
+"all": 54.6
+}
+}
+},
+{
+"slug": "powx-n",
+"title": "Pow(x, n)",
+"difficulty": "Medium",
+"topics": [
+"Math",
+"Recursion"
+],
+"url": "https://leetcode.com/problems/powx-n/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Math & Geometry",
+"companies": {
+"Adobe": {
+"all": 44.1
+},
+"Amazon": {
+"6m": 38.9,
+"all": 53.0
+},
+"Bloomberg": {
+"6m": 49.2,
+"all": 61.4
+},
+"Citadel": {
+"all": 46.8
+},
+"Goldman Sachs": {
+"all": 36.4
+},
+"Google": {
+"6m": 48.6,
+"all": 54.2
+},
+"LinkedIn": {
+"all": 69.7
+},
+"Meta": {
+"6m": 32.4,
+"all": 84.4
+},
+"Microsoft": {
+"6m": 38.3,
+"all": 53.3
+},
+"Nvidia": {
+"all": 38.7
+},
+"Oracle": {
+"all": 26.6
+}
+}
+},
+{
+"slug": "multiply-strings",
+"title": "Multiply Strings",
+"difficulty": "Medium",
+"topics": [
+"Math",
+"String",
+"Simulation"
+],
+"url": "https://leetcode.com/problems/multiply-strings/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Math & Geometry",
+"companies": {
+"Amazon": {
+"6m": 43.1,
+"all": 36.7
+},
+"Bloomberg": {
+"6m": 45.2,
+"all": 37.3
+},
+"Google": {
+"all": 33.2
+},
+"Meta": {
+"all": 49.3
+},
+"Microsoft": {
+"all": 39.8
+},
+"Oracle": {
+"all": 26.6
+},
+"Pinterest": {
+"6m": 66.6,
+"all": 57.1
+},
+"Salesforce": {
+"all": 27.6
+},
+"TikTok": {
+"all": 45.5
+},
+"Two Sigma": {
+"all": 93.2
+}
+}
+},
+{
+"slug": "detect-squares",
+"title": "Detect Squares",
+"difficulty": "Medium",
+"topics": [
+"Array",
+"Hash Table",
+"Design",
+"Counting",
+"Data Stream"
+],
+"url": "https://leetcode.com/problems/detect-squares/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Math & Geometry",
+"companies": {
+"Amazon": {
+"6m": 14.3,
+"all": 13.2
+},
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"all": 29.1
+},
+"Meta": {
+"all": 8.5
+}
+}
+},
+{
+"slug": "single-number",
+"title": "Single Number",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Bit Manipulation"
+],
+"url": "https://leetcode.com/problems/single-number/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Bit Manipulation",
+"companies": {
+"Adobe": {
+"all": 55.2
+},
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 45.0,
+"all": 59.1
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 68.3,
+"all": 65.0
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 43.7,
+"all": 57.5
+},
+"Meta": {
+"6m": 63.8,
+"all": 50.7
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 51.7
+},
+"Salesforce": {
+"all": 27.6
+}
+}
+},
+{
+"slug": "number-of-1-bits",
+"title": "Number of 1 Bits",
+"difficulty": "Easy",
+"topics": [
+"Divide and Conquer",
+"Bit Manipulation"
+],
+"url": "https://leetcode.com/problems/number-of-1-bits/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Bit Manipulation",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 30.3
+},
+"Apple": {
+"all": 55.2
+},
+"Bloomberg": {
+"all": 21.6
+},
+"Google": {
+"6m": 25.4,
+"all": 31.3
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"all": 22.3
+},
+"Microsoft": {
+"all": 34.7
+},
+"Nvidia": {
+"all": 38.7
+},
+"Verkada": {
+"all": 60.3
+}
+}
+},
+{
+"slug": "counting-bits",
+"title": "Counting Bits",
+"difficulty": "Easy",
+"topics": [
+"Dynamic Programming",
+"Bit Manipulation"
+],
+"url": "https://leetcode.com/problems/counting-bits/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Bit Manipulation",
+"companies": {
+"Amazon": {
+"all": 21.9
+},
+"Apple": {
+"all": 22.3
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 24.7
+},
+"Google": {
+"6m": 17.5,
+"all": 26.5
+},
+"Meta": {
+"all": 20.2
+},
+"Microsoft": {
+"all": 31.5
+},
+"Nvidia": {
+"all": 47.9
+}
+}
+},
+{
+"slug": "add-binary",
+"title": "Add Binary",
+"difficulty": "Easy",
+"topics": [
+"Math",
+"String",
+"Bit Manipulation",
+"Simulation"
+],
+"url": "https://leetcode.com/problems/add-binary/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"6m": 45.0,
+"all": 50.1
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 52.6
+},
+"Google": {
+"6m": 45.9,
+"all": 53.2
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"6m": 38.1,
+"all": 52.3
+},
+"Microsoft": {
+"6m": 42.9,
+"all": 49.8
+},
+"Snap": {
+"all": 44.8
+}
+}
+},
+{
+"slug": "reverse-bits",
+"title": "Reverse Bits",
+"difficulty": "Easy",
+"topics": [
+"Divide and Conquer",
+"Bit Manipulation"
+],
+"url": "https://leetcode.com/problems/reverse-bits/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Bit Manipulation",
+"companies": {
+"Airbnb": {
+"all": 66.3
+},
+"Amazon": {
+"6m": 20.8,
+"all": 33.3
+},
+"Anduril": {
+"all": 40.9
+},
+"Apple": {
+"all": 58.5
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 24.7
+},
+"Google": {
+"6m": 17.5,
+"all": 25.6
+},
+"Meta": {
+"all": 24.3
+},
+"Microsoft": {
+"all": 22.8
+},
+"Nvidia": {
+"all": 67.6
+}
+}
+},
+{
+"slug": "missing-number",
+"title": "Missing Number",
+"difficulty": "Easy",
+"topics": [
+"Array",
+"Hash Table",
+"Math",
+"Binary Search",
+"Bit Manipulation",
+"Sorting"
+],
+"url": "https://leetcode.com/problems/missing-number/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Bit Manipulation",
+"companies": {
+"Amazon": {
+"6m": 33.4,
+"all": 53.6
+},
+"Apple": {
+"all": 35.3
+},
+"Bloomberg": {
+"6m": 40.2,
+"all": 53.9
+},
+"Goldman Sachs": {
+"all": 21.1
+},
+"Google": {
+"6m": 46.8,
+"all": 45.6
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"6m": 42.7,
+"all": 42.6
+},
+"Microsoft": {
+"all": 48.5
+},
+"Nvidia": {
+"all": 54.6
+},
+"Salesforce": {
+"all": 40.9
+}
+}
+},
+{
+"slug": "sum-of-two-integers",
+"title": "Sum of Two Integers",
+"difficulty": "Medium",
+"topics": [
+"Math",
+"Bit Manipulation"
+],
+"url": "https://leetcode.com/problems/sum-of-two-integers/",
+"lists": [
+"neetcode150",
+"blind75",
+"neetcode250"
+],
+"category": "Bit Manipulation",
+"companies": {
+"Amazon": {
+"6m": 20.8,
+"all": 34.3
+},
+"Bloomberg": {
+"6m": 25.5,
+"all": 34.0
+},
+"Google": {
+"6m": 28.4,
+"all": 37.0
+},
+"IBM": {
+"all": 34.6
+},
+"Meta": {
+"6m": 24.6,
+"all": 15.0
+},
+"Microsoft": {
+"all": 22.8
+}
+}
+},
+{
+"slug": "reverse-integer",
+"title": "Reverse Integer",
+"difficulty": "Medium",
+"topics": [
+"Math"
+],
+"url": "https://leetcode.com/problems/reverse-integer/",
+"lists": [
+"neetcode150",
+"neetcode250"
+],
+"category": "Bit Manipulation",
+"companies": {
+"Amazon": {
+"6m": 62.4,
+"all": 63.4
+},
+"Apple": {
+"all": 63.9
+},
+"Bloomberg": {
+"6m": 60.7,
+"all": 74.3
+},
+"Google": {
+"6m": 66.1,
+"all": 66.3
+},
+"LinkedIn": {
+"all": 20.3
+},
+"Meta": {
+"6m": 58.8,
+"all": 55.6
+},
+"Microsoft": {
+"6m": 52.7,
+"all": 62.6
+},
+"Oracle": {
+"all": 40.7
+}
+}
+},
+{
+"slug": "bitwise-and-of-numbers-range",
+"title": "Bitwise AND of Numbers Range",
+"difficulty": "Medium",
+"topics": [
+"Bit Manipulation"
+],
+"url": "https://leetcode.com/problems/bitwise-and-of-numbers-range/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 15.8
+},
+"Bloomberg": {
+"all": 8.3
+},
+"Google": {
+"all": 16.6
+},
+"Meta": {
+"all": 5.0
+},
+"Microsoft": {
+"all": 19.8
+}
+}
+},
+{
+"slug": "minimum-array-end",
+"title": "Minimum Array End",
+"difficulty": "Medium",
+"topics": [
+"Bit Manipulation"
+],
+"url": "https://leetcode.com/problems/minimum-array-end/",
+"lists": [
+"neetcode250"
+],
+"category": "",
+"companies": {
+"Amazon": {
+"all": 7.2
+},
+"Bloomberg": {
+"all": 13.5
+},
+"Google": {
+"all": 10.6
+}
+}
+}
+],
+"categories": [
+"Arrays & Hashing",
+"Two Pointers",
+"Sliding Window",
+"Stack",
+"Binary Search",
+"Linked List",
+"Trees",
+"Heap / Priority Queue",
+"Backtracking",
+"Tries",
+"Graphs",
+"Advanced Graphs",
+"1-D Dynamic Programming",
+"2-D Dynamic Programming",
+"Greedy",
+"Intervals",
+"Math & Geometry",
+"Bit Manipulation"
+],
+"companies": [
+"Adobe",
+"Affirm",
+"Airbnb",
+"Akuna Capital",
+"Amazon",
+"Anduril",
+"Apple",
+"Atlassian",
+"Bloomberg",
+"Capital One",
+"Citadel",
+"Cloudflare",
+"Coinbase",
+"DE Shaw",
+"Databricks",
+"Datadog",
+"DoorDash",
+"Dropbox",
+"Duolingo",
+"Goldman Sachs",
+"Google",
+"Hudson River Trading",
+"IBM",
+"IMC",
+"Intuit",
+"Jane Street",
+"Jump Trading",
+"LinkedIn",
+"Lyft",
+"Meta",
+"Microsoft",
+"Millennium",
+"MongoDB",
+"Netflix",
+"Nvidia",
+"OpenAI",
+"Optiver",
+"Oracle",
+"Pinterest",
+"Point72",
+"Reddit",
+"Robinhood",
+"Roblox",
+"Salesforce",
+"Scale AI",
+"Shopify",
+"Snap",
+"Snowflake",
+"Spotify",
+"Stripe",
+"TikTok",
+"Twilio",
+"Two Sigma",
+"Uber",
+"Verkada"
+]
+}

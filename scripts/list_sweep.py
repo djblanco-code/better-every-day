@@ -37,6 +37,10 @@ CONSIDER = [  # (label, board host, board id)
     ('Kleiner Perkins', 'jobs.kleinerperkins.com', 'kleiner-perkins'),
     ('GV', 'jobs.gv.com', 'gv'),
     ('Bessemer', 'jobs.bvp.com', 'bessemer-ventures'),
+    ('Battery', 'jobs.battery.com', 'battery-ventures'),
+    ('NEA', 'careers.nea.com', 'nea'),
+    ('USV', 'jobs.usv.com', 'union-square-ventures'),
+    ('First Round', 'jobs.firstround.com', 'first-round-capital'),
 ]
 
 S = json.load(open(os.path.join(R, 'config', 'settings.json')))
