@@ -2,7 +2,7 @@
   "_readme": "Every knob the agent obeys. Full docs: README.md#settings.",
   "run": {
     "max_applications_per_run": 0,
-    "_max_note": "0 = no per-run cap (Dominick, 2026-10-04): apply to every lead that passes the gate. ./run.sh N still caps one run at N.",
+    "_max_note": "0 = no per-run cap: apply to every lead that passes the gate. ./run.sh N still caps one run at N.",
     "one_application_per_company_per_run": false,
     "same_day_company_freeze": false,
     "max_applications_per_company_lifetime": 2,
@@ -10,7 +10,7 @@
     "interview_tracker_path": "",
     "model": "sonnet",
     "_model_note": "Model for headless runs (run.sh / scheduled). sonnet uses far less of your plan than opus and is plenty for form filling. Empty = your account default.",
-    "_freeze_note": "Off (2026-10-05, Dominick: 'don't wait til tomorrow'): a second role at a company the same day is allowed. The lifetime cap of 2 per company still applies, and the best-fit role is taken first."
+    "_freeze_note": "Off: a second role at a company the same day is allowed. The lifetime cap of 2 per company still applies, and the best-fit role is taken first."
   },
   "schedule": {
     "frequency": "manual",
@@ -48,7 +48,7 @@
     ],
     "_locations_note": "New York, NY (in person or hybrid), Chicago, IL (in person or hybrid; would relocate), or remote in the US.",
     "min_annual_comp_usd": 120000,
-    "_min_annual_comp_note": "Floor is BASE salary and passes when the posted band's TOP reaches it (Dominick 2026-10-05: $120K). Jobs with no posted pay are applied to.",
+    "_min_annual_comp_note": "Floor is BASE salary and passes when the posted band's TOP reaches it Jobs with no posted pay are applied to.",
     "internship_min_hourly_usd": 0,
     "count_equity_toward_comp": false,
     "prestige_note": "One or two sentences on what makes a company worth your time. Used as a judgment gate when a posting lists no pay.",
@@ -123,7 +123,7 @@
     "stale_after_days": 150,
     "title_exclude": "\\banalytics engineer|data scientist|research scientist|\\bios\\b|android|mobile|embedded|firmware|hardware|electrical|mechanical|network engineer|sales engineer|solutions? engineer|support|\\bit engineer|devrel|developer relations|developer advocate|robotics|silicon|\\basic\\b|\\bfpga\\b|manual|solutions? (architect|consultant)|\\brvp\\b|vice president|account (manager|executive)|customer success|sales|recruit|partner (manager|engineer)|mission engineer|information extraction|model test|research (associate|engineer)|it (operations|ops)|trader|quant(itative)? (researcher|developer)|\\bintern\\b|\\bgtm\\b|go.to.market|revenue|marketing|growth engineer|\\bcontract(or)?\\b|temporary|freelance|part.?time",
     "route_required_self_id_to_you": false,
-    "_self_id_note": "false (2026-10-05): Dominick authorized the agent to fill self-ID dropdowns from config/profile.json. If a session's permission check still blocks it, the job goes to 'Apply yourself' at that point.",
+    "_self_id_note": "false means the agent fills self-ID dropdowns from config/profile.json (the user's standing instruction). If a session's permission check still blocks it, the job goes to 'Apply yourself' at that point.",
     "blocking_question_patterns": [],
     "_blocking_note": "Empty (2026-10-05): every known blocker now has an answer in config/answers.md. Add a pattern here when a new recurring question has no fact on file.",
     "jobdatalake_min_hours": 3,
