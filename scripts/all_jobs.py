@@ -30,10 +30,13 @@ T0 = time.time()
 ROLE = re.compile(r'software (engineer|developer|development engineer)|\bswe\b|\bsde\b|full[- ]?stack|product engineer|back[- ]?end (software )?engineer|front[- ]?end (software )?engineer'
                   r'|forward[- ]deployed|platform engineer|infrastructure engineer|site reliability|\bsre\b|devops|cloud engineer|distributed systems|data engineer'
                   r'|machine learning engineer|\bml engineer|\bai engineer|ai/ml engineer|\bsdet\b|engineer in test|test automation|security engineer'
-                  r'|developer (tools|experience|productivity)|member of technical staff|\bmts\b|applied ai engineer|systems engineer|web developer|application developer', re.I)
+                  r'|developer (tools|experience|productivity)|member of technical staff|\bmts\b|applied ai engineer|systems engineer|web developer|application developer'
+                  r'|founding engineer|product engineering|tech(nical)? lead|research engineer|production engineer|devsecops|automation engineer|integration engineer|deployment engineer'
+                  r'|(java|python|typescript|javascript|react|golang|go|rust|c\+\+|node|ruby|scala|kotlin|api|ui|web|growth|applications?|agent|llm|genai|ai/ml|ml|ai|data|platform|product|backend|frontend|infra|cloud) (software )?(engineer|developer)'
+                  r'|^((senior|sr\.?|staff|principal|lead|junior|associate|founding)\s+)*(software\s+)?(engineer|developer)(\s+(i{1,3}|iv|v|[1-6]))?\s*($|[,(\-–|/:])', re.I)
 EXCL = re.compile(r'\bios\b|android|mobile|embedded|firmware|hardware|electrical|mechanical|network engineer|sales engineer|solutions? engineer|support engineer|\bit engineer|devrel'
                   r'|developer relations|developer advocate|robotics|silicon|\basic\b|\bfpga\b|solutions? (architect|consultant)|account (manager|executive)|customer success|recruit'
-                  r'|field engineer|manufactur|process engineer|\bintern\b|internship|co-?op\b|\bcontract(or)?\b|part.?time|forward deployed (accountant|strategist|analyst)', re.I)
+                  r'|field engineer|manufactur|process engineer|flight|structur|propulsion|thermal|\brf\b|materials|controls engineer|\bgnc\b|power electronics|avionics|optical|quality engineer|supplier|mission operations|civil|chemical|aerospace|test engineer(?!ing)|\bintern\b|internship|co-?op\b|\bcontract(or)?\b|part.?time|forward deployed (accountant|strategist|analyst)', re.I)
 MGMT = re.compile(r'manager|director|head of|\bvp\b|vice president|chief', re.I)
 want = lambda t: bool(t and ROLE.search(t) and not EXCL.search(t) and not MGMT.search(t))
 
