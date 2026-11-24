@@ -189,7 +189,7 @@ function header() {
   $('src').innerHTML = '<option value="all">All</option>' + names.map(n => `<option value="${esc(n)}">${esc(n)} (${fmt(by[n])})</option>`).join('');
   $('src').value = names.includes(state.src) ? state.src : (state.src = 'all');
   const failed = Object.entries(m.sources || {}).filter(([, v]) => /FAILED/.test(v.note || '') || !v.jobs).map(([k]) => k);
-  $('foot').textContent = `Roles posted in the last ${m.days} days. Sources today: ${names.map(n => n + ' ' + fmt(by[n])).join(', ')}.` + (failed.length ? ` Returned nothing today: ${failed.join(', ')}.` : '') + ' Rows tagged “no date” come from sources that do not publish a posting date, so they only show under “Any”. Fit compares each role with your resume: role type, skills named in the description, years asked, location and pay. A “~” means the source gave no description, so only the title and location were scored. Level is guessed from the title. Open the posting to confirm it is still live.';
+  $('foot').textContent = `Roles posted in the last ${m.days} days. Sources today: ${names.map(n => n + ' ' + fmt(by[n])).join(', ')}.` + (failed.length ? ` Returned nothing today: ${failed.join(', ')}.` : '') + ' Rows tagged “no date” come from sources that do not publish a posting date, so they only show under “Any”. Fit compares each role with your resume: role type, skills named in the description, years asked, location and pay. Because you have under 3 years of experience, senior titles and roles asking 5+ years are capped at 55%, and staff, principal, lead or 7+ year roles at 40%. A “~” means the source gave no description, so only the title and location were scored. Level is guessed from the title. Open the posting to confirm it is still live.';
 }
 
 function setSeg(id, key) {
@@ -310,8 +310,9 @@ function fitChip(j) {
   return `<span class="fit ${cls}" title="${j.fd ? 'Scored against the full job description' : 'Scored on title and location only; this source gives no description'}">${j.fd ? '' : '~'}${j.f}% fit</span>`;
 }
 function why(j) {
-  if (!j.fd) return '';
+  if (!j.fd) return j.v === 'Senior+' ? '<span class="why"><b>senior-level title</b></span>' : '';
   const parts = [];
+  if (j.v === 'Senior+') parts.push('<b>senior-level title</b>');
   if (j.y) parts.push(j.y > 3 ? `<b>asks ${j.y}+ yrs</b>` : `asks ${j.y}+ yrs`);
   if (j.m) parts.push('match: ' + esc(j.m));
   if (j.g) parts.push('<b>not on your resume: ' + esc(j.g) + '</b>');

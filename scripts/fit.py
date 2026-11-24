@@ -37,6 +37,15 @@ def title_score(t):
 def level_penalty(t):
     return -6 if re.search(r'\biii\b|\bsenior\b|\bstaff\b|lead\b|principal', t.lower()) else 0
 
+def level_cap(title, years):
+    """Ceiling on the score for roles above the candidate's level (under 3 years of experience): a strong skills
+    match cannot lift a Staff or 7-year role into the 80s."""
+    t = title.lower(); cap = 100
+    if re.search(r'\bstaff\b|principal|\blead\b|architect|distinguished|\biv\b|\bv\b', re.sub(r'technical staff', '', t)): cap = 40
+    elif re.search(r'\bsenior\b|\bsr\b\.?|\biii\b|\b[3-6]$', t): cap = 55
+    if years: cap = min(cap, 100 if years <= 3 else 70 if years == 4 else 55 if years <= 6 else 40)
+    return cap
+
 def skills(desc):
     d = (desc or '').lower()
     return [lab for rx, lab in HAVE.items() if re.search(rx, d)], sorted({lab for rx, lab in GAPS.items() if re.search(rx, d)})
@@ -65,4 +74,4 @@ def score(title, desc, years, location, band_lo, band_hi):
     have, gaps = skills((desc or '') + ' ' + title)
     ss = max(0, min(30, round(30 * min(1.0, len(have) / 6))) - min(10, 2 * len(gaps))) if desc else 14
     total = title_score(title) + level_penalty(title) + ss + exp_score(years, title) + loc_score(location) + pay_score(band_hi, band_lo)
-    return max(0, min(100, total))
+    return max(0, min(level_cap(title, years), total))
