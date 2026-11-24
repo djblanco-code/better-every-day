@@ -38,6 +38,7 @@ MGMT = re.compile(r'manager|director|head of|\bvp\b|vice president|chief', re.I)
 want = lambda t: bool(t and ROLE.search(t) and not EXCL.search(t) and not MGMT.search(t))
 
 NYC = re.compile(r'new york|\bnyc\b|brooklyn|manhattan|\bny\b|jersey city|hoboken', re.I)
+CHI = re.compile(r'chicago|\bIL\b|illinois|evanston', re.I)
 REMOTE = re.compile(r'remote|anywhere|distributed|work from home|virtual', re.I)
 USW = re.compile(r'united states|\busa?\b|u\.s\.|\bamericas?\b|north america|new york|\bnyc\b|san francisco|\bsf\b|bay area|seattle|chicago|boston|austin|los angeles|denver|atlanta'
                  r'|palo alto|mountain view|menlo park|sunnyvale|san jose|redwood city|oakland|berkeley|san mateo|santa clara|cupertino|brooklyn|washington,? d\.?c|miami|jersey city'
@@ -89,7 +90,7 @@ import fit as FIT
 YRS = re.compile(r'(?<![\d$.])(\d{1,2})\s*\+?\s*(?:(?:-|–|to)\s*\d{1,2}\s*\+?\s*)?(?:years?|yrs?)\b(?:\s+of)?[^.\n;]{0,70}?(?:experience|industry|professional|engineering|software|building|working|developing)', re.I)
 MONEY = re.compile(r'\$\s?(\d{1,3}(?:,\d{3})+|\d{2,3}(?:\.\d+)?\s?[kK]\b)')
 def fit_of(r):
-    desc = r.pop('_desc', None) or ''
+    desc = r.get('_desc') or ''
     v = [int(m.group(1)) for m in YRS.finditer(desc) if 0 < int(m.group(1)) <= 15]
     years = min(v) if v else None
     amt = []
@@ -145,7 +146,7 @@ def b_ashby(s):
     for j in d['jobs']:
         if not j.get('isListed', True): continue
         loc = ' | '.join(x for x in [j.get('location') or ''] + [x.get('location', '') for x in (j.get('secondaryLocations') or [])] if x)
-        if j.get('isRemote') and not REMOTE.search(loc): loc += ' | Remote'
+        if (j.get('workplaceType') or '').lower() == 'remote' and not REMOTE.search(loc): loc += ' | Remote'   # isRemote is also true for hybrid roles
         add('Ashby', s, j.get('title'), loc, ts(j.get('publishedAt')), j.get('jobUrl'), (j.get('compensation') or {}).get('compensationTierSummary'), desc=j.get('descriptionPlain'))
 def b_greenhouse(s):
     d = get(f'https://boards-api.greenhouse.io/v1/boards/{s}/jobs')
@@ -371,7 +372,7 @@ def jdl():
     ITEM = re.compile(r'^\d+\.\s+\*\*(.+?)\*\*\s+at\s+(.+?)\s*$\n\s+(.*?)\s*$\n(?:\s+Skills:.*$\n)?\s+Apply:\s+(\S+)', re.M)
     for q in ('software engineer', 'full stack engineer', 'backend engineer', 'product engineer', 'forward deployed engineer', 'platform engineer', 'infrastructure engineer',
               'site reliability engineer', 'devops engineer', 'data engineer', 'machine learning engineer', 'ai engineer'):
-        for locq in ('New York', 'Remote'):
+        for locq in ('New York', 'Chicago', 'Remote'):
             for page in range(1, 4):
                 calls += 1
                 try: out = c.call('search_jobs', {'query': q, 'location': locq, 'countries': 'US', 'posted_within': '14d', 'per_page': 100, 'page': page})
@@ -386,7 +387,7 @@ def jdl():
                     parts = [p.strip() for p in meta.split('|')]
                     add('JobDataLake', co, title, parts[0] + (' | Remote' if 'fully_remote' in meta and not REMOTE.search(parts[0]) else ''), None, url, parts[-1] if '$' in parts[-1] else '', dated=False)
                 if len(items) < 100: break
-    return f'{calls} of 500 free daily calls used ({failed} failed); New York and remote only'
+    return f'{calls} of 500 free daily calls used ({failed} failed); New York, Chicago and remote only'
 
 # ---------------------------------------------------------------- run
 for fn in (boards, small_ats, investor, workday_all, oracle_all, amazon, google, microsoft, netflix, janestreet, yc, jdl): fn()
@@ -403,15 +404,21 @@ for r in ROWS:
     if k in seen: continue
     seen.add(k)
     fit_of(r)
-    r.update(v=level(r['t']), n=1 if NYC.search(r['l']) else 0, r=1 if REMOTE.search(r['l']) else 0, h=hashlib.sha1(k.encode()).hexdigest()[:12])
+    r.update(v=level(r['t']), n=1 if NYC.search(r['l']) else 0, ch=1 if CHI.search(r['l']) else 0, r=1 if REMOTE.search(r['l']) else 0, h=hashlib.sha1(k.encode()).hexdigest()[:12])
     jobs.append(r)
 jobs.sort(key=lambda r: r['d'] or '0', reverse=True)
 
 os.makedirs(OUT, exist_ok=True)
+# Leads for the applying agent: scripts/collect.py --import apply_queue.json vets them like any other lead.
+QMIN = int(arg('--queue-min-fit', 60))
+queue = [dict(source='all_jobs', company=j['c'], title=j['t'], location=j['l'], url=j['u'], posted=j['d'], band=j['p'], desc=(j.get('_desc') or '')[:6000])
+         for j in jobs if j['f'] >= QMIN and (j['n'] or j['ch'] or j['r']) and j['s'] != 'JobDataLake']
+json.dump(queue, open(os.path.join(OUT, 'apply_queue.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+for j in jobs: j.pop('_desc', None)
 meta = dict(generated=NOW.isoformat(timespec='minutes').replace('+00:00', 'Z'), days=DAYS, total=len(jobs), dated=sum(j['k'] for j in jobs), nyc=sum(j['n'] for j in jobs),
             companies=len({j['c'].lower() for j in jobs}), sources=STATS)
 json.dump(dict(meta=meta, jobs=jobs), open(os.path.join(OUT, 'jobs.json'), 'w', encoding='utf-8'), separators=(',', ':'), ensure_ascii=False)
 with open(os.path.join(OUT, 'jobs.csv'), 'w', newline='', encoding='utf-8') as f:
     w = csv.writer(f); w.writerow(['fit_%', 'fit_basis', 'title', 'company', 'location', 'level', 'years_asked', 'skills_you_have', 'skills_missing', 'pay', 'posted', 'source', 'url'])
     for j in jobs: w.writerow([j['f'], 'full description' if j['fd'] else 'title only', j['t'], j['c'], j['l'], j['v'], j['y'] or '', j['m'], j['g'], j['p'], j['d'] or 'not dated', j['s'], j['u']])
-print(f"DONE {time.time() - T0:.0f}s: {len(jobs)} jobs ({meta['dated']} dated, {meta['nyc']} New York) from {meta['companies']} companies -> {os.path.join(OUT, 'jobs.json')}")
+print(f"DONE {time.time() - T0:.0f}s: {len(jobs)} jobs ({meta['dated']} dated, {meta['nyc']} New York) from {meta['companies']} companies -> {os.path.join(OUT, 'jobs.json')}; {len(queue)} at {QMIN}%+ fit in New York, Chicago or remote -> apply_queue.json")

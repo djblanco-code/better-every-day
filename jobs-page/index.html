@@ -105,6 +105,7 @@ footer { padding-block: 8px 40px; color: var(--muted); font-size: 13px; max-widt
       <label class="search" for="q"><input id="q" type="search" placeholder="Filter by title, company, or city" autocomplete="off"></label>
       <div class="seg" role="group" aria-label="Location" id="where">
         <button type="button" data-v="nyc" aria-pressed="true">New York</button>
+        <button type="button" data-v="chi" aria-pressed="false">Chicago</button>
         <button type="button" data-v="remote" aria-pressed="false">Remote</button>
         <button type="button" data-v="all" aria-pressed="false">All US</button>
       </div>
@@ -290,7 +291,7 @@ function filtered() {
   const cut = state.age === 'any' ? null : new Date(today - (Number(state.age) - 1) * 864e5).toISOString().slice(0, 10);
   let out = DATA.jobs.filter(j =>
     !hidden.has(j.h) &&
-    (state.where === 'all' || (state.where === 'nyc' ? j.n : j.r)) &&
+    (state.where === 'all' || (state.where === 'nyc' ? j.n : state.where === 'chi' ? j.ch : j.r)) &&
     (cut === null || (j.d && j.d >= cut)) &&
     (state.src === 'all' || j.s === state.src) &&
     (j.f || 0) >= Number(state.fit) &&

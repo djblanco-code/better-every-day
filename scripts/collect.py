@@ -452,9 +452,9 @@ def main():
             # File: JSON list of {company, title, location, url, band, desc, posted}. They get the same vetting.
             rows = json.load(open(ARGS[ARGS.index('--import') + 1], encoding='utf-8'))
             for r in rows:
-                add('grepjob', r.get('company', ''), r.get('title', ''), r.get('location', ''), r.get('url', ''),
+                add(r.get('source') or 'grepjob', r.get('company', ''), r.get('title', ''), r.get('location', ''), r.get('url', ''),
                     r.get('posted', ''), r.get('band', ''), r.get('desc', ''))
-            print(f'imported {len(rows)} GrepJob rows; {len(NEW)} were new')
+            print(f'imported {len(rows)} rows; {len(NEW)} were new')
         ok = {} if (VET_ONLY or '--import' in ARGS) else search()
         save_pool()                                  # save BEFORE vetting: found leads are never lost
         if VET_ONLY:

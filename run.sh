@@ -168,6 +168,8 @@ PAUSED=0
 
 # Find, vet and save leads BEFORE the Claude session, in plain Python: searching costs no Claude usage, and
 # a session that dies on the usage limit loses nothing (leads stay in state/pool.json).
+# Once a day: the wider all-jobs feed (investor boards, Oracle/Workday career sites, big-company portals), 60%+ fit only.
+python3 scripts/feed_import.py >>logs/collector.log 2>&1 || true
 COLLECT_SUMMARY="$(python3 scripts/collect.py 2>>logs/collector.log | tail -1 || true)"
 printf '%s\n' "$COLLECT_SUMMARY"
 POOL_STATS="$(python3 scripts/pool.py stats 2>/dev/null || true)"

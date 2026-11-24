@@ -129,7 +129,7 @@
     "jobdatalake_min_hours": 3,
     "min_minutes_between_runs": 20,
     "_interval_note": "collect.py skips itself if it ran within this many minutes (--force overrides), so sessions can call it whenever the pool runs dry.",
-    "min_fit": 55,
+    "min_fit": 60,
     "_min_fit_note": "Leads scoring under this (0-100, scripts/fit.py) are skipped before the agent can claim them: off-target roles waste claims and tokens.",
     "_stale_note": "Older open postings stay in the queue but are worked LAST (fresh first, then best fit); only postings over this many days old are dropped."
   }

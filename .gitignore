@@ -82,3 +82,5 @@ state/network.json
 # All-jobs page data, rebuilt daily by scripts/all_jobs.py
 jobs-page/jobs.json
 jobs-page/jobs.csv
+
+jobs-page/apply_queue.json
