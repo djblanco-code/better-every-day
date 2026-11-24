@@ -78,3 +78,7 @@ state/recall-statements/
 state/recall.json
 state/journal.json
 state/network.json
+
+# All-jobs page data, rebuilt daily by scripts/all_jobs.py
+jobs-page/jobs.json
+jobs-page/jobs.csv

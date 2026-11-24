@@ -7,16 +7,18 @@ import re
 
 HAVE = {
     r'c\+\+': 'C++', r'\bpython\b': 'Python', r'typescript': 'TypeScript', r'javascript': 'JavaScript',
-    r'\bjava\b': 'Java', r'\bsql\b|postgres|mysql': 'SQL', r'\bbash\b|shell script': 'Bash',
+    r'\bsql\b|postgres|mysql': 'SQL', r'\bbash\b|shell script': 'Bash',
     r'\breact\b': 'React', r'next\.?js': 'Next.js', r'node\.?js': 'Node', r'\blinux\b': 'Linux',
     r'rest(ful)? api|\brest\b|\bapis?\b': 'REST/APIs', r'distributed system': 'distributed systems',
     r'load.?balanc|\bnat\b|tcp|networking|network': 'networking', r'observab|monitoring|alerting|dashboards': 'observability',
     r'ci/?cd|deployment pipeline': 'CI/CD', r'on-?call|incident': 'on-call/incidents', r'microservice': 'microservices',
     r'\bbackend\b|back-end': 'backend', r'full.?stack': 'full-stack', r'\bllm|generative ai|\bai\b': 'AI/LLM',
+    r'\bagents?\b|agentic|\bmcp\b|tool.?calling': 'AI agents', r'terraform': 'Terraform', r'supabase': 'Supabase',
+    r'system design': 'system design', r'test automation|automated test': 'test automation',
 }
 GAPS = {
-    r'\bgo(lang)?\b': 'Go', r'\brust\b': 'Rust', r'kubernetes|\bk8s\b': 'Kubernetes', r'\bscala\b': 'Scala', r'\bruby\b|rails': 'Ruby',
-    r'kotlin': 'Kotlin', r'swift': 'Swift', r'c#|\.net': 'C#/.NET', r'\bphp\b': 'PHP', r'terraform': 'Terraform',
+    r'golang|[,/(] ?go\b|\bgo[,/)]': 'Go', r'\brust\b': 'Rust', r'kubernetes|\bk8s\b': 'Kubernetes', r'\bscala\b': 'Scala', r'\bruby\b|rails': 'Ruby',
+    r'kotlin': 'Kotlin', r'swift': 'Swift', r'c#|\.net': 'C#/.NET', r'\bphp\b': 'PHP', r'\bjava\b': 'Java',
     r'\baws\b': 'AWS', r'\bgcp\b|google cloud': 'GCP', r'azure': 'Azure', r'kafka': 'Kafka', r'spark': 'Spark',
     r'pytorch|tensorflow': 'ML frameworks', r'django|flask|fastapi': 'Python web frameworks', r'graphql': 'GraphQL',
     r'elixir|haskell|clojure|erlang': 'functional langs',
