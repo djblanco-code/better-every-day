@@ -168,8 +168,8 @@ footer { padding-block: 8px 40px; color: var(--muted); font-size: 13px; max-widt
 let DATA = { meta: { generated: "", sources: {} }, jobs: [] };
 const PAGE = 200;
 const $ = id => document.getElementById(id);
-const state = { q: '', where: 'nyc', age: '7', src: 'all', fit: '0', lvl: 'all', sort: 'new', shown: PAGE };
-try { Object.assign(state, JSON.parse(localStorage.getItem('aj-filters') || '{}'), { shown: PAGE }); } catch (e) {}
+const state = { q: '', locs: ['nyc'], age: '7', src: 'all', fit: '0', lvl: 'all', sort: 'new', shown: PAGE };
+try { Object.assign(state, JSON.parse(localStorage.getItem('aj-filters-v2') || '{}'), { shown: PAGE }); } catch (e) {}
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 let today = new Date();
@@ -198,7 +198,7 @@ function setSeg(id, key) {
   g.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === state[key])));
   g.onclick = e => { const b = e.target.closest('button'); if (!b) return; state[key] = b.dataset.v; state.shown = PAGE; save(); setSeg(id, key); render(); };
 }
-function save() { try { const { shown, ...keep } = state; localStorage.setItem('aj-filters', JSON.stringify(keep)); } catch (e) {} }
+function save() { try { const { shown, ...keep } = state; localStorage.setItem('aj-filters-v2', JSON.stringify(keep)); } catch (e) {} }
 
 // ---- hidden jobs: saved to the viewer's private db subtree when the page can reach it, else this browser ----
 const CACHE = 'aj-hidden-cache', LOCAL = 'aj-hidden-local';
@@ -291,7 +291,7 @@ function filtered() {
   const cut = state.age === 'any' ? null : new Date(today - (Number(state.age) - 1) * 864e5).toISOString().slice(0, 10);
   let out = DATA.jobs.filter(j =>
     !hidden.has(j.h) &&
-    (state.where === 'all' || (state.where === 'nyc' ? j.n : state.where === 'chi' ? j.ch : j.r)) &&
+    (!state.locs.length || (state.locs.includes('nyc') && j.n) || (state.locs.includes('chi') && j.ch) || (state.locs.includes('remote') && j.r)) &&
     (cut === null || (j.d && j.d >= cut)) &&
     (state.src === 'all' || j.s === state.src) &&
     (j.f || 0) >= Number(state.fit) &&
@@ -339,7 +339,7 @@ function render() {
   const all = filtered();
   const list = $('list');
   list.innerHTML = all.length ? all.slice(0, state.shown).map(row).join('')
-    : `<li class="empty">${viewHidden ? 'No hidden jobs here.' : 'No roles match these filters. Widen the Posted window or switch to All US.'}</li>`;
+    : `<li class="empty">${viewHidden ? 'No hidden jobs here.' : 'No roles match these filters. Widen the Posted window or add a location.'}</li>`;
   $('count').textContent = viewHidden ? `${fmt(all.length)} hidden` : `${fmt(all.length)} shown of ${fmt(DATA.jobs.length)}` + (hidden.size ? ` · ${fmt(hidden.size)} hidden` : '');
   const tb = $('toggleHidden');
   tb.hidden = !viewHidden && hidden.size === 0;
@@ -353,7 +353,18 @@ function render() {
 $('q').value = state.q;
 $('lvl').value = state.lvl;
 $('sort').value = state.sort;
-setSeg('where', 'where');
+// Location: pick any mix of New York, Chicago and Remote; "All US" clears the picks.
+function setLocs() {
+  if (!Array.isArray(state.locs)) state.locs = ['nyc'];
+  $('where').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === 'all' ? !state.locs.length : state.locs.includes(b.dataset.v))));
+}
+$('where').onclick = e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const v = b.dataset.v;
+  state.locs = v === 'all' ? [] : state.locs.includes(v) ? state.locs.filter(x => x !== v) : [...state.locs, v];
+  state.shown = PAGE; save(); setLocs(); render();
+};
+setLocs();
 $('age').value = state.age;
 $('fit').value = state.fit;
 $('fit').addEventListener('change', e => { state.fit = e.target.value; state.shown = PAGE; save(); render(); });
